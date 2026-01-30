@@ -4,49 +4,49 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
       font-size: 20px;
       font-weight: 600;
-      fill: #1E293B;
+      fill: #6B7280;
     }
     .subtitle {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 13px;
-      fill: #64748B;
+      fill: #9CA3AF;
     }
     .note {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 10px;
-      fill: #64748B;
+      fill: #9CA3AF;
     }
     .axis-label {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 11px;
       font-weight: 500;
-      fill: #1E293B;
+      fill: #6B7280;
     }
   </style>
 
-  <rect x="-10" y="-2300" width="910" height="2700" fill="#FFFFFF"/>
+  <rect x="-10" y="-2300" width="910" height="2700" fill="transparent"/>
 
   <!-- Overlay content that bars will "break through" -->
   <g class="overlay-content" opacity="0.15">
     <!-- Repeating text pattern -->
-    <text x="100" y="-200" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="-200" font-size="60" fill="#94A3B8" font-family="monospace" font-weight="bold">
       CODE CODE CODE CODE CODE
     </text>
-    <text x="100" y="-100" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="-100" font-size="60" fill="#94A3B8" font-family="monospace" font-weight="bold">
       OVERFLOW OVERFLOW OVERFLOW
     </text>
-    <text x="100" y="0" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="0" font-size="60" fill="#94A3B8" font-family="monospace" font-weight="bold">
       ERROR ERROR ERROR ERROR
     </text>
-    <text x="100" y="80" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="80" font-size="60" fill="#94A3B8" font-family="monospace" font-weight="bold">
       EXCEPTION EXCEPTION EXCEPTION
     </text>
     <!-- Decorative code symbols -->
-    <text x="50" y="-500" font-size="100" fill="#E2E8F0" font-family="monospace">{}</text>
-    <text x="700" y="-800" font-size="120" fill="#E2E8F0" font-family="monospace">[]</text>
-    <text x="400" y="-1200" font-size="100" fill="#E2E8F0" font-family="monospace">&lt;/&gt;</text>
-    <text x="200" y="-1500" font-size="90" fill="#E2E8F0" font-family="monospace">()</text>
-    <text x="600" y="-1800" font-size="110" fill="#E2E8F0" font-family="monospace">;</text>
+    <text x="50" y="-500" font-size="100" fill="#94A3B8" font-family="monospace">{}</text>
+    <text x="700" y="-800" font-size="120" fill="#94A3B8" font-family="monospace">[]</text>
+    <text x="400" y="-1200" font-size="100" fill="#94A3B8" font-family="monospace">&lt;/&gt;</text>
+    <text x="200" y="-1500" font-size="90" fill="#94A3B8" font-family="monospace">()</text>
+    <text x="600" y="-1800" font-size="110" fill="#94A3B8" font-family="monospace">;</text>
   </g>
 
   <text x="50" y="200" text-anchor="end" class="axis-label">
@@ -60,8 +60,8 @@
     width="780"
     height="120"
     fill="none"
-    stroke="#E2E8F0"
-    stroke-width="1"
+    stroke="#D1D5DB"
+    stroke-width="0.5"
     rx="2"
   />
 
@@ -71,8 +71,8 @@
       y1="260"
       x2="840"
       y2="260"
-      stroke="#CBD5E1"
-      stroke-width="1"
+      stroke="#D1D5DB"
+      stroke-width="0.5"
       stroke-dasharray="0"
     />
     <text
@@ -80,7 +80,7 @@
       y="264"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >0</text>
     <line
@@ -88,7 +88,7 @@
       y1="212"
       x2="840"
       y2="212"
-      stroke="#F1F5F9"
+      stroke="#E5E7EB"
       stroke-width="0.5"
       stroke-dasharray="4 2"
     />
@@ -97,7 +97,7 @@
       y="216"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >5.3K</text>
     <line
@@ -105,7 +105,7 @@
       y1="164"
       x2="840"
       y2="164"
-      stroke="#F1F5F9"
+      stroke="#E5E7EB"
       stroke-width="0.5"
       stroke-dasharray="4 2"
     />
@@ -114,7 +114,7 @@
       y="168"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >10.5K</text>
     <line
@@ -122,7 +122,7 @@
       y1="116"
       x2="840"
       y2="116"
-      stroke="#F1F5F9"
+      stroke="#E5E7EB"
       stroke-width="0.5"
       stroke-dasharray="4 2"
     />
@@ -131,7 +131,7 @@
       y="120"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >15.8K</text>
     <line
@@ -139,7 +139,7 @@
       y1="68"
       x2="840"
       y2="68"
-      stroke="#F1F5F9"
+      stroke="#E5E7EB"
       stroke-width="0.5"
       stroke-dasharray="4 2"
     />
@@ -148,7 +148,7 @@
       y="72"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >21.1K</text>
     <line
@@ -156,7 +156,7 @@
       y1="20"
       x2="840"
       y2="20"
-      stroke="#F1F5F9"
+      stroke="#E5E7EB"
       stroke-width="0.5"
       stroke-dasharray="4 2"
     />
@@ -165,7 +165,7 @@
       y="24"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >26.4K</text>
   </g>
@@ -176,7 +176,7 @@
       y="168.50421188434393"
       width="4.468152866242038"
       height="91.49578811565607"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -187,7 +187,7 @@
       y="248.49814069970404"
       width="4.468152866242038"
       height="11.501859300295969"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -198,7 +198,7 @@
       y="248.4252864840252"
       width="4.468152866242038"
       height="11.574713515974805"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -209,7 +209,7 @@
       y="247.22319192532444"
       width="4.468152866242038"
       height="12.776808074675571"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -220,7 +220,7 @@
       y="228.9185702360173"
       width="4.468152866242038"
       height="31.081429763982694"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -231,7 +231,7 @@
       y="254.57236093192685"
       width="4.468152866242038"
       height="5.427639068073158"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -242,7 +242,7 @@
       y="243.45298626394475"
       width="4.468152866242038"
       height="16.54701373605525"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -253,7 +253,7 @@
       y="228.73643469682023"
       width="4.468152866242038"
       height="31.26356530317978"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -264,9 +264,9 @@
       y="-270.8158154359869"
       width="4.468152866242038"
       height="530.8158154359869"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Mar 27, 2023: 58.3K lines (34 commits)</title>
     </rect>
@@ -275,7 +275,7 @@
       y="255.7380283827882"
       width="4.468152866242038"
       height="4.261971617211809"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -286,7 +286,7 @@
       y="242.56052212187905"
       width="4.468152866242038"
       height="17.439477878120968"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -297,7 +297,7 @@
       y="258.70683767170067"
       width="4.468152866242038"
       height="1.2931623282993094"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -308,7 +308,7 @@
       y="259.72679669120436"
       width="4.468152866242038"
       height="0.27320330879562876"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -319,7 +319,7 @@
       y="242.95211353115278"
       width="4.468152866242038"
       height="17.047886468847235"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -330,7 +330,7 @@
       y="244.2361690824922"
       width="4.468152866242038"
       height="15.763830917507779"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -341,7 +341,7 @@
       y="256.37550276997797"
       width="4.468152866242038"
       height="3.624497230022008"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -352,7 +352,7 @@
       y="246.60393109205432"
       width="4.468152866242038"
       height="13.396068907945663"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -363,7 +363,7 @@
       y="247.95173408211278"
       width="4.468152866242038"
       height="12.048265917887226"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -374,7 +374,7 @@
       y="257.9327616301131"
       width="4.468152866242038"
       height="2.0672383698869243"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -385,7 +385,7 @@
       y="256.03855202246336"
       width="4.468152866242038"
       height="3.961447977536617"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -396,7 +396,7 @@
       y="224.6201715109661"
       width="4.468152866242038"
       height="35.379828489033926"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -407,7 +407,7 @@
       y="256.62138574789407"
       width="4.468152866242038"
       height="3.378614252105942"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -418,7 +418,7 @@
       y="245.60218562647037"
       width="4.468152866242038"
       height="14.397814373529634"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -429,7 +429,7 @@
       y="231.15883736814146"
       width="4.468152866242038"
       height="28.84116263185854"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -440,7 +440,7 @@
       y="258.83433254913865"
       width="4.468152866242038"
       height="1.1656674508613494"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -451,7 +451,7 @@
       y="259.05289519617514"
       width="4.468152866242038"
       height="0.9471048038248463"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -462,7 +462,7 @@
       y="249.07186764817484"
       width="4.468152866242038"
       height="10.92813235182515"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -473,7 +473,7 @@
       y="226.6054488882143"
       width="4.468152866242038"
       height="33.39455111178569"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -484,7 +484,7 @@
       y="226.55991500341503"
       width="4.468152866242038"
       height="33.44008499658496"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -495,7 +495,7 @@
       y="252.44137512332094"
       width="4.468152866242038"
       height="7.558624876679063"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -506,9 +506,9 @@
       y="58.08454124611063"
       width="4.468152866242038"
       height="201.91545875388937"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Aug 28, 2023: 22.2K lines (28 commits)</title>
     </rect>
@@ -517,7 +517,7 @@
       y="195.74258177126814"
       width="4.468152866242038"
       height="64.25741822873188"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -528,7 +528,7 @@
       y="235.5938377475905"
       width="4.468152866242038"
       height="24.4061622524095"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -539,7 +539,7 @@
       y="257.69598542915685"
       width="4.468152866242038"
       height="2.3040145708431354"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -550,7 +550,7 @@
       y="250.30128253775518"
       width="4.468152866242038"
       height="9.69871746224482"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -561,7 +561,7 @@
       y="219.43841542080898"
       width="4.468152866242038"
       height="40.56158457919102"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -572,7 +572,7 @@
       y="249.94611823632087"
       width="4.468152866242038"
       height="10.053881763679138"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -583,7 +583,7 @@
       y="252.72368520907642"
       width="4.468152866242038"
       height="7.276314790923579"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -594,7 +594,7 @@
       y="258.32435303938684"
       width="4.468152866242038"
       height="1.6756469606131896"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -605,7 +605,7 @@
       y="254.33558473097062"
       width="4.468152866242038"
       height="5.664415269029369"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -616,9 +616,9 @@
       y="114.80154815208317"
       width="4.468152866242038"
       height="145.19845184791683"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 6, 2023: 15.9K lines (64 commits)</title>
     </rect>
@@ -627,7 +627,7 @@
       y="251.80390073613114"
       width="4.468152866242038"
       height="8.196099263868863"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -638,7 +638,7 @@
       y="223.73681414586022"
       width="4.468152866242038"
       height="36.263185854139785"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -649,9 +649,9 @@
       y="136.06587235334294"
       width="4.468152866242038"
       height="123.93412764665706"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 27, 2023: 13.6K lines (216 commits)</title>
     </rect>
@@ -660,7 +660,7 @@
       y="259.30788495105105"
       width="4.468152866242038"
       height="0.6921150489489262"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -671,7 +671,7 @@
       y="256.439250208697"
       width="4.468152866242038"
       height="3.560749791303028"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -682,7 +682,7 @@
       y="257.97829551491236"
       width="4.468152866242038"
       height="2.021704485087653"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -693,7 +693,7 @@
       y="229.5378310692874"
       width="4.468152866242038"
       height="30.462168930712608"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -704,7 +704,7 @@
       y="247.99726796691203"
       width="4.468152866242038"
       height="12.002732033087955"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -715,7 +715,7 @@
       y="255.6742809440692"
       width="4.468152866242038"
       height="4.325719055930788"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -726,7 +726,7 @@
       y="249.2631099643318"
       width="4.468152866242038"
       height="10.73689003566821"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -737,7 +737,7 @@
       y="259.6175153676861"
       width="4.468152866242038"
       height="0.38248463231388025"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -748,7 +748,7 @@
       y="257.3226075738028"
       width="4.468152866242038"
       height="2.677392426197162"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -759,7 +759,7 @@
       y="222.50739925627988"
       width="4.468152866242038"
       height="37.49260074372012"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -770,7 +770,7 @@
       y="231.32275935341883"
       width="4.468152866242038"
       height="28.677240646581165"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -781,7 +781,7 @@
       y="214.80306594824316"
       width="4.468152866242038"
       height="45.196934051756855"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -792,7 +792,7 @@
       y="249.13561508689384"
       width="4.468152866242038"
       height="10.86438491310617"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -803,7 +803,7 @@
       y="229.8929953707217"
       width="4.468152866242038"
       height="30.10700462927829"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -814,7 +814,7 @@
       y="244.76436214616376"
       width="4.468152866242038"
       height="15.23563785383623"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -825,7 +825,7 @@
       y="230.88563405934582"
       width="4.468152866242038"
       height="29.11436594065417"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -836,7 +836,7 @@
       y="156.80200349093116"
       width="4.468152866242038"
       height="103.19799650906883"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -847,7 +847,7 @@
       y="152.38521666540183"
       width="4.468152866242038"
       height="107.61478333459817"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -858,7 +858,7 @@
       y="255.6560673901495"
       width="4.468152866242038"
       height="4.343932609850497"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -869,7 +869,7 @@
       y="258.4427411398649"
       width="4.468152866242038"
       height="1.5572588601350839"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -880,7 +880,7 @@
       y="248.83509144721864"
       width="4.468152866242038"
       height="11.164908552781363"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -891,7 +891,7 @@
       y="257.0311907110875"
       width="4.468152866242038"
       height="2.968809288912499"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -902,7 +902,7 @@
       y="207.95476967443273"
       width="4.468152866242038"
       height="52.045230325567275"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -913,7 +913,7 @@
       y="236.14024436518176"
       width="4.468152866242038"
       height="23.859755634818242"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -924,9 +924,9 @@
       y="49.59702511952645"
       width="4.468152866242038"
       height="210.40297488047355"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of May 20, 2024: 23.1K lines (56 commits)</title>
     </rect>
@@ -935,7 +935,7 @@
       y="237.78857099491537"
       width="4.468152866242038"
       height="22.211429005084618"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -946,9 +946,9 @@
       y="-84.88275024664188"
       width="4.468152866242038"
       height="344.8827502466419"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jun 3, 2024: 37.9K lines (57 commits)</title>
     </rect>
@@ -957,7 +957,7 @@
       y="257.0858313728466"
       width="4.468152866242038"
       height="2.9141686271533733"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -968,7 +968,7 @@
       y="259.25324428929196"
       width="4.468152866242038"
       height="0.7467557107080519"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -979,7 +979,7 @@
       y="254.52682704712757"
       width="4.468152866242038"
       height="5.47317295287243"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -990,9 +990,9 @@
       y="-120.18972451999696"
       width="4.468152866242038"
       height="380.18972451999696"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jul 1, 2024: 41.7K lines (34 commits)</title>
     </rect>
@@ -1001,7 +1001,7 @@
       y="235.42080898535326"
       width="4.468152866242038"
       height="24.579191014646735"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1012,7 +1012,7 @@
       y="245.9937770357441"
       width="4.468152866242038"
       height="14.006222964255901"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1023,7 +1023,7 @@
       y="171.89193291340973"
       width="4.468152866242038"
       height="88.10806708659027"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1034,7 +1034,7 @@
       y="235.32974121575472"
       width="4.468152866242038"
       height="24.670258784245277"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1045,7 +1045,7 @@
       y="246.90445473172952"
       width="4.468152866242038"
       height="13.095545268270472"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1056,7 +1056,7 @@
       y="245.13774000151778"
       width="4.468152866242038"
       height="14.862259998482203"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1067,7 +1067,7 @@
       y="241.84108674205055"
       width="4.468152866242038"
       height="18.158913257949457"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1078,7 +1078,7 @@
       y="232.10594217196632"
       width="4.468152866242038"
       height="27.894057828033695"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1089,7 +1089,7 @@
       y="243.13424907034985"
       width="4.468152866242038"
       height="16.86575092965015"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1100,7 +1100,7 @@
       y="248.68938301586098"
       width="4.468152866242038"
       height="11.310616984139031"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1111,7 +1111,7 @@
       y="222.53471958715943"
       width="4.468152866242038"
       height="37.465280412840556"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1122,7 +1122,7 @@
       y="208.38278819154587"
       width="4.468152866242038"
       height="51.61721180845413"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1133,7 +1133,7 @@
       y="207.8181680200349"
       width="4.468152866242038"
       height="52.18183197996509"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1144,7 +1144,7 @@
       y="181.69082492221293"
       width="4.468152866242038"
       height="78.30917507778706"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1155,7 +1155,7 @@
       y="222.124914623966"
       width="4.468152866242038"
       height="37.875085376034"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1166,7 +1166,7 @@
       y="252.07710404492676"
       width="4.468152866242038"
       height="7.922895955073234"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1177,7 +1177,7 @@
       y="213.50990361994383"
       width="4.468152866242038"
       height="46.49009638005616"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1188,7 +1188,7 @@
       y="213.02724444107156"
       width="4.468152866242038"
       height="46.97275555892844"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1199,7 +1199,7 @@
       y="213.2002732033088"
       width="4.468152866242038"
       height="46.7997267966912"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1210,9 +1210,9 @@
       y="73.86658571753816"
       width="4.468152866242038"
       height="186.13341428246184"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 18, 2024: 20.4K lines (42 commits)</title>
     </rect>
@@ -1221,7 +1221,7 @@
       y="222.47097214844047"
       width="4.468152866242038"
       height="37.52902785155953"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1232,7 +1232,7 @@
       y="145.39121196023373"
       width="4.468152866242038"
       height="114.60878803976627"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1243,7 +1243,7 @@
       y="237.48804735524018"
       width="4.468152866242038"
       height="22.51195264475981"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1254,7 +1254,7 @@
       y="223.2632617439478"
       width="4.468152866242038"
       height="36.73673825605221"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1265,7 +1265,7 @@
       y="195.0868938301586"
       width="4.468152866242038"
       height="64.9131061698414"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1276,7 +1276,7 @@
       y="218.20900053122864"
       width="4.468152866242038"
       height="41.790999468771346"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1287,7 +1287,7 @@
       y="233.73605524778023"
       width="4.468152866242038"
       height="26.26394475221978"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1298,7 +1298,7 @@
       y="231.02223571374364"
       width="4.468152866242038"
       height="28.977764286256356"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1309,7 +1309,7 @@
       y="247.48728845716022"
       width="4.468152866242038"
       height="12.512711542839796"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1320,7 +1320,7 @@
       y="194.90475829096152"
       width="4.468152866242038"
       height="65.09524170903848"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1331,7 +1331,7 @@
       y="253.83471199817865"
       width="4.468152866242038"
       height="6.165288001821355"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1342,7 +1342,7 @@
       y="252.93314107915307"
       width="4.468152866242038"
       height="7.06685892084693"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1353,7 +1353,7 @@
       y="214.04720346057525"
       width="4.468152866242038"
       height="45.95279653942475"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1364,7 +1364,7 @@
       y="219.43841542080898"
       width="4.468152866242038"
       height="40.56158457919102"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1375,7 +1375,7 @@
       y="222.90809744251348"
       width="4.468152866242038"
       height="37.09190255748653"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1386,7 +1386,7 @@
       y="217.07065341124687"
       width="4.468152866242038"
       height="42.929346588753134"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1397,7 +1397,7 @@
       y="243.84457767321848"
       width="4.468152866242038"
       height="16.155422326781512"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1408,7 +1408,7 @@
       y="201.95340365788874"
       width="4.468152866242038"
       height="58.04659634211126"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1419,7 +1419,7 @@
       y="185.14229338999772"
       width="4.468152866242038"
       height="74.85770661000228"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1430,7 +1430,7 @@
       y="241.0943310313425"
       width="4.468152866242038"
       height="18.90566896865751"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1441,7 +1441,7 @@
       y="234.04568566441526"
       width="4.468152866242038"
       height="25.95431433558473"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1452,7 +1452,7 @@
       y="244.96471123928058"
       width="4.468152866242038"
       height="15.035288760719435"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1463,7 +1463,7 @@
       y="247.5055020110799"
       width="4.468152866242038"
       height="12.494497988920088"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1474,7 +1474,7 @@
       y="246.49464976853608"
       width="4.468152866242038"
       height="13.505350231463915"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1485,7 +1485,7 @@
       y="253.07884951051074"
       width="4.468152866242038"
       height="6.9211504894892615"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1496,7 +1496,7 @@
       y="206.77088866965167"
       width="4.468152866242038"
       height="53.22911133034833"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1507,7 +1507,7 @@
       y="259.9635728921606"
       width="4.468152866242038"
       height="0.03642710783941717"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1518,9 +1518,9 @@
       y="-217.04029748804737"
       width="4.468152866242038"
       height="477.0402974880474"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jun 2, 2025: 52.4K lines (141 commits)</title>
     </rect>
@@ -1529,9 +1529,9 @@
       y="-863.8218107308189"
       width="4.468152866242038"
       height="1123.821810730819"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jun 9, 2025: 123.4K lines (662 commits)</title>
     </rect>
@@ -1540,9 +1540,9 @@
       y="-506.9636487819686"
       width="4.468152866242038"
       height="766.9636487819686"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jun 16, 2025: 84.2K lines (220 commits)</title>
     </rect>
@@ -1551,9 +1551,9 @@
       y="106.75115731957197"
       width="4.468152866242038"
       height="153.24884268042803"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jun 23, 2025: 16.8K lines (129 commits)</title>
     </rect>
@@ -1562,9 +1562,9 @@
       y="-25.461030583592617"
       width="4.468152866242038"
       height="285.4610305835926"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jun 30, 2025: 31.3K lines (143 commits)</title>
     </rect>
@@ -1573,9 +1573,9 @@
       y="103.95537679289671"
       width="4.468152866242038"
       height="156.04462320710329"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jul 7, 2025: 17.1K lines (164 commits)</title>
     </rect>
@@ -1584,7 +1584,7 @@
       y="227.15185550580557"
       width="4.468152866242038"
       height="32.84814449419443"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1595,9 +1595,9 @@
       y="-364.90703498520145"
       width="4.468152866242038"
       height="624.9070349852014"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jul 21, 2025: 68.6K lines (280 commits)</title>
     </rect>
@@ -1606,9 +1606,9 @@
       y="-28.010928132351808"
       width="4.468152866242038"
       height="288.0109281323518"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jul 28, 2025: 31.6K lines (137 commits)</title>
     </rect>
@@ -1617,9 +1617,9 @@
       y="-93.06974273355092"
       width="4.468152866242038"
       height="353.0697427335509"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Aug 4, 2025: 38.8K lines (228 commits)</title>
     </rect>
@@ -1628,9 +1628,9 @@
       y="-251.0723229870228"
       width="4.468152866242038"
       height="511.0723229870228"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Aug 11, 2025: 56.1K lines (108 commits)</title>
     </rect>
@@ -1639,7 +1639,7 @@
       y="231.07687637550276"
       width="4.468152866242038"
       height="28.92312362449723"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1650,9 +1650,9 @@
       y="93.60097138954237"
       width="4.468152866242038"
       height="166.39902861045763"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Aug 25, 2025: 18.3K lines (12 commits)</title>
     </rect>
@@ -1661,9 +1661,9 @@
       y="-632.4823556196402"
       width="4.468152866242038"
       height="892.4823556196402"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Sep 1, 2025: 98.0K lines (20 commits)</title>
     </rect>
@@ -1672,7 +1672,7 @@
       y="166.69196326933292"
       width="4.468152866242038"
       height="93.30803673066708"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1683,9 +1683,9 @@
       y="-261.1444183046217"
       width="4.468152866242038"
       height="521.1444183046217"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Sep 15, 2025: 57.2K lines (139 commits)</title>
     </rect>
@@ -1694,9 +1694,9 @@
       y="-113.98800941033619"
       width="4.468152866242038"
       height="373.9880094103362"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Sep 22, 2025: 41.1K lines (112 commits)</title>
     </rect>
@@ -1705,9 +1705,9 @@
       y="15.546786066631284"
       width="4.468152866242038"
       height="244.45321393336872"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Sep 29, 2025: 26.8K lines (252 commits)</title>
     </rect>
@@ -1716,9 +1716,9 @@
       y="107.39773848372164"
       width="4.468152866242038"
       height="152.60226151627836"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Oct 6, 2025: 16.8K lines (196 commits)</title>
     </rect>
@@ -1727,7 +1727,7 @@
       y="231.0131289367838"
       width="4.468152866242038"
       height="28.98687106321621"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1738,9 +1738,9 @@
       y="-114.81672611368293"
       width="4.468152866242038"
       height="374.81672611368293"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Oct 20, 2025: 41.2K lines (175 commits)</title>
     </rect>
@@ -1749,7 +1749,7 @@
       y="153.19571981482886"
       width="4.468152866242038"
       height="106.80428018517114"
-      fill="#A5B4FC"
+      fill="#93C5FD"
       rx="1"
       
     >
@@ -1760,9 +1760,9 @@
       y="-3.987250512256196"
       width="4.468152866242038"
       height="263.9872505122562"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 3, 2025: 29.0K lines (123 commits)</title>
     </rect>
@@ -1771,9 +1771,9 @@
       y="-150.5061850193519"
       width="4.468152866242038"
       height="410.5061850193519"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 10, 2025: 45.1K lines (52 commits)</title>
     </rect>
@@ -1782,9 +1782,9 @@
       y="-14.642179555285736"
       width="4.468152866242038"
       height="274.64217955528574"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 17, 2025: 30.2K lines (77 commits)</title>
     </rect>
@@ -1793,9 +1793,9 @@
       y="79.44903999392884"
       width="4.468152866242038"
       height="180.55096000607116"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Nov 24, 2025: 19.8K lines (26 commits)</title>
     </rect>
@@ -1804,9 +1804,9 @@
       y="124.48205206040831"
       width="4.468152866242038"
       height="135.5179479395917"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Dec 1, 2025: 14.9K lines (21 commits)</title>
     </rect>
@@ -1815,9 +1815,9 @@
       y="-2209.0931167944145"
       width="4.468152866242038"
       height="2469.0931167944145"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Dec 8, 2025: 271.1K lines (98 commits)</title>
     </rect>
@@ -1826,9 +1826,9 @@
       y="112.24254382636411"
       width="4.468152866242038"
       height="147.7574561736359"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Dec 15, 2025: 16.2K lines (30 commits)</title>
     </rect>
@@ -1837,9 +1837,9 @@
       y="-676.2404189117401"
       width="4.468152866242038"
       height="936.2404189117401"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Dec 22, 2025: 102.8K lines (15 commits)</title>
     </rect>
@@ -1848,7 +1848,7 @@
       y="253.3065189345071"
       width="4.468152866242038"
       height="6.693481065492904"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1859,7 +1859,7 @@
       y="215.91409273734538"
       width="4.468152866242038"
       height="44.08590726265462"
-      fill="#E0E7FF"
+      fill="#DBEAFE"
       rx="1"
       
     >
@@ -1870,9 +1870,9 @@
       y="-63.13576686650987"
       width="4.468152866242038"
       height="323.13576686650987"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jan 12, 2026: 35.5K lines (82 commits)</title>
     </rect>
@@ -1881,9 +1881,9 @@
       y="20"
       width="4.468152866242038"
       height="240"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jan 19, 2026: 26.4K lines (96 commits)</title>
     </rect>
@@ -1892,9 +1892,9 @@
       y="-375.51643014343176"
       width="4.468152866242038"
       height="635.5164301434318"
-      fill="#4338CA"
+      fill="#1D4ED8"
       rx="1"
-      stroke="#312E81" stroke-width="0.5"
+      stroke="#1D4ED8" stroke-width="0.5"
     >
       <title>Week of Jan 26, 2026: 69.8K lines (205 commits)</title>
     </rect>
@@ -1905,7 +1905,7 @@
       x="60"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 60, 285)"
       text-anchor="end"
@@ -1914,7 +1914,7 @@
       x="99.7452229299363"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 99.7452229299363, 285)"
       text-anchor="end"
@@ -1923,7 +1923,7 @@
       x="139.4904458598726"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 139.4904458598726, 285)"
       text-anchor="end"
@@ -1932,7 +1932,7 @@
       x="179.23566878980893"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 179.23566878980893, 285)"
       text-anchor="end"
@@ -1941,7 +1941,7 @@
       x="218.98089171974522"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 218.98089171974522, 285)"
       text-anchor="end"
@@ -1950,7 +1950,7 @@
       x="258.7261146496815"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 258.7261146496815, 285)"
       text-anchor="end"
@@ -1959,7 +1959,7 @@
       x="298.47133757961785"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 298.47133757961785, 285)"
       text-anchor="end"
@@ -1968,7 +1968,7 @@
       x="338.21656050955414"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 338.21656050955414, 285)"
       text-anchor="end"
@@ -1977,7 +1977,7 @@
       x="377.96178343949043"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 377.96178343949043, 285)"
       text-anchor="end"
@@ -1986,7 +1986,7 @@
       x="417.7070063694267"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 417.7070063694267, 285)"
       text-anchor="end"
@@ -1995,7 +1995,7 @@
       x="457.452229299363"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 457.452229299363, 285)"
       text-anchor="end"
@@ -2004,7 +2004,7 @@
       x="497.19745222929936"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 497.19745222929936, 285)"
       text-anchor="end"
@@ -2013,7 +2013,7 @@
       x="536.9426751592357"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 536.9426751592357, 285)"
       text-anchor="end"
@@ -2022,7 +2022,7 @@
       x="576.687898089172"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 576.687898089172, 285)"
       text-anchor="end"
@@ -2031,7 +2031,7 @@
       x="616.4331210191083"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 616.4331210191083, 285)"
       text-anchor="end"
@@ -2040,7 +2040,7 @@
       x="656.1783439490446"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 656.1783439490446, 285)"
       text-anchor="end"
@@ -2049,7 +2049,7 @@
       x="695.9235668789809"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 695.9235668789809, 285)"
       text-anchor="end"
@@ -2058,7 +2058,7 @@
       x="735.6687898089172"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 735.6687898089172, 285)"
       text-anchor="end"
@@ -2067,7 +2067,7 @@
       x="775.4140127388534"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 775.4140127388534, 285)"
       text-anchor="end"
@@ -2076,7 +2076,7 @@
       x="815.1592356687897"
       y="285"
       font-size="10"
-      fill="#64748B"
+      fill="#9CA3AF"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
       transform="rotate(-45, 815.1592356687897, 285)"
       text-anchor="end"

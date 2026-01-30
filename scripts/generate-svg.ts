@@ -13,15 +13,18 @@ const CHART_MAX_HEIGHT = 240; // Allow overflow above CHART_TOP
 const SIDE_PADDING = 60; // More space for y-axis labels
 const LABEL_Y = 285; // Below the chart
 
-// Indigo color palette
+// Dark/light mode compatible color palette
 const COLORS = {
-  bg: '#FFFFFF',
-  text: '#1E293B',
-  textLight: '#64748B',
-  low: '#E0E7FF',
-  medium: '#A5B4FC',
-  high: '#6366F1',
-  peak: '#4338CA'
+  bg: 'transparent',
+  text: '#6B7280',        // Medium gray - works on both modes
+  textLight: '#9CA3AF',   // Light gray - works on both modes
+  overlay: '#94A3B8',     // Overlay text color
+  border: '#D1D5DB',      // Light border
+  gridLine: '#E5E7EB',    // Subtle grid
+  low: '#DBEAFE',         // Light blue
+  medium: '#93C5FD',      // Medium blue
+  high: '#3B82F6',        // Bright blue
+  peak: '#1D4ED8'         // Deep blue
 };
 
 function getBarColor(value: number, max: number): string {
@@ -55,8 +58,8 @@ function generateYAxisTicks(scaleMax: number, absoluteMax: number): string {
       y1="${y}"
       x2="${SVG_WIDTH - SIDE_PADDING}"
       y2="${y}"
-      stroke="${i === 0 ? '#CBD5E1' : '#F1F5F9'}"
-      stroke-width="${i === 0 ? '1' : '0.5'}"
+      stroke="${i === 0 ? COLORS.border : COLORS.gridLine}"
+      stroke-width="0.5"
       stroke-dasharray="${i === 0 ? '0' : '4 2'}"
     />
     <text
@@ -64,7 +67,7 @@ function generateYAxisTicks(scaleMax: number, absoluteMax: number): string {
       y="${y + 4}"
       text-anchor="end"
       font-size="10"
-      fill="#64748B"
+      fill="${COLORS.textLight}"
       font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     >${formatNumber(value)}</text>`;
   }
@@ -111,7 +114,7 @@ function generateSVG(data: WeeklyData[]): string {
       height="${barHeight}"
       fill="${finalColor}"
       rx="1"
-      ${isOverflow ? 'stroke="#312E81" stroke-width="0.5"' : ''}
+      ${isOverflow ? `stroke="${COLORS.peak}" stroke-width="0.5"` : ''}
     >
       <title>${tooltipText}</title>
     </rect>`;
@@ -181,24 +184,24 @@ function generateSVG(data: WeeklyData[]): string {
   <!-- Overlay content that bars will "break through" -->
   <g class="overlay-content" opacity="0.15">
     <!-- Repeating text pattern -->
-    <text x="100" y="-200" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="-200" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
       CODE CODE CODE CODE CODE
     </text>
-    <text x="100" y="-100" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="-100" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
       OVERFLOW OVERFLOW OVERFLOW
     </text>
-    <text x="100" y="0" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="0" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
       ERROR ERROR ERROR ERROR
     </text>
-    <text x="100" y="80" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+    <text x="100" y="80" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
       EXCEPTION EXCEPTION EXCEPTION
     </text>
     <!-- Decorative code symbols -->
-    <text x="50" y="-500" font-size="100" fill="#E2E8F0" font-family="monospace">{}</text>
-    <text x="700" y="-800" font-size="120" fill="#E2E8F0" font-family="monospace">[]</text>
-    <text x="400" y="-1200" font-size="100" fill="#E2E8F0" font-family="monospace">&lt;/&gt;</text>
-    <text x="200" y="-1500" font-size="90" fill="#E2E8F0" font-family="monospace">()</text>
-    <text x="600" y="-1800" font-size="110" fill="#E2E8F0" font-family="monospace">;</text>
+    <text x="50" y="-500" font-size="100" fill="${COLORS.overlay}" font-family="monospace">{}</text>
+    <text x="700" y="-800" font-size="120" fill="${COLORS.overlay}" font-family="monospace">[]</text>
+    <text x="400" y="-1200" font-size="100" fill="${COLORS.overlay}" font-family="monospace">&lt;/&gt;</text>
+    <text x="200" y="-1500" font-size="90" fill="${COLORS.overlay}" font-family="monospace">()</text>
+    <text x="600" y="-1800" font-size="110" fill="${COLORS.overlay}" font-family="monospace">;</text>
   </g>
 
   <text x="${SIDE_PADDING - 10}" y="200" text-anchor="end" class="axis-label">
@@ -212,8 +215,8 @@ function generateSVG(data: WeeklyData[]): string {
     width="${availableWidth}"
     height="${CHART_HEIGHT}"
     fill="none"
-    stroke="#E2E8F0"
-    stroke-width="1"
+    stroke="${COLORS.border}"
+    stroke-width="0.5"
     rx="2"
   />
 
