@@ -18,7 +18,6 @@ const COLORS = {
   bg: 'transparent',
   text: '#6B7280',        // Medium gray - works on both modes
   textLight: '#9CA3AF',   // Light gray - works on both modes
-  overlay: '#94A3B8',     // Overlay text color
   border: '#D1D5DB',      // Light border
   gridLine: '#E5E7EB',    // Subtle grid
   low: '#DBEAFE',         // Light blue
@@ -180,29 +179,6 @@ function generateSVG(data: WeeklyData[]): string {
   </style>
 
   <rect x="-10" y="${VIEWBOX_Y_START}" width="${SVG_WIDTH + 10}" height="${SVG_HEIGHT - VIEWBOX_Y_START}" fill="${COLORS.bg}"/>
-
-  <!-- Overlay content that bars will "break through" -->
-  <g class="overlay-content" opacity="0.15">
-    <!-- Repeating text pattern -->
-    <text x="100" y="-200" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
-      CODE CODE CODE CODE CODE
-    </text>
-    <text x="100" y="-100" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
-      OVERFLOW OVERFLOW OVERFLOW
-    </text>
-    <text x="100" y="0" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
-      ERROR ERROR ERROR ERROR
-    </text>
-    <text x="100" y="80" font-size="60" fill="${COLORS.overlay}" font-family="monospace" font-weight="bold">
-      EXCEPTION EXCEPTION EXCEPTION
-    </text>
-    <!-- Decorative code symbols -->
-    <text x="50" y="-500" font-size="100" fill="${COLORS.overlay}" font-family="monospace">{}</text>
-    <text x="700" y="-800" font-size="120" fill="${COLORS.overlay}" font-family="monospace">[]</text>
-    <text x="400" y="-1200" font-size="100" fill="${COLORS.overlay}" font-family="monospace">&lt;/&gt;</text>
-    <text x="200" y="-1500" font-size="90" fill="${COLORS.overlay}" font-family="monospace">()</text>
-    <text x="600" y="-1800" font-size="110" fill="${COLORS.overlay}" font-family="monospace">;</text>
-  </g>
 
   <text x="${SIDE_PADDING - 10}" y="200" text-anchor="end" class="axis-label">
     Lines Changed
