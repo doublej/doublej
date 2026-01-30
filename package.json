@@ -1,0 +1,22 @@
+{
+  "name": "doublej",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "date-fns": "^4.1.0",
+    "simple-git": "^3.30.0"
+  },
+  "scripts": {
+    "collect": "bun run scripts/collect-data.ts",
+    "generate": "bun run scripts/generate-svg.ts",
+    "update": "bun run collect && bun run generate"
+  }
+}

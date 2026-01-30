@@ -1,0 +1,1415 @@
+[
+  {
+    "weekStart": "2023-01-29T17:00:00.000Z",
+    "weekNumber": 5,
+    "year": 2023,
+    "linesAdded": 3144,
+    "linesDeleted": 6903,
+    "totalChanges": 10047,
+    "commitCount": 18
+  },
+  {
+    "weekStart": "2023-02-05T17:00:00.000Z",
+    "weekNumber": 6,
+    "year": 2023,
+    "linesAdded": 582,
+    "linesDeleted": 681,
+    "totalChanges": 1263,
+    "commitCount": 41
+  },
+  {
+    "weekStart": "2023-02-12T17:00:00.000Z",
+    "weekNumber": 7,
+    "year": 2023,
+    "linesAdded": 559,
+    "linesDeleted": 712,
+    "totalChanges": 1271,
+    "commitCount": 33
+  },
+  {
+    "weekStart": "2023-02-19T17:00:00.000Z",
+    "weekNumber": 8,
+    "year": 2023,
+    "linesAdded": 789,
+    "linesDeleted": 614,
+    "totalChanges": 1403,
+    "commitCount": 23
+  },
+  {
+    "weekStart": "2023-02-26T17:00:00.000Z",
+    "weekNumber": 9,
+    "year": 2023,
+    "linesAdded": 1864,
+    "linesDeleted": 1549,
+    "totalChanges": 3413,
+    "commitCount": 30
+  },
+  {
+    "weekStart": "2023-03-05T17:00:00.000Z",
+    "weekNumber": 10,
+    "year": 2023,
+    "linesAdded": 416,
+    "linesDeleted": 180,
+    "totalChanges": 596,
+    "commitCount": 20
+  },
+  {
+    "weekStart": "2023-03-12T17:00:00.000Z",
+    "weekNumber": 11,
+    "year": 2023,
+    "linesAdded": 1140,
+    "linesDeleted": 677,
+    "totalChanges": 1817,
+    "commitCount": 39
+  },
+  {
+    "weekStart": "2023-03-19T17:00:00.000Z",
+    "weekNumber": 12,
+    "year": 2023,
+    "linesAdded": 1780,
+    "linesDeleted": 1653,
+    "totalChanges": 3433,
+    "commitCount": 31
+  },
+  {
+    "weekStart": "2023-03-26T17:00:00.000Z",
+    "weekNumber": 13,
+    "year": 2023,
+    "linesAdded": 4595,
+    "linesDeleted": 53693,
+    "totalChanges": 58288,
+    "commitCount": 34
+  },
+  {
+    "weekStart": "2023-04-02T17:00:00.000Z",
+    "weekNumber": 14,
+    "year": 2023,
+    "linesAdded": 264,
+    "linesDeleted": 204,
+    "totalChanges": 468,
+    "commitCount": 20
+  },
+  {
+    "weekStart": "2023-04-09T17:00:00.000Z",
+    "weekNumber": 15,
+    "year": 2023,
+    "linesAdded": 1210,
+    "linesDeleted": 705,
+    "totalChanges": 1915,
+    "commitCount": 40
+  },
+  {
+    "weekStart": "2023-04-16T17:00:00.000Z",
+    "weekNumber": 16,
+    "year": 2023,
+    "linesAdded": 73,
+    "linesDeleted": 69,
+    "totalChanges": 142,
+    "commitCount": 5
+  },
+  {
+    "weekStart": "2023-04-23T17:00:00.000Z",
+    "weekNumber": 17,
+    "year": 2023,
+    "linesAdded": 21,
+    "linesDeleted": 9,
+    "totalChanges": 30,
+    "commitCount": 9
+  },
+  {
+    "weekStart": "2023-04-30T17:00:00.000Z",
+    "weekNumber": 18,
+    "year": 2023,
+    "linesAdded": 1472,
+    "linesDeleted": 400,
+    "totalChanges": 1872,
+    "commitCount": 9
+  },
+  {
+    "weekStart": "2023-05-07T17:00:00.000Z",
+    "weekNumber": 19,
+    "year": 2023,
+    "linesAdded": 876,
+    "linesDeleted": 855,
+    "totalChanges": 1731,
+    "commitCount": 17
+  },
+  {
+    "weekStart": "2023-05-14T17:00:00.000Z",
+    "weekNumber": 20,
+    "year": 2023,
+    "linesAdded": 253,
+    "linesDeleted": 145,
+    "totalChanges": 398,
+    "commitCount": 11
+  },
+  {
+    "weekStart": "2023-05-21T17:00:00.000Z",
+    "weekNumber": 21,
+    "year": 2023,
+    "linesAdded": 913,
+    "linesDeleted": 558,
+    "totalChanges": 1471,
+    "commitCount": 14
+  },
+  {
+    "weekStart": "2023-05-28T17:00:00.000Z",
+    "weekNumber": 22,
+    "year": 2023,
+    "linesAdded": 807,
+    "linesDeleted": 516,
+    "totalChanges": 1323,
+    "commitCount": 16
+  },
+  {
+    "weekStart": "2023-06-04T17:00:00.000Z",
+    "weekNumber": 23,
+    "year": 2023,
+    "linesAdded": 131,
+    "linesDeleted": 96,
+    "totalChanges": 227,
+    "commitCount": 8
+  },
+  {
+    "weekStart": "2023-06-11T17:00:00.000Z",
+    "weekNumber": 24,
+    "year": 2023,
+    "linesAdded": 305,
+    "linesDeleted": 130,
+    "totalChanges": 435,
+    "commitCount": 12
+  },
+  {
+    "weekStart": "2023-06-18T17:00:00.000Z",
+    "weekNumber": 25,
+    "year": 2023,
+    "linesAdded": 2414,
+    "linesDeleted": 1471,
+    "totalChanges": 3885,
+    "commitCount": 26
+  },
+  {
+    "weekStart": "2023-06-25T17:00:00.000Z",
+    "weekNumber": 26,
+    "year": 2023,
+    "linesAdded": 171,
+    "linesDeleted": 200,
+    "totalChanges": 371,
+    "commitCount": 9
+  },
+  {
+    "weekStart": "2023-07-02T17:00:00.000Z",
+    "weekNumber": 27,
+    "year": 2023,
+    "linesAdded": 906,
+    "linesDeleted": 675,
+    "totalChanges": 1581,
+    "commitCount": 17
+  },
+  {
+    "weekStart": "2023-07-09T17:00:00.000Z",
+    "weekNumber": 28,
+    "year": 2023,
+    "linesAdded": 1758,
+    "linesDeleted": 1409,
+    "totalChanges": 3167,
+    "commitCount": 27
+  },
+  {
+    "weekStart": "2023-07-16T17:00:00.000Z",
+    "weekNumber": 29,
+    "year": 2023,
+    "linesAdded": 59,
+    "linesDeleted": 69,
+    "totalChanges": 128,
+    "commitCount": 7
+  },
+  {
+    "weekStart": "2023-07-23T17:00:00.000Z",
+    "weekNumber": 30,
+    "year": 2023,
+    "linesAdded": 53,
+    "linesDeleted": 51,
+    "totalChanges": 104,
+    "commitCount": 2
+  },
+  {
+    "weekStart": "2023-07-30T17:00:00.000Z",
+    "weekNumber": 31,
+    "year": 2023,
+    "linesAdded": 616,
+    "linesDeleted": 584,
+    "totalChanges": 1200,
+    "commitCount": 12
+  },
+  {
+    "weekStart": "2023-08-06T17:00:00.000Z",
+    "weekNumber": 32,
+    "year": 2023,
+    "linesAdded": 1983,
+    "linesDeleted": 1684,
+    "totalChanges": 3667,
+    "commitCount": 12
+  },
+  {
+    "weekStart": "2023-08-13T17:00:00.000Z",
+    "weekNumber": 33,
+    "year": 2023,
+    "linesAdded": 2109,
+    "linesDeleted": 1563,
+    "totalChanges": 3672,
+    "commitCount": 20
+  },
+  {
+    "weekStart": "2023-08-20T17:00:00.000Z",
+    "weekNumber": 34,
+    "year": 2023,
+    "linesAdded": 460,
+    "linesDeleted": 370,
+    "totalChanges": 830,
+    "commitCount": 23
+  },
+  {
+    "weekStart": "2023-08-27T17:00:00.000Z",
+    "weekNumber": 35,
+    "year": 2023,
+    "linesAdded": 13182,
+    "linesDeleted": 8990,
+    "totalChanges": 22172,
+    "commitCount": 28
+  },
+  {
+    "weekStart": "2023-09-03T17:00:00.000Z",
+    "weekNumber": 36,
+    "year": 2023,
+    "linesAdded": 4049,
+    "linesDeleted": 3007,
+    "totalChanges": 7056,
+    "commitCount": 45
+  },
+  {
+    "weekStart": "2023-09-10T17:00:00.000Z",
+    "weekNumber": 37,
+    "year": 2023,
+    "linesAdded": 2028,
+    "linesDeleted": 652,
+    "totalChanges": 2680,
+    "commitCount": 22
+  },
+  {
+    "weekStart": "2023-09-17T17:00:00.000Z",
+    "weekNumber": 38,
+    "year": 2023,
+    "linesAdded": 192,
+    "linesDeleted": 61,
+    "totalChanges": 253,
+    "commitCount": 19
+  },
+  {
+    "weekStart": "2023-09-24T17:00:00.000Z",
+    "weekNumber": 39,
+    "year": 2023,
+    "linesAdded": 644,
+    "linesDeleted": 421,
+    "totalChanges": 1065,
+    "commitCount": 34
+  },
+  {
+    "weekStart": "2023-10-01T17:00:00.000Z",
+    "weekNumber": 40,
+    "year": 2023,
+    "linesAdded": 2832,
+    "linesDeleted": 1622,
+    "totalChanges": 4454,
+    "commitCount": 136
+  },
+  {
+    "weekStart": "2023-10-08T17:00:00.000Z",
+    "weekNumber": 41,
+    "year": 2023,
+    "linesAdded": 754,
+    "linesDeleted": 350,
+    "totalChanges": 1104,
+    "commitCount": 68
+  },
+  {
+    "weekStart": "2023-10-15T17:00:00.000Z",
+    "weekNumber": 42,
+    "year": 2023,
+    "linesAdded": 704,
+    "linesDeleted": 95,
+    "totalChanges": 799,
+    "commitCount": 34
+  },
+  {
+    "weekStart": "2023-10-22T17:00:00.000Z",
+    "weekNumber": 43,
+    "year": 2023,
+    "linesAdded": 169,
+    "linesDeleted": 15,
+    "totalChanges": 184,
+    "commitCount": 11
+  },
+  {
+    "weekStart": "2023-10-29T17:00:00.000Z",
+    "weekNumber": 44,
+    "year": 2023,
+    "linesAdded": 416,
+    "linesDeleted": 206,
+    "totalChanges": 622,
+    "commitCount": 16
+  },
+  {
+    "weekStart": "2023-11-05T17:00:00.000Z",
+    "weekNumber": 45,
+    "year": 2023,
+    "linesAdded": 8723,
+    "linesDeleted": 7221,
+    "totalChanges": 15944,
+    "commitCount": 64
+  },
+  {
+    "weekStart": "2023-11-12T17:00:00.000Z",
+    "weekNumber": 46,
+    "year": 2023,
+    "linesAdded": 117,
+    "linesDeleted": 783,
+    "totalChanges": 900,
+    "commitCount": 17
+  },
+  {
+    "weekStart": "2023-11-19T17:00:00.000Z",
+    "weekNumber": 47,
+    "year": 2023,
+    "linesAdded": 2173,
+    "linesDeleted": 1809,
+    "totalChanges": 3982,
+    "commitCount": 28
+  },
+  {
+    "weekStart": "2023-11-26T17:00:00.000Z",
+    "weekNumber": 48,
+    "year": 2023,
+    "linesAdded": 8047,
+    "linesDeleted": 5562,
+    "totalChanges": 13609,
+    "commitCount": 216
+  },
+  {
+    "weekStart": "2023-12-03T17:00:00.000Z",
+    "weekNumber": 49,
+    "year": 2023,
+    "linesAdded": 65,
+    "linesDeleted": 11,
+    "totalChanges": 76,
+    "commitCount": 84
+  },
+  {
+    "weekStart": "2023-12-10T17:00:00.000Z",
+    "weekNumber": 50,
+    "year": 2023,
+    "linesAdded": 249,
+    "linesDeleted": 142,
+    "totalChanges": 391,
+    "commitCount": 80
+  },
+  {
+    "weekStart": "2023-12-17T17:00:00.000Z",
+    "weekNumber": 51,
+    "year": 2023,
+    "linesAdded": 135,
+    "linesDeleted": 87,
+    "totalChanges": 222,
+    "commitCount": 37
+  },
+  {
+    "weekStart": "2023-12-24T17:00:00.000Z",
+    "weekNumber": 52,
+    "year": 2023,
+    "linesAdded": 3078,
+    "linesDeleted": 267,
+    "totalChanges": 3345,
+    "commitCount": 43
+  },
+  {
+    "weekStart": "2023-12-31T17:00:00.000Z",
+    "weekNumber": 1,
+    "year": 2024,
+    "linesAdded": 816,
+    "linesDeleted": 502,
+    "totalChanges": 1318,
+    "commitCount": 79
+  },
+  {
+    "weekStart": "2024-01-07T17:00:00.000Z",
+    "weekNumber": 2,
+    "year": 2024,
+    "linesAdded": 275,
+    "linesDeleted": 200,
+    "totalChanges": 475,
+    "commitCount": 47
+  },
+  {
+    "weekStart": "2024-01-14T17:00:00.000Z",
+    "weekNumber": 3,
+    "year": 2024,
+    "linesAdded": 788,
+    "linesDeleted": 391,
+    "totalChanges": 1179,
+    "commitCount": 41
+  },
+  {
+    "weekStart": "2024-01-21T17:00:00.000Z",
+    "weekNumber": 4,
+    "year": 2024,
+    "linesAdded": 33,
+    "linesDeleted": 9,
+    "totalChanges": 42,
+    "commitCount": 24
+  },
+  {
+    "weekStart": "2024-01-28T17:00:00.000Z",
+    "weekNumber": 5,
+    "year": 2024,
+    "linesAdded": 237,
+    "linesDeleted": 57,
+    "totalChanges": 294,
+    "commitCount": 28
+  },
+  {
+    "weekStart": "2024-02-04T17:00:00.000Z",
+    "weekNumber": 6,
+    "year": 2024,
+    "linesAdded": 2948,
+    "linesDeleted": 1169,
+    "totalChanges": 4117,
+    "commitCount": 22
+  },
+  {
+    "weekStart": "2024-02-11T17:00:00.000Z",
+    "weekNumber": 7,
+    "year": 2024,
+    "linesAdded": 1984,
+    "linesDeleted": 1165,
+    "totalChanges": 3149,
+    "commitCount": 53
+  },
+  {
+    "weekStart": "2024-02-18T17:00:00.000Z",
+    "weekNumber": 8,
+    "year": 2024,
+    "linesAdded": 3518,
+    "linesDeleted": 1445,
+    "totalChanges": 4963,
+    "commitCount": 53
+  },
+  {
+    "weekStart": "2024-02-25T17:00:00.000Z",
+    "weekNumber": 9,
+    "year": 2024,
+    "linesAdded": 724,
+    "linesDeleted": 469,
+    "totalChanges": 1193,
+    "commitCount": 48
+  },
+  {
+    "weekStart": "2024-03-03T17:00:00.000Z",
+    "weekNumber": 10,
+    "year": 2024,
+    "linesAdded": 1809,
+    "linesDeleted": 1497,
+    "totalChanges": 3306,
+    "commitCount": 22
+  },
+  {
+    "weekStart": "2024-03-10T17:00:00.000Z",
+    "weekNumber": 11,
+    "year": 2024,
+    "linesAdded": 1035,
+    "linesDeleted": 638,
+    "totalChanges": 1673,
+    "commitCount": 40
+  },
+  {
+    "weekStart": "2024-03-17T17:00:00.000Z",
+    "weekNumber": 12,
+    "year": 2024,
+    "linesAdded": 2403,
+    "linesDeleted": 794,
+    "totalChanges": 3197,
+    "commitCount": 29
+  },
+  {
+    "weekStart": "2024-03-24T17:00:00.000Z",
+    "weekNumber": 13,
+    "year": 2024,
+    "linesAdded": 961,
+    "linesDeleted": 10371,
+    "totalChanges": 11332,
+    "commitCount": 51
+  },
+  {
+    "weekStart": "2024-03-31T17:00:00.000Z",
+    "weekNumber": 14,
+    "year": 2024,
+    "linesAdded": 10932,
+    "linesDeleted": 885,
+    "totalChanges": 11817,
+    "commitCount": 34
+  },
+  {
+    "weekStart": "2024-04-07T17:00:00.000Z",
+    "weekNumber": 15,
+    "year": 2024,
+    "linesAdded": 320,
+    "linesDeleted": 157,
+    "totalChanges": 477,
+    "commitCount": 47
+  },
+  {
+    "weekStart": "2024-04-14T17:00:00.000Z",
+    "weekNumber": 16,
+    "year": 2024,
+    "linesAdded": 134,
+    "linesDeleted": 37,
+    "totalChanges": 171,
+    "commitCount": 15
+  },
+  {
+    "weekStart": "2024-04-21T17:00:00.000Z",
+    "weekNumber": 17,
+    "year": 2024,
+    "linesAdded": 870,
+    "linesDeleted": 356,
+    "totalChanges": 1226,
+    "commitCount": 21
+  },
+  {
+    "weekStart": "2024-04-28T17:00:00.000Z",
+    "weekNumber": 18,
+    "year": 2024,
+    "linesAdded": 166,
+    "linesDeleted": 160,
+    "totalChanges": 326,
+    "commitCount": 14
+  },
+  {
+    "weekStart": "2024-05-05T17:00:00.000Z",
+    "weekNumber": 19,
+    "year": 2024,
+    "linesAdded": 2983,
+    "linesDeleted": 2732,
+    "totalChanges": 5715,
+    "commitCount": 36
+  },
+  {
+    "weekStart": "2024-05-12T17:00:00.000Z",
+    "weekNumber": 20,
+    "year": 2024,
+    "linesAdded": 1666,
+    "linesDeleted": 954,
+    "totalChanges": 2620,
+    "commitCount": 21
+  },
+  {
+    "weekStart": "2024-05-19T17:00:00.000Z",
+    "weekNumber": 21,
+    "year": 2024,
+    "linesAdded": 2037,
+    "linesDeleted": 21067,
+    "totalChanges": 23104,
+    "commitCount": 56
+  },
+  {
+    "weekStart": "2024-05-26T17:00:00.000Z",
+    "weekNumber": 22,
+    "year": 2024,
+    "linesAdded": 1146,
+    "linesDeleted": 1293,
+    "totalChanges": 2439,
+    "commitCount": 59
+  },
+  {
+    "weekStart": "2024-06-02T17:00:00.000Z",
+    "weekNumber": 23,
+    "year": 2024,
+    "linesAdded": 20713,
+    "linesDeleted": 17158,
+    "totalChanges": 37871,
+    "commitCount": 57
+  },
+  {
+    "weekStart": "2024-06-09T17:00:00.000Z",
+    "weekNumber": 24,
+    "year": 2024,
+    "linesAdded": 166,
+    "linesDeleted": 154,
+    "totalChanges": 320,
+    "commitCount": 36
+  },
+  {
+    "weekStart": "2024-06-16T17:00:00.000Z",
+    "weekNumber": 25,
+    "year": 2024,
+    "linesAdded": 53,
+    "linesDeleted": 29,
+    "totalChanges": 82,
+    "commitCount": 23
+  },
+  {
+    "weekStart": "2024-06-23T17:00:00.000Z",
+    "weekNumber": 26,
+    "year": 2024,
+    "linesAdded": 178,
+    "linesDeleted": 423,
+    "totalChanges": 601,
+    "commitCount": 22
+  },
+  {
+    "weekStart": "2024-06-30T17:00:00.000Z",
+    "weekNumber": 27,
+    "year": 2024,
+    "linesAdded": 4369,
+    "linesDeleted": 37379,
+    "totalChanges": 41748,
+    "commitCount": 34
+  },
+  {
+    "weekStart": "2024-07-07T17:00:00.000Z",
+    "weekNumber": 28,
+    "year": 2024,
+    "linesAdded": 1621,
+    "linesDeleted": 1078,
+    "totalChanges": 2699,
+    "commitCount": 50
+  },
+  {
+    "weekStart": "2024-07-14T17:00:00.000Z",
+    "weekNumber": 29,
+    "year": 2024,
+    "linesAdded": 966,
+    "linesDeleted": 572,
+    "totalChanges": 1538,
+    "commitCount": 35
+  },
+  {
+    "weekStart": "2024-07-21T17:00:00.000Z",
+    "weekNumber": 30,
+    "year": 2024,
+    "linesAdded": 9271,
+    "linesDeleted": 404,
+    "totalChanges": 9675,
+    "commitCount": 54
+  },
+  {
+    "weekStart": "2024-07-28T17:00:00.000Z",
+    "weekNumber": 31,
+    "year": 2024,
+    "linesAdded": 1986,
+    "linesDeleted": 723,
+    "totalChanges": 2709,
+    "commitCount": 68
+  },
+  {
+    "weekStart": "2024-08-04T17:00:00.000Z",
+    "weekNumber": 32,
+    "year": 2024,
+    "linesAdded": 790,
+    "linesDeleted": 648,
+    "totalChanges": 1438,
+    "commitCount": 27
+  },
+  {
+    "weekStart": "2024-08-11T17:00:00.000Z",
+    "weekNumber": 33,
+    "year": 2024,
+    "linesAdded": 848,
+    "linesDeleted": 784,
+    "totalChanges": 1632,
+    "commitCount": 24
+  },
+  {
+    "weekStart": "2024-08-18T17:00:00.000Z",
+    "weekNumber": 34,
+    "year": 2024,
+    "linesAdded": 1434,
+    "linesDeleted": 560,
+    "totalChanges": 1994,
+    "commitCount": 13
+  },
+  {
+    "weekStart": "2024-08-25T17:00:00.000Z",
+    "weekNumber": 35,
+    "year": 2024,
+    "linesAdded": 2249,
+    "linesDeleted": 814,
+    "totalChanges": 3063,
+    "commitCount": 28
+  },
+  {
+    "weekStart": "2024-09-01T17:00:00.000Z",
+    "weekNumber": 36,
+    "year": 2024,
+    "linesAdded": 1202,
+    "linesDeleted": 650,
+    "totalChanges": 1852,
+    "commitCount": 38
+  },
+  {
+    "weekStart": "2024-09-08T17:00:00.000Z",
+    "weekNumber": 37,
+    "year": 2024,
+    "linesAdded": 699,
+    "linesDeleted": 543,
+    "totalChanges": 1242,
+    "commitCount": 29
+  },
+  {
+    "weekStart": "2024-09-15T17:00:00.000Z",
+    "weekNumber": 38,
+    "year": 2024,
+    "linesAdded": 2002,
+    "linesDeleted": 2112,
+    "totalChanges": 4114,
+    "commitCount": 91
+  },
+  {
+    "weekStart": "2024-09-22T17:00:00.000Z",
+    "weekNumber": 39,
+    "year": 2024,
+    "linesAdded": 3439,
+    "linesDeleted": 2229,
+    "totalChanges": 5668,
+    "commitCount": 44
+  },
+  {
+    "weekStart": "2024-09-29T17:00:00.000Z",
+    "weekNumber": 40,
+    "year": 2024,
+    "linesAdded": 2920,
+    "linesDeleted": 2810,
+    "totalChanges": 5730,
+    "commitCount": 61
+  },
+  {
+    "weekStart": "2024-10-06T17:00:00.000Z",
+    "weekNumber": 41,
+    "year": 2024,
+    "linesAdded": 5374,
+    "linesDeleted": 3225,
+    "totalChanges": 8599,
+    "commitCount": 48
+  },
+  {
+    "weekStart": "2024-10-13T17:00:00.000Z",
+    "weekNumber": 42,
+    "year": 2024,
+    "linesAdded": 2177,
+    "linesDeleted": 1982,
+    "totalChanges": 4159,
+    "commitCount": 88
+  },
+  {
+    "weekStart": "2024-10-20T17:00:00.000Z",
+    "weekNumber": 43,
+    "year": 2024,
+    "linesAdded": 849,
+    "linesDeleted": 21,
+    "totalChanges": 870,
+    "commitCount": 31
+  },
+  {
+    "weekStart": "2024-10-27T17:00:00.000Z",
+    "weekNumber": 44,
+    "year": 2024,
+    "linesAdded": 3228,
+    "linesDeleted": 1877,
+    "totalChanges": 5105,
+    "commitCount": 38
+  },
+  {
+    "weekStart": "2024-11-03T17:00:00.000Z",
+    "weekNumber": 45,
+    "year": 2024,
+    "linesAdded": 3923,
+    "linesDeleted": 1235,
+    "totalChanges": 5158,
+    "commitCount": 31
+  },
+  {
+    "weekStart": "2024-11-10T17:00:00.000Z",
+    "weekNumber": 46,
+    "year": 2024,
+    "linesAdded": 2739,
+    "linesDeleted": 2400,
+    "totalChanges": 5139,
+    "commitCount": 29
+  },
+  {
+    "weekStart": "2024-11-17T17:00:00.000Z",
+    "weekNumber": 47,
+    "year": 2024,
+    "linesAdded": 1554,
+    "linesDeleted": 18885,
+    "totalChanges": 20439,
+    "commitCount": 42
+  },
+  {
+    "weekStart": "2024-11-24T17:00:00.000Z",
+    "weekNumber": 48,
+    "year": 2024,
+    "linesAdded": 2010,
+    "linesDeleted": 2111,
+    "totalChanges": 4121,
+    "commitCount": 41
+  },
+  {
+    "weekStart": "2024-12-01T17:00:00.000Z",
+    "weekNumber": 49,
+    "year": 2024,
+    "linesAdded": 3823,
+    "linesDeleted": 8762,
+    "totalChanges": 12585,
+    "commitCount": 59
+  },
+  {
+    "weekStart": "2024-12-08T17:00:00.000Z",
+    "weekNumber": 50,
+    "year": 2024,
+    "linesAdded": 1920,
+    "linesDeleted": 552,
+    "totalChanges": 2472,
+    "commitCount": 44
+  },
+  {
+    "weekStart": "2024-12-15T17:00:00.000Z",
+    "weekNumber": 51,
+    "year": 2024,
+    "linesAdded": 3859,
+    "linesDeleted": 175,
+    "totalChanges": 4034,
+    "commitCount": 45
+  },
+  {
+    "weekStart": "2024-12-22T17:00:00.000Z",
+    "weekNumber": 52,
+    "year": 2024,
+    "linesAdded": 6458,
+    "linesDeleted": 670,
+    "totalChanges": 7128,
+    "commitCount": 60
+  },
+  {
+    "weekStart": "2024-12-29T17:00:00.000Z",
+    "weekNumber": 1,
+    "year": 2025,
+    "linesAdded": 1073,
+    "linesDeleted": 3516,
+    "totalChanges": 4589,
+    "commitCount": 30
+  },
+  {
+    "weekStart": "2025-01-05T17:00:00.000Z",
+    "weekNumber": 2,
+    "year": 2025,
+    "linesAdded": 2536,
+    "linesDeleted": 348,
+    "totalChanges": 2884,
+    "commitCount": 35
+  },
+  {
+    "weekStart": "2025-01-12T17:00:00.000Z",
+    "weekNumber": 3,
+    "year": 2025,
+    "linesAdded": 2271,
+    "linesDeleted": 911,
+    "totalChanges": 3182,
+    "commitCount": 75
+  },
+  {
+    "weekStart": "2025-01-19T17:00:00.000Z",
+    "weekNumber": 4,
+    "year": 2025,
+    "linesAdded": 1016,
+    "linesDeleted": 358,
+    "totalChanges": 1374,
+    "commitCount": 42
+  },
+  {
+    "weekStart": "2025-01-26T17:00:00.000Z",
+    "weekNumber": 5,
+    "year": 2025,
+    "linesAdded": 6442,
+    "linesDeleted": 706,
+    "totalChanges": 7148,
+    "commitCount": 71
+  },
+  {
+    "weekStart": "2025-02-02T17:00:00.000Z",
+    "weekNumber": 6,
+    "year": 2025,
+    "linesAdded": 195,
+    "linesDeleted": 482,
+    "totalChanges": 677,
+    "commitCount": 16
+  },
+  {
+    "weekStart": "2025-02-09T17:00:00.000Z",
+    "weekNumber": 7,
+    "year": 2025,
+    "linesAdded": 443,
+    "linesDeleted": 333,
+    "totalChanges": 776,
+    "commitCount": 26
+  },
+  {
+    "weekStart": "2025-02-16T17:00:00.000Z",
+    "weekNumber": 8,
+    "year": 2025,
+    "linesAdded": 2252,
+    "linesDeleted": 2794,
+    "totalChanges": 5046,
+    "commitCount": 38
+  },
+  {
+    "weekStart": "2025-02-23T17:00:00.000Z",
+    "weekNumber": 9,
+    "year": 2025,
+    "linesAdded": 2873,
+    "linesDeleted": 1581,
+    "totalChanges": 4454,
+    "commitCount": 78
+  },
+  {
+    "weekStart": "2025-03-02T17:00:00.000Z",
+    "weekNumber": 10,
+    "year": 2025,
+    "linesAdded": 3076,
+    "linesDeleted": 997,
+    "totalChanges": 4073,
+    "commitCount": 36
+  },
+  {
+    "weekStart": "2025-03-09T17:00:00.000Z",
+    "weekNumber": 11,
+    "year": 2025,
+    "linesAdded": 4000,
+    "linesDeleted": 714,
+    "totalChanges": 4714,
+    "commitCount": 98
+  },
+  {
+    "weekStart": "2025-03-16T17:00:00.000Z",
+    "weekNumber": 12,
+    "year": 2025,
+    "linesAdded": 1302,
+    "linesDeleted": 472,
+    "totalChanges": 1774,
+    "commitCount": 43
+  },
+  {
+    "weekStart": "2025-03-23T17:00:00.000Z",
+    "weekNumber": 13,
+    "year": 2025,
+    "linesAdded": 4703,
+    "linesDeleted": 1671,
+    "totalChanges": 6374,
+    "commitCount": 85
+  },
+  {
+    "weekStart": "2025-03-30T17:00:00.000Z",
+    "weekNumber": 14,
+    "year": 2025,
+    "linesAdded": 7007,
+    "linesDeleted": 1213,
+    "totalChanges": 8220,
+    "commitCount": 72
+  },
+  {
+    "weekStart": "2025-04-06T17:00:00.000Z",
+    "weekNumber": 15,
+    "year": 2025,
+    "linesAdded": 1830,
+    "linesDeleted": 246,
+    "totalChanges": 2076,
+    "commitCount": 54
+  },
+  {
+    "weekStart": "2025-04-13T17:00:00.000Z",
+    "weekNumber": 16,
+    "year": 2025,
+    "linesAdded": 2349,
+    "linesDeleted": 501,
+    "totalChanges": 2850,
+    "commitCount": 72
+  },
+  {
+    "weekStart": "2025-04-20T17:00:00.000Z",
+    "weekNumber": 17,
+    "year": 2025,
+    "linesAdded": 1619,
+    "linesDeleted": 32,
+    "totalChanges": 1651,
+    "commitCount": 48
+  },
+  {
+    "weekStart": "2025-04-27T17:00:00.000Z",
+    "weekNumber": 18,
+    "year": 2025,
+    "linesAdded": 880,
+    "linesDeleted": 492,
+    "totalChanges": 1372,
+    "commitCount": 22
+  },
+  {
+    "weekStart": "2025-05-04T17:00:00.000Z",
+    "weekNumber": 19,
+    "year": 2025,
+    "linesAdded": 1226,
+    "linesDeleted": 257,
+    "totalChanges": 1483,
+    "commitCount": 48
+  },
+  {
+    "weekStart": "2025-05-11T17:00:00.000Z",
+    "weekNumber": 20,
+    "year": 2025,
+    "linesAdded": 438,
+    "linesDeleted": 322,
+    "totalChanges": 760,
+    "commitCount": 25
+  },
+  {
+    "weekStart": "2025-05-18T17:00:00.000Z",
+    "weekNumber": 21,
+    "year": 2025,
+    "linesAdded": 4453,
+    "linesDeleted": 1392,
+    "totalChanges": 5845,
+    "commitCount": 42
+  },
+  {
+    "weekStart": "2025-05-25T17:00:00.000Z",
+    "weekNumber": 22,
+    "year": 2025,
+    "linesAdded": 2,
+    "linesDeleted": 2,
+    "totalChanges": 4,
+    "commitCount": 21
+  },
+  {
+    "weekStart": "2025-06-01T17:00:00.000Z",
+    "weekNumber": 23,
+    "year": 2025,
+    "linesAdded": 34215,
+    "linesDeleted": 18168,
+    "totalChanges": 52383,
+    "commitCount": 141
+  },
+  {
+    "weekStart": "2025-06-08T17:00:00.000Z",
+    "weekNumber": 24,
+    "year": 2025,
+    "linesAdded": 88853,
+    "linesDeleted": 34552,
+    "totalChanges": 123405,
+    "commitCount": 662
+  },
+  {
+    "weekStart": "2025-06-15T17:00:00.000Z",
+    "weekNumber": 25,
+    "year": 2025,
+    "linesAdded": 56451,
+    "linesDeleted": 27768,
+    "totalChanges": 84219,
+    "commitCount": 220
+  },
+  {
+    "weekStart": "2025-06-22T17:00:00.000Z",
+    "weekNumber": 26,
+    "year": 2025,
+    "linesAdded": 13149,
+    "linesDeleted": 3679,
+    "totalChanges": 16828,
+    "commitCount": 129
+  },
+  {
+    "weekStart": "2025-06-29T17:00:00.000Z",
+    "weekNumber": 27,
+    "year": 2025,
+    "linesAdded": 26864,
+    "linesDeleted": 4482,
+    "totalChanges": 31346,
+    "commitCount": 143
+  },
+  {
+    "weekStart": "2025-07-06T17:00:00.000Z",
+    "weekNumber": 28,
+    "year": 2025,
+    "linesAdded": 10494,
+    "linesDeleted": 6641,
+    "totalChanges": 17135,
+    "commitCount": 164
+  },
+  {
+    "weekStart": "2025-07-13T17:00:00.000Z",
+    "weekNumber": 29,
+    "year": 2025,
+    "linesAdded": 2393,
+    "linesDeleted": 1214,
+    "totalChanges": 3607,
+    "commitCount": 51
+  },
+  {
+    "weekStart": "2025-07-20T17:00:00.000Z",
+    "weekNumber": 30,
+    "year": 2025,
+    "linesAdded": 43907,
+    "linesDeleted": 24713,
+    "totalChanges": 68620,
+    "commitCount": 280
+  },
+  {
+    "weekStart": "2025-07-27T17:00:00.000Z",
+    "weekNumber": 31,
+    "year": 2025,
+    "linesAdded": 28307,
+    "linesDeleted": 3319,
+    "totalChanges": 31626,
+    "commitCount": 137
+  },
+  {
+    "weekStart": "2025-08-03T17:00:00.000Z",
+    "weekNumber": 32,
+    "year": 2025,
+    "linesAdded": 18567,
+    "linesDeleted": 20203,
+    "totalChanges": 38770,
+    "commitCount": 228
+  },
+  {
+    "weekStart": "2025-08-10T17:00:00.000Z",
+    "weekNumber": 33,
+    "year": 2025,
+    "linesAdded": 44569,
+    "linesDeleted": 11551,
+    "totalChanges": 56120,
+    "commitCount": 108
+  },
+  {
+    "weekStart": "2025-08-17T17:00:00.000Z",
+    "weekNumber": 34,
+    "year": 2025,
+    "linesAdded": 1715,
+    "linesDeleted": 1461,
+    "totalChanges": 3176,
+    "commitCount": 46
+  },
+  {
+    "weekStart": "2025-08-24T17:00:00.000Z",
+    "weekNumber": 35,
+    "year": 2025,
+    "linesAdded": 14265,
+    "linesDeleted": 4007,
+    "totalChanges": 18272,
+    "commitCount": 12
+  },
+  {
+    "weekStart": "2025-08-31T17:00:00.000Z",
+    "weekNumber": 36,
+    "year": 2025,
+    "linesAdded": 97703,
+    "linesDeleted": 299,
+    "totalChanges": 98002,
+    "commitCount": 20
+  },
+  {
+    "weekStart": "2025-09-07T17:00:00.000Z",
+    "weekNumber": 37,
+    "year": 2025,
+    "linesAdded": 8716,
+    "linesDeleted": 1530,
+    "totalChanges": 10246,
+    "commitCount": 10
+  },
+  {
+    "weekStart": "2025-09-14T17:00:00.000Z",
+    "weekNumber": 38,
+    "year": 2025,
+    "linesAdded": 43968,
+    "linesDeleted": 13258,
+    "totalChanges": 57226,
+    "commitCount": 139
+  },
+  {
+    "weekStart": "2025-09-21T17:00:00.000Z",
+    "weekNumber": 39,
+    "year": 2025,
+    "linesAdded": 34968,
+    "linesDeleted": 6099,
+    "totalChanges": 41067,
+    "commitCount": 112
+  },
+  {
+    "weekStart": "2025-09-28T17:00:00.000Z",
+    "weekNumber": 40,
+    "year": 2025,
+    "linesAdded": 15990,
+    "linesDeleted": 10853,
+    "totalChanges": 26843,
+    "commitCount": 252
+  },
+  {
+    "weekStart": "2025-10-05T17:00:00.000Z",
+    "weekNumber": 41,
+    "year": 2025,
+    "linesAdded": 13538,
+    "linesDeleted": 3219,
+    "totalChanges": 16757,
+    "commitCount": 196
+  },
+  {
+    "weekStart": "2025-10-12T17:00:00.000Z",
+    "weekNumber": 42,
+    "year": 2025,
+    "linesAdded": 1055,
+    "linesDeleted": 2128,
+    "totalChanges": 3183,
+    "commitCount": 38
+  },
+  {
+    "weekStart": "2025-10-19T17:00:00.000Z",
+    "weekNumber": 43,
+    "year": 2025,
+    "linesAdded": 34478,
+    "linesDeleted": 6680,
+    "totalChanges": 41158,
+    "commitCount": 175
+  },
+  {
+    "weekStart": "2025-10-26T17:00:00.000Z",
+    "weekNumber": 44,
+    "year": 2025,
+    "linesAdded": 8233,
+    "linesDeleted": 3495,
+    "totalChanges": 11728,
+    "commitCount": 76
+  },
+  {
+    "weekStart": "2025-11-02T17:00:00.000Z",
+    "weekNumber": 45,
+    "year": 2025,
+    "linesAdded": 24040,
+    "linesDeleted": 4948,
+    "totalChanges": 28988,
+    "commitCount": 123
+  },
+  {
+    "weekStart": "2025-11-09T17:00:00.000Z",
+    "weekNumber": 46,
+    "year": 2025,
+    "linesAdded": 38749,
+    "linesDeleted": 6328,
+    "totalChanges": 45077,
+    "commitCount": 52
+  },
+  {
+    "weekStart": "2025-11-16T17:00:00.000Z",
+    "weekNumber": 47,
+    "year": 2025,
+    "linesAdded": 22853,
+    "linesDeleted": 7305,
+    "totalChanges": 30158,
+    "commitCount": 77
+  },
+  {
+    "weekStart": "2025-11-23T17:00:00.000Z",
+    "weekNumber": 48,
+    "year": 2025,
+    "linesAdded": 18083,
+    "linesDeleted": 1743,
+    "totalChanges": 19826,
+    "commitCount": 26
+  },
+  {
+    "weekStart": "2025-11-30T17:00:00.000Z",
+    "weekNumber": 49,
+    "year": 2025,
+    "linesAdded": 12951,
+    "linesDeleted": 1930,
+    "totalChanges": 14881,
+    "commitCount": 21
+  },
+  {
+    "weekStart": "2025-12-07T17:00:00.000Z",
+    "weekNumber": 50,
+    "year": 2025,
+    "linesAdded": 155609,
+    "linesDeleted": 115518,
+    "totalChanges": 271127,
+    "commitCount": 98
+  },
+  {
+    "weekStart": "2025-12-14T17:00:00.000Z",
+    "weekNumber": 51,
+    "year": 2025,
+    "linesAdded": 14369,
+    "linesDeleted": 1856,
+    "totalChanges": 16225,
+    "commitCount": 30
+  },
+  {
+    "weekStart": "2025-12-21T17:00:00.000Z",
+    "weekNumber": 52,
+    "year": 2025,
+    "linesAdded": 50547,
+    "linesDeleted": 52260,
+    "totalChanges": 102807,
+    "commitCount": 15
+  },
+  {
+    "weekStart": "2025-12-28T17:00:00.000Z",
+    "weekNumber": 1,
+    "year": 2026,
+    "linesAdded": 729,
+    "linesDeleted": 6,
+    "totalChanges": 735,
+    "commitCount": 3
+  },
+  {
+    "weekStart": "2026-01-04T17:00:00.000Z",
+    "weekNumber": 2,
+    "year": 2026,
+    "linesAdded": 4217,
+    "linesDeleted": 624,
+    "totalChanges": 4841,
+    "commitCount": 16
+  },
+  {
+    "weekStart": "2026-01-11T17:00:00.000Z",
+    "weekNumber": 3,
+    "year": 2026,
+    "linesAdded": 30617,
+    "linesDeleted": 4866,
+    "totalChanges": 35483,
+    "commitCount": 82
+  },
+  {
+    "weekStart": "2026-01-18T17:00:00.000Z",
+    "weekNumber": 4,
+    "year": 2026,
+    "linesAdded": 20685,
+    "linesDeleted": 5669,
+    "totalChanges": 26354,
+    "commitCount": 96
+  },
+  {
+    "weekStart": "2026-01-25T17:00:00.000Z",
+    "weekNumber": 5,
+    "year": 2026,
+    "linesAdded": 51415,
+    "linesDeleted": 18370,
+    "totalChanges": 69785,
+    "commitCount": 205
+  }
+]

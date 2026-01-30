@@ -1,0 +1,2093 @@
+<svg viewBox="-10 -2300 910 2700" xmlns="http://www.w3.org/2000/svg" style="overflow: visible">
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      fill: #1E293B;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      fill: #64748B;
+    }
+    .note {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10px;
+      fill: #64748B;
+    }
+    .axis-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      fill: #1E293B;
+    }
+  </style>
+
+  <rect x="-10" y="-2300" width="910" height="2700" fill="#FFFFFF"/>
+
+  <!-- Overlay content that bars will "break through" -->
+  <g class="overlay-content" opacity="0.15">
+    <!-- Repeating text pattern -->
+    <text x="100" y="-200" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+      CODE CODE CODE CODE CODE
+    </text>
+    <text x="100" y="-100" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+      OVERFLOW OVERFLOW OVERFLOW
+    </text>
+    <text x="100" y="0" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+      ERROR ERROR ERROR ERROR
+    </text>
+    <text x="100" y="80" font-size="60" fill="#CBD5E1" font-family="monospace" font-weight="bold">
+      EXCEPTION EXCEPTION EXCEPTION
+    </text>
+    <!-- Decorative code symbols -->
+    <text x="50" y="-500" font-size="100" fill="#E2E8F0" font-family="monospace">{}</text>
+    <text x="700" y="-800" font-size="120" fill="#E2E8F0" font-family="monospace">[]</text>
+    <text x="400" y="-1200" font-size="100" fill="#E2E8F0" font-family="monospace">&lt;/&gt;</text>
+    <text x="200" y="-1500" font-size="90" fill="#E2E8F0" font-family="monospace">()</text>
+    <text x="600" y="-1800" font-size="110" fill="#E2E8F0" font-family="monospace">;</text>
+  </g>
+
+  <text x="50" y="200" text-anchor="end" class="axis-label">
+    Lines Changed
+  </text>
+
+  <!-- Chart container border -->
+  <rect
+    x="60"
+    y="140"
+    width="780"
+    height="120"
+    fill="none"
+    stroke="#E2E8F0"
+    stroke-width="1"
+    rx="2"
+  />
+
+  <g class="y-axis">
+    <line
+      x1="55"
+      y1="260"
+      x2="840"
+      y2="260"
+      stroke="#CBD5E1"
+      stroke-width="1"
+      stroke-dasharray="0"
+    />
+    <text
+      x="50"
+      y="264"
+      text-anchor="end"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    >0</text>
+    <line
+      x1="55"
+      y1="212"
+      x2="840"
+      y2="212"
+      stroke="#F1F5F9"
+      stroke-width="0.5"
+      stroke-dasharray="4 2"
+    />
+    <text
+      x="50"
+      y="216"
+      text-anchor="end"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    >5.3K</text>
+    <line
+      x1="55"
+      y1="164"
+      x2="840"
+      y2="164"
+      stroke="#F1F5F9"
+      stroke-width="0.5"
+      stroke-dasharray="4 2"
+    />
+    <text
+      x="50"
+      y="168"
+      text-anchor="end"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    >10.5K</text>
+    <line
+      x1="55"
+      y1="116"
+      x2="840"
+      y2="116"
+      stroke="#F1F5F9"
+      stroke-width="0.5"
+      stroke-dasharray="4 2"
+    />
+    <text
+      x="50"
+      y="120"
+      text-anchor="end"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    >15.8K</text>
+    <line
+      x1="55"
+      y1="68"
+      x2="840"
+      y2="68"
+      stroke="#F1F5F9"
+      stroke-width="0.5"
+      stroke-dasharray="4 2"
+    />
+    <text
+      x="50"
+      y="72"
+      text-anchor="end"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    >21.1K</text>
+    <line
+      x1="55"
+      y1="20"
+      x2="840"
+      y2="20"
+      stroke="#F1F5F9"
+      stroke-width="0.5"
+      stroke-dasharray="4 2"
+    />
+    <text
+      x="50"
+      y="24"
+      text-anchor="end"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    >26.4K</text>
+  </g>
+
+  <g class="bars">
+    <rect
+      x="60"
+      y="168.50421188434393"
+      width="4.468152866242038"
+      height="91.49578811565607"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Jan 30, 2023: 10.0K lines (18 commits)</title>
+    </rect>
+    <rect
+      x="64.96815286624204"
+      y="248.49814069970404"
+      width="4.468152866242038"
+      height="11.501859300295969"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 6, 2023: 1.3K lines (41 commits)</title>
+    </rect>
+    <rect
+      x="69.93630573248407"
+      y="248.4252864840252"
+      width="4.468152866242038"
+      height="11.574713515974805"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 13, 2023: 1.3K lines (33 commits)</title>
+    </rect>
+    <rect
+      x="74.90445859872611"
+      y="247.22319192532444"
+      width="4.468152866242038"
+      height="12.776808074675571"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 20, 2023: 1.4K lines (23 commits)</title>
+    </rect>
+    <rect
+      x="79.87261146496814"
+      y="228.9185702360173"
+      width="4.468152866242038"
+      height="31.081429763982694"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 27, 2023: 3.4K lines (30 commits)</title>
+    </rect>
+    <rect
+      x="84.84076433121018"
+      y="254.57236093192685"
+      width="4.468152866242038"
+      height="5.427639068073158"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 6, 2023: 596 lines (20 commits)</title>
+    </rect>
+    <rect
+      x="89.80891719745223"
+      y="243.45298626394475"
+      width="4.468152866242038"
+      height="16.54701373605525"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 13, 2023: 1.8K lines (39 commits)</title>
+    </rect>
+    <rect
+      x="94.77707006369427"
+      y="228.73643469682023"
+      width="4.468152866242038"
+      height="31.26356530317978"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 20, 2023: 3.4K lines (31 commits)</title>
+    </rect>
+    <rect
+      x="99.7452229299363"
+      y="-270.8158154359869"
+      width="4.468152866242038"
+      height="530.8158154359869"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Mar 27, 2023: 58.3K lines (34 commits)</title>
+    </rect>
+    <rect
+      x="104.71337579617834"
+      y="255.7380283827882"
+      width="4.468152866242038"
+      height="4.261971617211809"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 3, 2023: 468 lines (20 commits)</title>
+    </rect>
+    <rect
+      x="109.68152866242038"
+      y="242.56052212187905"
+      width="4.468152866242038"
+      height="17.439477878120968"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 10, 2023: 1.9K lines (40 commits)</title>
+    </rect>
+    <rect
+      x="114.64968152866243"
+      y="258.70683767170067"
+      width="4.468152866242038"
+      height="1.2931623282993094"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 17, 2023: 142 lines (5 commits)</title>
+    </rect>
+    <rect
+      x="119.61783439490446"
+      y="259.72679669120436"
+      width="4.468152866242038"
+      height="0.27320330879562876"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 24, 2023: 30 lines (9 commits)</title>
+    </rect>
+    <rect
+      x="124.5859872611465"
+      y="242.95211353115278"
+      width="4.468152866242038"
+      height="17.047886468847235"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 1, 2023: 1.9K lines (9 commits)</title>
+    </rect>
+    <rect
+      x="129.55414012738854"
+      y="244.2361690824922"
+      width="4.468152866242038"
+      height="15.763830917507779"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 8, 2023: 1.7K lines (17 commits)</title>
+    </rect>
+    <rect
+      x="134.52229299363057"
+      y="256.37550276997797"
+      width="4.468152866242038"
+      height="3.624497230022008"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 15, 2023: 398 lines (11 commits)</title>
+    </rect>
+    <rect
+      x="139.4904458598726"
+      y="246.60393109205432"
+      width="4.468152866242038"
+      height="13.396068907945663"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 22, 2023: 1.5K lines (14 commits)</title>
+    </rect>
+    <rect
+      x="144.45859872611464"
+      y="247.95173408211278"
+      width="4.468152866242038"
+      height="12.048265917887226"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 29, 2023: 1.3K lines (16 commits)</title>
+    </rect>
+    <rect
+      x="149.42675159235668"
+      y="257.9327616301131"
+      width="4.468152866242038"
+      height="2.0672383698869243"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 5, 2023: 227 lines (8 commits)</title>
+    </rect>
+    <rect
+      x="154.39490445859872"
+      y="256.03855202246336"
+      width="4.468152866242038"
+      height="3.961447977536617"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 12, 2023: 435 lines (12 commits)</title>
+    </rect>
+    <rect
+      x="159.36305732484075"
+      y="224.6201715109661"
+      width="4.468152866242038"
+      height="35.379828489033926"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 19, 2023: 3.9K lines (26 commits)</title>
+    </rect>
+    <rect
+      x="164.3312101910828"
+      y="256.62138574789407"
+      width="4.468152866242038"
+      height="3.378614252105942"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 26, 2023: 371 lines (9 commits)</title>
+    </rect>
+    <rect
+      x="169.29936305732485"
+      y="245.60218562647037"
+      width="4.468152866242038"
+      height="14.397814373529634"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 3, 2023: 1.6K lines (17 commits)</title>
+    </rect>
+    <rect
+      x="174.26751592356686"
+      y="231.15883736814146"
+      width="4.468152866242038"
+      height="28.84116263185854"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 10, 2023: 3.2K lines (27 commits)</title>
+    </rect>
+    <rect
+      x="179.23566878980893"
+      y="258.83433254913865"
+      width="4.468152866242038"
+      height="1.1656674508613494"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 17, 2023: 128 lines (7 commits)</title>
+    </rect>
+    <rect
+      x="184.20382165605093"
+      y="259.05289519617514"
+      width="4.468152866242038"
+      height="0.9471048038248463"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 24, 2023: 104 lines (2 commits)</title>
+    </rect>
+    <rect
+      x="189.171974522293"
+      y="249.07186764817484"
+      width="4.468152866242038"
+      height="10.92813235182515"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 31, 2023: 1.2K lines (12 commits)</title>
+    </rect>
+    <rect
+      x="194.14012738853503"
+      y="226.6054488882143"
+      width="4.468152866242038"
+      height="33.39455111178569"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 7, 2023: 3.7K lines (12 commits)</title>
+    </rect>
+    <rect
+      x="199.10828025477707"
+      y="226.55991500341503"
+      width="4.468152866242038"
+      height="33.44008499658496"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 14, 2023: 3.7K lines (20 commits)</title>
+    </rect>
+    <rect
+      x="204.0764331210191"
+      y="252.44137512332094"
+      width="4.468152866242038"
+      height="7.558624876679063"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 21, 2023: 830 lines (23 commits)</title>
+    </rect>
+    <rect
+      x="209.04458598726114"
+      y="58.08454124611063"
+      width="4.468152866242038"
+      height="201.91545875388937"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Aug 28, 2023: 22.2K lines (28 commits)</title>
+    </rect>
+    <rect
+      x="214.01273885350318"
+      y="195.74258177126814"
+      width="4.468152866242038"
+      height="64.25741822873188"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Sep 4, 2023: 7.1K lines (45 commits)</title>
+    </rect>
+    <rect
+      x="218.98089171974522"
+      y="235.5938377475905"
+      width="4.468152866242038"
+      height="24.4061622524095"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 11, 2023: 2.7K lines (22 commits)</title>
+    </rect>
+    <rect
+      x="223.94904458598725"
+      y="257.69598542915685"
+      width="4.468152866242038"
+      height="2.3040145708431354"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 18, 2023: 253 lines (19 commits)</title>
+    </rect>
+    <rect
+      x="228.9171974522293"
+      y="250.30128253775518"
+      width="4.468152866242038"
+      height="9.69871746224482"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 25, 2023: 1.1K lines (34 commits)</title>
+    </rect>
+    <rect
+      x="233.88535031847132"
+      y="219.43841542080898"
+      width="4.468152866242038"
+      height="40.56158457919102"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 2, 2023: 4.5K lines (136 commits)</title>
+    </rect>
+    <rect
+      x="238.85350318471336"
+      y="249.94611823632087"
+      width="4.468152866242038"
+      height="10.053881763679138"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 9, 2023: 1.1K lines (68 commits)</title>
+    </rect>
+    <rect
+      x="243.8216560509554"
+      y="252.72368520907642"
+      width="4.468152866242038"
+      height="7.276314790923579"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 16, 2023: 799 lines (34 commits)</title>
+    </rect>
+    <rect
+      x="248.78980891719743"
+      y="258.32435303938684"
+      width="4.468152866242038"
+      height="1.6756469606131896"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 23, 2023: 184 lines (11 commits)</title>
+    </rect>
+    <rect
+      x="253.75796178343947"
+      y="254.33558473097062"
+      width="4.468152866242038"
+      height="5.664415269029369"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 30, 2023: 622 lines (16 commits)</title>
+    </rect>
+    <rect
+      x="258.7261146496815"
+      y="114.80154815208317"
+      width="4.468152866242038"
+      height="145.19845184791683"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 6, 2023: 15.9K lines (64 commits)</title>
+    </rect>
+    <rect
+      x="263.69426751592357"
+      y="251.80390073613114"
+      width="4.468152866242038"
+      height="8.196099263868863"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Nov 13, 2023: 900 lines (17 commits)</title>
+    </rect>
+    <rect
+      x="268.6624203821656"
+      y="223.73681414586022"
+      width="4.468152866242038"
+      height="36.263185854139785"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Nov 20, 2023: 4.0K lines (28 commits)</title>
+    </rect>
+    <rect
+      x="273.63057324840764"
+      y="136.06587235334294"
+      width="4.468152866242038"
+      height="123.93412764665706"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 27, 2023: 13.6K lines (216 commits)</title>
+    </rect>
+    <rect
+      x="278.5987261146497"
+      y="259.30788495105105"
+      width="4.468152866242038"
+      height="0.6921150489489262"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 4, 2023: 76 lines (84 commits)</title>
+    </rect>
+    <rect
+      x="283.5668789808917"
+      y="256.439250208697"
+      width="4.468152866242038"
+      height="3.560749791303028"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 11, 2023: 391 lines (80 commits)</title>
+    </rect>
+    <rect
+      x="288.5350318471337"
+      y="257.97829551491236"
+      width="4.468152866242038"
+      height="2.021704485087653"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 18, 2023: 222 lines (37 commits)</title>
+    </rect>
+    <rect
+      x="293.5031847133758"
+      y="229.5378310692874"
+      width="4.468152866242038"
+      height="30.462168930712608"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 25, 2023: 3.3K lines (43 commits)</title>
+    </rect>
+    <rect
+      x="298.47133757961785"
+      y="247.99726796691203"
+      width="4.468152866242038"
+      height="12.002732033087955"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 1, 2024: 1.3K lines (79 commits)</title>
+    </rect>
+    <rect
+      x="303.43949044585986"
+      y="255.6742809440692"
+      width="4.468152866242038"
+      height="4.325719055930788"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 8, 2024: 475 lines (47 commits)</title>
+    </rect>
+    <rect
+      x="308.40764331210187"
+      y="249.2631099643318"
+      width="4.468152866242038"
+      height="10.73689003566821"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 15, 2024: 1.2K lines (41 commits)</title>
+    </rect>
+    <rect
+      x="313.37579617834393"
+      y="259.6175153676861"
+      width="4.468152866242038"
+      height="0.38248463231388025"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 22, 2024: 42 lines (24 commits)</title>
+    </rect>
+    <rect
+      x="318.343949044586"
+      y="257.3226075738028"
+      width="4.468152866242038"
+      height="2.677392426197162"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 29, 2024: 294 lines (28 commits)</title>
+    </rect>
+    <rect
+      x="323.312101910828"
+      y="222.50739925627988"
+      width="4.468152866242038"
+      height="37.49260074372012"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 5, 2024: 4.1K lines (22 commits)</title>
+    </rect>
+    <rect
+      x="328.28025477707007"
+      y="231.32275935341883"
+      width="4.468152866242038"
+      height="28.677240646581165"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 12, 2024: 3.1K lines (53 commits)</title>
+    </rect>
+    <rect
+      x="333.2484076433121"
+      y="214.80306594824316"
+      width="4.468152866242038"
+      height="45.196934051756855"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 19, 2024: 5.0K lines (53 commits)</title>
+    </rect>
+    <rect
+      x="338.21656050955414"
+      y="249.13561508689384"
+      width="4.468152866242038"
+      height="10.86438491310617"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 26, 2024: 1.2K lines (48 commits)</title>
+    </rect>
+    <rect
+      x="343.18471337579615"
+      y="229.8929953707217"
+      width="4.468152866242038"
+      height="30.10700462927829"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 4, 2024: 3.3K lines (22 commits)</title>
+    </rect>
+    <rect
+      x="348.1528662420382"
+      y="244.76436214616376"
+      width="4.468152866242038"
+      height="15.23563785383623"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 11, 2024: 1.7K lines (40 commits)</title>
+    </rect>
+    <rect
+      x="353.1210191082802"
+      y="230.88563405934582"
+      width="4.468152866242038"
+      height="29.11436594065417"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 18, 2024: 3.2K lines (29 commits)</title>
+    </rect>
+    <rect
+      x="358.0891719745223"
+      y="156.80200349093116"
+      width="4.468152866242038"
+      height="103.19799650906883"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Mar 25, 2024: 11.3K lines (51 commits)</title>
+    </rect>
+    <rect
+      x="363.0573248407643"
+      y="152.38521666540183"
+      width="4.468152866242038"
+      height="107.61478333459817"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Apr 1, 2024: 11.8K lines (34 commits)</title>
+    </rect>
+    <rect
+      x="368.02547770700636"
+      y="255.6560673901495"
+      width="4.468152866242038"
+      height="4.343932609850497"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 8, 2024: 477 lines (47 commits)</title>
+    </rect>
+    <rect
+      x="372.99363057324837"
+      y="258.4427411398649"
+      width="4.468152866242038"
+      height="1.5572588601350839"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 15, 2024: 171 lines (15 commits)</title>
+    </rect>
+    <rect
+      x="377.96178343949043"
+      y="248.83509144721864"
+      width="4.468152866242038"
+      height="11.164908552781363"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 22, 2024: 1.2K lines (21 commits)</title>
+    </rect>
+    <rect
+      x="382.9299363057325"
+      y="257.0311907110875"
+      width="4.468152866242038"
+      height="2.968809288912499"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 29, 2024: 326 lines (14 commits)</title>
+    </rect>
+    <rect
+      x="387.8980891719745"
+      y="207.95476967443273"
+      width="4.468152866242038"
+      height="52.045230325567275"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 6, 2024: 5.7K lines (36 commits)</title>
+    </rect>
+    <rect
+      x="392.86624203821657"
+      y="236.14024436518176"
+      width="4.468152866242038"
+      height="23.859755634818242"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 13, 2024: 2.6K lines (21 commits)</title>
+    </rect>
+    <rect
+      x="397.8343949044586"
+      y="49.59702511952645"
+      width="4.468152866242038"
+      height="210.40297488047355"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of May 20, 2024: 23.1K lines (56 commits)</title>
+    </rect>
+    <rect
+      x="402.80254777070064"
+      y="237.78857099491537"
+      width="4.468152866242038"
+      height="22.211429005084618"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 27, 2024: 2.4K lines (59 commits)</title>
+    </rect>
+    <rect
+      x="407.77070063694265"
+      y="-84.88275024664188"
+      width="4.468152866242038"
+      height="344.8827502466419"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jun 3, 2024: 37.9K lines (57 commits)</title>
+    </rect>
+    <rect
+      x="412.7388535031847"
+      y="257.0858313728466"
+      width="4.468152866242038"
+      height="2.9141686271533733"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 10, 2024: 320 lines (36 commits)</title>
+    </rect>
+    <rect
+      x="417.7070063694267"
+      y="259.25324428929196"
+      width="4.468152866242038"
+      height="0.7467557107080519"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 17, 2024: 82 lines (23 commits)</title>
+    </rect>
+    <rect
+      x="422.6751592356688"
+      y="254.52682704712757"
+      width="4.468152866242038"
+      height="5.47317295287243"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jun 24, 2024: 601 lines (22 commits)</title>
+    </rect>
+    <rect
+      x="427.6433121019108"
+      y="-120.18972451999696"
+      width="4.468152866242038"
+      height="380.18972451999696"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jul 1, 2024: 41.7K lines (34 commits)</title>
+    </rect>
+    <rect
+      x="432.61146496815286"
+      y="235.42080898535326"
+      width="4.468152866242038"
+      height="24.579191014646735"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 8, 2024: 2.7K lines (50 commits)</title>
+    </rect>
+    <rect
+      x="437.57961783439487"
+      y="245.9937770357441"
+      width="4.468152866242038"
+      height="14.006222964255901"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 15, 2024: 1.5K lines (35 commits)</title>
+    </rect>
+    <rect
+      x="442.54777070063693"
+      y="171.89193291340973"
+      width="4.468152866242038"
+      height="88.10806708659027"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Jul 22, 2024: 9.7K lines (54 commits)</title>
+    </rect>
+    <rect
+      x="447.51592356687894"
+      y="235.32974121575472"
+      width="4.468152866242038"
+      height="24.670258784245277"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 29, 2024: 2.7K lines (68 commits)</title>
+    </rect>
+    <rect
+      x="452.484076433121"
+      y="246.90445473172952"
+      width="4.468152866242038"
+      height="13.095545268270472"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 5, 2024: 1.4K lines (27 commits)</title>
+    </rect>
+    <rect
+      x="457.452229299363"
+      y="245.13774000151778"
+      width="4.468152866242038"
+      height="14.862259998482203"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 12, 2024: 1.6K lines (24 commits)</title>
+    </rect>
+    <rect
+      x="462.4203821656051"
+      y="241.84108674205055"
+      width="4.468152866242038"
+      height="18.158913257949457"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 19, 2024: 2.0K lines (13 commits)</title>
+    </rect>
+    <rect
+      x="467.38853503184714"
+      y="232.10594217196632"
+      width="4.468152866242038"
+      height="27.894057828033695"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 26, 2024: 3.1K lines (28 commits)</title>
+    </rect>
+    <rect
+      x="472.35668789808915"
+      y="243.13424907034985"
+      width="4.468152866242038"
+      height="16.86575092965015"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 2, 2024: 1.9K lines (38 commits)</title>
+    </rect>
+    <rect
+      x="477.3248407643312"
+      y="248.68938301586098"
+      width="4.468152866242038"
+      height="11.310616984139031"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 9, 2024: 1.2K lines (29 commits)</title>
+    </rect>
+    <rect
+      x="482.2929936305732"
+      y="222.53471958715943"
+      width="4.468152866242038"
+      height="37.465280412840556"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 16, 2024: 4.1K lines (91 commits)</title>
+    </rect>
+    <rect
+      x="487.2611464968153"
+      y="208.38278819154587"
+      width="4.468152866242038"
+      height="51.61721180845413"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 23, 2024: 5.7K lines (44 commits)</title>
+    </rect>
+    <rect
+      x="492.2292993630573"
+      y="207.8181680200349"
+      width="4.468152866242038"
+      height="52.18183197996509"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Sep 30, 2024: 5.7K lines (61 commits)</title>
+    </rect>
+    <rect
+      x="497.19745222929936"
+      y="181.69082492221293"
+      width="4.468152866242038"
+      height="78.30917507778706"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Oct 7, 2024: 8.6K lines (48 commits)</title>
+    </rect>
+    <rect
+      x="502.16560509554137"
+      y="222.124914623966"
+      width="4.468152866242038"
+      height="37.875085376034"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 14, 2024: 4.2K lines (88 commits)</title>
+    </rect>
+    <rect
+      x="507.13375796178343"
+      y="252.07710404492676"
+      width="4.468152866242038"
+      height="7.922895955073234"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 21, 2024: 870 lines (31 commits)</title>
+    </rect>
+    <rect
+      x="512.1019108280254"
+      y="213.50990361994383"
+      width="4.468152866242038"
+      height="46.49009638005616"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 28, 2024: 5.1K lines (38 commits)</title>
+    </rect>
+    <rect
+      x="517.0700636942674"
+      y="213.02724444107156"
+      width="4.468152866242038"
+      height="46.97275555892844"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Nov 4, 2024: 5.2K lines (31 commits)</title>
+    </rect>
+    <rect
+      x="522.0382165605095"
+      y="213.2002732033088"
+      width="4.468152866242038"
+      height="46.7997267966912"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Nov 11, 2024: 5.1K lines (29 commits)</title>
+    </rect>
+    <rect
+      x="527.0063694267516"
+      y="73.86658571753816"
+      width="4.468152866242038"
+      height="186.13341428246184"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 18, 2024: 20.4K lines (42 commits)</title>
+    </rect>
+    <rect
+      x="531.9745222929936"
+      y="222.47097214844047"
+      width="4.468152866242038"
+      height="37.52902785155953"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Nov 25, 2024: 4.1K lines (41 commits)</title>
+    </rect>
+    <rect
+      x="536.9426751592357"
+      y="145.39121196023373"
+      width="4.468152866242038"
+      height="114.60878803976627"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Dec 2, 2024: 12.6K lines (59 commits)</title>
+    </rect>
+    <rect
+      x="541.9108280254777"
+      y="237.48804735524018"
+      width="4.468152866242038"
+      height="22.51195264475981"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 9, 2024: 2.5K lines (44 commits)</title>
+    </rect>
+    <rect
+      x="546.8789808917197"
+      y="223.2632617439478"
+      width="4.468152866242038"
+      height="36.73673825605221"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 16, 2024: 4.0K lines (45 commits)</title>
+    </rect>
+    <rect
+      x="551.8471337579617"
+      y="195.0868938301586"
+      width="4.468152866242038"
+      height="64.9131061698414"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Dec 23, 2024: 7.1K lines (60 commits)</title>
+    </rect>
+    <rect
+      x="556.8152866242037"
+      y="218.20900053122864"
+      width="4.468152866242038"
+      height="41.790999468771346"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 30, 2024: 4.6K lines (30 commits)</title>
+    </rect>
+    <rect
+      x="561.7834394904459"
+      y="233.73605524778023"
+      width="4.468152866242038"
+      height="26.26394475221978"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 6, 2025: 2.9K lines (35 commits)</title>
+    </rect>
+    <rect
+      x="566.7515923566879"
+      y="231.02223571374364"
+      width="4.468152866242038"
+      height="28.977764286256356"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 13, 2025: 3.2K lines (75 commits)</title>
+    </rect>
+    <rect
+      x="571.71974522293"
+      y="247.48728845716022"
+      width="4.468152866242038"
+      height="12.512711542839796"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 20, 2025: 1.4K lines (42 commits)</title>
+    </rect>
+    <rect
+      x="576.687898089172"
+      y="194.90475829096152"
+      width="4.468152866242038"
+      height="65.09524170903848"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Jan 27, 2025: 7.1K lines (71 commits)</title>
+    </rect>
+    <rect
+      x="581.656050955414"
+      y="253.83471199817865"
+      width="4.468152866242038"
+      height="6.165288001821355"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 3, 2025: 677 lines (16 commits)</title>
+    </rect>
+    <rect
+      x="586.624203821656"
+      y="252.93314107915307"
+      width="4.468152866242038"
+      height="7.06685892084693"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 10, 2025: 776 lines (26 commits)</title>
+    </rect>
+    <rect
+      x="591.592356687898"
+      y="214.04720346057525"
+      width="4.468152866242038"
+      height="45.95279653942475"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 17, 2025: 5.0K lines (38 commits)</title>
+    </rect>
+    <rect
+      x="596.5605095541401"
+      y="219.43841542080898"
+      width="4.468152866242038"
+      height="40.56158457919102"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Feb 24, 2025: 4.5K lines (78 commits)</title>
+    </rect>
+    <rect
+      x="601.5286624203821"
+      y="222.90809744251348"
+      width="4.468152866242038"
+      height="37.09190255748653"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 3, 2025: 4.1K lines (36 commits)</title>
+    </rect>
+    <rect
+      x="606.4968152866242"
+      y="217.07065341124687"
+      width="4.468152866242038"
+      height="42.929346588753134"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 10, 2025: 4.7K lines (98 commits)</title>
+    </rect>
+    <rect
+      x="611.4649681528662"
+      y="243.84457767321848"
+      width="4.468152866242038"
+      height="16.155422326781512"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 17, 2025: 1.8K lines (43 commits)</title>
+    </rect>
+    <rect
+      x="616.4331210191083"
+      y="201.95340365788874"
+      width="4.468152866242038"
+      height="58.04659634211126"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Mar 24, 2025: 6.4K lines (85 commits)</title>
+    </rect>
+    <rect
+      x="621.4012738853503"
+      y="185.14229338999772"
+      width="4.468152866242038"
+      height="74.85770661000228"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Mar 31, 2025: 8.2K lines (72 commits)</title>
+    </rect>
+    <rect
+      x="626.3694267515923"
+      y="241.0943310313425"
+      width="4.468152866242038"
+      height="18.90566896865751"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 7, 2025: 2.1K lines (54 commits)</title>
+    </rect>
+    <rect
+      x="631.3375796178344"
+      y="234.04568566441526"
+      width="4.468152866242038"
+      height="25.95431433558473"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 14, 2025: 2.9K lines (72 commits)</title>
+    </rect>
+    <rect
+      x="636.3057324840764"
+      y="244.96471123928058"
+      width="4.468152866242038"
+      height="15.035288760719435"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 21, 2025: 1.7K lines (48 commits)</title>
+    </rect>
+    <rect
+      x="641.2738853503184"
+      y="247.5055020110799"
+      width="4.468152866242038"
+      height="12.494497988920088"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Apr 28, 2025: 1.4K lines (22 commits)</title>
+    </rect>
+    <rect
+      x="646.2420382165604"
+      y="246.49464976853608"
+      width="4.468152866242038"
+      height="13.505350231463915"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 5, 2025: 1.5K lines (48 commits)</title>
+    </rect>
+    <rect
+      x="651.2101910828026"
+      y="253.07884951051074"
+      width="4.468152866242038"
+      height="6.9211504894892615"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 12, 2025: 760 lines (25 commits)</title>
+    </rect>
+    <rect
+      x="656.1783439490446"
+      y="206.77088866965167"
+      width="4.468152866242038"
+      height="53.22911133034833"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 19, 2025: 5.8K lines (42 commits)</title>
+    </rect>
+    <rect
+      x="661.1464968152866"
+      y="259.9635728921606"
+      width="4.468152866242038"
+      height="0.03642710783941717"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of May 26, 2025: 4 lines (21 commits)</title>
+    </rect>
+    <rect
+      x="666.1146496815286"
+      y="-217.04029748804737"
+      width="4.468152866242038"
+      height="477.0402974880474"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jun 2, 2025: 52.4K lines (141 commits)</title>
+    </rect>
+    <rect
+      x="671.0828025477707"
+      y="-863.8218107308189"
+      width="4.468152866242038"
+      height="1123.821810730819"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jun 9, 2025: 123.4K lines (662 commits)</title>
+    </rect>
+    <rect
+      x="676.0509554140127"
+      y="-506.9636487819686"
+      width="4.468152866242038"
+      height="766.9636487819686"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jun 16, 2025: 84.2K lines (220 commits)</title>
+    </rect>
+    <rect
+      x="681.0191082802547"
+      y="106.75115731957197"
+      width="4.468152866242038"
+      height="153.24884268042803"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jun 23, 2025: 16.8K lines (129 commits)</title>
+    </rect>
+    <rect
+      x="685.9872611464967"
+      y="-25.461030583592617"
+      width="4.468152866242038"
+      height="285.4610305835926"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jun 30, 2025: 31.3K lines (143 commits)</title>
+    </rect>
+    <rect
+      x="690.9554140127389"
+      y="103.95537679289671"
+      width="4.468152866242038"
+      height="156.04462320710329"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jul 7, 2025: 17.1K lines (164 commits)</title>
+    </rect>
+    <rect
+      x="695.9235668789809"
+      y="227.15185550580557"
+      width="4.468152866242038"
+      height="32.84814449419443"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jul 14, 2025: 3.6K lines (51 commits)</title>
+    </rect>
+    <rect
+      x="700.8917197452229"
+      y="-364.90703498520145"
+      width="4.468152866242038"
+      height="624.9070349852014"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jul 21, 2025: 68.6K lines (280 commits)</title>
+    </rect>
+    <rect
+      x="705.859872611465"
+      y="-28.010928132351808"
+      width="4.468152866242038"
+      height="288.0109281323518"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jul 28, 2025: 31.6K lines (137 commits)</title>
+    </rect>
+    <rect
+      x="710.828025477707"
+      y="-93.06974273355092"
+      width="4.468152866242038"
+      height="353.0697427335509"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Aug 4, 2025: 38.8K lines (228 commits)</title>
+    </rect>
+    <rect
+      x="715.796178343949"
+      y="-251.0723229870228"
+      width="4.468152866242038"
+      height="511.0723229870228"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Aug 11, 2025: 56.1K lines (108 commits)</title>
+    </rect>
+    <rect
+      x="720.764331210191"
+      y="231.07687637550276"
+      width="4.468152866242038"
+      height="28.92312362449723"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Aug 18, 2025: 3.2K lines (46 commits)</title>
+    </rect>
+    <rect
+      x="725.7324840764331"
+      y="93.60097138954237"
+      width="4.468152866242038"
+      height="166.39902861045763"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Aug 25, 2025: 18.3K lines (12 commits)</title>
+    </rect>
+    <rect
+      x="730.7006369426751"
+      y="-632.4823556196402"
+      width="4.468152866242038"
+      height="892.4823556196402"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Sep 1, 2025: 98.0K lines (20 commits)</title>
+    </rect>
+    <rect
+      x="735.6687898089172"
+      y="166.69196326933292"
+      width="4.468152866242038"
+      height="93.30803673066708"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Sep 8, 2025: 10.2K lines (10 commits)</title>
+    </rect>
+    <rect
+      x="740.6369426751592"
+      y="-261.1444183046217"
+      width="4.468152866242038"
+      height="521.1444183046217"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Sep 15, 2025: 57.2K lines (139 commits)</title>
+    </rect>
+    <rect
+      x="745.6050955414013"
+      y="-113.98800941033619"
+      width="4.468152866242038"
+      height="373.9880094103362"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Sep 22, 2025: 41.1K lines (112 commits)</title>
+    </rect>
+    <rect
+      x="750.5732484076433"
+      y="15.546786066631284"
+      width="4.468152866242038"
+      height="244.45321393336872"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Sep 29, 2025: 26.8K lines (252 commits)</title>
+    </rect>
+    <rect
+      x="755.5414012738853"
+      y="107.39773848372164"
+      width="4.468152866242038"
+      height="152.60226151627836"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Oct 6, 2025: 16.8K lines (196 commits)</title>
+    </rect>
+    <rect
+      x="760.5095541401273"
+      y="231.0131289367838"
+      width="4.468152866242038"
+      height="28.98687106321621"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Oct 13, 2025: 3.2K lines (38 commits)</title>
+    </rect>
+    <rect
+      x="765.4777070063694"
+      y="-114.81672611368293"
+      width="4.468152866242038"
+      height="374.81672611368293"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Oct 20, 2025: 41.2K lines (175 commits)</title>
+    </rect>
+    <rect
+      x="770.4458598726114"
+      y="153.19571981482886"
+      width="4.468152866242038"
+      height="106.80428018517114"
+      fill="#A5B4FC"
+      rx="1"
+      
+    >
+      <title>Week of Oct 27, 2025: 11.7K lines (76 commits)</title>
+    </rect>
+    <rect
+      x="775.4140127388534"
+      y="-3.987250512256196"
+      width="4.468152866242038"
+      height="263.9872505122562"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 3, 2025: 29.0K lines (123 commits)</title>
+    </rect>
+    <rect
+      x="780.3821656050956"
+      y="-150.5061850193519"
+      width="4.468152866242038"
+      height="410.5061850193519"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 10, 2025: 45.1K lines (52 commits)</title>
+    </rect>
+    <rect
+      x="785.3503184713376"
+      y="-14.642179555285736"
+      width="4.468152866242038"
+      height="274.64217955528574"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 17, 2025: 30.2K lines (77 commits)</title>
+    </rect>
+    <rect
+      x="790.3184713375796"
+      y="79.44903999392884"
+      width="4.468152866242038"
+      height="180.55096000607116"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Nov 24, 2025: 19.8K lines (26 commits)</title>
+    </rect>
+    <rect
+      x="795.2866242038216"
+      y="124.48205206040831"
+      width="4.468152866242038"
+      height="135.5179479395917"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Dec 1, 2025: 14.9K lines (21 commits)</title>
+    </rect>
+    <rect
+      x="800.2547770700637"
+      y="-2209.0931167944145"
+      width="4.468152866242038"
+      height="2469.0931167944145"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Dec 8, 2025: 271.1K lines (98 commits)</title>
+    </rect>
+    <rect
+      x="805.2229299363057"
+      y="112.24254382636411"
+      width="4.468152866242038"
+      height="147.7574561736359"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Dec 15, 2025: 16.2K lines (30 commits)</title>
+    </rect>
+    <rect
+      x="810.1910828025477"
+      y="-676.2404189117401"
+      width="4.468152866242038"
+      height="936.2404189117401"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Dec 22, 2025: 102.8K lines (15 commits)</title>
+    </rect>
+    <rect
+      x="815.1592356687897"
+      y="253.3065189345071"
+      width="4.468152866242038"
+      height="6.693481065492904"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Dec 29, 2025: 735 lines (3 commits)</title>
+    </rect>
+    <rect
+      x="820.1273885350319"
+      y="215.91409273734538"
+      width="4.468152866242038"
+      height="44.08590726265462"
+      fill="#E0E7FF"
+      rx="1"
+      
+    >
+      <title>Week of Jan 5, 2026: 4.8K lines (16 commits)</title>
+    </rect>
+    <rect
+      x="825.0955414012739"
+      y="-63.13576686650987"
+      width="4.468152866242038"
+      height="323.13576686650987"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jan 12, 2026: 35.5K lines (82 commits)</title>
+    </rect>
+    <rect
+      x="830.0636942675159"
+      y="20"
+      width="4.468152866242038"
+      height="240"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jan 19, 2026: 26.4K lines (96 commits)</title>
+    </rect>
+    <rect
+      x="835.0318471337579"
+      y="-375.51643014343176"
+      width="4.468152866242038"
+      height="635.5164301434318"
+      fill="#4338CA"
+      rx="1"
+      stroke="#312E81" stroke-width="0.5"
+    >
+      <title>Week of Jan 26, 2026: 69.8K lines (205 commits)</title>
+    </rect>
+  </g>
+
+  <g class="labels">
+    <text
+      x="60"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 60, 285)"
+      text-anchor="end"
+    >Jan 23</text>
+    <text
+      x="99.7452229299363"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 99.7452229299363, 285)"
+      text-anchor="end"
+    >Mar 23</text>
+    <text
+      x="139.4904458598726"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 139.4904458598726, 285)"
+      text-anchor="end"
+    >May 23</text>
+    <text
+      x="179.23566878980893"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 179.23566878980893, 285)"
+      text-anchor="end"
+    >Jul 23</text>
+    <text
+      x="218.98089171974522"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 218.98089171974522, 285)"
+      text-anchor="end"
+    >Sep 23</text>
+    <text
+      x="258.7261146496815"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 258.7261146496815, 285)"
+      text-anchor="end"
+    >Nov 23</text>
+    <text
+      x="298.47133757961785"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 298.47133757961785, 285)"
+      text-anchor="end"
+    >Jan 24</text>
+    <text
+      x="338.21656050955414"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 338.21656050955414, 285)"
+      text-anchor="end"
+    >Feb 24</text>
+    <text
+      x="377.96178343949043"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 377.96178343949043, 285)"
+      text-anchor="end"
+    >Apr 24</text>
+    <text
+      x="417.7070063694267"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 417.7070063694267, 285)"
+      text-anchor="end"
+    >Jun 24</text>
+    <text
+      x="457.452229299363"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 457.452229299363, 285)"
+      text-anchor="end"
+    >Aug 24</text>
+    <text
+      x="497.19745222929936"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 497.19745222929936, 285)"
+      text-anchor="end"
+    >Oct 24</text>
+    <text
+      x="536.9426751592357"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 536.9426751592357, 285)"
+      text-anchor="end"
+    >Dec 24</text>
+    <text
+      x="576.687898089172"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 576.687898089172, 285)"
+      text-anchor="end"
+    >Jan 25</text>
+    <text
+      x="616.4331210191083"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 616.4331210191083, 285)"
+      text-anchor="end"
+    >Mar 25</text>
+    <text
+      x="656.1783439490446"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 656.1783439490446, 285)"
+      text-anchor="end"
+    >May 25</text>
+    <text
+      x="695.9235668789809"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 695.9235668789809, 285)"
+      text-anchor="end"
+    >Jul 25</text>
+    <text
+      x="735.6687898089172"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 735.6687898089172, 285)"
+      text-anchor="end"
+    >Sep 25</text>
+    <text
+      x="775.4140127388534"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 775.4140127388534, 285)"
+      text-anchor="end"
+    >Nov 25</text>
+    <text
+      x="815.1592356687897"
+      y="285"
+      font-size="10"
+      fill="#64748B"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+      transform="rotate(-45, 815.1592356687897, 285)"
+      text-anchor="end"
+    >Dec 25</text>
+  </g>
+
+  <text x="450" y="340" text-anchor="middle" class="title">
+    Coding Activity - Last 36 Months
+  </text>
+
+  <text x="450" y="360" text-anchor="middle" class="subtitle">
+    2.1M lines · 8957 commits · 157 active weeks
+  </text>
+</svg>
