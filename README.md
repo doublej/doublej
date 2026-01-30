@@ -1,9 +1,9 @@
 
 ## Projects
 
-- **[consult-user-mcp](https://github.com/doublej/consult-user-mcp)** - MCP server to consult the user using popup modals — [docs](https://doublej.github.io/consult-user-mcp/)
-- **[ccom](https://github.com/doublej/ccom)** - Convert natural language to shell commands using Claude Code, with some caching features for quick results on repetitive tasks
-- **[beads-kanban](https://github.com/doublej/beads-kanban)** - Beads, Claude, Kanban
+- **[consult-user-mcp](https://github.com/doublej/consult-user-mcp)** - Native macOS dialogs for MCP agents — [docs](https://doublej.github.io/consult-user-mcp/)
+- **[ccom](https://github.com/doublej/ccom)** - Convert natural language to shell commands using Claude AI
+- **[beads-kanban](https://github.com/doublej/beads-kanban)** - SvelteKit web app wrapping Beads CLI with drag-and-drop Kanban interface — [demo](https://doublej.github.io/beads-kanban/)
 - **[mermaid-gantt](https://github.com/doublej/mermaid-gantt)** - Keyboard-first Gantt chart editor with Mermaid syntax import/export
 - **[nordvpn-cli-macos](https://github.com/doublej/nordvpn-cli-macos)** - Unofficial CLI and TUI for NordVPN on macOS using WireGuard
 - **[laptop-light](https://github.com/doublej/laptop-light)** - Laptop light utility
@@ -13,7 +13,7 @@
 - **[marktplaats-search](https://github.com/doublej/marktplaats-search)** - Marktplaats search tool
 - **[claude-code-launcher](https://github.com/doublej/claude-code-launcher)** - Claude Code launcher
 - **[pixi-devtools-cli](https://github.com/doublej/pixi-devtools-cli)** - CLI debugger for PixiJS applications via Chrome DevTools Protocol
-- **[pixi-adaptive-glass](https://github.com/doublej/pixi-adaptive-glass)** - Adaptive glass effect for PixiJS
+- **[pixi-adaptive-glass](https://github.com/doublej/pixi-adaptive-glass)** - High-performance adaptive glass effect for PixiJS with realistic refraction
 - **[batch-qr-generator](https://github.com/doublej/batch-qr-generator)** - Data-driven QR code generator with customizable styling built with Svelte 5
 - **[pii-filter-proxy](https://github.com/doublej/pii-filter-proxy)** - Proxy to sit between application and LLM to swap out any PII data
 - **[snail-mail-parser](https://github.com/doublej/snail-mail-parser)** - LLM-powered snail mail parser for managing physical mail like digital
@@ -26,18 +26,18 @@
 
 ## Raycast Plugins
 
-- **[raycast-ext-active-ports](https://github.com/doublej/raycast-ext-active-ports)** - View and manage active TCP ports
-- **[raycast-ext-caddyfile-tools](https://github.com/doublej/raycast-ext-caddyfile-tools)** - Caddyfile tools
-- **[raycast-ext-chatgpt-software](https://github.com/doublej/raycast-ext-chatgpt-software)** - ChatGPT software
-- **[raycast-ext-clean-text](https://github.com/doublej/raycast-ext-clean-text)** - Clean text utility
-- **[raycast-ext-clean-watermark](https://github.com/doublej/raycast-ext-clean-watermark)** - Clean watermarks
-- **[raycast-ext-hide-my-email](https://github.com/doublej/raycast-ext-hide-my-email)** - Hide my email
-- **[raycast-ext-insecure-chrome](https://github.com/doublej/raycast-ext-insecure-chrome)** - Launch Chrome with security disabled
-- **[raycast-ext-openrouter-key](https://github.com/doublej/raycast-ext-openrouter-key)** - OpenRouter API key management
-- **[raycast-ext-save-api-key](https://github.com/doublej/raycast-ext-save-api-key)** - Save API keys
-- **[raycast-ext-wake-pc](https://github.com/doublej/raycast-ext-wake-pc)** - Wake PC via Wake-on-LAN
-- **[raycast-ext-wrap-text](https://github.com/doublej/raycast-ext-wrap-text)** - Wrap text utility
-- **[raycast-ext-ziggo-router](https://github.com/doublej/raycast-ext-ziggo-router)** - Ziggo router control
+- **[Active Ports](https://github.com/doublej/raycast-ext-active-ports)** - View and manage active TCP ports
+- **[Caddyfile Tools](https://github.com/doublej/raycast-ext-caddyfile-tools)** - Caddyfile utilities and tools
+- **[ChatGPT Software Question](https://github.com/doublej/raycast-ext-chatgpt-software)** - Ask ChatGPT about software
+- **[Clean Text](https://github.com/doublej/raycast-ext-clean-text)** - Clean and format text
+- **[Clean Watermark](https://github.com/doublej/raycast-ext-clean-watermark)** - Remove watermarks from images
+- **[Hide My Email](https://github.com/doublej/raycast-ext-hide-my-email)** - Generate Apple Hide My Email addresses
+- **[Insecure Chrome](https://github.com/doublej/raycast-ext-insecure-chrome)** - Launch Chrome with security disabled for testing
+- **[OpenRouter Key](https://github.com/doublej/raycast-ext-openrouter-key)** - OpenRouter API key management
+- **[Save API Key](https://github.com/doublej/raycast-ext-save-api-key)** - Securely save API keys
+- **[Wake PC](https://github.com/doublej/raycast-ext-wake-pc)** - Wake PC via Wake-on-LAN
+- **[Wrap Text](https://github.com/doublej/raycast-ext-wrap-text)** - Wrap text at specified width
+- **[Ziggo Router](https://github.com/doublej/raycast-ext-ziggo-router)** - Ziggo router control
 
 ## Forks
 
