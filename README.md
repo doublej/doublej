@@ -4,7 +4,7 @@
 | | | |
 |---|---|---|
 | [consult-user-mcp](https://github.com/doublej/consult-user-mcp) | Native macOS dialogs for MCP agents | [docs](https://doublej.github.io/consult-user-mcp/) |
-| [ccom](https://github.com/doublej/ccom) | Convert natural language to shell commands using Claude AI | |
+| [ccom](https://github.com/doublej/ccom) | Convert natural language to shell commands using Claude AI | [docs](https://doublej.github.io/ccom/) |
 | [beads-kanban](https://github.com/doublej/beads-kanban) | SvelteKit web app wrapping Beads CLI with drag-and-drop Kanban interface | [demo](https://doublej.github.io/beads-kanban/) |
 | [mermaid-gantt](https://github.com/doublej/mermaid-gantt) | Keyboard-first Gantt chart editor with Mermaid syntax import/export | |
 | [nordvpn-cli-macos](https://github.com/doublej/nordvpn-cli-macos) | Unofficial CLI and TUI for NordVPN on macOS using WireGuard | |
@@ -27,12 +27,16 @@
 
 ## Project Indexer
 
+| | |
+|---|---|
 | [project-scanner](https://github.com/doublej/project-scanner) | Scans and indexes development projects |
 | [project-index](https://github.com/doublej/project-index) | Project index data |
 | [project-picker](https://github.com/doublej/project-picker) | Raycast extension to quickly open indexed projects |
 
 ## Raycast Plugins
 
+| | |
+|---|---|
 | [Active Ports](https://github.com/doublej/raycast-ext-active-ports) | View and manage active TCP ports |
 | [Caddyfile Tools](https://github.com/doublej/raycast-ext-caddyfile-tools) | Caddyfile utilities and tools |
 | [ChatGPT Software Question](https://github.com/doublej/raycast-ext-chatgpt-software) | Ask ChatGPT about software |
@@ -48,6 +52,8 @@
 
 ## Forks
 
+| | |
+|---|---|
 | [cui](https://github.com/doublej/cui) | A web UI for Claude Code agents, forked to use Claude Code Agent SDK |
 | [mcpick](https://github.com/doublej/mcpick) | CLI tool for dynamically managing MCP server configurations in Claude Code, forked to support tools |
 | [npo-dl-webui](https://github.com/doublej/npo-dl-webui) | NPO Start download tool, forked to have a web UI and quality of life additions |
