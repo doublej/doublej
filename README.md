@@ -1,18 +1,112 @@
 
 ## Highlights
 
-| | | |
-|---|---|---|
-| [consult-user-mcp](https://github.com/doublej/consult-user-mcp) | Native macOS dialogs for MCP agents | [docs](https://doublej.github.io/consult-user-mcp/) |
-| [ccom](https://github.com/doublej/ccom) | Convert natural language to shell commands using Claude AI | [docs](https://doublej.github.io/ccom/) |
-| [beads-kanban](https://github.com/doublej/beads-kanban) | SvelteKit web app wrapping Beads CLI with drag-and-drop Kanban interface | [docs](https://doublej.github.io/beads-kanban/) |
-| [doublej-productivity-skills](https://github.com/doublej/doublej-productivity-skills) | 38 Claude Code skills for development, design, DevOps, and creative workflows | |
-| [mermaid-gantt](https://github.com/doublej/mermaid-gantt) | Keyboard-first Gantt chart editor with Mermaid syntax import/export | |
-| [nordvpn-cli-macos](https://github.com/doublej/nordvpn-cli-macos) | Unofficial CLI and TUI for NordVPN on macOS using WireGuard | |
-| [browser-router](https://github.com/doublej/browser-router) | macOS menu bar app that routes URLs to different browsers based on rules | |
-| [laptop-light](https://github.com/doublej/laptop-light) | Laptop light utility | |
-| [onenv](https://github.com/doublej/onenv) | 1Password-backed environment variable manager. CLI + TUI + agent API. Replaces .env files | |
-| [flt](https://github.com/doublej/flt) | Flight search engine with CLI, TUI, and web interfaces — scrapes Google Flights and compares results | |
+<table>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="https://github.com/doublej/consult-user-mcp">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=consult-user-mcp&theme=tokyonight&hide_border=true&description_lines_count=2&card_width=820" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=consult-user-mcp&theme=default&hide_border=true&description_lines_count=2&card_width=820" alt="consult-user-mcp" />
+        </picture>
+      </a>
+      <br/>
+      <sub>Flagship · <a href="https://doublej.github.io/consult-user-mcp/">documentation</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/ccom">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=ccom&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=ccom&theme=default&hide_border=true&description_lines_count=2" alt="ccom" />
+        </picture>
+      </a>
+      <br/>
+      <sub><a href="https://doublej.github.io/ccom/">documentation</a></sub>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/beads-kanban">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=beads-kanban&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=beads-kanban&theme=default&hide_border=true&description_lines_count=2" alt="beads-kanban" />
+        </picture>
+      </a>
+      <br/>
+      <sub><a href="https://doublej.github.io/beads-kanban/">documentation</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/doublej-productivity-skills">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=doublej-productivity-skills&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=doublej-productivity-skills&theme=default&hide_border=true&description_lines_count=2" alt="doublej-productivity-skills" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/onenv">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=onenv&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=onenv&theme=default&hide_border=true&description_lines_count=2" alt="onenv" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/mermaid-gantt">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=mermaid-gantt&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=mermaid-gantt&theme=default&hide_border=true&description_lines_count=2" alt="mermaid-gantt" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/flt">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=flt&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=flt&theme=default&hide_border=true&description_lines_count=2" alt="flt" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/nordvpn-cli-macos">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=nordvpn-cli-macos&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=nordvpn-cli-macos&theme=default&hide_border=true&description_lines_count=2" alt="nordvpn-cli-macos" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/browser-router">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=browser-router&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=browser-router&theme=default&hide_border=true&description_lines_count=2" alt="browser-router" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/doublej/laptop-light">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=laptop-light&theme=tokyonight&hide_border=true&description_lines_count=2" />
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=laptop-light&theme=default&hide_border=true&description_lines_count=2" alt="laptop-light" />
+        </picture>
+      </a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=doublej&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=doublej&theme=default&hide_border=true&layout=compact&langs_count=8" alt="Top languages" />
+      </picture>
+    </td>
+  </tr>
+</table>
 
 ## Projects
 
