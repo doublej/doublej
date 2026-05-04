@@ -1,112 +1,51 @@
 
 ## Highlights
 
-<table>
-  <tr>
-    <td colspan="2" align="center">
-      <a href="https://github.com/doublej/consult-user-mcp">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=consult-user-mcp&theme=tokyonight&hide_border=true&description_lines_count=2&card_width=820" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=consult-user-mcp&theme=default&hide_border=true&description_lines_count=2&card_width=820" alt="consult-user-mcp" />
-        </picture>
-      </a>
-      <br/>
-      <sub>Flagship · <a href="https://doublej.github.io/consult-user-mcp/">documentation</a></sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/ccom">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=ccom&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=ccom&theme=default&hide_border=true&description_lines_count=2" alt="ccom" />
-        </picture>
-      </a>
-      <br/>
-      <sub><a href="https://doublej.github.io/ccom/">documentation</a></sub>
-    </td>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/beads-kanban">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=beads-kanban&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=beads-kanban&theme=default&hide_border=true&description_lines_count=2" alt="beads-kanban" />
-        </picture>
-      </a>
-      <br/>
-      <sub><a href="https://doublej.github.io/beads-kanban/">documentation</a></sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/doublej-productivity-skills">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=doublej-productivity-skills&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=doublej-productivity-skills&theme=default&hide_border=true&description_lines_count=2" alt="doublej-productivity-skills" />
-        </picture>
-      </a>
-    </td>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/onenv">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=onenv&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=onenv&theme=default&hide_border=true&description_lines_count=2" alt="onenv" />
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/mermaid-gantt">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=mermaid-gantt&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=mermaid-gantt&theme=default&hide_border=true&description_lines_count=2" alt="mermaid-gantt" />
-        </picture>
-      </a>
-    </td>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/flt">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=flt&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=flt&theme=default&hide_border=true&description_lines_count=2" alt="flt" />
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/nordvpn-cli-macos">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=nordvpn-cli-macos&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=nordvpn-cli-macos&theme=default&hide_border=true&description_lines_count=2" alt="nordvpn-cli-macos" />
-        </picture>
-      </a>
-    </td>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/browser-router">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=browser-router&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=browser-router&theme=default&hide_border=true&description_lines_count=2" alt="browser-router" />
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center">
-      <a href="https://github.com/doublej/laptop-light">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=laptop-light&theme=tokyonight&hide_border=true&description_lines_count=2" />
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=doublej&repo=laptop-light&theme=default&hide_border=true&description_lines_count=2" alt="laptop-light" />
-        </picture>
-      </a>
-    </td>
-    <td width="50%" valign="top" align="center">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=doublej&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" />
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=doublej&theme=default&hide_border=true&layout=compact&langs_count=8" alt="Top languages" />
-      </picture>
-    </td>
-  </tr>
-</table>
+<pre>
+╔══════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                  ║
+║  <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                                                                          ★ 40  ║
+║                                                                                                  ║
+║  Native macOS dialogs for MCP agents.                                                            ║
+║                                                                                                  ║
+║  Sidecar Swift app + Python bridge giving Claude Code real interactive UI:                       ║
+║  confirms, picks, multi-question forms, slider tweak panes that write live to disk.              ║
+║                                                                                                  ║
+║  →  <a href="https://github.com/doublej/consult-user-mcp">source</a>                                                                                       ║
+║  →  <a href="https://doublej.github.io/consult-user-mcp/">documentation</a>                                                                                ║
+║                                                                                                  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────┐  ┌──────────────────────────────┐  ┌──────────────────────────────┐
+│                              │  │                              │  │                              │
+│ <a href="https://github.com/doublej/ccom">ccom</a>                         │  │ <a href="https://github.com/doublej/beads-kanban">beads-kanban</a>                 │  │ <a href="https://github.com/doublej/flt">flt</a>                          │
+│                              │  │                              │  │                              │
+│ Natural language → shell.    │  │ Kanban wrapper for Beads     │  │ Flight search engine,        │
+│                              │  │ CLI.                         │  │ CLI+TUI.                     │
+│ → <a href="https://github.com/doublej/ccom">source</a> · <a href="https://doublej.github.io/ccom/">docs</a>              │  │ → <a href="https://github.com/doublej/beads-kanban">source</a> · <a href="https://doublej.github.io/beads-kanban/">docs</a>              │  │ → <a href="https://github.com/doublej/flt">source</a> · <a href="https://doublej.github.io/flt/">docs</a>              │
+│                              │  │                              │  │                              │
+└──────────────────────────────┘  └──────────────────────────────┘  └──────────────────────────────┘
+
+┌──────────────────────────────┐  ┌──────────────────────────────┐  ┌──────────────────────────────┐
+│                              │  │                              │  │                              │
+│ <a href="https://github.com/doublej/doublej-productivity-skills">doublej-productivity-skills</a>  │  │ <a href="https://github.com/doublej/onenv">onenv</a>                        │  │ <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                │
+│                              │  │                              │  │                              │
+│ 38 Claude Code skills        │  │ 1Password env var manager.   │  │ Gantt editor (Mermaid        │
+│ bundle.                      │  │                              │  │ syntax).                     │
+│ → <a href="https://github.com/doublej/doublej-productivity-skills">source</a>                     │  │ → <a href="https://github.com/doublej/onenv">source</a>                     │  │ → <a href="https://github.com/doublej/mermaid-gantt">source</a>                     │
+│                              │  │                              │  │                              │
+└──────────────────────────────┘  └──────────────────────────────┘  └──────────────────────────────┘
+
+┌──────────────────────────────┐  ┌──────────────────────────────┐  ┌──────────────────────────────┐
+│                              │  │                              │  │                              │
+│ <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn-cli-macos</a>            │  │ <a href="https://github.com/doublej/browser-router">browser-router</a>               │  │ <a href="https://github.com/doublej/laptop-light">laptop-light</a>                 │
+│                              │  │                              │  │                              │
+│ NordVPN CLI for macOS.       │  │ URL-based browser router.    │  │ MacBook keyboard light tool. │
+│                              │  │                              │  │                              │
+│ → <a href="https://github.com/doublej/nordvpn-cli-macos">source</a>                     │  │ → <a href="https://github.com/doublej/browser-router">source</a>                     │  │ → <a href="https://github.com/doublej/laptop-light">source</a>                     │
+│                              │  │                              │  │                              │
+└──────────────────────────────┘  └──────────────────────────────┘  └──────────────────────────────┘
+</pre>
 
 ## Projects
 
@@ -114,7 +53,7 @@
 |---|---|
 | [apple-notes-sync](https://github.com/doublej/apple-notes-sync) | Two-way task sync between Markdown, Apple Reminders, and Apple Notes |
 | [sheet-cms](https://github.com/doublej/sheet-cms) | Bidirectional sync between Google Sheets and local JSON files |
-| [pixi-paper](https://github.com/doublej/pixi-paper) | Real-time comparison of HTML to Canvas/Image screenshot libraries |
+| [pixi-paper](https://github.com/doublej/pixi-paper) | Real-time comparison of HTML to Canvas/Image screenshot libraries · [docs](https://doublej.github.io/pixi-paper/) |
 | [ss-image-processor](https://github.com/doublej/ss-image-processor) | Batch image sequence processing toolkit for VFX pipelines |
 | [Scoot](https://github.com/doublej/Scoot) | Disk usage visualization |
 | [sagemcom-mcp](https://github.com/doublej/sagemcom-mcp) | Open and close ports through your favorite MCP-supporting LLM |
@@ -125,9 +64,9 @@
 | [snail-mail-parser](https://github.com/doublej/snail-mail-parser) | LLM-powered snail mail parser for managing physical mail like digital |
 | [marktplaats-search](https://github.com/doublej/marktplaats-search) | Marktplaats search tool |
 | [claude-code-launcher](https://github.com/doublej/claude-code-launcher) | Claude Code launcher |
-| [orphan-obliterator](https://github.com/doublej/orphan-obliterator) | Prevent orphaned words on the last line of HTML elements |
-| [web-haptics-polyfill](https://github.com/doublej/web-haptics-polyfill) | Cross-platform haptic feedback for mobile web — iOS Safari exploit + Android vibrate + PWM intensity |
-| [doublej-project-linking](https://github.com/doublej/doublej-project-linking) | Embeddable corner widget with path-based profile matching and Short.io URL shortening |
+| [orphan-obliterator](https://github.com/doublej/orphan-obliterator) | Prevent orphaned words on the last line of HTML elements · [docs](https://doublej.github.io/orphan-obliterator/) |
+| [web-haptics-polyfill](https://github.com/doublej/web-haptics-polyfill) | Cross-platform haptic feedback for mobile web — iOS Safari exploit + Android vibrate + PWM intensity · [docs](https://doublej.github.io/web-haptics-polyfill/) |
+| [doublej-project-linking](https://github.com/doublej/doublej-project-linking) | Embeddable corner widget with path-based profile matching and Short.io URL shortening · [docs](https://doublej.github.io/doublej-project-linking/) |
 | [claude-history-browser](https://github.com/doublej/claude-history-browser) | Web UI for browsing and analyzing Claude Code conversation history with token usage tracking |
 | [claude-verbs](https://github.com/doublej/claude-verbs) | Community-contributed spinner verb sets for Claude Code, with install CLI |
 
