@@ -88,10 +88,4 @@
 | [cookiecutter-uv](https://github.com/doublej/cookiecutter-uv) | Modern cookiecutter template for Python projects using uv |
 | [comfy-ui](https://github.com/doublej/comfy-ui) | ComfyUI node system for running Python functions |
 
-<div align="center">
-
-![Coding Activity](./assets/coding-activity.svg)
-
-</div>
-
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
