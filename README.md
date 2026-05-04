@@ -11,6 +11,8 @@
 | [nordvpn-cli-macos](https://github.com/doublej/nordvpn-cli-macos) | Unofficial CLI and TUI for NordVPN on macOS using WireGuard | |
 | [browser-router](https://github.com/doublej/browser-router) | macOS menu bar app that routes URLs to different browsers based on rules | |
 | [laptop-light](https://github.com/doublej/laptop-light) | Laptop light utility | |
+| [onenv](https://github.com/doublej/onenv) | 1Password-backed environment variable manager. CLI + TUI + agent API. Replaces .env files | |
+| [flt](https://github.com/doublej/flt) | Flight search engine with CLI, TUI, and web interfaces — scrapes Google Flights and compares results | |
 
 ## Projects
 
@@ -29,6 +31,11 @@
 | [snail-mail-parser](https://github.com/doublej/snail-mail-parser) | LLM-powered snail mail parser for managing physical mail like digital |
 | [marktplaats-search](https://github.com/doublej/marktplaats-search) | Marktplaats search tool |
 | [claude-code-launcher](https://github.com/doublej/claude-code-launcher) | Claude Code launcher |
+| [orphan-obliterator](https://github.com/doublej/orphan-obliterator) | Prevent orphaned words on the last line of HTML elements |
+| [web-haptics-polyfill](https://github.com/doublej/web-haptics-polyfill) | Cross-platform haptic feedback for mobile web — iOS Safari exploit + Android vibrate + PWM intensity |
+| [doublej-project-linking](https://github.com/doublej/doublej-project-linking) | Embeddable corner widget with path-based profile matching and Short.io URL shortening |
+| [claude-history-browser](https://github.com/doublej/claude-history-browser) | Web UI for browsing and analyzing Claude Code conversation history with token usage tracking |
+| [claude-verbs](https://github.com/doublej/claude-verbs) | Community-contributed spinner verb sets for Claude Code, with install CLI |
 
 ## Project Indexer
 
@@ -54,6 +61,8 @@
 | [Wake PC](https://github.com/doublej/raycast-ext-wake-pc) | Wake PC via Wake-on-LAN |
 | [Wrap Text](https://github.com/doublej/raycast-ext-wrap-text) | Wrap text at specified width |
 | [Ziggo Router](https://github.com/doublej/raycast-ext-ziggo-router) | Ziggo router control |
+| [Claude History](https://github.com/doublej/claude-history) | Search and browse Claude Code session history across projects |
+| [Caveman Compress](https://github.com/doublej/raycast-ext-caveman-compress) | Compress text via Claude/Codex/Opencode/Ollama/NLP backends |
 
 ## Raycast Scripts
 
@@ -68,6 +77,7 @@
 |---|---|
 | [cui](https://github.com/doublej/cui) | A web UI for Claude Code agents, forked to use Claude Code Agent SDK |
 | [mcpick](https://github.com/doublej/mcpick) | CLI tool for dynamically managing MCP server configurations in Claude Code |
+| [mcpick-plus](https://github.com/doublej/mcpick-plus) | Enhanced fork of mcpick with plugin support and cost analysis dashboard |
 | [whatsapp-mcp-ts](https://github.com/doublej/whatsapp-mcp-ts) | WhatsApp MCP Server (TypeScript/Baileys) |
 | [Gmail-MCP-Server](https://github.com/doublej/Gmail-MCP-Server) | Gmail MCP server with auto authentication |
 | [libgen-downloader](https://github.com/doublej/libgen-downloader) | Search and download ebooks from libgen via TUI |
