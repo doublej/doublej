@@ -29,7 +29,7 @@
   │  Shows the proposed command before running   │    │  Drag-and-drop Kanban over your bd database  │
   │  so you can confirm, edit, or pipe further.  │    │  with live sync and dependency arrows.       │
   │                                              │    │                                              │
-  │  <a href="https://doublej.github.io/ccom/">docs</a> →                                      │    │  <a href="https://doublej.github.io/beads-kanban/">docs</a> →                                      │
+  │  → <a href="https://github.com/doublej/ccom">source</a>     → <a href="https://doublej.github.io/ccom/">docs</a>                         │    │  → <a href="https://github.com/doublej/beads-kanban">source</a>     → <a href="https://doublej.github.io/beads-kanban/">docs</a>                         │
   │                                              │    │                                              │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
@@ -41,7 +41,7 @@
   │  Scrapes Google Flights, compares prices     │    │  CLI + TUI for humans, HTTP API for agents   │
   │  by date range, builds and exports trips.    │    │  with permission brokering. No more .env.    │
   │                                              │    │                                              │
-  │  <a href="https://doublej.github.io/flt/">docs</a> →                                      │    │                                              │
+  │  → <a href="https://github.com/doublej/flt">source</a>     → <a href="https://doublej.github.io/flt/">docs</a>                         │    │  → <a href="https://github.com/doublej/onenv">source</a>                                    │
   │                                              │    │                                              │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
@@ -53,7 +53,7 @@
   │  DevOps, and creative workflows.             │    │  Type Mermaid syntax, see live diagram.      │
   │  Drop-in install, immediately useful.        │    │  Round-trip import/export for planning.      │
   │                                              │    │                                              │
-  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/doublej-productivity-skills">source</a>                                    │    │  → <a href="https://github.com/doublej/mermaid-gantt">source</a>                                    │
   │                                              │    │                                              │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
@@ -65,19 +65,19 @@
   │  Uses WireGuard directly — no Electron, no   │    │  Rule-based: dev → Chrome, work → Firefox,   │
   │  menu bar app, just configs and a fast CLI.  │    │  social → default. Reclaim your default.     │
   │                                              │    │                                              │
-  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/nordvpn-cli-macos">source</a>                                    │    │  → <a href="https://github.com/doublej/browser-router">source</a>                                    │
   │                                              │    │                                              │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
   ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
   │                                              │    │                                              │
-  │  <a href="https://github.com/doublej/laptop-light">laptop-light</a>                                │    │  more                                        │
+  │  <a href="https://github.com/doublej/laptop-light">laptop-light</a>                                │    │  more  →                                     │
   │                                              │    │                                              │
   │  Small CLI utility to control MacBook        │    │  60+ public repos and counting,              │
   │  keyboard backlight from the terminal.       │    │  100+ private projects in the monorepo.      │
   │                                              │    │  Browse the full set:                        │
   │                                              │    │                                              │
-  │                                              │    │  <a href="https://github.com/doublej?tab=repositories">github.com/doublej?tab=repositories</a> →       │
+  │  → <a href="https://github.com/doublej/laptop-light">source</a>                                    │    │  → <a href="https://github.com/doublej?tab=repositories">github.com/doublej?tab=repositories</a>       │
   │                                              │    │                                              │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
@@ -93,9 +93,9 @@
 
     find.  pick.  go.
 
-   <a href="https://github.com/doublej/project-index">atlas-api</a>        SvelteKit backend serving the project graph (port 47891)
-   <a href="https://github.com/doublej/project-picker">atlas-picker</a>     Rust TUI: splash logo, fuzzy fast project picking
-   <a href="https://github.com/doublej/project-scanner">atlas-browser</a>    Raycast extension to browse and search indexed projects
+   <a href="https://github.com/doublej/project-index">atlas-api</a>        SvelteKit backend serving the project graph (port 47891)  ·  <a href="https://github.com/doublej/project-index">repo</a>
+   <a href="https://github.com/doublej/project-picker">atlas-picker</a>     Rust TUI: splash logo, fuzzy fast project picking  ·  <a href="https://github.com/doublej/project-picker">repo</a>
+   <a href="https://github.com/doublej/project-scanner">atlas-browser</a>    Raycast extension to browse and search indexed projects  ·  <a href="https://github.com/doublej/project-scanner">repo</a>
 
 
   PROJECTS  ──────────────────────────────────────────────────────────────────────────────────────────
