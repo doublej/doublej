@@ -560,19 +560,32 @@ BEATS = ["queued", "runner booting", "checking out doublej/doublej",
 
 
 def loading(target, pct):
-    """A real README, committed mid-flight, purely so the wait is visible."""
+    """The page with its body swapped for a loader, and nothing else moved.
+
+    The block is rendered exactly as tall as the page being turned to, so the panel
+    keeps its height for the whole turn — only the contents change. RECENT and the
+    footer sit below it, untouched, which is what makes the swap read as the same
+    document loading rather than a different, shorter one.
+    """
     beat = BEATS[min(pct * len(BEATS) // 100, len(BEATS) - 1)]
-    return ["", header("LOADING"), "",
-            f"  turning to {target}",
-            "",
-            f"  [{bar(pct)}]  {pct:>3}%",
-            "",
-            f"  {beat}\u2026",
-            "",
-            "",
-            "  This is not a gif. A GitHub Action is rewriting this file while you read it,",
-            "  one commit per frame, and it will land on the page you asked for.",
-            "", ""]
+    block = ["LOADING",
+             "",
+             f"turning to {target}",
+             "",
+             f"[{bar(pct)}]  {pct:>3}%",
+             "",
+             f"{beat}\u2026",
+             "",
+             "",
+             "This is not a gif. A GitHub Action is rewriting this file while you",
+             "read it, one commit per frame, and it will land on the page you asked for."]
+    mid = [" " * ((W - len(l)) // 2) + l if l else "" for l in block]
+
+    height = len(BUILDERS[target]())
+    if height <= len(mid):
+        return mid
+    top = (height - len(mid)) // 2
+    return [""] * top + mid + [""] * (height - len(mid) - top)
 
 
 def build(page, pct=None):

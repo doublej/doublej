@@ -304,12 +304,6 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
         font-family:"Monaspace Neon",ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
         font-size:11.9px; line-height:17.255px; }
   pre a { color:var(--accent); text-decoration:underline; }
-  /* While the rebuild is running the document reads as inactive — everything drops to
-     the muted grey and only the LOADING block keeps its colour. Scoped to .doc, so
-     nothing outside the README is touched. */
-  .doc.busy pre, .doc.busy pre a { color:var(--muted); transition:color .4s ease; }
-  .doc.busy pre a { text-decoration:none; }
-  .doc.busy pre .hot { color:var(--fg); }
 
   .sect { margin-top:32px; }
   .secthead { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; }
@@ -410,7 +404,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
             <span class="ico">${ICON.pencil}</span>
           </span>
         </div>
-        <div class="doc busy" id="doc">${pre}</div>
+        <div class="doc" id="doc">${pre}</div>
       </div>
 
       <div class="sect">
@@ -450,16 +444,12 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
            String(Math.round(pct)).padStart(3) + "%";
   });
 
-  // Everything from the LOADING rule down to the RECENT rule is the loader.
-  const HOT = /(\\n\\s*LOADING[\\s\\S]*?)(\\n\\s*RECENT)/;
-  const paint = (html) => html.replace(HOT, '<span class="hot">$1</span>$2');
-  doc.innerHTML = paint(raw);   // the frame we shipped is already a loading frame
 
   setInterval(() => {
     if (done || !BAR.test(raw)) return;
     // Creep toward the next frame without ever overtaking the truth by much.
     shown += (Math.min(99, committed + 22) - shown) * 0.08 + 0.1;
-    doc.innerHTML = paint(withBar(raw, shown));
+    doc.innerHTML = withBar(raw, shown);
   }, 220);
 
   const show = (pre) => {
@@ -467,7 +457,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
     raw = pre;
     const m = raw.match(BAR);
     if (m) { committed = +m[2]; shown = Math.max(shown, committed); }
-    doc.innerHTML = paint(m ? withBar(raw, shown) : raw);
+    doc.innerHTML = m ? withBar(raw, shown) : raw;
   };
 
   // When the page lands, the document does not just appear — it wipes across, one
@@ -495,7 +485,6 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
       : style === 2 ? c / cols * 0.6 + r / rows * 0.4          // diagonal
       : ((r * 7919) ^ (c * 104729)) % 1000 / 1000;             // dissolve
 
-    doc.classList.remove("busy");   // the document comes back up as it is revealed
     let pre = doc.querySelector("pre") || doc.appendChild(document.createElement("pre"));
     let f = 0;
     const iv = setInterval(() => {
