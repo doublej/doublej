@@ -4,7 +4,9 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  ◂  [home]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">▸</a>           page 1 / 9
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 1 / 9
+   │ home │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">▸</a>
+───┘      └─────┴───────┴───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
   FEATURED  ──────────────────────────────────────────────────────────────────────────────────────────
@@ -94,16 +96,16 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            just now            simsync         14 minutes ago
-   framelink       38 seconds ago      raycast         16 minutes ago
-   home            1 minute ago        projects        17 minutes ago
-   atlas           2 minutes ago       atlas           17 minutes ago
-   home            5 minutes ago       raycast         19 minutes ago
-   cli             7 minutes ago       projects        20 minutes ago
-   framelink       8 minutes ago       projects        23 minutes ago
-   forks           11 minutes ago      systems         24 minutes ago
-   cli             13 minutes ago      atlas           24 minutes ago
-   raycast         13 minutes ago      projects        25 minutes ago
+   forks           7 minutes ago       systems         19 minutes ago
+   cli             8 minutes ago       atlas           20 minutes ago
+   raycast         9 minutes ago       projects        21 minutes ago
+   simsync         10 minutes ago      framelink       22 minutes ago
+   raycast         12 minutes ago      cli             25 minutes ago
+   projects        12 minutes ago      framelink       26 minutes ago
+   atlas           13 minutes ago      atlas           26 minutes ago
+   raycast         14 minutes ago      projects        29 minutes ago
+   projects        16 minutes ago      home            30 minutes ago
+   projects        19 minutes ago      cli             31 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────

@@ -380,29 +380,44 @@ def link(page):
 
 
 def nav(active, live=True):
-    """The tab strip. live=False renders it inert, for the loading frames."""
+    """The tab strip.
+
+    Three lines of box drawing, because a row of links reads as a list and a row of
+    tabs reads as somewhere you can go. The active tab has no floor \u2014 its box opens
+    straight into the page underneath, which is the whole trick: it is the only tab
+    you are already inside. live=False renders it inert, for the loading frames.
+    """
     i = PAGES.index(active)
-    plain = rich = "  "
+    cells = [len(p) + 2 for p in PAGES]
 
-    def add(text, url):
-        nonlocal plain, rich
-        plain += text
-        rich += f'<a href="{url}">{text}</a>' if (url and live) else text
-
-    add("\u25c2", link(PAGES[i - 1]) if i else None)
-    plain += "  "
-    rich += "  "
-    for j, page in enumerate(PAGES):
-        if j:
-            plain += "  "
-            rich += "  "
-        add(f"[{page}]", None) if page == active else add(page, link(page))
-    plain += "  "
-    rich += "  "
-    add("\u25b8", link(PAGES[i + 1]) if i < len(PAGES) - 1 else None)
-
+    top = "   \u250c" + "\u252c".join("\u2500" * w for w in cells) + "\u2510"
     tail = f"page {i + 1} / {len(PAGES)}"
-    return rich + " " * (W - len(plain) - len(tail)) + tail
+    top += " " * (W - len(top) - len(tail)) + tail
+
+    left = "\u25c2" if i else " "
+    right = "\u25b8" if i < len(PAGES) - 1 else " "
+    mid_plain = f" {left} "
+    mid_rich = mid_plain if not (live and i) else \
+        f' <a href="{link(PAGES[i - 1])}">{left}</a> '
+    for j, page in enumerate(PAGES):
+        label = f" {page} "
+        mid_plain += "\u2502" + label
+        cell = label if page == active or not live else \
+            f' <a href="{link(page)}">{page}</a> '
+        mid_rich += "\u2502" + cell
+    mid_plain += "\u2502 " + right
+    mid_rich += "\u2502 " + (right if not (live and i < len(PAGES) - 1) else
+                          f'<a href="{link(PAGES[i + 1])}">{right}</a>')
+
+    bot = "\u2500\u2500\u2500"
+    for j, w in enumerate(cells):
+        bot += ("\u2518" if j == i else "\u2514" if j == i + 1 else "\u2534")
+        bot += " " * w if j == i else "\u2500" * w
+    bot += "\u2514" if i == len(PAGES) - 1 else "\u2534"
+    bot += "\u2500" * (W - len(bot))
+
+    assert len(mid_plain) <= W, len(mid_plain)
+    return [top, mid_rich, bot]
 
 
 def site(url, label):
@@ -563,7 +578,7 @@ def loading(target, pct):
 def build(page, pct=None):
     out = ["<pre>", ""]
     out += masthead()
-    out += ["", nav(page, live=pct is None), ""]
+    out += [""] + nav(page, live=pct is None) + [""]
     out += loading(page, pct) if pct is not None else BUILDERS[page]()
     out += activity()
     out += ["", ""] + FOOTER
