@@ -21,6 +21,20 @@
  * asked for — never the page you just left, which is what made it look stuck.
  *
  * Without GH_TOKEN it degrades to a prefilled issue whose body explains itself.
+ *
+ * The shell comes in two variants, because github.com does. Logged out you get the
+ * 72px dark marketing header and the tab row inside the main column; logged in you get
+ * the 52px GlobalNav with a full-bleed tab row, an Edit profile button, an email row
+ * and Organizations. Login state cannot be detected cross-origin — every way to probe
+ * it is an XS-Leak — so the shell defaults to logged out (the README link is public,
+ * so that is the common case) and offers a quiet "not your view?" control that writes
+ * a cookie on this origin. The cookie is read in fetch(), so the corrected shell is in
+ * the first byte on the next visit: no flash, no client-side reflow.
+ *
+ *   ?dry=1   render the shell without dispatching a workflow run or polling for it.
+ *            Use this for visual checking — every uncached real hit rewrites the
+ *            profile README for everyone.
+ *   ?view=owner|out, ?theme=light|dark   override the cookie, for the same reason.
  */
 
 import { FRAME_0 } from "./frames";
@@ -44,8 +58,17 @@ const ME = {
   followers: 7,
   following: 10,
   repositories: 267,
+  publicRepos: 94,  // what a visitor who is not me counts
   stars: 95,
 };
+
+/** The two shells github.com serves for this page, and the theme override. */
+type View = "owner" | "out";
+type Theme = "auto" | "light" | "dark";
+interface Look { view: View; theme: Theme; dry: boolean }
+
+const VIEW_COOKIE = "djview";
+const THEME_COOKIE = "djtheme";
 
 const ORGS = [
   { login: "FrameLinkVR", avatar: "https://avatars.githubusercontent.com/u/297276893?v=4" },
@@ -170,8 +193,14 @@ async function contributions(): Promise<string> {
 /** Just the document, without the tracking pixel. */
 const preOf = (md: string): string => (md.match(/<pre>[\s\S]*<\/pre>/) ?? [""])[0];
 
-const landed = (md: string, page: string) =>
-  md.includes(`[${page}]`) && !md.includes("LOADING");
+/**
+ * gen.py stamps every build with a marker, so landing is detected explicitly rather
+ * than by pattern-matching the document. It used to look for "[page]" in the nav,
+ * which silently stopped matching the day the nav became a tab strip — and a turn
+ * that never registers as landed leaves the visitor sitting at 99% until the cap.
+ */
+const landed = (md: string, page: string) => md.includes(`<!-- nav:page=${page} -->`);
+const isLoading = (md: string) => md.includes("<!-- nav:loading=");
 
 // GitHub's own octicons, so the chrome reads right at a glance.
 const ICON = {
@@ -196,11 +225,25 @@ const ICON = {
   fork: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>`,
   grip: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M10 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-4 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>`,
   pencil: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></svg>`,
+  copilot: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"/><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"/></svg>`,
+  smiley: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm3.82 1.636a.75.75 0 0 1 1.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 0 1 1.222.87l-.022-.015c.02.013.021.015.021.015v.001l-.001.002-.002.003-.005.007-.014.019a2.066 2.066 0 0 1-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.331 3.331 0 0 1-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 0 1 .183-1.044ZM12 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.25 2.25.592.416a97.71 97.71 0 0 0-.592-.416Z"/></svg>`,
+  sun: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>`,
 };
+
+/** Light and dark as two blocks, so the media query and the cookie override agree. */
+const LIGHT = `color-scheme:light;
+    --fg:#1f2328; --dim:#59636e; --bg:#ffffff; --canvas:#ffffff; --topbar:#f6f8fa;
+    --line:#d1d9e0; --accent:#0969da; --btn:#f6f8fa; --btnh:#eef1f4; --muted:#818b98;
+    --code:#f6f8fa; --l0:#eff2f5; --l1:#aceebb; --l2:#4ac26b; --l3:#2da44e; --l4:#116329;`;
+
+const DARK = `color-scheme:dark;
+    --fg:#f0f6fc; --dim:#9198a1; --bg:#0d1117; --canvas:#0d1117; --topbar:#010409;
+    --line:#3d444d; --accent:#4493f8; --btn:#212830; --btnh:#2a313c; --muted:#6e7681;
+    --code:#151b23; --l0:#151b23; --l1:#033a16; --l2:#196c2e; --l3:#2ea043; --l4:#56d364;`;
 
 const tab = (icon: string, label: string, count?: number) =>
   `<a class="tab${label === "Overview" ? " on" : ""}" href="${PROFILE}${
-    label === "Overview" ? "" : "?tab=" + label.toLowerCase()}">${icon}<span>${label}</span>${
+    label === "Overview" ? "" : "?tab=" + label.toLowerCase()}">${icon}<span class="lbl">${label}</span>${
     count === undefined ? "" : `<span class="ctr">${count}</span>`}</a>`;
 
 const pinCard = (p: typeof PINNED[number]) => `
@@ -214,8 +257,19 @@ const pinCard = (p: typeof PINNED[number]) => `
     </div>
   </li>`;
 
-const shell = (page: string, pre: string, graph: string) => `<!doctype html>
-<html lang="en"><head>
+const shell = (page: string, pre: string, graph: string, look: Look) => {
+const owner = look.view === "owner";
+const tabs = `<nav class="tabs">
+    ${tab(ICON.book, "Overview")}
+    ${tab(ICON.repo, "Repositories", owner ? ME.repositories : ME.publicRepos)}
+    ${tab(ICON.proj, "Projects", 0)}
+    ${tab(ICON.pkg, "Packages", 0)}
+    ${tab(ICON.star, "Stars", ME.stars)}
+  </nav>`;
+
+return `<!doctype html>
+<html lang="en" class="${owner ? "in" : "out"}"${
+  look.theme === "auto" ? "" : ` data-theme="${look.theme}"`}><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
@@ -223,60 +277,96 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
 <link rel="icon" href="${ME.avatar}">
 <script defer src="${UMAMI}" data-website-id="${UMAMI_SITE}"></script>
 <style>
-  :root {
-    color-scheme: light dark;
-    --fg:#1f2328; --dim:#59636e; --bg:#ffffff; --canvas:#ffffff; --topbar:#f6f8fa;
-    --line:#d1d9e0; --accent:#0969da; --btn:#f6f8fa; --btnh:#eef1f4; --muted:#818b98;
-    --code:#f6f8fa; --l0:#eff2f5; --l1:#aceebb; --l2:#4ac26b; --l3:#2da44e; --l4:#116329;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --fg:#f0f6fc; --dim:#9198a1; --bg:#0d1117; --canvas:#0d1117; --topbar:#010409;
-            --line:#3d444d; --accent:#4493f8; --btn:#212830; --btnh:#2a313c; --muted:#6e7681;
-            --code:#151b23; --l0:#151b23; --l1:#033a16; --l2:#196c2e; --l3:#2ea043; --l4:#56d364; }
-  }
+  /* prefers-color-scheme is exact for logged-out visitors — github.com ships
+     data-color-mode="auto" and resolves it the same way. The attribute is only there
+     for the visitor who told us the guess was wrong. */
+  :root { ${LIGHT} }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${DARK} } }
+  :root[data-theme="dark"] { ${DARK} }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--canvas); color:var(--fg);
          font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; }
 
-  /* The real header block is 52px of global bar plus a 48px tab row, then an 8px
-     gap before the content. Matching it to the pixel is the whole point: get it
-     wrong and the handoff to github.com ends in a visible jump. */
-  .chrome { background:var(--topbar); }
-  .top { display:flex; align-items:center; gap:16px; padding:0 32px; height:52px; }
-  .top .mark { color:var(--fg); display:flex; }
-  .top .ico { color:var(--fg); display:flex; align-items:center; }
+  /* Matching the header block to the pixel is the whole point: get it wrong and the
+     handoff to github.com ends in a visible jump. Logged in that block is a 52px
+     GlobalNav plus a 48px full-bleed tab row, then an 8px gap before the content.
+     Logged out it is a 72px marketing header, a 24px gap, and a tab row that lives
+     inside the main column instead — 37px further down the page. */
+  .chrome { background:var(--topbar); color:var(--fg); }
+  .out .chrome { background:#25292e; color:#ffffff; }
+  .top { display:flex; align-items:center; gap:16px; padding:0 16px; height:52px; }
+  .out .top { height:72px; max-width:1280px; margin:0 auto; padding:0 32px; }
+  .top .mark, .top .ico { color:inherit; display:flex; align-items:center; }
   .top .grow { flex:1; }
+  .crumb { font-size:14px; color:inherit; }
   .search { display:flex; align-items:center; gap:8px; color:var(--muted); background:var(--bg);
             border:1px solid var(--line); border-radius:6px; padding:5px 8px; width:272px; font-size:14px; }
   .search .slash { margin-left:auto; border:1px solid var(--line); border-radius:3px;
                    padding:0 5px; font-size:12px; line-height:18px; }
+  .out .search { background:transparent; border-color:#3d444d; color:#8b949e; width:200px; }
+  .out .search .slash { border-color:#3d444d; }
   .avatar-sm { width:20px; height:20px; border-radius:50%; }
-  .top .sep { width:1px; height:20px; background:var(--line); }
 
-  .tabs { border-bottom:1px solid var(--line); padding:0 32px; display:flex; gap:8px;
-          height:48px; align-items:stretch; overflow-x:auto; }
+  /* The marketing header does not follow the theme — it is #25292e in both. */
+  .mnav { display:flex; align-items:center; gap:16px; font-size:14px; }
+  .mnav span { display:flex; align-items:center; gap:2px; white-space:nowrap; }
+  .signin { color:inherit; font-size:14px; white-space:nowrap; }
+  .signup { color:inherit; font-size:14px; line-height:20px; white-space:nowrap;
+            border:1px solid #d1d9e0; border-radius:6px; padding:5px 12px; }
+  .signin:hover, .signup:hover { text-decoration:none; opacity:.8; }
+  @media (max-width:1012px) { .mnav, .out .search { display:none; } }
+
+  /* Classic tab row: items fill the row and underline the separator, which is an
+     inset shadow rather than a border so the items can paint over it without a
+     negative margin — that margin is what put a scrollbar in a 49px box. */
+  .tabs { box-shadow:inset 0 -1px 0 var(--line); padding:0 16px; display:flex; gap:8px;
+          height:49px; margin-bottom:24px; align-items:stretch;
+          overflow-x:auto; overflow-y:hidden; }
   .tab { display:flex; align-items:center; gap:8px; padding:0 8px; color:var(--fg);
-         font-size:14px; border-bottom:2px solid transparent; margin-bottom:-1px; white-space:nowrap; }
+         font-size:14px; border-bottom:2px solid transparent; white-space:nowrap; }
   .tab:hover { text-decoration:none; border-bottom-color:var(--line); }
-  .tab.on { font-weight:600; border-bottom-color:#fd8c73; }
+  .tab.on .lbl { font-weight:600; }
+  .tab.on { border-bottom-color:#fd8c73; }
   .tab svg { color:var(--dim); }
-  .ctr { background:var(--btn); border-radius:2em; padding:0 6px; font-size:12px; color:var(--fg); }
+  .ctr { background:rgba(129,139,152,.12); border-radius:20px; padding:2px 6px;
+         font-size:12px; line-height:14px; color:var(--fg); }
+  /* GlobalNav tab row: no icons, 32px items sitting 8px down, underline at y+32. */
+  .in .tabs { height:48px; padding:8px 16px 0; margin-bottom:0; align-items:flex-start; }
+  .in .tab { height:32px; padding:6px 8px; line-height:20px; border-bottom:0;
+             border-radius:6px 6px 0 0; }
+  .in .tab svg { display:none; }
+  .in .tab:hover { box-shadow:inset 0 -2px 0 var(--line); }
+  .in .tab.on { box-shadow:inset 0 -2px 0 #fd8c73; }
 
   .page { max-width:1280px; margin:8px auto 0; padding:24px 32px 64px;
           display:grid; grid-template-columns:296px minmax(0,1fr); gap:24px; align-items:start; }
-  @media (max-width:1012px) { .page { grid-template-columns:1fr; padding:16px; } .side { max-width:22rem; } }
+  .out .page { margin-top:24px; padding-top:0; }
+  /* minmax(0,1fr), not 1fr: an auto minimum lets the tab row and the document set a
+     floor wider than the viewport, and the whole page scrolls sideways. */
+  @media (max-width:1012px) { .page { grid-template-columns:minmax(0,1fr); padding:16px; }
+                              .side { max-width:22rem; } }
+  /* The GlobalNav bar cannot fit its search box and six icons on a phone either. */
+  @media (max-width:768px) { .in .search, .in .top .ico:not(:first-child) { display:none; } }
 
   .side { padding-top:8px; }
+  .out .side { padding-top:17px; }
+  .avawrap { position:relative; }
+  .status { position:absolute; right:3px; bottom:33px; width:36px; height:36px; border-radius:50%;
+            border:1px solid var(--line); background:var(--bg); color:var(--dim);
+            display:flex; align-items:center; justify-content:center; cursor:pointer; }
   .side .ava { width:100%; aspect-ratio:1; border-radius:50%; border:1px solid var(--line); display:block; }
   .side h1 { font-size:24px; line-height:1.25; font-weight:600; margin:16px 0 0; }
   .side h2 { font-size:20px; line-height:24px; font-weight:300; color:var(--dim); margin:0 0 16px; }
-  .btn { display:block; text-align:center; width:100%; margin:16px 0; padding:5px 16px; font-size:14px;
-         font-weight:500; border:1px solid var(--line); border-radius:6px; background:var(--btn);
-         color:var(--fg); cursor:pointer; }
+  .btn { display:block; text-align:center; width:100%; margin:16px 0; padding:5px 16px;
+         font-size:14px; line-height:20px; font-weight:500; border:1px solid var(--line);
+         border-radius:6px; background:var(--btn); color:var(--fg); cursor:pointer; }
   .btn:hover { background:var(--btnh); text-decoration:none; }
-  .meta { color:var(--dim); font-size:14px; display:flex; align-items:center; gap:8px; margin:4px 0; }
+  /* vcard rows are 25px on a 29px pitch, with the followers line set apart by 12. */
+  .meta { color:var(--dim); font-size:14px; display:flex; align-items:center; gap:8px;
+          margin:4px 0; padding:2px 0; }
+  .side .meta:first-of-type { margin-bottom:12px; }
   .meta svg { color:var(--muted); flex:none; }
   .meta b { color:var(--fg); font-weight:600; }
   .side h3 { font-size:16px; font-weight:600; margin:16px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
@@ -287,13 +377,18 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
                border-radius:2em; font-size:11px; padding:0 4px; }
 
   /* The panel is a plain Box with 24px of padding; the "doublej / README.md" line is
-     a 35px row inside that padding, not a bordered strip. The document itself is a
-     markdown code block, which is where the muted background comes from. */
+     an ordinary flex row inside that padding, not a bordered strip — there is no
+     Box-header and no separator. It is 12px monospace on an 18px line, and the extra
+     1.34px logged in is the pencil's 16px glyph hanging below the baseline. The
+     document itself is a markdown code block, which is where the muted background
+     comes from. */
   .panel { border:1px solid var(--line); border-radius:6px; background:var(--bg); padding:24px; }
-  .panelhead { display:flex; align-items:center; gap:4px; height:35px;
-               color:var(--dim); font-size:14px; }
+  .panelhead { display:flex; align-items:center; justify-content:space-between;
+               height:18px; margin-bottom:16px; color:var(--dim);
+               font:12px/18px ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace; }
+  .in .panelhead { height:19.34px; }
   .panelhead .path { color:var(--fg); }
-  .panelhead .right { margin-left:auto; display:flex; align-items:center; gap:12px; }
+  .panelhead .right { display:flex; align-items:center; gap:8px; }
   .panelhead .ico { color:var(--dim); display:flex; }
   .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); opacity:0; }
   .dot.on { opacity:1; animation:pulse 1.1s ease-in-out infinite; }
@@ -304,6 +399,15 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
         font-family:"Monaspace Neon",ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
         font-size:11.9px; line-height:17.255px; }
   pre a { color:var(--accent); text-decoration:underline; }
+
+  /* The guess about who is looking is unverifiable from here, so say so quietly and
+     let the visitor correct it. Muted, below the fold of the document, small. */
+  .viewfix { display:flex; justify-content:flex-end; align-items:center; gap:6px;
+             margin-top:8px; font-size:12px; color:var(--muted); }
+  .viewfix button { font:inherit; color:var(--dim); background:none; border:0; padding:0;
+                    cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
+  .viewfix button:hover { color:var(--accent); }
+  .viewfix button.on { color:var(--fg); text-decoration:none; cursor:default; }
 
   .sect { margin-top:32px; }
   .secthead { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; }
@@ -333,6 +437,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   .ctitle { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; }
   .ctitle h2 { font-size:16px; font-weight:400; margin:0; }
   .cset { font-size:14px; color:var(--fg); }
+  .out .cset { display:none; }  /* the graph is public; the settings menu is not */
   .graph { border:1px solid var(--line); border-radius:6px; padding:16px; overflow-x:auto; }
   .cal { border-spacing:3px; border-collapse:separate; font-size:12px; color:var(--dim); }
   .cal td { padding:0; }
@@ -352,63 +457,83 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
 </style>
 </head><body>
   <div class="chrome">
-  <header class="top">
+  ${owner ? `<header class="top">
     <span class="ico">${ICON.bar}</span>
     <a class="mark" href="https://github.com/" aria-label="Homepage">${ICON.logo}</a>
+    <a class="crumb" href="${PROFILE}">${ME.login}</a>
     <span class="grow"></span>
     <div class="search">${ICON.search}<span>Type <kbd>/</kbd> to search</span><span class="slash">/</span></div>
+    <span class="ico">${ICON.copilot}</span>
     <span class="ico">${ICON.plus}${ICON.caret}</span>
     <span class="ico">${ICON.issue}</span>
     <span class="ico">${ICON.pr}</span>
+    <span class="ico">${ICON.proj}</span>
     <span class="ico">${ICON.inbox}</span>
     <img class="avatar-sm" src="${ME.avatar}" alt="">
   </header>
 
-  <nav class="tabs">
-    ${tab(ICON.book, "Overview")}
-    ${tab(ICON.repo, "Repositories", ME.repositories)}
-    ${tab(ICON.proj, "Projects", 0)}
-    ${tab(ICON.pkg, "Packages", 0)}
-    ${tab(ICON.star, "Stars", ME.stars)}
-  </nav>
+  ${tabs}` : `<header class="top">
+    <span class="ico">${ICON.bar}</span>
+    <a class="mark" href="https://github.com/" aria-label="Homepage">${ICON.logo}</a>
+    <nav class="mnav">${["Platform", "Solutions", "Resources", "Open Source", "Enterprise"]
+      .map((n) => `<span>${n}${ICON.caret}</span>`).join("")}<span>Pricing</span></nav>
+    <span class="grow"></span>
+    <div class="search">${ICON.search}<span>Search or jump to...</span><span class="slash">/</span></div>
+    <a class="signin" href="https://github.com/login">Sign in</a>
+    <a class="signup" href="https://github.com/signup">Sign up</a>
+    <span class="ico">${ICON.sun}</span>
+  </header>`}
   </div>
 
   <div class="page">
     <div class="side">
-      <img class="ava" src="${ME.avatar}" alt="">
+      <div class="avawrap">
+        <img class="ava" src="${ME.avatar}" alt="">
+        ${owner ? `<button class="status" title="Set status">${ICON.smiley}</button>` : ""}
+      </div>
       <h1>${ME.name}</h1>
       <h2>${ME.login}</h2>
-      <a class="btn" href="${PROFILE}">Edit profile</a>
+      ${owner
+        ? `<a class="btn" href="${PROFILE}">Edit profile</a>`
+        : `<a class="btn" href="https://github.com/login">Follow</a>`}
       <p class="meta">${ICON.org}<span><b>${ME.followers}</b> followers · <b>${ME.following}</b> following</span></p>
       <p class="meta">${ICON.org}${ME.company}</p>
       <p class="meta">${ICON.loc}${ME.location}</p>
-      <p class="meta">${ICON.mail}${ME.email}</p>
+      ${owner ? `<p class="meta">${ICON.mail}${ME.email}</p>` : ""}
       <p class="meta">${ICON.link}<a href="${ME.link}">${ME.link}</a></p>
       <h3>Achievements</h3>
       <div class="badges">
         ${ACHIEVEMENTS.map((a) => `<span><img src="${a.img}" alt="${a.name}">${
           a.x ? `<i class="x">x${a.x}</i>` : ""}</span>`).join("")}
       </div>
-      <h3>Organizations</h3>
+      ${owner ? `<h3>Organizations</h3>
       <div class="orgs">
         ${ORGS.map((o) => `<a href="https://github.com/${o.login}"><img src="${o.avatar}" alt="${o.login}"></a>`).join("")}
-      </div>
+      </div>` : ""}
     </div>
 
     <div>
+      ${owner ? "" : tabs}
       <div class="panel">
         <div class="panelhead">
-          <span class="path">${ME.login}</span><span>/</span><span class="path">README.md</span>
+          <span><a class="path" href="${PROFILE}">${ME.login}</a> / <span class="path">README</span>.md</span>
           <span class="right">
             <span class="dot on" id="dot" title="rebuilding"></span>
-            <span class="ico">${ICON.pencil}</span>
+            ${owner ? `<span class="ico">${ICON.pencil}</span>` : ""}
           </span>
         </div>
         <div class="doc" id="doc">${pre}</div>
       </div>
 
+      <div class="viewfix">not your view?
+        <button data-set="${THEME_COOKIE}:light"${look.theme === "light" ? ` class="on"` : ""}>light</button><span>·</span>
+        <button data-set="${THEME_COOKIE}:dark"${look.theme === "dark" ? ` class="on"` : ""}>dark</button><span>·</span>
+        <button data-set="${VIEW_COOKIE}:${owner ? "out" : "owner"}">${owner ? "signed out" : "signed in"}</button>
+      </div>
+
       <div class="sect">
-        <div class="secthead"><h2>Pinned</h2><a href="${PROFILE}">Customize your pins</a></div>
+        <div class="secthead"><h2>Pinned</h2>${
+          owner ? `<a href="${PROFILE}">Customize your pins</a>` : ""}</div>
         <ul class="pins">${PINNED.map(pinCard).join("")}</ul>
       </div>
 
@@ -420,7 +545,21 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   </div>
 
 <script>
-  const PAGE = ${JSON.stringify(page)}, MAX = ${MAX_WAIT_SECONDS};
+  const PAGE = ${JSON.stringify(page)}, MAX = ${MAX_WAIT_SECONDS}, DRY = ${look.dry};
+
+  // Which shell to serve is a guess, so the correction has to survive the visit. The
+  // worker is first-party on a top-level navigation, so a plain cookie does it, read
+  // back in fetch() — the theme flips in place, the view needs the server.
+  document.querySelectorAll(".viewfix button").forEach((b) => b.addEventListener("click", () => {
+    const parts = b.dataset.set.split(":");
+    document.cookie = parts[0] + "=" + parts[1] + ";path=/;max-age=31536000;samesite=lax" +
+      (location.protocol === "https:" ? ";secure" : "");
+    if (parts[0] === ${JSON.stringify(VIEW_COOKIE)}) return location.reload();
+    document.documentElement.dataset.theme = parts[1];
+    b.parentNode.querySelectorAll("[data-set^=" + ${JSON.stringify(THEME_COOKIE)} + "]")
+      .forEach((x) => x.classList.toggle("on", x === b));
+  }));
+
   // The tracker is deferred, so it may not exist yet on the first beat. Retry rather
   // than drop it — nav:request fires immediately and is the one event we cannot lose.
   const track = (name, data) => {
@@ -432,7 +571,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
     go();
   };
   const began = Date.now();
-  track("nav:request", { page: PAGE });
+  if (!DRY) track("nav:request", { page: PAGE });
   const doc = document.getElementById("doc"), dot = document.getElementById("dot");
   // The committed frames carry a real bar; ease between them so it reads as continuous.
   const BAR = /\\[([\\u2593\\u2591]+)\\]\\s+(\\d+)%/;
@@ -529,13 +668,20 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
     } catch (e) { /* keep waiting; the cap will fire */ }
     setTimeout(poll, 1200);
   };
-  setTimeout(poll, 1200);
+  // ?dry=1 renders the shell and nothing else: no dispatch, no poll, no handoff.
+  if (!DRY) setTimeout(poll, 1200);
 </script>
-<noscript><meta http-equiv="refresh" content="35;url=${PROFILE}"></noscript>
+${look.dry ? "" : `<noscript><meta http-equiv="refresh" content="35;url=${PROFILE}"></noscript>`}
 </body></html>`;
+};
 
 const seeOther = (to: string) =>
   new Response(null, { status: 302, headers: { Location: to, "Cache-Control": "no-store" } });
+
+/** The query string is for checking the shell; the cookie is what visitors actually set. */
+const setting = (url: URL, jar: string, param: string, name: string) =>
+  url.searchParams.get(param) ??
+  (jar.match(new RegExp("(?:^|;\\s*)" + name + "=([^;]*)"))?.[1] ?? "");
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -549,20 +695,32 @@ export default {
       }
       const md = await readme(env.GH_TOKEN);
       return Response.json(
-        { landed: landed(md, page), loading: md.includes("LOADING"), pre: preOf(md) },
+        { landed: landed(md, page), loading: isLoading(md), pre: preOf(md) },
         { headers: nostore },
       );
     }
 
+    // Logged out is the default: the README link is public, so most clicks are.
+    const jar = request.headers.get("Cookie") ?? "";
+    const theme = setting(url, jar, "theme", THEME_COOKIE);
+    const look: Look = {
+      view: setting(url, jar, "view", VIEW_COOKIE) === "owner" ? "owner" : "out",
+      theme: theme === "light" || theme === "dark" ? theme : "auto",
+      dry: url.searchParams.get("dry") === "1",
+    };
+
     if (!PAGES.includes(page)) return seeOther(PROFILE);
-    if (!env.GH_TOKEN) return seeOther(issueFallback(page));
+    if (!env.GH_TOKEN && !look.dry) return seeOther(issueFallback(page));
 
     // The 0% frame ships with the worker, so the loader is on screen in one round
     // trip — no waiting on the contents API, let alone on the runner.
-    const [claimed, graph] = await Promise.all([claimTurn(), contributions()]);
-    if (claimed) await dispatch(page, env.GH_TOKEN);
+    const [claimed, graph] = await Promise.all([
+      look.dry ? false : claimTurn(),
+      contributions(),
+    ]);
+    if (claimed && env.GH_TOKEN) await dispatch(page, env.GH_TOKEN);
 
-    return new Response(shell(page, preOf(FRAME_0[page] ?? ""), graph), {
+    return new Response(shell(page, preOf(FRAME_0[page] ?? ""), graph, look), {
       headers: { "Content-Type": "text/html; charset=utf-8", ...nostore },
     });
   },
