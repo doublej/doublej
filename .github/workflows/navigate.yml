@@ -16,7 +16,7 @@ on:
         required: true
         default: home
         type: choice
-        options: [home, cli, atlas, systems, projects, raycast, forks]
+        options: [home, cli, atlas, framelink, simsync, systems, projects, raycast, forks]
 
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
         run: |
           page="${DISPATCH:-${TITLE#go:}}"
           case "$page" in
-            home|cli|atlas|systems|projects|raycast|forks)
+            home|cli|atlas|framelink|simsync|systems|projects|raycast|forks)
               echo "page=$page" >> "$GITHUB_OUTPUT" ;;
             *)
               echo "::error::not a page: $page"; exit 1 ;;

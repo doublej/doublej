@@ -4,7 +4,7 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  ◂ prev   ·   [home]  <a href="https://github.com/doublej/doublej/issues/new?title=go%3Acli&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">cli</a>  <a href="https://github.com/doublej/doublej/issues/new?title=go%3Aatlas&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">atlas</a>  <a href="https://github.com/doublej/doublej/issues/new?title=go%3Asystems&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">systems</a>  <a href="https://github.com/doublej/doublej/issues/new?title=go%3Aprojects&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">projects</a>  <a href="https://github.com/doublej/doublej/issues/new?title=go%3Araycast&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">raycast</a>  <a href="https://github.com/doublej/doublej/issues/new?title=go%3Aforks&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">forks</a>   ·   <a href="https://github.com/doublej/doublej/issues/new?title=go%3Acli&body=Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.">next ▸</a>           page 1 / 7
+  ◂  [home]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">▸</a>           page 1 / 9
 
 
   FEATURED  ──────────────────────────────────────────────────────────────────────────────────────────
@@ -92,10 +92,10 @@
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
-  Every tab is an issue link. ⌘-click or middle-click one to keep this page where it is —
-  GitHub strips target=_blank from READMEs, so that modifier is the only way to stay put.
-  Press Create and the build narrates itself on the issue, then links you back here. Meanwhile
-  this file is re-rendered frame by frame: sit on the profile and refresh for the loading bar.
+  A README cannot open a new tab — GitHub strips target=_blank and forbids script — so every
+  tab up there points at a Cloudflare Worker instead. It fires a GitHub Action and bounces you
+  straight back here, and the Action rewrites this file frame by frame behind you. Refresh a
+  few times right after clicking and you will catch the loading bar. Five commits per turn.
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)

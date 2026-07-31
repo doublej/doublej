@@ -18,6 +18,8 @@ DESCCOL = 36     # column where descriptions start
 
 GH = "https://github.com/doublej/"
 REPO = "https://github.com/doublej/doublej"
+# The tab bar proxy: dispatches the workflow, then bounces the visitor straight back.
+NAV = "https://doublej-nav.jurrejan-e26.workers.dev/?p="
 
 
 # ── primitives ──────────────────────────────────────────────────────────────
@@ -96,10 +98,8 @@ CLI = [
 ]
 
 SYSTEMS = [
-    ("framelink", None, "Wireless PC-VR to Quest 3 — Bun control plane, Zig data plane"),
     ("frameclarity", None, "Per-game Quest optimizer over ADB: Rust core, Tauri, APK"),
     ("quest-link-bridge", None, "Meta Quest Link (XRSP) protocol RE, bridged into SteamVR"),
-    ("simsync", None, "Set your wheel up once, use it in every racing sim"),
     ("acc-native-server", None, "The ACC dedicated server, reverse-engineered and rebuilt in Rust"),
     ("beamng-mcp", None, "Drive, tune and sense BeamNG.drive from any MCP client"),
     ("wallgen", None, "Wallpaper print pipeline: wall segmentation to press-ready art"),
@@ -334,14 +334,12 @@ def atlas_diagram():
 
 # ── navigation ──────────────────────────────────────────────────────────────
 
-PAGES = ["home", "cli", "atlas", "systems", "projects", "raycast", "forks"]
-
-BODY = ("Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C"
-        "+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.")
+PAGES = ["home", "cli", "atlas", "framelink", "simsync", "systems", "projects",
+         "raycast", "forks"]
 
 
 def link(page):
-    return f"{REPO}/issues/new?title=go%3A{page}&body={BODY}"
+    return NAV + page
 
 
 def nav(active, live=True):
@@ -354,31 +352,32 @@ def nav(active, live=True):
         plain += text
         rich += f'<a href="{url}">{text}</a>' if (url and live) else text
 
-    add("◂ prev", link(PAGES[i - 1]) if i else None)
-    plain += "   ·   "
-    rich += "   ·   "
-    for j, p in enumerate(PAGES):
+    add("\u25c2", link(PAGES[i - 1]) if i else None)
+    plain += "  "
+    rich += "  "
+    for j, page in enumerate(PAGES):
         if j:
             plain += "  "
             rich += "  "
-        if p == active:
-            add(f"[{p}]", None)
-        else:
-            add(p, link(p))
-    plain += "   ·   "
-    rich += "   ·   "
-    add("next ▸", link(PAGES[(i + 1) % len(PAGES)]) if i < len(PAGES) - 1 else None)
+        add(f"[{page}]", None) if page == active else add(page, link(page))
+    plain += "  "
+    rich += "  "
+    add("\u25b8", link(PAGES[i + 1]) if i < len(PAGES) - 1 else None)
 
     tail = f"page {i + 1} / {len(PAGES)}"
     return rich + " " * (W - len(plain) - len(tail)) + tail
 
 
+def site(url, label):
+    return f'  \u2192  <a href="{url}">{label}</a>'
+
+
 FOOTER = [
     "  " + "─" * (W - 2),
-    "  Every tab is an issue link. \u2318-click or middle-click one to keep this page where it is \u2014",
-    "  GitHub strips target=_blank from READMEs, so that modifier is the only way to stay put.",
-    "  Press Create and the build narrates itself on the issue, then links you back here. Meanwhile",
-    "  this file is re-rendered frame by frame: sit on the profile and refresh for the loading bar.",
+    "  A README cannot open a new tab \u2014 GitHub strips target=_blank and forbids script \u2014 so every",
+    "  tab up there points at a Cloudflare Worker instead. It fires a GitHub Action and bounces you",
+    "  straight back here, and the Action rewrites this file frame by frame behind you. Refresh a",
+    "  few times right after clicking and you will catch the loading bar. Five commits per turn.",
 ]
 
 
@@ -467,7 +466,42 @@ def page_forks():
     return listing("FORKS", ["Other people's work that I run, patched to taste. Credit upstream."], FORKS)
 
 
-BUILDERS = {"home": page_home, "cli": page_cli, "atlas": page_atlas, "systems": page_systems,
+def page_framelink():
+    out = ["", header("FRAMELINK"), "", site("https://www.framelink.quest/", "www.framelink.quest"), "",
+           "  Wireless PC-VR to a Quest 3. A cross-platform data plane, native capture, encode and",
+           "  decode at each end, and a Bun control surface holding the session together \u2014 built to see",
+           "  how far a self-made streamer gets against Air Link and Virtual Desktop.",
+           "",
+           row("packages/protocol", None, "Zig \u2014 the shared wire contract and its C ABI"),
+           row("pc-streamer", None, "Zig \u2014 frame sharding, pacing, transport metrics"),
+           row("sim-receiver", None, "Zig \u2014 reassembly and presentation on the headset"),
+           row("apps/ui", None, "Bun control daemon and dashboard API"),
+           row("apps/consumer-ui", None, "Svelte operator control and session view"),
+           row("broker \u00b7 auth", None, "The TypeScript services behind the control plane"),
+           row("quest-link-bridge", None, "Meta Quest Link (XRSP) protocol RE, bridged to SteamVR"),
+           row("beamng-mcp", None, "Bundled: drive and sense BeamNG.drive from an MCP client")]
+    return out
+
+
+def page_simsync():
+    return ["", header("SIMSYNC"), "", site("https://www.simsync.app/", "www.simsync.app"), "",
+            "  Set your wheel up once and use it in every sim. Every racing function gets a universal",
+            "  control id; SimSync binds your hardware to those ids and maps them onto whatever a game",
+            "  expects, so supporting a new sim is a new adapter rather than an afternoon of remapping.",
+            "",
+            "        PERIPHERAL                 CONTROL                    SIM",
+            "        Fanatec DD    \u25c4\u2500 bind \u2500\u25ba   Throttle 0301001   \u25c4\u2500 map \u2500\u25ba   iRacing",
+            "",
+            row("simsync-application", None, "The core: read, translate and write input maps"),
+            row("simsync-ui", None, "Desktop UI for binding hardware to controls"),
+            row("simsync-helper", None, "Rust helper for direct device access"),
+            row("simsync-emulator", None, "Stands in for hardware that is not on the desk"),
+            row("adapters", None, "ac \u00b7 acc \u00b7 acevo \u00b7 iracing \u00b7 f124 \u00b7 ets2 \u00b7 beamng \u00b7 wrc"),
+            row("simsync-marketing", None, "The site at simsync.app")]
+
+
+BUILDERS = {"home": page_home, "cli": page_cli, "atlas": page_atlas,
+            "framelink": page_framelink, "simsync": page_simsync, "systems": page_systems,
             "projects": page_projects, "raycast": page_raycast, "forks": page_forks}
 
 
