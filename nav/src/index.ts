@@ -39,12 +39,17 @@ const ME = {
   avatar: "https://avatars.githubusercontent.com/u/548350?v=4",
   company: "poolsuite.partners",
   location: "Netherlands",
+  email: "jurrejan@gmail.com",
   link: "https://www.threads.com/@jurre_jan",
   followers: 7,
   following: 10,
-  repositories: 94,
+  repositories: 267,
   stars: 95,
 };
+
+const ORGS = [
+  { login: "FrameLinkVR", avatar: "https://avatars.githubusercontent.com/u/297276893?v=4" },
+];
 
 /** Mirrors the real profile, which is what the visitor sees a second later. */
 const PINNED = [
@@ -53,6 +58,7 @@ const PINNED = [
   { name: "bpr", desc: "Better Beeper CLI for Agents", lang: "Go", dot: "#00ADD8", stars: 0, forks: 0 },
   { name: "flt", desc: "Search flights, compare prices across dates, build itineraries, and export data — all from your terminal.", lang: "TypeScript", dot: "#3178c6", stars: 0, forks: 0 },
   { name: "onenv", desc: "1Password-backed environment variable manager with agent friendly CLI. Replaces .env files.", lang: "TypeScript", dot: "#3178c6", stars: 0, forks: 0 },
+  { name: "orphan-obliterator", desc: "Prevent orphaned words on the last line of HTML elements", lang: "TypeScript", dot: "#3178c6", stars: 0, forks: 0 },
 ];
 
 const ACHIEVEMENTS = [
@@ -142,7 +148,8 @@ async function contributions(): Promise<string> {
       if (rows.length) {
         const grid = rows.map((r) =>
           `<tr>${r.map((l) => `<td data-level="${l}"></td>`).join("")}</tr>`).join("");
-        out = `<h2 class="ctitle">${total} contributions in the last year</h2>
+        out = `<div class="ctitle"><h2>${total} contributions in the last year</h2>
+            <span class="cset">Contribution settings ▾</span></div>
           <div class="graph"><table class="cal">
             <thead><tr><td class="cdow"></td>${labels}</tr></thead><tbody>${grid}</tbody>
           </table>
@@ -182,6 +189,10 @@ const ICON = {
   pin: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M4.456.734a1.75 1.75 0 0 1 2.826.504l.613 1.327a3.081 3.081 0 0 0 2.084 1.707l2.454.584c1.201.286 1.635 1.779.762 2.65l-1.997 1.997 3.14 3.14a.75.75 0 0 1-1.06 1.06l-3.14-3.14-1.997 1.997c-.871.873-2.364.439-2.65-.762l-.584-2.454a3.081 3.081 0 0 0-1.707-2.084l-1.327-.613a1.75 1.75 0 0 1-.504-2.826Z"/></svg>`,
   link: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 2 2 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a2 2 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 2 2 0 0 0-2.83 0l-2.5 2.5a2 2 0 0 0 0 2.83Z"/></svg>`,
   loc: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"/></svg>`,
+  mail: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"/></svg>`,
+  fork: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>`,
+  grip: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M10 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-4 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>`,
+  pencil: `<svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"/></svg>`,
 };
 
 const tab = (icon: string, label: string, count?: number) =>
@@ -191,12 +202,12 @@ const tab = (icon: string, label: string, count?: number) =>
 
 const pinCard = (p: typeof PINNED[number]) => `
   <li class="pin">
-    <div class="pinhead">${ICON.repo}<a href="https://github.com/${OWNER}/${p.name}">${p.name}</a><span class="badge">Public</span></div>
+    <div class="pinhead">${ICON.repo}<a href="https://github.com/${OWNER}/${p.name}">${p.name}</a><span class="badge">Public</span><span class="grip">${ICON.grip}</span></div>
     <p class="pindesc">${p.desc}</p>
     <div class="pinmeta">
       <span><i class="langdot" style="background:${p.dot}"></i>${p.lang}</span>
       ${p.stars ? `<span>${ICON.star}${p.stars}</span>` : ""}
-      ${p.forks ? `<span>${ICON.pr}${p.forks}</span>` : ""}
+      ${p.forks ? `<span>${ICON.fork}${p.forks}</span>` : ""}
     </div>
   </li>`;
 
@@ -225,8 +236,11 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; }
 
-  .top { background:var(--topbar); border-bottom:1px solid var(--line);
-         display:flex; align-items:center; gap:16px; padding:0 16px; height:56px; }
+  /* The real header block is 52px of global bar plus a 48px tab row, then an 8px
+     gap before the content. Matching it to the pixel is the whole point: get it
+     wrong and the handoff to github.com ends in a visible jump. */
+  .chrome { background:var(--topbar); }
+  .top { display:flex; align-items:center; gap:16px; padding:0 32px; height:52px; }
   .top .mark { color:var(--fg); display:flex; }
   .top .ico { color:var(--fg); display:flex; align-items:center; }
   .top .grow { flex:1; }
@@ -237,18 +251,20 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   .avatar-sm { width:20px; height:20px; border-radius:50%; }
   .top .sep { width:1px; height:20px; background:var(--line); }
 
-  .tabs { border-bottom:1px solid var(--line); padding:0 32px; display:flex; gap:8px; overflow-x:auto; }
-  .tab { display:flex; align-items:center; gap:8px; padding:8px 8px 12px; color:var(--fg);
+  .tabs { border-bottom:1px solid var(--line); padding:0 32px; display:flex; gap:8px;
+          height:48px; align-items:stretch; overflow-x:auto; }
+  .tab { display:flex; align-items:center; gap:8px; padding:0 8px; color:var(--fg);
          font-size:14px; border-bottom:2px solid transparent; margin-bottom:-1px; white-space:nowrap; }
   .tab:hover { text-decoration:none; border-bottom-color:var(--line); }
   .tab.on { font-weight:600; border-bottom-color:#fd8c73; }
   .tab svg { color:var(--dim); }
   .ctr { background:var(--btn); border-radius:2em; padding:0 6px; font-size:12px; color:var(--fg); }
 
-  .page { max-width:1280px; margin:0 auto; padding:24px 32px 64px;
+  .page { max-width:1280px; margin:8px auto 0; padding:24px 32px 64px;
           display:grid; grid-template-columns:296px minmax(0,1fr); gap:24px; align-items:start; }
   @media (max-width:1012px) { .page { grid-template-columns:1fr; padding:16px; } .side { max-width:22rem; } }
 
+  .side { padding-top:8px; }
   .side .ava { width:100%; aspect-ratio:1; border-radius:50%; border:1px solid var(--line); display:block; }
   .side h1 { font-size:24px; line-height:1.25; font-weight:600; margin:16px 0 0; }
   .side h2 { font-size:20px; line-height:24px; font-weight:300; color:var(--dim); margin:0 0 16px; }
@@ -267,20 +283,29 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
                border-radius:2em; font-size:11px; padding:0 4px; }
 
   .panel { border:1px solid var(--line); border-radius:6px; background:var(--bg); overflow:hidden; }
-  .panelhead { display:flex; align-items:center; gap:8px; padding:8px 16px;
+  .panelhead { display:flex; align-items:center; gap:8px; padding:6px 16px;
                border-bottom:1px solid var(--line); color:var(--dim); font-size:14px; }
   .panelhead .path { color:var(--fg); }
   .panelhead .right { margin-left:auto; display:flex; align-items:center; gap:8px; }
   .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); opacity:0; }
   .dot.on { opacity:1; animation:pulse 1.1s ease-in-out infinite; }
   @keyframes pulse { 0%,100% { opacity:.25 } 50% { opacity:1 } }
-  .doc { padding:32px; overflow-x:auto; }
+  .doc { padding:24px; overflow-x:auto; }
   pre { margin:0; font:12px/1.45 ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace; }
   pre a { color:var(--accent); }
 
   .sect { margin-top:32px; }
-  .secthead { display:flex; align-items:center; gap:8px; font-size:16px; font-weight:400;
-              color:var(--fg); margin:0 0 8px; }
+  .secthead { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; }
+  .secthead h2 { font-size:16px; font-weight:400; color:var(--fg); margin:0; }
+  .secthead a { font-size:12px; }
+  .orgs { display:flex; flex-wrap:wrap; gap:4px; }
+  .orgs img { width:32px; height:32px; border-radius:6px; }
+  .grip { margin-left:auto; color:var(--muted); display:flex; }
+  .graphwrap { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:16px; align-items:start; }
+  .years { display:flex; flex-direction:column; gap:4px; padding-top:32px; }
+  .year { border:1px solid transparent; border-radius:6px; padding:5px 16px; font-size:14px;
+          color:var(--fg); text-align:left; min-width:88px; }
+  .year.on { background:var(--accent); color:#fff; font-weight:500; }
   .pins { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
   @media (max-width:768px) { .pins { grid-template-columns:1fr; } }
   .pin { border:1px solid var(--line); border-radius:6px; padding:16px; display:flex; flex-direction:column; gap:8px; }
@@ -294,7 +319,9 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   .pinmeta svg { width:12px; height:12px; }
   .langdot { width:12px; height:12px; border-radius:50%; display:inline-block; }
 
-  .ctitle { font-size:16px; font-weight:400; margin:0 0 8px; }
+  .ctitle { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; }
+  .ctitle h2 { font-size:16px; font-weight:400; margin:0; }
+  .cset { font-size:14px; color:var(--fg); }
   .graph { border:1px solid var(--line); border-radius:6px; padding:16px; overflow-x:auto; }
   .cal { border-spacing:3px; border-collapse:separate; font-size:12px; color:var(--dim); }
   .cal td { padding:0; }
@@ -313,6 +340,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   .legend span:last-child { margin-left:5px; }
 </style>
 </head><body>
+  <div class="chrome">
   <header class="top">
     <span class="ico">${ICON.bar}</span>
     <a class="mark" href="https://github.com/" aria-label="Homepage">${ICON.logo}</a>
@@ -332,6 +360,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
     ${tab(ICON.pkg, "Packages", 0)}
     ${tab(ICON.star, "Stars", ME.stars)}
   </nav>
+  </div>
 
   <div class="page">
     <div class="side">
@@ -342,11 +371,16 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
       <p class="meta">${ICON.org}<span><b>${ME.followers}</b> followers · <b>${ME.following}</b> following</span></p>
       <p class="meta">${ICON.org}${ME.company}</p>
       <p class="meta">${ICON.loc}${ME.location}</p>
+      <p class="meta">${ICON.mail}${ME.email}</p>
       <p class="meta">${ICON.link}<a href="${ME.link}">${ME.link}</a></p>
       <h3>Achievements</h3>
       <div class="badges">
         ${ACHIEVEMENTS.map((a) => `<span><img src="${a.img}" alt="${a.name}">${
           a.x ? `<i class="x">x${a.x}</i>` : ""}</span>`).join("")}
+      </div>
+      <h3>Organizations</h3>
+      <div class="orgs">
+        ${ORGS.map((o) => `<a href="https://github.com/${o.login}"><img src="${o.avatar}" alt="${o.login}"></a>`).join("")}
       </div>
     </div>
 
@@ -354,17 +388,23 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
       <div class="panel">
         <div class="panelhead">
           <span class="path">${ME.login}</span><span>/</span><span class="path">README.md</span>
-          <span class="right"><span class="dot on" id="dot" title="rebuilding"></span></span>
+          <span class="right">
+            <span class="dot on" id="dot" title="rebuilding"></span>
+            <span class="ico">${ICON.pencil}</span>
+          </span>
         </div>
         <div class="doc" id="doc">${pre}</div>
       </div>
 
       <div class="sect">
-        <h2 class="secthead">${ICON.pin} Pinned</h2>
+        <div class="secthead"><h2>Pinned</h2><a href="${PROFILE}">Customize your pins</a></div>
         <ul class="pins">${PINNED.map(pinCard).join("")}</ul>
       </div>
 
-      <div class="sect">${graph}</div>
+      <div class="sect graphwrap">
+        <div>${graph}</div>
+        <div class="years"><span class="year on">2026</span><span class="year">2025</span></div>
+      </div>
     </div>
   </div>
 
