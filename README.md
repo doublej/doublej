@@ -11,9 +11,9 @@
 
   turning to cli
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  reticulating splines…
+  waking the runner…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,11 +25,11 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   simsync         33 seconds ago      systems         10 minutes ago
-   framelink       1 minute ago        atlas           11 minutes ago
+   simsync         39 seconds ago      systems         11 minutes ago
+   framelink       1 minute ago        atlas           12 minutes ago
    projects        2 minutes ago       cli             12 minutes ago
    systems         3 minutes ago       cli             16 minutes ago
-   framelink       4 minutes ago       raycast         16 minutes ago
+   framelink       4 minutes ago       raycast         17 minutes ago
    simsync         5 minutes ago       framelink       17 minutes ago
    systems         8 minutes ago       projects        19 minutes ago
    simsync         8 minutes ago
