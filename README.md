@@ -11,9 +11,9 @@
 
   turning to cli
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  queued…
+  runner booting…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,10 +25,10 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   raycast         42 seconds ago      projects        12 minutes ago
+   raycast         44 seconds ago      projects        12 minutes ago
    simsync         1 minute ago        framelink       13 minutes ago
    raycast         3 minutes ago       cli             16 minutes ago
-   projects        3 minutes ago       framelink       17 minutes ago
+   projects        4 minutes ago       framelink       17 minutes ago
    atlas           4 minutes ago       atlas           18 minutes ago
    raycast         6 minutes ago       projects        20 minutes ago
    projects        7 minutes ago       home            21 minutes ago
