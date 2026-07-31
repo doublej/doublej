@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -59,13 +59,13 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           28 seconds ago      framelink       26 minutes ago
+   atlas           30 seconds ago      framelink       26 minutes ago
    atlas           1 minute ago        home            26 minutes ago
    atlas           9 minutes ago       atlas           27 minutes ago
    cli             10 minutes ago      home            30 minutes ago
    home            21 minutes ago      cli             32 minutes ago
    home            22 minutes ago      framelink       34 minutes ago
-   home            22 minutes ago      forks           37 minutes ago
+   home            23 minutes ago      forks           37 minutes ago
    atlas           23 minutes ago      cli             38 minutes ago
    framelink       24 minutes ago      raycast         39 minutes ago
    home            25 minutes ago      simsync         40 minutes ago
@@ -85,4 +85,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=cli pct=31 -->
+<!-- nav:loading=cli pct=58 -->
