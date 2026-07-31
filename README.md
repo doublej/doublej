@@ -46,9 +46,9 @@
 
                                            turning to home
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -112,4 +112,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=home pct=6 -->
+<!-- nav:loading=home pct=31 -->
