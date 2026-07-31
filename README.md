@@ -11,9 +11,9 @@
 
   turning to framelink
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-  waking the runner…
+  resolving the monorepo that is not a monorepo…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -32,7 +32,7 @@
    home            8 minutes ago       systems         20 minutes ago
    cli             9 minutes ago       atlas           21 minutes ago
    simsync         10 minutes ago      cli             22 minutes ago
-   framelink       10 minutes ago      cli             25 minutes ago
+   framelink       11 minutes ago      cli             26 minutes ago
    projects        12 minutes ago      raycast         26 minutes ago
    systems         12 minutes ago      framelink       27 minutes ago
 
