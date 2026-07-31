@@ -11,9 +11,9 @@
 
   turning to framelink
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  queued…
+  runner booting…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,8 +25,8 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            13 seconds ago      projects        16 minutes ago
-   atlas           1 minute ago        atlas           16 minutes ago
+   home            15 seconds ago      projects        16 minutes ago
+   atlas           1 minute ago        atlas           17 minutes ago
    home            4 minutes ago       raycast         18 minutes ago
    cli             6 minutes ago       projects        19 minutes ago
    framelink       8 minutes ago       projects        22 minutes ago
