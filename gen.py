@@ -430,11 +430,6 @@ FOOTER = [
     "  a rebuild takes, a worker hands the profile back to you and lets this document load inside it",
     "  \u2014 not a fake progress bar, but the actual frames the Action commits, polled as they land.",
     "  Then it returns you to the real page. Five commits a turn. Refresh here and you catch one.",
-    "",
-    "  Capacity: one reader at a time. The workflow holds a lock, so a second click during a turn",
-    "  waits its turn rather than racing it, and clicks inside the same 20 seconds are folded into",
-    "  one. Fair use: turn as many pages as you like, but this is a text file behind a queue of one,",
-    "  so if it feels slow, that is not the network \u2014 that is somebody else already reading.",
 ]
 
 

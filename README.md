@@ -98,16 +98,16 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            just now            home            31 minutes ago
-   home            5 minutes ago       home            32 minutes ago
-   atlas           7 minutes ago       atlas           32 minutes ago
-   atlas           7 minutes ago       framelink       33 minutes ago
-   cli             8 minutes ago       home            34 minutes ago
-   atlas           9 minutes ago       framelink       35 minutes ago
-   atlas           10 minutes ago      home            35 minutes ago
-   atlas           18 minutes ago      atlas           36 minutes ago
-   cli             19 minutes ago      home            39 minutes ago
-   home            30 minutes ago      cli             41 minutes ago
+   atlas           11 minutes ago      home            36 minutes ago
+   atlas           19 minutes ago      atlas           37 minutes ago
+   cli             20 minutes ago      home            40 minutes ago
+   home            31 minutes ago      cli             42 minutes ago
+   home            32 minutes ago      framelink       44 minutes ago
+   home            32 minutes ago      forks           46 minutes ago
+   atlas           33 minutes ago      cli             48 minutes ago
+   framelink       34 minutes ago      raycast         49 minutes ago
+   home            35 minutes ago      simsync         50 minutes ago
+   framelink       36 minutes ago      raycast         52 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -115,11 +115,6 @@
   a rebuild takes, a worker hands the profile back to you and lets this document load inside it
   — not a fake progress bar, but the actual frames the Action commits, polled as they land.
   Then it returns you to the real page. Five commits a turn. Refresh here and you catch one.
-
-  Capacity: one reader at a time. The workflow holds a lock, so a second click during a turn
-  waits its turn rather than racing it, and clicks inside the same 20 seconds are folded into
-  one. Fair use: turn as many pages as you like, but this is a text file behind a queue of one,
-  so if it feels slow, that is not the network — that is somebody else already reading.
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
