@@ -5,63 +5,109 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 3 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ atlas │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">▸</a>
-───┴──────┴─────┘       └───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 1 / 9
+   │ home │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">▸</a>
+───┘      └─────┴───────┴───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  ATLAS  ─────────────────────────────────────────────────────────────────────────────────────────────
+  FEATURED  ──────────────────────────────────────────────────────────────────────────────────────────
 
-             __  __                       _      __            
-      ____ _/ /_/ /___ ______      ____  (_)____/ /_____  _____
-     / __ `/ __/ / __ `/ ___/_____/ __ \/ / ___/ //_/ _ \/ ___/
-    / /_/ / /_/ / /_/ (__  )_____/ /_/ / / /__/ ,< /  __/ /    
-    \__,_/\__/_/\__,_/____/     / .___/_/\___/_/|_|\___/_/     
-                               /_/                              
+  ╔══════════════════════════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                                                  ║
+  ║  <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                                                                          ★ 40  ║
+  ║                                                                                                  ║
+  ║  Native dialogs for MCP agents, on macOS and Windows.                                            ║
+  ║                                                                                                  ║
+  ║  A sidecar app and an MCP bridge giving Claude Code real interactive UI:                         ║
+  ║  confirms, picks, multi-question forms, slider tweak panes that write live to disk.              ║
+  ║                                                                                                  ║
+  ║  →  <a href="https://github.com/doublej/consult-user-mcp">source</a>                                                                                       ║
+  ║  →  <a href="https://doublej.github.io/consult-user-mcp/">documentation</a>                                                                                ║
+  ║                                                                                                  ║
+  ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-    find.  pick.  go.
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/reminders-beads-bridge">reminders-beads-bridge</a>                      │    │  <a href="https://github.com/doublej/strandkanban">strandkanban</a>                                │
+  │                                              │    │                                              │
+  │  Apple Reminders as an agent remote.         │    │  Drag-and-drop Kanban over beads issues.     │
+  │  A macOS daemon: file and close beads        │    │  One command starts it, the issues never     │
+  │  issues, drive Claude and Codex sessions,    │    │  leave your repo, and the board draws the    │
+  │  read and type into live tabs from a phone.  │    │  dependency arrows the bd CLI cannot.        │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/reminders-beads-bridge">source</a>     → <a href="https://doublej.github.io/reminders-beads-bridge/">docs</a>                         │    │  → <a href="https://github.com/doublej/strandkanban">source</a>                                    │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/flt">flt</a>                                         │    │  <a href="https://github.com/doublej/onenv">onenv</a>                                       │
+  │                                              │    │                                              │
+  │  Flight search in four shapes: a CLI, a      │    │  Stop committing .env. Values live in a      │
+  │  green-on-black GDS-style TUI, a SvelteKit   │    │  1Password vault; onenv run injects them     │
+  │  web UI and an MCP server — all over an      │    │  into a child process and they vanish when   │
+  │  engine with zero npm dependencies.          │    │  it exits. KEY=value ergonomics, unchanged.  │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/flt">source</a>     → <a href="https://doublej.github.io/flt/">docs</a>                         │    │  → <a href="https://github.com/doublej/onenv">source</a>     → <a href="https://doublej.github.io/onenv/">docs</a>                         │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-  One scanner, four front ends. atlas-api walks the development folder and types every project
-  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches
-  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same
-  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-
-  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/bpr">bpr</a>                                         │    │  fin                                         │
+  │                                              │    │                                              │
+  │  A Beeper CLI shaped for agents. Short       │    │  Every account in one local ledger.          │
+  │  stable ids, a dense table on a TTY and      │    │  ING and Revolut over PSD2, Wise on its      │
+  │  JSON the moment you pipe it, watch          │    │  own API, DEGIRO through degiro-connector,   │
+  │  subscriptions, takeout, a prime contract.   │    │  broker CSVs for the rest. Private.          │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/bpr">source</a>     → <a href="https://doublej.github.io/bpr/">docs</a>                         │    │                                              │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-                             ~/Documents/development
-                                        │
-                                        ▼
-                                  ┌───────────┐
-                                  │ atlas-api │    :47891  ·  scans, types, caches the graph
-                                  └─────┬─────┘    .atlas-cache.json  ·  60s TTL, revalidating
-                                        │
-             ┌──────────────────┬───────┴────────┬─────────────────┐
-             ▼                  ▼                ▼                 ▼
-       atlas-picker       atlas-browser      atlas-cli      atlas-watchdog
-         Rust TUI            Raycast          `atlas`           launchd
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/ccom">ccom</a>                                        │    │  <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                               │
+  │                                              │    │                                              │
+  │  Plain English → shell command via Claude.   │    │  Keyboard-first Gantt chart editor.          │
+  │  Shows the proposed command before running   │    │  Type Mermaid syntax, see the diagram        │
+  │  so you can confirm, edit, or pipe further.  │    │  update live, round-trip it back out for     │
+  │                                              │    │  planning somewhere else.                    │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/ccom">source</a>     → <a href="https://doublej.github.io/ccom/">docs</a>                         │    │  → <a href="https://github.com/doublej/mermaid-gantt">source</a>     → <a href="https://mermaidgantt.xyz">mermaidgantt.xyz</a>             │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn-cli-macos</a>                           │    │  <a href="https://github.com/doublej/browser-router">browser-router</a>                              │
+  │                                              │    │                                              │
+  │  Unofficial NordVPN CLI and TUI for macOS.   │    │  Menu bar app routing URLs to browsers.      │
+  │  Talks WireGuard directly — no Electron, no  │    │  Rule-based, down to the profile: dev to     │
+  │  menu bar app, just configs and a fast       │    │  Chrome, work to Firefox, everything else    │
+  │  command you can script.                     │    │  to the default. Reclaim your default.       │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/nordvpn-cli-macos">source</a>                                    │    │  → <a href="https://github.com/doublej/browser-router">source</a>                                    │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   atlas-api                        Scanner, cache and project graph — SvelteKit on :47891
-   atlas-cli                        The global `atlas`: tree, scan, pick, open, ports, new
-   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI — iocraft and Nucleo, reads the cache directly
-   <a href="https://github.com/doublej/atlas-browser">atlas-browser</a>                    Raycast: browse, filter and act on any project
-   atlas-watchdog                   Polls the API and restarts it through launchctl
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/laptop-light">laptop-light</a>                                │    │  <a href="https://github.com/doublej/?tab=repositories">more  →</a>                                     │
+  │                                              │    │                                              │
+  │  Turns a laptop screen into ambient light.   │    │  94 public repos and counting,               │
+  │  Warm tones, candle flicker, HDR/P3 colour,  │    │  267 in total, public and private.           │
+  │  a wake lock so it never sleeps, and a       │    │  Browse the full set:                        │
+  │  phone remote over WebRTC.                   │    │                                              │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/laptop-light">source</a>                                    │    │  → <a href="https://github.com/doublej/?tab=repositories">github.com/doublej?tab=repositories</a>       │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
+
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
-   home            16 minutes ago      cli             27 minutes ago
-   home            17 minutes ago      framelink       29 minutes ago
-   home            17 minutes ago      forks           31 minutes ago
-   atlas           18 minutes ago      cli             33 minutes ago
-   framelink       19 minutes ago      raycast         34 minutes ago
-   home            20 minutes ago      simsync         35 minutes ago
-   framelink       21 minutes ago      raycast         37 minutes ago
-   home            21 minutes ago      projects        37 minutes ago
-   atlas           22 minutes ago      atlas           38 minutes ago
-   home            25 minutes ago      raycast         39 minutes ago
+   atlas           7 minutes ago       atlas           25 minutes ago
+   cli             8 minutes ago       home            28 minutes ago
+   home            19 minutes ago      cli             30 minutes ago
+   home            20 minutes ago      framelink       32 minutes ago
+   home            21 minutes ago      forks           35 minutes ago
+   atlas           21 minutes ago      cli             36 minutes ago
+   framelink       22 minutes ago      raycast         37 minutes ago
+   home            23 minutes ago      simsync         38 minutes ago
+   framelink       24 minutes ago      raycast         40 minutes ago
+   home            24 minutes ago      projects        40 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
