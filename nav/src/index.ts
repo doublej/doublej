@@ -436,6 +436,51 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
     doc.innerHTML = m ? withBar(raw, shown) : raw;
   };
 
+  // When the page lands, the document does not just appear — it wipes across, one
+  // character cell at a time, from the loading frame to the page you asked for.
+  // The sweep runs in plain text; the real markup (and its links) goes back in at
+  // the end, which is also the cue to hand over to github.com.
+  const NOISE = "\\u2591\\u2592\\u2593\\u2588\\u259a\\u259e\\u2599\\u259f";
+  const FRAMES = 34, LEAD = 0.09;
+
+  const textOf = (html) => {
+    const d = document.createElement("div");
+    d.innerHTML = html;
+    return d.textContent.replace(/^\\n/, "").split("\\n");
+  };
+
+  const wipe = (toHtml, then) => {
+    const A = textOf(doc.innerHTML), B = textOf(toHtml);
+    const rows = Math.max(A.length, B.length);
+    const cols = Math.max(1, ...A.concat(B).map((l) => l.length));
+    const at = (L, r, c) => ((L[r] || "")[c] || " ");
+    const style = Math.floor(Math.random() * 4);
+    const edge = (r, c) =>
+      style === 0 ? c / cols                                   // left to right
+      : style === 1 ? r / rows                                 // top to bottom
+      : style === 2 ? c / cols * 0.6 + r / rows * 0.4          // diagonal
+      : ((r * 7919) ^ (c * 104729)) % 1000 / 1000;             // dissolve
+
+    let pre = doc.querySelector("pre") || doc.appendChild(document.createElement("pre"));
+    let f = 0;
+    const iv = setInterval(() => {
+      const p = (f / FRAMES) * (1 + LEAD);
+      let out = "";
+      for (let r = 0; r < rows; r++) {
+        let line = "";
+        for (let c = 0; c < cols; c++) {
+          const e = edge(r, c);
+          line += e < p - LEAD ? at(B, r, c)
+                : e < p ? NOISE[(r + c + f) % NOISE.length]
+                : at(A, r, c);
+        }
+        out += line.replace(/\\s+$/, "") + "\\n";
+      }
+      pre.textContent = out;
+      if (++f > FRAMES) { clearInterval(iv); then(); }
+    }, 24);
+  };
+
   const poll = async () => {
     if (done) return;
     t += 1.2;
@@ -444,8 +489,10 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
       const j = await (await fetch("/status?p=" + PAGE, { cache: "no-store" })).json();
       if (j.landed) {
         done = true; dot.classList.remove("on");
-        doc.innerHTML = j.pre;
-        setTimeout(() => location.replace(${JSON.stringify(PROFILE)}), 900);
+        wipe(j.pre, () => {
+          doc.innerHTML = j.pre;
+          setTimeout(() => location.replace(${JSON.stringify(PROFILE)}), 700);
+        });
         return;
       }
       // Only ever accept a loading frame. Anything else is the page you just left,

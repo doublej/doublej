@@ -84,11 +84,9 @@ jobs:
             gh issue comment "$NUMBER" --body "$1" >/dev/null
           }
 
-          # The run id picks which way the sign fills in, so every visit reveals a
-          # different portion of the panel, and all four frames share one style.
           while IFS='|' read -r pct beat; do
             [ -n "$pct" ] || continue
-            python3 gen.py README.md --loading "$PAGE" "$pct" --seed "$GITHUB_RUN_ID"
+            python3 gen.py README.md --loading "$PAGE" "$pct"
             publish "nav: loading $PAGE — $pct%"
             say "\`$(python3 gen.py --bar "$pct")\` \`${pct}%\` · $beat"
             sleep 1
