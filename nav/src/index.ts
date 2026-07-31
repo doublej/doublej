@@ -1,19 +1,24 @@
 /**
  * doublej-nav — the tab bar for a README.
  *
- * A GitHub README cannot open a link in a new tab: the markdown sanitizer strips
- * target="_blank" and forbids script. So a click always steals the tab you were
- * reading, and the rebuild it kicks off takes about half a minute.
+ * A GitHub README cannot open a link in a new tab (the sanitizer strips target=_blank
+ * and forbids script), and github.com sends `x-frame-options: deny`, so it cannot be
+ * framed either. For the ~25 seconds between a click and the rebuild landing, this
+ * worker owns the tab — so it serves the profile back, laid out the same way, and lets
+ * the README load *inside* it.
  *
- * github.com sends `x-frame-options: deny`, so the profile cannot be iframed either.
- * Instead this worker *is* the profile for a moment: it serves the current README
- * inline, styled like GitHub, dims it behind a progress card, and when the new page
- * lands it swaps the content in place and only then hands back to the real URL.
- * No reload, no blank frame — the document just rebuilds itself in front of you.
+ * The trick is that it does not fake the loading state. The Action commits real frames
+ * (6%, 31%, 58%, 84%, then the page), and this polls the file and shows whatever is
+ * actually there, easing the bar between commits so it reads as continuous. When the
+ * requested tab lands it hands back to the real URL.
  *
- *   click a tab  ->  GET /?p=cli  ->  dispatch, serve the README + overlay
- *                ->  poll /status until the README says [cli]
- *                ->  swap in the new text, then replace() to github.com/doublej
+ *   click a tab  ->  GET /?p=cli  ->  dispatch, serve the profile + current README
+ *                ->  poll /status every 1.5s, swap in each committed frame
+ *                ->  tab lands -> replace() to github.com/doublej
+ *
+ * Deliberately NOT reproduced: GitHub's logo, global nav and account menu. A
+ * pixel-exact github.com on a non-GitHub domain is a phishing kit whatever the intent,
+ * and the illusion only needs the document itself.
  *
  * Without GH_TOKEN it degrades to a prefilled issue whose body explains itself.
  */
@@ -26,10 +31,18 @@ const PROFILE = "https://github.com/doublej";
 const PAGES = ["home", "cli", "atlas", "framelink", "simsync",
                "systems", "projects", "raycast", "forks"];
 
-/** One turn at a time. Extra clicks join the turn already in flight. */
+const ME = {
+  name: "Jurre-Jan Smit",
+  login: "doublej",
+  avatar: "https://avatars.githubusercontent.com/u/548350?v=4",
+  company: "poolsuite.partners",
+  location: "Netherlands",
+  followers: 7,
+  following: 10,
+};
+
 const COOLDOWN_SECONDS = 20;
-/** Never hold anyone hostage, however badly the build is going. */
-const MAX_WAIT_SECONDS = 60;
+const MAX_WAIT_SECONDS = 75;
 
 interface Env {
   GH_TOKEN?: string;
@@ -51,10 +64,9 @@ async function claimTurn(): Promise<boolean> {
   const cache = caches.default;
   const key = new Request("https://doublej-nav.internal/turn");
   if (await cache.match(key)) return false;
-  await cache.put(
-    key,
-    new Response("turning", { headers: { "Cache-Control": `max-age=${COOLDOWN_SECONDS}` } }),
-  );
+  await cache.put(key, new Response("turning", {
+    headers: { "Cache-Control": `max-age=${COOLDOWN_SECONDS}` },
+  }));
   return true;
 }
 
@@ -69,25 +81,21 @@ async function dispatch(page: string, token: string): Promise<void> {
   );
 }
 
-/** The README as GitHub currently has it, or "" if it cannot be read. */
 async function readme(token: string): Promise<string> {
   const res = await fetch(
     `https://api.github.com/repos/${OWNER}/${REPO}/contents/README.md?ref=main`,
-    { headers: gh(token), cf: { cacheTtl: 0 } } as RequestInit,
+    { headers: gh(token) },
   );
   if (!res.ok) return "";
   const body = (await res.json()) as { content?: string };
   if (!body.content) return "";
-  // atob gives latin1; the file is UTF-8 and full of box-drawing characters.
+  // atob yields latin1; the file is UTF-8 and mostly box-drawing characters.
   const bytes = Uint8Array.from(atob(body.content.replace(/\n/g, "")), (c) => c.charCodeAt(0));
   return new TextDecoder().decode(bytes);
 }
 
-/** Just the <pre> block — the page itself, without the tracking pixel. */
-const preOf = (md: string): string => {
-  const m = md.match(/<pre>[\s\S]*<\/pre>/);
-  return m ? m[0] : "";
-};
+/** Just the document, without the tracking pixel. */
+const preOf = (md: string): string => (md.match(/<pre>[\s\S]*<\/pre>/) ?? [""])[0];
 
 const landed = (md: string, page: string) =>
   md.includes(`[${page}]`) && !md.includes("LOADING");
@@ -97,94 +105,117 @@ const shell = (page: string, pre: string) => `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>doublej · turning to ${page}…</title>
+<title>${ME.login} · loading ${page}</title>
+<link rel="icon" href="${ME.avatar}">
 <style>
   :root {
     color-scheme: light dark;
-    --fg:#1f2328; --dim:#59636e; --bg:#ffffff; --canvas:#f6f8fa;
-    --line:#d1d9e0; --accent:#0969da; --ok:#1a7f37;
+    --fg:#1f2328; --dim:#59636e; --bg:#ffffff; --canvas:#ffffff; --topbar:#ffffff;
+    --line:#d1d9e0; --accent:#0969da; --btn:#f6f8fa;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --fg:#e6edf3; --dim:#9198a1; --bg:#0d1117; --canvas:#010409;
-            --line:#3d444d; --accent:#4493f8; --ok:#3fb950; }
+    :root { --fg:#f0f6fc; --dim:#9198a1; --bg:#0d1117; --canvas:#0d1117; --topbar:#010409;
+            --line:#3d444d; --accent:#4493f8; --btn:#212830; }
   }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--canvas); color:var(--fg); padding:2rem 1rem;
+  * { box-sizing:border-box; }
+  html,body { height:100%; }
+  body { margin:0; background:var(--canvas); color:var(--fg);
          font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
-  .wrap { max-width:1012px; margin:0 auto; position:relative; }
-  .panel { background:var(--bg); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
-  .panelhead { padding:.5rem 1rem; border-bottom:1px solid var(--line); color:var(--dim); font-size:12px; }
-  .panelbody { padding:2rem; overflow-x:auto; transition:opacity .45s ease, filter .45s ease; }
-  .panelbody.busy { opacity:.45; filter:blur(1.5px); }
+  .topbar { background:var(--topbar); border-bottom:1px solid var(--line); height:60px;
+            display:flex; align-items:center; padding:0 2rem; gap:.75rem; }
+  .topbar img { width:24px; height:24px; border-radius:50%; }
+  .topbar b { font-size:14px; font-weight:600; }
+  .topbar .dim { color:var(--dim); }
+  .page { max-width:1280px; margin:0 auto; padding:1.5rem 2rem 4rem;
+          display:grid; grid-template-columns:296px minmax(0,1fr); gap:1.5rem; align-items:start; }
+  @media (max-width:1012px) { .page { grid-template-columns:1fr; } .side { max-width:22rem; } }
+  .side .ava { width:100%; aspect-ratio:1; border-radius:50%; border:1px solid var(--line); display:block; }
+  .side h1 { font-size:24px; line-height:1.25; font-weight:600; margin:1rem 0 0; }
+  .side h2 { font-size:20px; line-height:1.25; font-weight:300; color:var(--dim); margin:0 0 1rem; }
+  .side .meta { color:var(--dim); font-size:14px; margin:.25rem 0; }
+  .side .btn { display:block; text-align:center; margin:1rem 0; padding:.3rem; font-size:14px;
+               font-weight:500; border:1px solid var(--line); border-radius:6px; background:var(--btn);
+               color:var(--fg); text-decoration:none; }
+  .panel { border:1px solid var(--line); border-radius:6px; background:var(--bg); overflow:hidden; }
+  .panelhead { display:flex; align-items:center; gap:.5rem; padding:.5rem 1rem;
+               border-bottom:1px solid var(--line); color:var(--dim); font-size:14px; }
+  .panelhead .path { color:var(--fg); }
+  .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); opacity:0; }
+  .dot.on { opacity:1; animation:pulse 1.1s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:.25 } 50% { opacity:1 } }
+  .doc { padding:2rem; overflow-x:auto; }
   pre { margin:0; font:12px/1.45 ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace; }
   pre a { color:var(--accent); text-decoration:none; }
-
-  .overlay { position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; }
-  .card { pointer-events:auto; position:sticky; top:40vh; width:min(24rem,calc(100vw - 3rem));
-          background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:1.25rem 1.4rem;
-          box-shadow:0 8px 32px rgba(0,0,0,.18); font-size:13px; }
-  .card h2 { margin:0 0 1rem; font-size:13px; font-weight:600; }
-  .card h2 .dim { color:var(--dim); font-weight:400; }
-  .bar { font:11px/1 ui-monospace,Menlo,monospace; letter-spacing:-.05em; margin:0 0 .5rem;
-         white-space:nowrap; overflow:hidden; }
-  .beat { color:var(--dim); margin:0; min-height:1.5em; font-size:12px; }
-  .done { color:var(--ok); }
-  .card.gone { opacity:0; transform:translateY(-4px); transition:opacity .4s, transform .4s; }
+  pre a:hover { text-decoration:underline; }
 </style>
 </head><body>
-  <div class="wrap">
-    <div class="panel">
-      <div class="panelhead">doublej / README.md</div>
-      <div class="panelbody busy" id="body">${pre || "<pre>  rebuilding…</pre>"}</div>
+  <div class="topbar">
+    <img src="${ME.avatar}" alt="">
+    <b>${ME.login}</b><span class="dim">/</span><span class="dim">README.md</span>
+  </div>
+  <div class="page">
+    <div class="side">
+      <img class="ava" src="${ME.avatar}" alt="">
+      <h1>${ME.name}</h1>
+      <h2>${ME.login}</h2>
+      <a class="btn" href="${PROFILE}">View on GitHub</a>
+      <p class="meta">${ME.followers} followers · ${ME.following} following</p>
+      <p class="meta">${ME.company}</p>
+      <p class="meta">${ME.location}</p>
     </div>
-    <div class="overlay">
-      <div class="card" id="card">
-        <h2>turning to <strong>${page}</strong> <span class="dim">· rebuilding the page</span></h2>
-        <p class="bar" id="bar"></p>
-        <p class="beat" id="beat">waking the runner…</p>
+    <div class="panel">
+      <div class="panelhead">
+        <span class="path">${ME.login}</span><span>/</span><span class="path">README.md</span>
+        <span class="dot on" id="dot" title="rebuilding"></span>
       </div>
+      <div class="doc" id="doc">${pre || "<pre>  loading…</pre>"}</div>
     </div>
   </div>
 <script>
-  const WIDTH = 30, MAX = ${MAX_WAIT_SECONDS}, PAGE = ${JSON.stringify(page)};
-  const beats = ["waking the runner…", "resolving the monorepo that is not a monorepo…",
-                 "rendering the page…", "committing it, one frame at a time…", "almost…"];
-  const bar = document.getElementById("bar"), beat = document.getElementById("beat"),
-        card = document.getElementById("card"), body = document.getElementById("body");
-  let t = 0, done = false;
+  const PAGE = ${JSON.stringify(page)}, MAX = ${MAX_WAIT_SECONDS};
+  const doc = document.getElementById("doc"), dot = document.getElementById("dot");
+  // The committed frames carry a real bar; ease between them so it reads as continuous.
+  const BAR = /\\[([\\u2593\\u2591]+)\\]\\s+(\\d+)%/;
+  let raw = doc.innerHTML, committed = 0, shown = 0, t = 0, done = false;
 
-  const paint = (p) => {
-    const f = Math.round(p / 100 * WIDTH);
-    bar.textContent = "[" + "\\u2593".repeat(f) + "\\u2591".repeat(WIDTH - f) + "] " + Math.round(p) + "%";
-  };
+  const withBar = (html, pct) => html.replace(BAR, (_m, cells) => {
+    const w = cells.length, f = Math.round(pct / 100 * w);
+    return "[" + "\\u2593".repeat(f) + "\\u2591".repeat(w - f) + "]  " +
+           String(Math.round(pct)).padStart(3) + "%";
+  });
 
   setInterval(() => {
-    if (done) return;
-    t += 0.25;
-    paint(Math.min(95, 95 * (1 - Math.exp(-t / 9))));
-    beat.textContent = beats[Math.min(beats.length - 1, Math.floor(t / 6))];
-  }, 250);
+    if (done || !BAR.test(raw)) return;
+    // Creep toward the next frame without ever overtaking the truth by much.
+    shown += (Math.min(99, committed + 22) - shown) * 0.08 + 0.1;
+    doc.innerHTML = withBar(raw, shown);
+  }, 220);
 
-  const finish = async (pre) => {
-    done = true; paint(100);
-    beat.innerHTML = '<span class="done">deployed</span>';
-    if (pre) body.innerHTML = pre;            // swap the document in place
-    body.classList.remove("busy");
-    card.classList.add("gone");
-    setTimeout(() => location.replace(${JSON.stringify(PROFILE)}), 1400);
+  const show = (pre) => {
+    if (!pre || pre === raw) return;
+    raw = pre;
+    const m = raw.match(BAR);
+    if (m) { committed = +m[2]; shown = Math.max(shown, committed); }
+    doc.innerHTML = m ? withBar(raw, shown) : raw;
   };
 
   const poll = async () => {
     if (done) return;
-    if (t >= MAX) return finish(null);
+    t += 1.5;
+    if (t >= MAX) { location.replace(${JSON.stringify(PROFILE)}); return; }
     try {
-      const r = await fetch("/status?p=" + PAGE, { cache: "no-store" });
-      const j = await r.json();
-      if (j.landed) return finish(j.pre);
+      const j = await (await fetch("/status?p=" + PAGE, { cache: "no-store" })).json();
+      show(j.pre);
+      if (j.landed) {
+        done = true; dot.classList.remove("on");
+        doc.innerHTML = j.pre;
+        setTimeout(() => location.replace(${JSON.stringify(PROFILE)}), 1200);
+        return;
+      }
     } catch (e) { /* keep waiting; the cap will fire */ }
-    setTimeout(poll, 2000);
+    setTimeout(poll, 1500);
   };
-  setTimeout(poll, 5000);
+  setTimeout(poll, 1500);
 </script>
 <noscript><meta http-equiv="refresh" content="35;url=${PROFILE}"></noscript>
 </body></html>`;
@@ -200,19 +231,16 @@ export default {
 
     if (url.pathname === "/status") {
       if (!env.GH_TOKEN || !PAGES.includes(page)) {
-        return Response.json({ landed: false }, { headers: nostore });
+        return Response.json({ landed: false, pre: null }, { headers: nostore });
       }
       const md = await readme(env.GH_TOKEN);
-      const ok = landed(md, page);
-      // Ship the new document with the verdict so the swap needs no second round trip.
-      return Response.json({ landed: ok, pre: ok ? preOf(md) : null }, { headers: nostore });
+      // Always ship the current document — the loading frames are the show.
+      return Response.json({ landed: landed(md, page), pre: preOf(md) }, { headers: nostore });
     }
 
     if (!PAGES.includes(page)) return seeOther(PROFILE);
     if (!env.GH_TOKEN) return seeOther(issueFallback(page));
 
-    // Losing the race is fine — someone else is already turning a page, and the
-    // overlay polls for the result either way.
     const [claimed, current] = await Promise.all([claimTurn(), readme(env.GH_TOKEN)]);
     if (claimed) await dispatch(page, env.GH_TOKEN);
 

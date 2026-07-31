@@ -411,11 +411,12 @@ def site(url, label):
 
 FOOTER = [
     "  " + "\u2500" * (W - 2),
-    "  A README cannot open a new tab, and github.com refuses to be framed. So every tab up there",
-    "  points at a worker that hands this page straight back to you, dims it, and rebuilds it in",
-    "  front of you \u2014 there is no reload, the document just changes. Behind it a GitHub Action",
-    "  rewrites this file frame by frame, five commits a turn. Refresh here and you catch the bar.",
+    "  A README cannot open a new tab, and github.com refuses to be framed. So for the half minute",
+    "  a rebuild takes, a worker hands the profile back to you and lets this document load inside it",
+    "  \u2014 not a fake progress bar, but the actual frames the Action commits, polled as they land.",
+    "  Then it returns you to the real page. Five commits a turn. Refresh here and you catch one.",
 ]
+
 
 
 
