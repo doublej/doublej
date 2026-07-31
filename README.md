@@ -46,9 +46,9 @@
 
                                            turning to home
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -88,7 +88,7 @@
 
    home            5 minutes ago       cli             1 hour ago
    framelink       30 minutes ago      atlas           1 hour ago
-   cli             33 minutes ago      atlas           1 hour ago
+   cli             34 minutes ago      atlas           1 hour ago
    home            42 minutes ago      atlas           1 hour ago
    cli             42 minutes ago      cli             1 hour ago
    framelink       43 minutes ago      home            1 hour ago
@@ -102,4 +102,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=home pct=6 -->
+<!-- nav:loading=home pct=31 -->
