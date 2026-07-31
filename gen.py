@@ -375,9 +375,10 @@ def nav(active, live=True):
 
 FOOTER = [
     "  " + "─" * (W - 2),
-    "  Every tab up there is an issue link. Press Create and stay on the issue — the build narrates",
-    "  itself there, then links you back. Meanwhile this file is re-rendered frame by frame, so if",
-    "  you sit here and refresh you get a loading bar instead. Five commits a turn, either way.",
+    "  Every tab is an issue link. \u2318-click or middle-click one to keep this page where it is \u2014",
+    "  GitHub strips target=_blank from READMEs, so that modifier is the only way to stay put.",
+    "  Press Create and the build narrates itself on the issue, then links you back here. Meanwhile",
+    "  this file is re-rendered frame by frame: sit on the profile and refresh for the loading bar.",
 ]
 
 
