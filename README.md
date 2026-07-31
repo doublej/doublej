@@ -29,9 +29,9 @@
 
                                            turning to atlas
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -52,7 +52,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           17 seconds ago      home            2 hours ago
+   atlas           19 seconds ago      home            2 hours ago
    cli             50 minutes ago      cli             2 hours ago
    home            50 minutes ago      framelink       2 hours ago
    raycast         1 hour ago          home            2 hours ago
@@ -68,4 +68,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=atlas pct=31 -->
+<!-- nav:loading=atlas pct=58 -->
