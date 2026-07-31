@@ -21,9 +21,9 @@
 
                                           turning to raycast
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -42,9 +42,9 @@
    home            14 minutes ago      cli             1 hour ago
    framelink       40 minutes ago      atlas           1 hour ago
    cli             43 minutes ago      atlas           1 hour ago
-   home            51 minutes ago      atlas           1 hour ago
+   home            52 minutes ago      atlas           1 hour ago
    cli             52 minutes ago      cli             1 hour ago
-   framelink       52 minutes ago      home            1 hour ago
+   framelink       53 minutes ago      home            1 hour ago
    home            1 hour ago          home            1 hour ago
 
 
@@ -52,4 +52,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=raycast pct=6 -->
+<!-- nav:loading=raycast pct=31 -->
