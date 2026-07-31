@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -59,8 +59,8 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   framelink       20 seconds ago      home            39 minutes ago
-   home            8 minutes ago       home            39 minutes ago
+   framelink       22 seconds ago      home            39 minutes ago
+   home            8 minutes ago       home            40 minutes ago
    home            14 minutes ago      home            40 minutes ago
    atlas           15 minutes ago      atlas           41 minutes ago
    atlas           16 minutes ago      framelink       42 minutes ago
@@ -75,4 +75,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=cli pct=6 -->
+<!-- nav:loading=cli pct=31 -->
