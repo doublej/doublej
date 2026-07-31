@@ -11,9 +11,9 @@
 
   turning to projects
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-  resolving the monorepo that is not a monorepo…
+  committing…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -28,8 +28,8 @@
    home            1 minute ago        simsync         11 minutes ago
    cli             2 minutes ago       systems         13 minutes ago
    simsync         3 minutes ago       atlas           14 minutes ago
-   framelink       3 minutes ago       cli             15 minutes ago
-   projects        5 minutes ago       cli             18 minutes ago
+   framelink       4 minutes ago       cli             15 minutes ago
+   projects        5 minutes ago       cli             19 minutes ago
    systems         5 minutes ago       raycast         19 minutes ago
    framelink       7 minutes ago       framelink       20 minutes ago
    simsync         8 minutes ago       projects        22 minutes ago
