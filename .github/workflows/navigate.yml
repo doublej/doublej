@@ -1,0 +1,92 @@
+name: navigate
+
+# The profile README is a seven-page portfolio. Every tab on the page is a link that
+# opens an issue titled "go:<page>". This reads that title, re-renders the README one
+# frame at a time, commits each frame, and closes the issue behind itself.
+#
+# It is a deeply silly way to paginate a text file. It also genuinely works.
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      page:
+        description: Page to turn to
+        required: true
+        default: home
+        type: choice
+        options: [home, cli, atlas, systems, projects, raycast, forks]
+
+permissions:
+  contents: write
+  issues: write
+
+# Clicks queue rather than race — two visitors mid-turn would fight over the branch.
+concurrency:
+  group: navigate
+
+jobs:
+  turn-the-page:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      startsWith(github.event.issue.title, 'go:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Work out where we are going
+        id: target
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          DISPATCH: ${{ inputs.page }}
+        run: |
+          page="${DISPATCH:-${TITLE#go:}}"
+          case "$page" in
+            home|cli|atlas|systems|projects|raycast|forks)
+              echo "page=$page" >> "$GITHUB_OUTPUT" ;;
+            *)
+              echo "::error::not a page: $page"; exit 1 ;;
+          esac
+
+      - name: Turn the page, slowly, on purpose
+        env:
+          PAGE: ${{ steps.target.outputs.page }}
+        run: |
+          set -euo pipefail
+          git config user.name  "atlas"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          publish () {
+            git add README.md
+            git diff --cached --quiet && return 0
+            git commit -q -m "$1"
+            git push -q
+          }
+
+          for pct in 6 31 58 84; do
+            python3 gen.py README.md --loading "$PAGE" "$pct"
+            publish "nav: loading $PAGE — $pct%"
+            sleep 5
+          done
+
+          python3 gen.py README.md --page "$PAGE"
+          publish "nav: $PAGE"
+
+      - name: If anything broke, do not leave a loading bar up forever
+        if: failure()
+        run: |
+          python3 gen.py README.md --page home
+          git add README.md
+          git diff --cached --quiet || { git commit -q -m "nav: recover to home"; git push -q; }
+
+      - name: Close the issue behind us
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          PAGE: ${{ steps.target.outputs.page }}
+        run: |
+          gh issue comment "$NUMBER" --body \
+            "Turned to **$PAGE**. Head back to [the profile]($GITHUB_SERVER_URL/doublej) — it should be there now. Closing this behind me."
+          gh issue close "$NUMBER"

@@ -1,12 +1,26 @@
 #!/usr/bin/env python3
-"""Generate the doublej profile README from structured data."""
+"""Render one page of the doublej profile.
+
+The profile is a seven-page portfolio living in a single README. Nav links open a
+prefilled issue; .github/workflows/navigate.yml reads the title, runs this script
+and commits the result. Clicking a tab really does redeploy the page.
+
+    gen.py README.md --page cli
+    gen.py README.md --loading cli 40
+"""
+
+import pathlib
+import sys
 
 W = 102          # total line width
 NAMECOL = 3      # indent before the name
 DESCCOL = 36     # column where descriptions start
 
 GH = "https://github.com/doublej/"
+REPO = "https://github.com/doublej/doublej"
 
+
+# ── primitives ──────────────────────────────────────────────────────────────
 
 def header(title):
     left = "  " + title + "  "
@@ -25,17 +39,19 @@ def row(name, repo, desc):
 def group(title):
     """Group rule: dotted, so a solid rule always means a section and a dotted one a group."""
     left = " " * NAMECOL + title + "  "
-    return "\n" + left + "\u00b7" * (W - len(left))
+    return "\n" + left + "·" * (W - len(left))
 
 
 def cli_row(name, repo, desc):
-    """Like row(), but prompted \u2014 the CLI section reads as things you type."""
+    """Like row(), but prompted — the CLI section reads as things you type."""
     label = f'<a href="{GH}{repo}">{name}</a>' if repo else name
     pad = " " * (DESCCOL - NAMECOL - 2 - len(name))
     assert len(name) <= DESCCOL - NAMECOL - 3, name
     assert len(desc) <= W - DESCCOL, (len(desc), desc)
     return " " * NAMECOL + "$ " + label + pad + desc
 
+
+# ── data ────────────────────────────────────────────────────────────────────
 
 CLI = [
     ("agents, terminal & workflow", [
@@ -67,7 +83,7 @@ CLI = [
         ("flt", "flt", "Flight search, price-by-date comparison and trip export"),
         ("marktplaats", "marktplaats", "Marktplaats scraper library with CLI, MCP server and UI"),
         ("snail-mail", "snail-mail-parser", "Parse physical mail with an LLM and manage it like email"),
-                ("umami", None, "Agent-first CLI for Umami analytics"),
+        ("umami", None, "Agent-first CLI for Umami analytics"),
         ("fin", None, "Aggregate bank and broker balances and transactions locally"),
         ("fb-scrape", None, "Facebook group scraper with CLI, API and web UI"),
     ]),
@@ -80,7 +96,7 @@ CLI = [
 ]
 
 SYSTEMS = [
-    ("framelink", None, "Wireless PC-VR to Quest 3 \u2014 Bun control plane, Zig data plane"),
+    ("framelink", None, "Wireless PC-VR to Quest 3 — Bun control plane, Zig data plane"),
     ("frameclarity", None, "Per-game Quest optimizer over ADB: Rust core, Tauri, APK"),
     ("quest-link-bridge", None, "Meta Quest Link (XRSP) protocol RE, bridged into SteamVR"),
     ("simsync", None, "Set your wheel up once, use it in every racing sim"),
@@ -123,14 +139,14 @@ RAYCAST = [
     ("ChatGPT Software Question", "raycast-ext-chatgpt-software", "Ask ChatGPT about the frontmost application"),
     ("Claude Code Launcher", "claude-code-launcher", "Open Claude Code in any directory, in your terminal of choice"),
     ("Claude History", "claude-history", "Search and browse Claude Code session history across projects"),
-    ("Keyboard Backlight", None, "Control MacBook keyboard backlight brightness"),
     ("Clean Text", "raycast-ext-clean-text", "Clean clipboard text with the fabric clean_text pattern"),
     ("Clean Watermark", "raycast-ext-clean-watermark", "Remove watermarks, formatting and junk from clipboard text"),
     ("File Scripts", "raycast-ext-file-scripts", "Run ffmpeg presets on the Finder selection, with live progress"),
     ("Insecure Chrome", "raycast-ext-insecure-chrome", "Launch Chrome Canary with insecure HTTP flags for local dev"),
+    ("Keyboard Backlight", None, "Control MacBook keyboard backlight brightness"),
     ("OpenRouter Key", "raycast-ext-openrouter-key", "Create API keys on OpenRouter"),
-    ("Wake PC", "raycast-ext-wake-pc", "Send a Wake-on-LAN magic packet to wake your PC"),
     ("Text Tools", "raycast-ext-text-tools", "Clean, unwrap and wrap clipboard text"),
+    ("Wake PC", "raycast-ext-wake-pc", "Send a Wake-on-LAN magic packet to wake your PC"),
     ("Watermark Washer", "watermark-washer", "Clean the clipboard of invisible AI watermarks"),
     ("Wrap Text", "raycast-ext-wrap-text", "Wrap clipboard or selected text in XML-like tags"),
 ]
@@ -149,95 +165,8 @@ FORKS = [
     ("comfy-ui", "comfy-ui", "ComfyUI node system for running plain Python functions"),
 ]
 
-def atlas_diagram():
-    """Scanner at the top, four consumers fanning out below it."""
-    CONSUMERS = [("atlas-picker", "Rust TUI"), ("atlas-browser", "Raycast"),
-                 ("atlas-cli", "`atlas`"), ("atlas-watchdog", "launchd")]
-    centres = [11, 30, 47, 65]
-    trunk = (centres[0] + centres[-1]) // 2
 
-    def place(pairs):
-        """pairs = [(centre, text)] -> one line with each text centred on its column."""
-        line = ""
-        for c, t in pairs:
-            start = c - len(t) // 2
-            line += " " * (start - len(line)) + t
-        return line
-
-    box = "┌───────────┐"
-    lines = [
-        place([(trunk, "~/Documents/development")]),
-        place([(trunk, "│")]),
-        place([(trunk, "▼")]),
-        " " * (trunk - 6) + box,
-        " " * (trunk - 6) + "│ atlas-api │" + "    :47891  ·  scans, types, caches the graph",
-        " " * (trunk - 6) + "└─────┬─────┘" + "    .atlas-cache.json  ·  60s TTL, revalidating",
-        place([(trunk, "│")]),
-    ]
-
-    # the fan-out rail: corners at the outer consumers, tees at the inner ones, trunk in the middle
-    rail = [" "] * (centres[-1] + 1)
-    for i in range(centres[0], centres[-1] + 1):
-        rail[i] = "─"
-    rail[centres[0]], rail[centres[-1]] = "┌", "┐"
-    for c in centres[1:-1]:
-        rail[c] = "┬"
-    rail[trunk] = "┴"
-    lines.append("".join(rail))
-
-    lines.append(place([(c, "▼") for c in centres]))
-    lines.append(place(list(zip(centres, [n for n, _ in CONSUMERS]))))
-    lines.append(place(list(zip(centres, [t for _, t in CONSUMERS]))))
-    return [("  " + l).rstrip() for l in lines]
-
-
-out = []
-A = out.append
-
-A("<pre>")
-A("")
-A("  doublej")
-A("  " + "─" * (W - 2))
-A("  Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners")
-A("")
-A("")
-A(header("CLI TOOLS"))
-A("")
-A("  Everything I drive from a terminal. Linked names are public repos;")
-A("  plain names live in private repos and are described here instead.")
-
-for title, rows in CLI:
-    A(group(title))
-    A("")
-    for r in rows:
-        A(cli_row(*r))
-
-A("")
-A("")
-A(header("HIGHLIGHTS"))
-A("")
-
-HL = """  ╔══════════════════════════════════════════════════════════════════════════════════════════════════╗
-  ║                                                                                                  ║
-  ║  <a href="{gh}consult-user-mcp">consult-user-mcp</a>                                                                          ★ 40  ║
-  ║                                                                                                  ║
-  ║  Native dialogs for MCP agents, on macOS and Windows.                                            ║
-  ║                                                                                                  ║
-  ║  A sidecar app and an MCP bridge giving Claude Code real interactive UI:                         ║
-  ║  confirms, picks, multi-question forms, slider tweak panes that write live to disk.              ║
-  ║                                                                                                  ║
-  ║  →  <a href="{gh}consult-user-mcp">source</a>                                                                                       ║
-  ║  →  <a href="https://doublej.github.io/consult-user-mcp/">documentation</a>                                                                                ║
-  ║                                                                                                  ║
-  ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝""".format(gh=GH)
-A(HL)
-A("")
-
-
-def card(name, repo, lines, links):
-    """Return the 9 raw lines of one 46-wide card, without the anchor markup."""
-    return (name, repo, lines, links)
-
+# ── cards ───────────────────────────────────────────────────────────────────
 
 def render_cards(left, right):
     """Each card is (name, repo_or_None, [body lines], [(label, url)]). No repo -> private."""
@@ -254,7 +183,7 @@ def render_cards(left, right):
         if links:
             plain = rich = ""
             for j, (label, url) in enumerate(links):
-                seg = "\u2192 " if j == 0 else "     \u2192 "
+                seg = "→ " if j == 0 else "     → "
                 plain += seg + label
                 rich += seg + f'<a href="{url}">{label}</a>'
             out.append((plain.ljust(IW), rich + " " * (IW - len(plain))))
@@ -263,12 +192,12 @@ def render_cards(left, right):
         return out
 
     L, R = rows(left), rows(right)
-    res = ["  \u250c" + "\u2500" * 46 + "\u2510    \u250c" + "\u2500" * 46 + "\u2510"]
+    res = ["  ┌" + "─" * 46 + "┐    ┌" + "─" * 46 + "┐"]
     for (lp, lr), (rp, rr) in zip(L, R):
         for plain in (lp, rp):
             assert len(plain) == IW, (len(plain), plain)
-        res.append("  \u2502  " + (lr or lp) + "  \u2502    \u2502  " + (rr or rp) + "  \u2502")
-    res.append("  \u2514" + "\u2500" * 46 + "\u2518    \u2514" + "\u2500" * 46 + "\u2518")
+        res.append("  │  " + (lr or lp) + "  │    │  " + (rr or rp) + "  │")
+    res.append("  └" + "─" * 46 + "┘    └" + "─" * 46 + "┘")
     return res
 
 
@@ -289,7 +218,7 @@ CARDS = [
     (("flt", GH + "flt",
       ["Flight search in four shapes: a CLI, a",
        "green-on-black GDS-style TUI, a SvelteKit",
-       "web UI and an MCP server \u2014 all over an",
+       "web UI and an MCP server — all over an",
        "engine with zero npm dependencies."],
       [("source", GH + "flt"), ("docs", "https://doublej.github.io/flt/")]),
      ("onenv", GH + "onenv",
@@ -311,7 +240,7 @@ CARDS = [
        "broker CSVs for the rest. Private."],
       [])),
     (("ccom", GH + "ccom",
-      ["Plain English \u2192 shell command via Claude.",
+      ["Plain English → shell command via Claude.",
        "Shows the proposed command before running",
        "so you can confirm, edit, or pipe further."],
       [("source", GH + "ccom"), ("docs", "https://doublej.github.io/ccom/")]),
@@ -323,7 +252,7 @@ CARDS = [
       [("source", GH + "mermaid-gantt")])),
     (("nordvpn-cli-macos", GH + "nordvpn-cli-macos",
       ["Unofficial NordVPN CLI and TUI for macOS.",
-       "Talks WireGuard directly \u2014 no Electron, no",
+       "Talks WireGuard directly — no Electron, no",
        "menu bar app, just configs and a fast",
        "command you can script."],
       [("source", GH + "nordvpn-cli-macos")]),
@@ -339,77 +268,244 @@ CARDS = [
        "a wake lock so it never sleeps, and a",
        "phone remote over WebRTC."],
       [("source", GH + "laptop-light")]),
-     ("more  \u2192", GH + "?tab=repositories",
+     ("more  →", GH + "?tab=repositories",
       ["94 public repos and counting,",
        "267 in total, public and private.",
        "Browse the full set:"],
       [("github.com/doublej?tab=repositories", GH + "?tab=repositories")])),
 ]
 
-for l, r in CARDS:
-    out.extend(render_cards(l, r))
-    A("")
+HERO = """  ╔""" + "═" * 98 + """╗
+  ║""" + " " * 98 + """║
+  ║  <a href="{gh}consult-user-mcp">consult-user-mcp</a>                                                                          ★ 40  ║
+  ║""" + " " * 98 + """║
+  ║  Native dialogs for MCP agents, on macOS and Windows.                                            ║
+  ║""" + " " * 98 + """║
+  ║  A sidecar app and an MCP bridge giving Claude Code real interactive UI:                         ║
+  ║  confirms, picks, multi-question forms, slider tweak panes that write live to disk.              ║
+  ║""" + " " * 98 + """║
+  ║  →  <a href="{gh}consult-user-mcp">source</a>                                                                                       ║
+  ║  →  <a href="https://doublej.github.io/consult-user-mcp/">documentation</a>                                                                                ║
+  ║""" + " " * 98 + """║
+  ╚""" + "═" * 98 + "╝"
 
-A("")
-A(header("ATLAS"))
-A("")
-A("             __  __                       _      __            ")
-A("      ____ _/ /_/ /___ ______      ____  (_)____/ /_____  _____")
-A("     / __ `/ __/ / __ `/ ___/_____/ __ \\/ / ___/ //_/ _ \\/ ___/")
-A("    / /_/ / /_/ / /_/ (__  )_____/ /_/ / / /__/ ,< /  __/ /    ")
-A("    \\__,_/\\__/_/\\__,_/____/     / .___/_/\\___/_/|_|\\___/_/     ")
-A("                               /_/                              ")
-A("")
-A("    find.  pick.  go.")
-A("")
-A("")
-A("  One scanner, four front ends. atlas-api walks the development folder and types every project")
-A("  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches")
-A("  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same")
-A("  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-")
-A("  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.")
-A("")
-out.extend(atlas_diagram())
-A("")
-A("")
-A(row("atlas-api", None, "Scanner, cache and project graph — SvelteKit on :47891"))
-A(row("atlas-cli", None, "The global `atlas`: tree, scan, pick, open, ports, new"))
-A(row("atlas-picker", "atlas-picker", "Rust TUI — iocraft and Nucleo, reads the cache directly"))
-A(row("atlas-browser", "atlas-browser", "Raycast: browse, filter and act on any project"))
-A(row("atlas-watchdog", None, "Polls the API and restarts it through launchctl"))
-A("")
-A("")
-A(header("SYSTEMS"))
-A("")
-A("  The bigger multi-repo work \u2014 VR streaming, sim racing, print pipelines, admin platforms.")
-A("  All private, so described rather than linked.")
-A("")
-for r in SYSTEMS:
-    A(row(*r))
-A("")
-A("")
-A(header("PROJECTS"))
-A("")
-for r in PROJECTS:
-    A(row(*r))
-A("")
-A("")
-A(header("RAYCAST PLUGINS"))
-A("")
-for r in RAYCAST:
-    A(row(*r))
-A("")
-A("")
-A(header("FORKS"))
-A("")
-for r in FORKS:
-    A(row(*r))
-A("")
-A("</pre>")
-A("")
-A("![](https://umami-inky-two.vercel.app/p/QL68zROQG)")
 
-import pathlib
-import sys
-pathlib.Path(sys.argv[1]).write_text("\n".join(out) + "\n")
-print("wrote", sys.argv[1], len(out), "lines")
+# ── the atlas diagram ───────────────────────────────────────────────────────
+
+def atlas_diagram():
+    """Scanner at the top, four consumers fanning out below it."""
+    CONSUMERS = [("atlas-picker", "Rust TUI"), ("atlas-browser", "Raycast"),
+                 ("atlas-cli", "`atlas`"), ("atlas-watchdog", "launchd")]
+    centres = [11, 30, 47, 65]
+    trunk = (centres[0] + centres[-1]) // 2
+
+    def place(pairs):
+        """pairs = [(centre, text)] -> one line with each text centred on its column."""
+        line = ""
+        for c, t in pairs:
+            start = c - len(t) // 2
+            line += " " * (start - len(line)) + t
+        return line
+
+    lines = [
+        place([(trunk, "~/Documents/development")]),
+        place([(trunk, "│")]),
+        place([(trunk, "▼")]),
+        " " * (trunk - 6) + "┌───────────┐",
+        " " * (trunk - 6) + "│ atlas-api │" + "    :47891  ·  scans, types, caches the graph",
+        " " * (trunk - 6) + "└─────┬─────┘" + "    .atlas-cache.json  ·  60s TTL, revalidating",
+        place([(trunk, "│")]),
+    ]
+
+    rail = [" "] * (centres[-1] + 1)
+    for i in range(centres[0], centres[-1] + 1):
+        rail[i] = "─"
+    rail[centres[0]], rail[centres[-1]] = "┌", "┐"
+    for c in centres[1:-1]:
+        rail[c] = "┬"
+    rail[trunk] = "┴"
+    lines.append("".join(rail))
+
+    lines.append(place([(c, "▼") for c in centres]))
+    lines.append(place(list(zip(centres, [n for n, _ in CONSUMERS]))))
+    lines.append(place(list(zip(centres, [t for _, t in CONSUMERS]))))
+    return [("  " + l).rstrip() for l in lines]
+
+
+# ── navigation ──────────────────────────────────────────────────────────────
+
+PAGES = ["home", "cli", "atlas", "systems", "projects", "raycast", "forks"]
+
+BODY = ("Press+Create.+Nothing+is+filed+against+anyone%3A+a+workflow+reads+the+title%2C"
+        "+rebuilds+the+README+and+closes+this+issue+by+itself.+Give+it+half+a+minute.")
+
+
+def link(page):
+    return f"{REPO}/issues/new?title=go%3A{page}&body={BODY}"
+
+
+def nav(active, live=True):
+    """The tab strip. live=False renders it inert, for the loading frames."""
+    i = PAGES.index(active)
+    plain = rich = "  "
+
+    def add(text, url):
+        nonlocal plain, rich
+        plain += text
+        rich += f'<a href="{url}">{text}</a>' if (url and live) else text
+
+    add("◂ prev", link(PAGES[i - 1]) if i else None)
+    plain += "   ·   "
+    rich += "   ·   "
+    for j, p in enumerate(PAGES):
+        if j:
+            plain += "  "
+            rich += "  "
+        if p == active:
+            add(f"[{p}]", None)
+        else:
+            add(p, link(p))
+    plain += "   ·   "
+    rich += "   ·   "
+    add("next ▸", link(PAGES[(i + 1) % len(PAGES)]) if i < len(PAGES) - 1 else None)
+
+    tail = f"page {i + 1} / {len(PAGES)}"
+    return rich + " " * (W - len(plain) - len(tail)) + tail
+
+
+FOOTER = [
+    "  " + "─" * (W - 2),
+    "  Every tab up there is an issue link. A workflow reads the title, re-renders this file and",
+    "  commits it — so the page you are looking at was literally deployed by your last click.",
+    "  It takes about thirty seconds and burns five commits. Refresh to watch it load.",
+]
+
+
+# ── pages ───────────────────────────────────────────────────────────────────
+
+def masthead():
+    return ["  doublej",
+            "  " + "─" * (W - 2),
+            "  Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners"]
+
+
+def page_home():
+    out = ["", header("FEATURED"), ""]
+    out.append(HERO.format(gh=GH))
+    out.append("")
+    for l, r in CARDS:
+        out.extend(render_cards(l, r))
+        out.append("")
+    return out
+
+
+def page_cli():
+    out = ["", header("CLI TOOLS"), "",
+           "  Everything I drive from a terminal. Linked names are public repos;",
+           "  plain names live in private repos and are described here instead."]
+    for title, rows in CLI:
+        out.append(group(title))
+        out.append("")
+        out.extend(cli_row(*r) for r in rows)
+    return out
+
+
+def page_atlas():
+    out = ["", header("ATLAS"), "",
+           "             __  __                       _      __            ",
+           "      ____ _/ /_/ /___ ______      ____  (_)____/ /_____  _____",
+           "     / __ `/ __/ / __ `/ ___/_____/ __ \\/ / ___/ //_/ _ \\/ ___/",
+           "    / /_/ / /_/ / /_/ (__  )_____/ /_/ / / /__/ ,< /  __/ /    ",
+           "    \\__,_/\\__/_/\\__,_/____/     / .___/_/\\___/_/|_|\\___/_/     ",
+           "                               /_/                              ",
+           "",
+           "    find.  pick.  go.",
+           "",
+           "",
+           "  One scanner, four front ends. atlas-api walks the development folder and types every project",
+           "  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches",
+           "  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same",
+           "  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-",
+           "  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.",
+           ""]
+    out.extend(atlas_diagram())
+    out += ["", "",
+            row("atlas-api", None, "Scanner, cache and project graph — SvelteKit on :47891"),
+            row("atlas-cli", None, "The global `atlas`: tree, scan, pick, open, ports, new"),
+            row("atlas-picker", "atlas-picker", "Rust TUI — iocraft and Nucleo, reads the cache directly"),
+            row("atlas-browser", "atlas-browser", "Raycast: browse, filter and act on any project"),
+            row("atlas-watchdog", None, "Polls the API and restarts it through launchctl")]
+    return out
+
+
+def listing(title, intro, items):
+    out = ["", header(title), ""]
+    out.extend("  " + l for l in intro)
+    if intro:
+        out.append("")
+    out.extend(row(*r) for r in items)
+    return out
+
+
+def page_systems():
+    return listing("SYSTEMS",
+                   ["The bigger multi-repo work — VR streaming, sim racing, print pipelines, admin platforms.",
+                    "All private, so described rather than linked."],
+                   SYSTEMS)
+
+
+def page_projects():
+    return listing("PROJECTS", [], PROJECTS)
+
+
+def page_raycast():
+    return listing("RAYCAST", ["Extensions I use every day. The launcher is half my interface."], RAYCAST)
+
+
+def page_forks():
+    return listing("FORKS", ["Other people's work that I run, patched to taste. Credit upstream."], FORKS)
+
+
+BUILDERS = {"home": page_home, "cli": page_cli, "atlas": page_atlas, "systems": page_systems,
+            "projects": page_projects, "raycast": page_raycast, "forks": page_forks}
+
+
+def loading(target, pct):
+    """A real README, committed mid-flight, purely so the wait is visible."""
+    filled = round(pct * 60 / 100)
+    bar = "▓" * filled + "░" * (60 - filled)
+    beat = ["reticulating splines", "waking the runner", "resolving the monorepo that is not a monorepo",
+            "asking the scanner nicely", "committing"][min(pct * 5 // 100, 4)]
+    return ["", header("LOADING"), "",
+            f"  turning to {target}",
+            "",
+            f"  [{bar}]  {pct:>3}%",
+            "",
+            f"  {beat}…",
+            "",
+            "",
+            "  This is not a gif. A GitHub Action is rewriting this file while you read it,",
+            "  one commit per frame, and it will land on the page you asked for.",
+            "", ""]
+
+
+def build(page, pct=None):
+    out = ["<pre>", ""]
+    out += masthead()
+    out += ["", nav(page, live=pct is None), ""]
+    out += loading(page, pct) if pct is not None else BUILDERS[page]()
+    out += ["", ""] + FOOTER
+    out += ["</pre>", "", "![](https://umami-inky-two.vercel.app/p/QL68zROQG)"]
+    return out
+
+
+if __name__ == "__main__":
+    dest = sys.argv[1]
+    if "--loading" in sys.argv:
+        i = sys.argv.index("--loading")
+        lines = build(sys.argv[i + 1], int(sys.argv[i + 2]))
+    else:
+        i = sys.argv.index("--page") if "--page" in sys.argv else None
+        lines = build(sys.argv[i + 1] if i else "home")
+    pathlib.Path(dest).write_text("\n".join(lines) + "\n")
+    print(f"wrote {dest}  ({len(lines)} lines)")

@@ -1,0 +1,30 @@
+name: sleep
+
+# Left alone, the page drifts back to the front. Partly so visitors never land on
+# whatever tab the last stranger opened, mostly because a portfolio that quietly
+# returns to its home screen is funnier than one that does not.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: navigate
+
+jobs:
+  back-to-home:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 gen.py README.md --page home
+          git config user.name  "atlas"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet && exit 0
+          git commit -q -m "nav: back to home"
+          git push -q
