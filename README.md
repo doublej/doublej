@@ -11,9 +11,9 @@
 
   turning to systems
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-  waking the runner…
+  resolving the monorepo that is not a monorepo…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,15 +25,15 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           24 seconds ago      framelink       13 minutes ago
+   atlas           29 seconds ago      framelink       13 minutes ago
    projects        1 minute ago        projects        14 minutes ago
    framelink       2 minutes ago       systems         15 minutes ago
    cli             5 minutes ago       framelink       16 minutes ago
    framelink       6 minutes ago       simsync         17 minutes ago
-   atlas           6 minutes ago       systems         20 minutes ago
+   atlas           7 minutes ago       systems         20 minutes ago
    projects        9 minutes ago       simsync         20 minutes ago
    home            10 minutes ago      systems         23 minutes ago
-   cli             11 minutes ago      atlas           23 minutes ago
+   cli             11 minutes ago      atlas           24 minutes ago
    simsync         12 minutes ago      cli             24 minutes ago
 
 
