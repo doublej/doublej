@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -66,7 +66,7 @@
    framelink       13 minutes ago      raycast         28 minutes ago
    home            14 minutes ago      simsync         29 minutes ago
    framelink       15 minutes ago      raycast         31 minutes ago
-   home            15 minutes ago      projects        31 minutes ago
+   home            15 minutes ago      projects        32 minutes ago
    atlas           17 minutes ago      atlas           32 minutes ago
    home            19 minutes ago      raycast         34 minutes ago
 
