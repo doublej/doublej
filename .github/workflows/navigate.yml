@@ -60,10 +60,21 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           publish () {
-            git add README.md
+            git add README.md nav-log.json 2>/dev/null || git add README.md
             git diff --cached --quiet && return 0
             git commit -q -m "$1"
             git push -q
+          }
+
+          # Record the turn before the final render, so the page shows its own arrival.
+          record () {
+            python3 - <<'REC'
+          import json, os, pathlib, time
+          log = pathlib.Path("nav-log.json")
+          entries = json.loads(log.read_text()) if log.exists() else []
+          entries.insert(0, {"page": os.environ["PAGE"], "at": int(time.time())})
+          log.write_text(json.dumps(entries[:20], indent=1) + "\n")
+          REC
           }
 
           # The visitor is sitting on this issue, not on the profile — issue pages stream
@@ -86,6 +97,7 @@ jobs:
           84|committing it, one frame at a time
           FRAMES
 
+          record
           python3 gen.py README.md --page "$PAGE"
           publish "nav: $PAGE"
 

@@ -9,8 +9,10 @@ and commits the result. Clicking a tab really does redeploy the page.
     gen.py README.md --loading cli 40
 """
 
+import json
 import pathlib
 import sys
+import time
 
 W = 102          # total line width
 NAMECOL = 3      # indent before the name
@@ -334,6 +336,41 @@ def atlas_diagram():
 
 # ── navigation ──────────────────────────────────────────────────────────────
 
+LOG = pathlib.Path(__file__).parent / "nav-log.json"
+
+
+def ago(seconds):
+    for unit, size in (("second", 60), ("minute", 60), ("hour", 24), ("day", 7)):
+        if seconds < size:
+            n = int(seconds)
+            return "just now" if unit == "second" and n < 10 else f"{n} {unit}{'s' * (n != 1)} ago"
+        seconds /= size
+    return f"{int(seconds)} week{'s' * (int(seconds) != 1)} ago"
+
+
+def activity():
+    """The last 20 page turns. Relative times are frozen at build time, which is the
+    joke: this clock only ticks when somebody clicks something."""
+    if not LOG.exists():
+        return []
+    entries = json.loads(LOG.read_text())[:20]
+    if not entries:
+        return []
+    now = time.time()
+    cells = [(e["page"], ago(max(0, now - e["at"]))) for e in entries]
+    half = (len(cells) + 1) // 2
+    left, right = cells[:half], cells[half:]
+
+    out = ["", header("RECENT"), "",
+           "  The last 20 turns, as of the build that produced this page.", ""]
+    for i, (page, when) in enumerate(left):
+        line = "   " + page.ljust(16) + when.ljust(20)
+        if i < len(right):
+            line += right[i][0].ljust(16) + right[i][1]
+        out.append(line.rstrip())
+    return out
+
+
 PAGES = ["home", "cli", "atlas", "framelink", "simsync", "systems", "projects",
          "raycast", "forks"]
 
@@ -467,37 +504,23 @@ def page_forks():
 
 
 def page_framelink():
-    out = ["", header("FRAMELINK"), "", site("https://www.framelink.quest/", "www.framelink.quest"), "",
-           "  Wireless PC-VR to a Quest 3. A cross-platform data plane, native capture, encode and",
-           "  decode at each end, and a Bun control surface holding the session together \u2014 built to see",
-           "  how far a self-made streamer gets against Air Link and Virtual Desktop.",
-           "",
-           row("packages/protocol", None, "Zig \u2014 the shared wire contract and its C ABI"),
-           row("pc-streamer", None, "Zig \u2014 frame sharding, pacing, transport metrics"),
-           row("sim-receiver", None, "Zig \u2014 reassembly and presentation on the headset"),
-           row("apps/ui", None, "Bun control daemon and dashboard API"),
-           row("apps/consumer-ui", None, "Svelte operator control and session view"),
-           row("broker \u00b7 auth", None, "The TypeScript services behind the control plane"),
-           row("quest-link-bridge", None, "Meta Quest Link (XRSP) protocol RE, bridged to SteamVR"),
-           row("beamng-mcp", None, "Bundled: drive and sense BeamNG.drive from an MCP client")]
-    return out
+    return ["", header("FRAMELINK"), "", site("https://www.framelink.quest/", "www.framelink.quest"), "",
+            "  Wireless PC-VR streaming to a Quest 3. Low-latency capture, encode and transport, with a",
+            "  control plane that keeps the session honest when the network is not.",
+            "",
+            "  Quest 3  \u00b7  SteamVR  \u00b7  OpenXR",
+            "",
+            "  Commercial product \u2014 the source stays closed."]
 
 
 def page_simsync():
     return ["", header("SIMSYNC"), "", site("https://www.simsync.app/", "www.simsync.app"), "",
-            "  Set your wheel up once and use it in every sim. Every racing function gets a universal",
-            "  control id; SimSync binds your hardware to those ids and maps them onto whatever a game",
-            "  expects, so supporting a new sim is a new adapter rather than an afternoon of remapping.",
+            "  Set your wheel up once and use it in every sim. Each racing function gets a universal",
+            "  control id, so switching titles stops meaning an afternoon of remapping.",
             "",
-            "        PERIPHERAL                 CONTROL                    SIM",
-            "        Fanatec DD    \u25c4\u2500 bind \u2500\u25ba   Throttle 0301001   \u25c4\u2500 map \u2500\u25ba   iRacing",
+            "  Assetto Corsa  \u00b7  Competizione  \u00b7  Evo  \u00b7  iRacing  \u00b7  F1 24  \u00b7  ETS2  \u00b7  BeamNG  \u00b7  WRC",
             "",
-            row("simsync-application", None, "The core: read, translate and write input maps"),
-            row("simsync-ui", None, "Desktop UI for binding hardware to controls"),
-            row("simsync-helper", None, "Rust helper for direct device access"),
-            row("simsync-emulator", None, "Stands in for hardware that is not on the desk"),
-            row("adapters", None, "ac \u00b7 acc \u00b7 acevo \u00b7 iracing \u00b7 f124 \u00b7 ets2 \u00b7 beamng \u00b7 wrc"),
-            row("simsync-marketing", None, "The site at simsync.app")]
+            "  Commercial product \u2014 the source stays closed."]
 
 
 BUILDERS = {"home": page_home, "cli": page_cli, "atlas": page_atlas,
@@ -532,6 +555,7 @@ def build(page, pct=None):
     out += masthead()
     out += ["", nav(page, live=pct is None), ""]
     out += loading(page, pct) if pct is not None else BUILDERS[page]()
+    out += activity()
     out += ["", ""] + FOOTER
     out += ["</pre>", "", "![](https://umami-inky-two.vercel.app/p/QL68zROQG)"]
     return out
