@@ -336,8 +336,8 @@ def atlas_diagram():
 
 PAGES = ["home", "cli", "atlas", "systems", "projects", "raycast", "forks"]
 
-BODY = ("Press+Create.+Nothing+is+filed+against+anyone%3A+a+workflow+reads+the+title%2C"
-        "+rebuilds+the+README+and+closes+this+issue+by+itself.+Give+it+half+a+minute.")
+BODY = ("Press+Create+and+stay+on+this+page.+A+workflow+reads+the+title+and+rebuilds+the+profile%2C"
+        "+narrating+it+here+as+it+goes.+It+will+link+you+back+when+the+tab+is+live%2C+then+close+itself.")
 
 
 def link(page):
@@ -375,9 +375,9 @@ def nav(active, live=True):
 
 FOOTER = [
     "  " + "─" * (W - 2),
-    "  Every tab up there is an issue link. A workflow reads the title, re-renders this file and",
-    "  commits it — so the page you are looking at was literally deployed by your last click.",
-    "  It takes about thirty seconds and burns five commits. Refresh to watch it load.",
+    "  Every tab up there is an issue link. Press Create and stay on the issue — the build narrates",
+    "  itself there, then links you back. Meanwhile this file is re-rendered frame by frame, so if",
+    "  you sit here and refresh you get a loading bar instead. Five commits a turn, either way.",
 ]
 
 
@@ -470,16 +470,19 @@ BUILDERS = {"home": page_home, "cli": page_cli, "atlas": page_atlas, "systems": 
             "projects": page_projects, "raycast": page_raycast, "forks": page_forks}
 
 
+def bar(pct, width=60):
+    filled = round(pct * width / 100)
+    return "\u2593" * filled + "\u2591" * (width - filled)
+
+
 def loading(target, pct):
     """A real README, committed mid-flight, purely so the wait is visible."""
-    filled = round(pct * 60 / 100)
-    bar = "▓" * filled + "░" * (60 - filled)
     beat = ["reticulating splines", "waking the runner", "resolving the monorepo that is not a monorepo",
             "asking the scanner nicely", "committing"][min(pct * 5 // 100, 4)]
     return ["", header("LOADING"), "",
             f"  turning to {target}",
             "",
-            f"  [{bar}]  {pct:>3}%",
+            f"  [{bar(pct)}]  {pct:>3}%",
             "",
             f"  {beat}…",
             "",
@@ -500,6 +503,9 @@ def build(page, pct=None):
 
 
 if __name__ == "__main__":
+    if "--bar" in sys.argv:                      # the workflow reuses this for its commentary
+        print(bar(int(sys.argv[sys.argv.index("--bar") + 1]), 28))
+        raise SystemExit
     dest = sys.argv[1]
     if "--loading" in sys.argv:
         i = sys.argv.index("--loading")

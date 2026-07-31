@@ -52,6 +52,8 @@ jobs:
       - name: Turn the page, slowly, on purpose
         env:
           PAGE: ${{ steps.target.outputs.page }}
+          NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           git config user.name  "atlas"
@@ -64,11 +66,25 @@ jobs:
             git push -q
           }
 
-          for pct in 6 31 58 84; do
+          # The visitor is sitting on this issue, not on the profile — issue pages stream
+          # new comments in live, so this is the only surface where the wait is visible.
+          say () {
+            [ -n "${NUMBER:-}" ] || return 0
+            gh issue comment "$NUMBER" --body "$1" >/dev/null
+          }
+
+          while IFS='|' read -r pct beat; do
+            [ -n "$pct" ] || continue
             python3 gen.py README.md --loading "$PAGE" "$pct"
             publish "nav: loading $PAGE — $pct%"
-            sleep 5
-          done
+            say "\`$(python3 gen.py --bar "$pct")\` \`${pct}%\` · $beat"
+            sleep 4
+          done <<'FRAMES'
+          6|waking the runner
+          31|resolving the monorepo that is not a monorepo
+          58|rendering the page
+          84|committing it, one frame at a time
+          FRAMES
 
           python3 gen.py README.md --page "$PAGE"
           publish "nav: $PAGE"
@@ -88,5 +104,9 @@ jobs:
           PAGE: ${{ steps.target.outputs.page }}
         run: |
           gh issue comment "$NUMBER" --body \
-            "Turned to **$PAGE**. Head back to [the profile]($GITHUB_SERVER_URL/doublej) — it should be there now. Closing this behind me."
+            "\`$(python3 gen.py --bar 100)\` \`100%\` · deployed
+
+          **$PAGE** is live → **[github.com/doublej]($GITHUB_SERVER_URL/doublej)**
+
+          <sub>That took five commits. Closing this behind me.</sub>"
           gh issue close "$NUMBER"
