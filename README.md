@@ -11,9 +11,9 @@
 
   turning to atlas
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  queued…
+  runner booting…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -27,11 +27,11 @@
 
    home            2 minutes ago       raycast         16 minutes ago
    cli             4 minutes ago       projects        18 minutes ago
-   framelink       6 minutes ago       projects        20 minutes ago
+   framelink       6 minutes ago       projects        21 minutes ago
    forks           9 minutes ago       systems         21 minutes ago
    cli             10 minutes ago      atlas           22 minutes ago
    raycast         11 minutes ago      projects        23 minutes ago
-   simsync         12 minutes ago      framelink       23 minutes ago
+   simsync         12 minutes ago      framelink       24 minutes ago
    raycast         14 minutes ago      cli             27 minutes ago
    projects        14 minutes ago      framelink       28 minutes ago
    atlas           15 minutes ago      atlas           28 minutes ago
