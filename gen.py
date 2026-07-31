@@ -410,12 +410,13 @@ def site(url, label):
 
 
 FOOTER = [
-    "  " + "─" * (W - 2),
-    "  A README cannot open a new tab \u2014 GitHub strips target=_blank and forbids script \u2014 so every",
-    "  tab up there points at a Cloudflare Worker instead. It fires a GitHub Action and bounces you",
-    "  straight back here, and the Action rewrites this file frame by frame behind you. Refresh a",
-    "  few times right after clicking and you will catch the loading bar. Five commits per turn.",
+    "  " + "\u2500" * (W - 2),
+    "  A README cannot open a new tab, and github.com refuses to be framed. So every tab up there",
+    "  points at a worker that hands this page straight back to you, dims it, and rebuilds it in",
+    "  front of you \u2014 there is no reload, the document just changes. Behind it a GitHub Action",
+    "  rewrites this file frame by frame, five commits a turn. Refresh here and you catch the bar.",
 ]
+
 
 
 # ── pages ───────────────────────────────────────────────────────────────────

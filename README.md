@@ -4,71 +4,105 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">◂</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a>  [cli]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">▸</a>           page 2 / 9
+  ◂  [home]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">▸</a>           page 1 / 9
 
 
-  CLI TOOLS  ─────────────────────────────────────────────────────────────────────────────────────────
+  FEATURED  ──────────────────────────────────────────────────────────────────────────────────────────
 
-  Everything I drive from a terminal. Linked names are public repos;
-  plain names live in private repos and are described here instead.
+  ╔══════════════════════════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                                                  ║
+  ║  <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                                                                          ★ 40  ║
+  ║                                                                                                  ║
+  ║  Native dialogs for MCP agents, on macOS and Windows.                                            ║
+  ║                                                                                                  ║
+  ║  A sidecar app and an MCP bridge giving Claude Code real interactive UI:                         ║
+  ║  confirms, picks, multi-question forms, slider tweak panes that write live to disk.              ║
+  ║                                                                                                  ║
+  ║  →  <a href="https://github.com/doublej/consult-user-mcp">source</a>                                                                                       ║
+  ║  →  <a href="https://doublej.github.io/consult-user-mcp/">documentation</a>                                                                                ║
+  ║                                                                                                  ║
+  ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-   agents, terminal & workflow  ······································································
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/reminders-beads-bridge">reminders-beads-bridge</a>                      │    │  <a href="https://github.com/doublej/strandkanban">strandkanban</a>                                │
+  │                                              │    │                                              │
+  │  Apple Reminders as an agent remote.         │    │  Drag-and-drop Kanban over beads issues.     │
+  │  A macOS daemon: file and close beads        │    │  One command starts it, the issues never     │
+  │  issues, drive Claude and Codex sessions,    │    │  leave your repo, and the board draws the    │
+  │  read and type into live tabs from a phone.  │    │  dependency arrows the bd CLI cannot.        │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/reminders-beads-bridge">source</a>     → <a href="https://doublej.github.io/reminders-beads-bridge/">docs</a>                         │    │  → <a href="https://github.com/doublej/strandkanban">source</a>                                    │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   $ <a href="https://github.com/doublej/ccom">ccom</a>                           Plain English to a shell command, shown before it runs
-   $ <a href="https://github.com/doublej/bpr">bpr</a>                            Beeper CLI for agents: stable ids, JSON when piped, prime
-   $ <a href="https://github.com/doublej/strandkanban">strand</a>                         One command opens a Kanban board over your beads issues
-   $ <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                        Drive beads, agent sessions and Claude tabs from Apple Reminders
-   $ <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                   Install themed spinner verb sets into Claude Code
-   $ cav                            Supervisor TUI coordinating several Claude Code agents
-   $ gh-inbox                       Relevance-filtered GitHub issue and PR triage
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/flt">flt</a>                                         │    │  <a href="https://github.com/doublej/onenv">onenv</a>                                       │
+  │                                              │    │                                              │
+  │  Flight search in four shapes: a CLI, a      │    │  Stop committing .env. Values live in a      │
+  │  green-on-black GDS-style TUI, a SvelteKit   │    │  1Password vault; onenv run injects them     │
+  │  web UI and an MCP server — all over an      │    │  into a child process and they vanish when   │
+  │  engine with zero npm dependencies.          │    │  it exits. KEY=value ergonomics, unchanged.  │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/flt">source</a>     → <a href="https://doublej.github.io/flt/">docs</a>                         │    │  → <a href="https://github.com/doublej/onenv">source</a>                                    │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   machines & environment  ···········································································
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/bpr">bpr</a>                                         │    │  fin                                         │
+  │                                              │    │                                              │
+  │  A Beeper CLI shaped for agents. Short       │    │  Every account in one local ledger.          │
+  │  stable ids, a dense table on a TTY and      │    │  ING and Revolut over PSD2, Wise on its      │
+  │  JSON the moment you pipe it, watch          │    │  own API, DEGIRO through degiro-connector,   │
+  │  subscriptions, takeout, a prime contract.   │    │  broker CSVs for the rest. Private.          │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/bpr">source</a>                                    │    │                                              │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   $ <a href="https://github.com/doublej/onenv">onenv</a>                          1Password-backed env vars with an agent-friendly CLI
-   $ <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn</a>                        NordVPN over WireGuard on macOS, CLI plus TUI
-   $ cdy                            Reverse proxies, static sites and certs on the NAS, over SSH
-   $ qnap-cli                       QNAP NAS services, storage, files, power and users
-   $ hn                             Work on other machines on the LAN as if they were local
-   $ rig                            YAML control plane for a VR sim-racing PC (CLI, API, VR UI)
-   $ swcache                        List and delete stale Chrome service-worker caches
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/ccom">ccom</a>                                        │    │  <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                               │
+  │                                              │    │                                              │
+  │  Plain English → shell command via Claude.   │    │  Keyboard-first Gantt chart editor.          │
+  │  Shows the proposed command before running   │    │  Type Mermaid syntax, see the diagram        │
+  │  so you can confirm, edit, or pipe further.  │    │  update live, round-trip it back out for     │
+  │                                              │    │  planning somewhere else.                    │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/ccom">source</a>     → <a href="https://doublej.github.io/ccom/">docs</a>                         │    │  → <a href="https://github.com/doublej/mermaid-gantt">source</a>                                    │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   media & files  ····················································································
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn-cli-macos</a>                           │    │  <a href="https://github.com/doublej/browser-router">browser-router</a>                              │
+  │                                              │    │                                              │
+  │  Unofficial NordVPN CLI and TUI for macOS.   │    │  Menu bar app routing URLs to browsers.      │
+  │  Talks WireGuard directly — no Electron, no  │    │  Rule-based, down to the profile: dev to     │
+  │  menu bar app, just configs and a fast       │    │  Chrome, work to Firefox, everything else    │
+  │  command you can script.                     │    │  to the default. Reclaim your default.       │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/nordvpn-cli-macos">source</a>                                    │    │  → <a href="https://github.com/doublej/browser-router">source</a>                                    │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   $ <a href="https://github.com/doublej/shazam-export">shazam-export</a>                  Export Shazam history to CSV, JSON, GeoJSON, GPX, KML, HTML
-   $ <a href="https://github.com/doublej/ss-image-processor">c4d2pixi</a>                       Batch image-sequence processing for VFX and 3D pipelines
-   $ kfcut                          Keyframe-aware video cutting with no re-encode, plus ASR
-   $ micstream                      Turn phones into wireless mics for the Mac over the LAN
-   $ rotary                         The DJ's operating system: crawl, enrich, query and mix crates
+  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
+  │  <a href="https://github.com/doublej/laptop-light">laptop-light</a>                                │    │  <a href="https://github.com/doublej/?tab=repositories">more  →</a>                                     │
+  │                                              │    │                                              │
+  │  Turns a laptop screen into ambient light.   │    │  94 public repos and counting,               │
+  │  Warm tones, candle flicker, HDR/P3 colour,  │    │  267 in total, public and private.           │
+  │  a wake lock so it never sleeps, and a       │    │  Browse the full set:                        │
+  │  phone remote over WebRTC.                   │    │                                              │
+  │                                              │    │                                              │
+  │  → <a href="https://github.com/doublej/laptop-light">source</a>                                    │    │  → <a href="https://github.com/doublej/?tab=repositories">github.com/doublej?tab=repositories</a>       │
+  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
-   data & scraping  ··················································································
-
-   $ <a href="https://github.com/doublej/flt">flt</a>                            Flight search, price-by-date comparison and trip export
-   $ <a href="https://github.com/doublej/marktplaats">marktplaats</a>                    Marktplaats scraper library with CLI, MCP server and UI
-   $ <a href="https://github.com/doublej/snail-mail-parser">snail-mail</a>                     Parse physical mail with an LLM and manage it like email
-   $ umami                          Agent-first CLI for Umami analytics
-   $ fin                            Aggregate bank and broker balances and transactions locally
-   $ fb-scrape                      Facebook group scraper with CLI, API and web UI
-
-   debug & devices  ··················································································
-
-   $ <a href="https://github.com/doublej/pixi-devtools-cli">pixi-debug</a>                     Debug PixiJS apps over the Chrome DevTools Protocol
-   $ <a href="https://github.com/doublej/sagemcom-mcp">sagemcom-cli</a>                   Open and close router ports from the shell or an LLM
-   $ soundlink                      BLE test kit for SoundLink Max: scan, GATT, firmware
-   $ simstew                        Voice assistant for VR sim racing
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             just now            framelink       1 minute ago
-   raycast         43 seconds ago      projects        3 minutes ago
+   cli             16 seconds ago      framelink       1 minute ago
+   raycast         59 seconds ago      projects        3 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
-  A README cannot open a new tab — GitHub strips target=_blank and forbids script — so every
-  tab up there points at a Cloudflare Worker instead. It fires a GitHub Action and bounces you
-  straight back here, and the Action rewrites this file frame by frame behind you. Refresh a
-  few times right after clicking and you will catch the loading bar. Five commits per turn.
+  A README cannot open a new tab, and github.com refuses to be framed. So every tab up there
+  points at a worker that hands this page straight back to you, dims it, and rebuilds it in
+  front of you — there is no reload, the document just changes. Behind it a GitHub Action
+  rewrites this file frame by frame, five commits a turn. Refresh here and you catch the bar.
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
