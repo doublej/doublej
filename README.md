@@ -21,9 +21,9 @@
 
                                           turning to raycast
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -39,7 +39,7 @@
    cli             7 minutes ago       home            1 hour ago
    projects        8 minutes ago       atlas           1 hour ago
    home            9 minutes ago       atlas           1 hour ago
-   home            14 minutes ago      cli             1 hour ago
+   home            15 minutes ago      cli             1 hour ago
    framelink       40 minutes ago      atlas           1 hour ago
    cli             43 minutes ago      atlas           1 hour ago
    home            52 minutes ago      atlas           1 hour ago
@@ -52,4 +52,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=raycast pct=31 -->
+<!-- nav:loading=raycast pct=58 -->
