@@ -19,7 +19,6 @@
    <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                     Install themed spinner verb sets into Claude Code
    cav                              Supervisor TUI coordinating several Claude Code agents
    gh-inbox                         Relevance-filtered GitHub issue and PR triage
-   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI: fuzzy-pick any project on disk and jump into it
 
    machines & environment
 
@@ -44,8 +43,6 @@
    <a href="https://github.com/doublej/flt">flt</a>                              Flight search, price-by-date comparison and trip export
    <a href="https://github.com/doublej/marktplaats">marktplaats</a>                      Marktplaats scraper library with CLI, MCP server and UI
    <a href="https://github.com/doublej/snail-mail-parser">snail-mail</a>                       Parse physical mail with an LLM and manage it like email
-   <a href="https://github.com/doublej/apple-notes-sync">apple-notes-sync</a>                 Two-way task sync: Markdown, Apple Reminders, Apple Notes
-   <a href="https://github.com/doublej/sheet-cms">sheet-cms</a>                        Bidirectional sync between Google Sheets and local JSON
    umami                            Agent-first CLI for Umami analytics
    fin                              Aggregate bank and broker balances and transactions locally
    fb-scrape                        Facebook group scraper with CLI, API and web UI
@@ -145,17 +142,13 @@
 
    <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                 Native dialogs, forms and slider panes for MCP agents
    <a href="https://github.com/doublej/ConsultUserSketch">ConsultUserSketch</a>                Grid layout sketcher behind consult-user-mcp propose_layout
-   <a href="https://github.com/doublej/strandkanban">strandkanban</a>                     Drag-and-drop Kanban board for beads issues
    <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                    Keyboard-first Gantt editor with Mermaid import and export
    <a href="https://github.com/doublej/kanban-claude">kanban-claude</a>                    WebSocket server wrapping the Claude Agent SDK
    <a href="https://github.com/doublej/prompt-analysis">prompt-analysis</a>                  Distil project briefings out of Claude Code session history
    <a href="https://github.com/doublej/claude-history-browser">claude-history-browser</a>           Web UI for browsing and analysing Claude Code history
-   <a href="https://github.com/doublej/claude-verbs">claude-verbs</a>                     Community-contributed spinner verb sets for Claude Code
    <a href="https://github.com/doublej/cookiecutter-templates">cookiecutter-templates</a>           Project templates by language and framework, agent-ready
    <a href="https://github.com/doublej/browser-router">browser-router</a>                   Menu bar app routing URLs to browsers by rule
    <a href="https://github.com/doublej/Scoot">Scoot</a>                            Disk usage analyser with live scanning and a 3D depth view
-   <a href="https://github.com/doublej/apple-notes-sync">apple-notes-sync</a>                 Two-way task sync between Markdown, Reminders and Notes
-   <a href="https://github.com/doublej/sheet-cms">sheet-cms</a>                        Bidirectional sync between Google Sheets and local JSON
    <a href="https://github.com/doublej/pii-filter-proxy">pii-filter-proxy</a>                 Proxy between app and LLM that swaps out PII
    <a href="https://github.com/doublej/web-haptics-polyfill">web-haptics-polyfill</a>             Cross-platform haptic feedback for the mobile web
    <a href="https://github.com/doublej/orphan-obliterator">orphan-obliterator</a>               Prevent orphaned words on the last line of HTML elements
@@ -176,24 +169,16 @@
    <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
    <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
    <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
+   Keyboard Backlight               Control MacBook keyboard backlight brightness
    <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
    <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
    <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
-   <a href="https://github.com/doublej/raycast-ext-hide-my-email">Hide My Email</a>                    Generate Apple Hide My Email addresses
    <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
    <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
-   <a href="https://github.com/doublej/atlas-browser">Project Browser</a>                  Browse and search indexed projects with framework detection
-   <a href="https://github.com/doublej/raycast-ext-save-api-key">Save API Key</a>                     Securely save API keys
    <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
+   <a href="https://github.com/doublej/raycast-ext-text-tools">Text Tools</a>                       Clean, unwrap and wrap clipboard text
    <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
    <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
-   <a href="https://github.com/doublej/raycast-ext-ziggo-router">Ziggo Router</a>                     Ziggo router control
-
-
-  RAYCAST SCRIPTS  ───────────────────────────────────────────────────────────────────────────────────
-
-   raycast-ext-keyboard-backlight   MacBook keyboard backlight control
-   <a href="https://github.com/doublej/raycast-ext-text-tools">raycast-ext-text-tools</a>           Text transformation tools
 
 
   FORKS  ─────────────────────────────────────────────────────────────────────────────────────────────

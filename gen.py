@@ -35,7 +35,6 @@ CLI = [
         ("claude-verbs", "claude-verbs-cli", "Install themed spinner verb sets into Claude Code"),
         ("cav", None, "Supervisor TUI coordinating several Claude Code agents"),
         ("gh-inbox", None, "Relevance-filtered GitHub issue and PR triage"),
-        ("atlas-picker", "atlas-picker", "Rust TUI: fuzzy-pick any project on disk and jump into it"),
     ]),
     ("machines & environment", [
         ("onenv", "onenv", "1Password-backed env vars with an agent-friendly CLI"),
@@ -57,9 +56,7 @@ CLI = [
         ("flt", "flt", "Flight search, price-by-date comparison and trip export"),
         ("marktplaats", "marktplaats", "Marktplaats scraper library with CLI, MCP server and UI"),
         ("snail-mail", "snail-mail-parser", "Parse physical mail with an LLM and manage it like email"),
-        ("apple-notes-sync", "apple-notes-sync", "Two-way task sync: Markdown, Apple Reminders, Apple Notes"),
-        ("sheet-cms", "sheet-cms", "Bidirectional sync between Google Sheets and local JSON"),
-        ("umami", None, "Agent-first CLI for Umami analytics"),
+                ("umami", None, "Agent-first CLI for Umami analytics"),
         ("fin", None, "Aggregate bank and broker balances and transactions locally"),
         ("fb-scrape", None, "Facebook group scraper with CLI, API and web UI"),
     ]),
@@ -74,17 +71,13 @@ CLI = [
 PROJECTS = [
     ("consult-user-mcp", "consult-user-mcp", "Native dialogs, forms and slider panes for MCP agents"),
     ("ConsultUserSketch", "ConsultUserSketch", "Grid layout sketcher behind consult-user-mcp propose_layout"),
-    ("strandkanban", "strandkanban", "Drag-and-drop Kanban board for beads issues"),
     ("mermaid-gantt", "mermaid-gantt", "Keyboard-first Gantt editor with Mermaid import and export"),
     ("kanban-claude", "kanban-claude", "WebSocket server wrapping the Claude Agent SDK"),
     ("prompt-analysis", "prompt-analysis", "Distil project briefings out of Claude Code session history"),
     ("claude-history-browser", "claude-history-browser", "Web UI for browsing and analysing Claude Code history"),
-    ("claude-verbs", "claude-verbs", "Community-contributed spinner verb sets for Claude Code"),
     ("cookiecutter-templates", "cookiecutter-templates", "Project templates by language and framework, agent-ready"),
     ("browser-router", "browser-router", "Menu bar app routing URLs to browsers by rule"),
     ("Scoot", "Scoot", "Disk usage analyser with live scanning and a 3D depth view"),
-    ("apple-notes-sync", "apple-notes-sync", "Two-way task sync between Markdown, Reminders and Notes"),
-    ("sheet-cms", "sheet-cms", "Bidirectional sync between Google Sheets and local JSON"),
     ("pii-filter-proxy", "pii-filter-proxy", "Proxy between app and LLM that swaps out PII"),
     ("web-haptics-polyfill", "web-haptics-polyfill", "Cross-platform haptic feedback for the mobile web"),
     ("orphan-obliterator", "orphan-obliterator", "Prevent orphaned words on the last line of HTML elements"),
@@ -104,23 +97,16 @@ RAYCAST = [
     ("ChatGPT Software Question", "raycast-ext-chatgpt-software", "Ask ChatGPT about the frontmost application"),
     ("Claude Code Launcher", "claude-code-launcher", "Open Claude Code in any directory, in your terminal of choice"),
     ("Claude History", "claude-history", "Search and browse Claude Code session history across projects"),
+    ("Keyboard Backlight", None, "Control MacBook keyboard backlight brightness"),
     ("Clean Text", "raycast-ext-clean-text", "Clean clipboard text with the fabric clean_text pattern"),
     ("Clean Watermark", "raycast-ext-clean-watermark", "Remove watermarks, formatting and junk from clipboard text"),
     ("File Scripts", "raycast-ext-file-scripts", "Run ffmpeg presets on the Finder selection, with live progress"),
-    ("Hide My Email", "raycast-ext-hide-my-email", "Generate Apple Hide My Email addresses"),
     ("Insecure Chrome", "raycast-ext-insecure-chrome", "Launch Chrome Canary with insecure HTTP flags for local dev"),
     ("OpenRouter Key", "raycast-ext-openrouter-key", "Create API keys on OpenRouter"),
-    ("Project Browser", "atlas-browser", "Browse and search indexed projects with framework detection"),
-    ("Save API Key", "raycast-ext-save-api-key", "Securely save API keys"),
     ("Wake PC", "raycast-ext-wake-pc", "Send a Wake-on-LAN magic packet to wake your PC"),
+    ("Text Tools", "raycast-ext-text-tools", "Clean, unwrap and wrap clipboard text"),
     ("Watermark Washer", "watermark-washer", "Clean the clipboard of invisible AI watermarks"),
     ("Wrap Text", "raycast-ext-wrap-text", "Wrap clipboard or selected text in XML-like tags"),
-    ("Ziggo Router", "raycast-ext-ziggo-router", "Ziggo router control"),
-]
-
-SCRIPTS = [
-    ("raycast-ext-keyboard-backlight", None, "MacBook keyboard backlight control"),
-    ("raycast-ext-text-tools", "raycast-ext-text-tools", "Text transformation tools"),
 ]
 
 FORKS = [
@@ -310,12 +296,6 @@ A("")
 A(header("RAYCAST PLUGINS"))
 A("")
 for r in RAYCAST:
-    A(row(*r))
-A("")
-A("")
-A(header("RAYCAST SCRIPTS"))
-A("")
-for r in SCRIPTS:
     A(row(*r))
 A("")
 A("")
