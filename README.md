@@ -176,8 +176,27 @@
    atlas-watchdog                   Polls the API and restarts it through launchctl
 
 
+  SYSTEMS  ───────────────────────────────────────────────────────────────────────────────────────────
+
+  The bigger multi-repo work — VR streaming, sim racing, print pipelines, admin platforms.
+  All private, so described rather than linked.
+
+   framelink                        Wireless PC-VR to Quest 3 — Bun control plane, Zig data plane
+   frameclarity                     Per-game Quest optimizer over ADB: Rust core, Tauri, APK
+   quest-link-bridge                Meta Quest Link (XRSP) protocol RE, bridged into SteamVR
+   simsync                          Set your wheel up once, use it in every racing sim
+   acc-native-server                The ACC dedicated server, reverse-engineered and rebuilt in Rust
+   beamng-mcp                       Drive, tune and sense BeamNG.drive from any MCP client
+   wallgen                          Wallpaper print pipeline: wall segmentation to press-ready art
+   schakelwerk                      Field admin: a deterministic hour engine on an append-only log
+   capture-resistance               Screen-capture detection, deterrence and attribution in-browser
+   geluid                           Multi-device mic ingest with a live waveform viewer
+   dia-tts-api                      Nari Labs Dia 1.6B wrapped as a LAN text-to-speech service
+
+
   PROJECTS  ──────────────────────────────────────────────────────────────────────────────────────────
 
+   doublej-productivity-skills      Claude Code skills for dev, design, DevOps and creative work
    <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                 Native dialogs, forms and slider panes for MCP agents
    <a href="https://github.com/doublej/ConsultUserSketch">ConsultUserSketch</a>                Grid layout sketcher behind consult-user-mcp propose_layout
    <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                    Keyboard-first Gantt editor with Mermaid import and export

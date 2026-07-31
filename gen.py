@@ -79,7 +79,22 @@ CLI = [
     ]),
 ]
 
+SYSTEMS = [
+    ("framelink", None, "Wireless PC-VR to Quest 3 \u2014 Bun control plane, Zig data plane"),
+    ("frameclarity", None, "Per-game Quest optimizer over ADB: Rust core, Tauri, APK"),
+    ("quest-link-bridge", None, "Meta Quest Link (XRSP) protocol RE, bridged into SteamVR"),
+    ("simsync", None, "Set your wheel up once, use it in every racing sim"),
+    ("acc-native-server", None, "The ACC dedicated server, reverse-engineered and rebuilt in Rust"),
+    ("beamng-mcp", None, "Drive, tune and sense BeamNG.drive from any MCP client"),
+    ("wallgen", None, "Wallpaper print pipeline: wall segmentation to press-ready art"),
+    ("schakelwerk", None, "Field admin: a deterministic hour engine on an append-only log"),
+    ("capture-resistance", None, "Screen-capture detection, deterrence and attribution in-browser"),
+    ("geluid", None, "Multi-device mic ingest with a live waveform viewer"),
+    ("dia-tts-api", None, "Nari Labs Dia 1.6B wrapped as a LAN text-to-speech service"),
+]
+
 PROJECTS = [
+    ("doublej-productivity-skills", None, "Claude Code skills for dev, design, DevOps and creative work"),
     ("consult-user-mcp", "consult-user-mcp", "Native dialogs, forms and slider panes for MCP agents"),
     ("ConsultUserSketch", "ConsultUserSketch", "Grid layout sketcher behind consult-user-mcp propose_layout"),
     ("mermaid-gantt", "mermaid-gantt", "Keyboard-first Gantt editor with Mermaid import and export"),
@@ -362,6 +377,15 @@ A(row("atlas-cli", None, "The global `atlas`: tree, scan, pick, open, ports, new
 A(row("atlas-picker", "atlas-picker", "Rust TUI — iocraft and Nucleo, reads the cache directly"))
 A(row("atlas-browser", "atlas-browser", "Raycast: browse, filter and act on any project"))
 A(row("atlas-watchdog", None, "Polls the API and restarts it through launchctl"))
+A("")
+A("")
+A(header("SYSTEMS"))
+A("")
+A("  The bigger multi-repo work \u2014 VR streaming, sim racing, print pipelines, admin platforms.")
+A("  All private, so described rather than linked.")
+A("")
+for r in SYSTEMS:
+    A(row(*r))
 A("")
 A("")
 A(header("PROJECTS"))
