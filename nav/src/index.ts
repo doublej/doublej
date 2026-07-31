@@ -68,6 +68,9 @@ const ACHIEVEMENTS = [
   { name: "Quickdraw", img: "https://github.githubassets.com/assets/quickdraw-default-39c6aec8ff89.png", x: 0 },
 ];
 
+const UMAMI = "https://umami-inky-two.vercel.app/script.js";
+const UMAMI_SITE = "c10eba84-1988-43b1-a0f2-06b1c1199daf";
+
 const COOLDOWN_SECONDS = 20;
 const MAX_WAIT_SECONDS = 75;
 
@@ -218,6 +221,7 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
 <meta name="robots" content="noindex">
 <title>${ME.login} (${ME.name})</title>
 <link rel="icon" href="${ME.avatar}">
+<script defer src="${UMAMI}" data-website-id="${UMAMI_SITE}"></script>
 <style>
   :root {
     color-scheme: light dark;
@@ -423,6 +427,18 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
 
 <script>
   const PAGE = ${JSON.stringify(page)}, MAX = ${MAX_WAIT_SECONDS};
+  // The tracker is deferred, so it may not exist yet on the first beat. Retry rather
+  // than drop it — nav:request fires immediately and is the one event we cannot lose.
+  const track = (name, data) => {
+    let tries = 0;
+    const go = () => {
+      if (window.umami) return window.umami.track(name, data);
+      if (++tries < 10) setTimeout(go, 500);
+    };
+    go();
+  };
+  const began = Date.now();
+  track("nav:request", { page: PAGE });
   const doc = document.getElementById("doc"), dot = document.getElementById("dot");
   // The committed frames carry a real bar; ease between them so it reads as continuous.
   const BAR = /\\[([\\u2593\\u2591]+)\\]\\s+(\\d+)%/;
@@ -503,11 +519,15 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   const poll = async () => {
     if (done) return;
     t += 1.2;
-    if (t >= MAX) { location.replace(${JSON.stringify(PROFILE)}); return; }
+    if (t >= MAX) {
+      track("nav:timeout", { page: PAGE });
+      location.replace(${JSON.stringify(PROFILE)}); return;
+    }
     try {
       const j = await (await fetch("/status?p=" + PAGE, { cache: "no-store" })).json();
       if (j.landed) {
         done = true; dot.classList.remove("on");
+        track("nav:landed", { page: PAGE, seconds: Math.round((Date.now() - began) / 1000) });
         wipe(j.pre, () => {
           doc.innerHTML = j.pre;
           setTimeout(() => location.replace(${JSON.stringify(PROFILE)}), 700);

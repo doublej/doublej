@@ -44,7 +44,7 @@
   │  web UI and an MCP server — all over an      │    │  into a child process and they vanish when   │
   │  engine with zero npm dependencies.          │    │  it exits. KEY=value ergonomics, unchanged.  │
   │                                              │    │                                              │
-  │  → <a href="https://github.com/doublej/flt">source</a>     → <a href="https://doublej.github.io/flt/">docs</a>                         │    │  → <a href="https://github.com/doublej/onenv">source</a>                                    │
+  │  → <a href="https://github.com/doublej/flt">source</a>     → <a href="https://doublej.github.io/flt/">docs</a>                         │    │  → <a href="https://github.com/doublej/onenv">source</a>     → <a href="https://doublej.github.io/onenv/">docs</a>                         │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
   ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
@@ -55,7 +55,7 @@
   │  JSON the moment you pipe it, watch          │    │  own API, DEGIRO through degiro-connector,   │
   │  subscriptions, takeout, a prime contract.   │    │  broker CSVs for the rest. Private.          │
   │                                              │    │                                              │
-  │  → <a href="https://github.com/doublej/bpr">source</a>                                    │    │                                              │
+  │  → <a href="https://github.com/doublej/bpr">source</a>     → <a href="https://doublej.github.io/bpr/">docs</a>                         │    │                                              │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
   ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
@@ -66,7 +66,7 @@
   │  so you can confirm, edit, or pipe further.  │    │  update live, round-trip it back out for     │
   │                                              │    │  planning somewhere else.                    │
   │                                              │    │                                              │
-  │  → <a href="https://github.com/doublej/ccom">source</a>     → <a href="https://doublej.github.io/ccom/">docs</a>                         │    │  → <a href="https://github.com/doublej/mermaid-gantt">source</a>                                    │
+  │  → <a href="https://github.com/doublej/ccom">source</a>     → <a href="https://doublej.github.io/ccom/">docs</a>                         │    │  → <a href="https://github.com/doublej/mermaid-gantt">source</a>     → <a href="https://mermaidgantt.xyz">mermaidgantt.xyz</a>             │
   └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘
 
   ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
@@ -96,16 +96,16 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   forks           7 minutes ago       systems         19 minutes ago
-   cli             8 minutes ago       atlas           20 minutes ago
-   raycast         9 minutes ago       projects        21 minutes ago
-   simsync         10 minutes ago      framelink       22 minutes ago
-   raycast         12 minutes ago      cli             25 minutes ago
-   projects        12 minutes ago      framelink       26 minutes ago
-   atlas           13 minutes ago      atlas           26 minutes ago
-   raycast         14 minutes ago      projects        29 minutes ago
-   projects        16 minutes ago      home            30 minutes ago
-   projects        19 minutes ago      cli             31 minutes ago
+   forks           10 minutes ago      systems         22 minutes ago
+   cli             11 minutes ago      atlas           23 minutes ago
+   raycast         12 minutes ago      projects        24 minutes ago
+   simsync         13 minutes ago      framelink       25 minutes ago
+   raycast         15 minutes ago      cli             28 minutes ago
+   projects        16 minutes ago      framelink       29 minutes ago
+   atlas           16 minutes ago      atlas           30 minutes ago
+   raycast         18 minutes ago      projects        32 minutes ago
+   projects        19 minutes ago      home            33 minutes ago
+   projects        22 minutes ago      cli             34 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
