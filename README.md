@@ -13,9 +13,9 @@
 
   turning to home
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  queued…
+  runner booting…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -27,9 +27,9 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            20 seconds ago      forks           14 minutes ago
-   atlas           58 seconds ago      cli             15 minutes ago
-   framelink       1 minute ago        raycast         16 minutes ago
+   home            23 seconds ago      forks           14 minutes ago
+   atlas           1 minute ago        cli             15 minutes ago
+   framelink       2 minutes ago       raycast         16 minutes ago
    home            2 minutes ago       simsync         17 minutes ago
    framelink       3 minutes ago       raycast         19 minutes ago
    home            3 minutes ago       projects        20 minutes ago
