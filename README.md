@@ -46,9 +46,9 @@
 
                                            turning to home
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -90,7 +90,7 @@
    cli             29 minutes ago      home            1 hour ago
    projects        30 minutes ago      atlas           1 hour ago
    home            31 minutes ago      atlas           1 hour ago
-   home            36 minutes ago      cli             1 hour ago
+   home            37 minutes ago      cli             1 hour ago
    framelink       1 hour ago          atlas           1 hour ago
    cli             1 hour ago          atlas           1 hour ago
    home            1 hour ago          atlas           1 hour ago
@@ -102,4 +102,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=home pct=31 -->
+<!-- nav:loading=home pct=58 -->
