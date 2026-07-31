@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -62,8 +62,8 @@
    home            10 minutes ago      cli             22 minutes ago
    home            11 minutes ago      framelink       23 minutes ago
    home            12 minutes ago      forks           26 minutes ago
-   atlas           12 minutes ago      cli             27 minutes ago
-   framelink       13 minutes ago      raycast         28 minutes ago
+   atlas           13 minutes ago      cli             27 minutes ago
+   framelink       14 minutes ago      raycast         28 minutes ago
    home            14 minutes ago      simsync         29 minutes ago
    framelink       15 minutes ago      raycast         31 minutes ago
    home            15 minutes ago      projects        32 minutes ago
