@@ -223,12 +223,12 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
     color-scheme: light dark;
     --fg:#1f2328; --dim:#59636e; --bg:#ffffff; --canvas:#ffffff; --topbar:#f6f8fa;
     --line:#d1d9e0; --accent:#0969da; --btn:#f6f8fa; --btnh:#eef1f4; --muted:#818b98;
-    --l0:#eff2f5; --l1:#aceebb; --l2:#4ac26b; --l3:#2da44e; --l4:#116329;
+    --code:#f6f8fa; --l0:#eff2f5; --l1:#aceebb; --l2:#4ac26b; --l3:#2da44e; --l4:#116329;
   }
   @media (prefers-color-scheme: dark) {
     :root { --fg:#f0f6fc; --dim:#9198a1; --bg:#0d1117; --canvas:#0d1117; --topbar:#010409;
             --line:#3d444d; --accent:#4493f8; --btn:#212830; --btnh:#2a313c; --muted:#6e7681;
-            --l0:#151b23; --l1:#033a16; --l2:#196c2e; --l3:#2ea043; --l4:#56d364; }
+            --code:#151b23; --l0:#151b23; --l1:#033a16; --l2:#196c2e; --l3:#2ea043; --l4:#56d364; }
   }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--canvas); color:var(--fg);
@@ -282,21 +282,29 @@ const shell = (page: string, pre: string, graph: string) => `<!doctype html>
   .badges .x { position:absolute; right:-2px; bottom:2px; background:var(--bg); border:1px solid var(--line);
                border-radius:2em; font-size:11px; padding:0 4px; }
 
-  .panel { border:1px solid var(--line); border-radius:6px; background:var(--bg); overflow:hidden; }
-  .panelhead { display:flex; align-items:center; gap:8px; padding:6px 16px;
-               border-bottom:1px solid var(--line); color:var(--dim); font-size:14px; }
+  /* The panel is a plain Box with 24px of padding; the "doublej / README.md" line is
+     a 35px row inside that padding, not a bordered strip. The document itself is a
+     markdown code block, which is where the muted background comes from. */
+  .panel { border:1px solid var(--line); border-radius:6px; background:var(--bg); padding:24px; }
+  .panelhead { display:flex; align-items:center; gap:4px; height:35px;
+               color:var(--dim); font-size:14px; }
   .panelhead .path { color:var(--fg); }
-  .panelhead .right { margin-left:auto; display:flex; align-items:center; gap:8px; }
+  .panelhead .right { margin-left:auto; display:flex; align-items:center; gap:12px; }
+  .panelhead .ico { color:var(--dim); display:flex; }
   .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); opacity:0; }
   .dot.on { opacity:1; animation:pulse 1.1s ease-in-out infinite; }
   @keyframes pulse { 0%,100% { opacity:.25 } 50% { opacity:1 } }
-  .doc { padding:24px; overflow-x:auto; }
-  pre { margin:0; font:12px/1.45 ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace; }
-  pre a { color:var(--accent); }
+  .doc { padding:0; }
+  pre { margin:0; padding:16px; background:var(--code); border-radius:6px; overflow-x:auto;
+        color:var(--fg);
+        font-family:"Monaspace Neon",ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+        font-size:11.9px; line-height:17.255px; }
+  pre a { color:var(--accent); text-decoration:underline; }
   /* While the rebuild is running the document reads as inactive — everything drops to
      the muted grey and only the LOADING block keeps its colour. Scoped to .doc, so
      nothing outside the README is touched. */
   .doc.busy pre, .doc.busy pre a { color:var(--muted); transition:color .4s ease; }
+  .doc.busy pre a { text-decoration:none; }
   .doc.busy pre .hot { color:var(--fg); }
 
   .sect { margin-top:32px; }
