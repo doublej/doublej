@@ -11,9 +11,9 @@
 
   turning to simsync
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-  resolving the monorepo that is not a monorepo…
+  committing…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,7 +25,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   framelink       34 seconds ago      systems         10 minutes ago
+   framelink       39 seconds ago      systems         10 minutes ago
    projects        1 minute ago        atlas           11 minutes ago
    systems         2 minutes ago       cli             11 minutes ago
    framelink       3 minutes ago       cli             15 minutes ago
