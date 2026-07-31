@@ -29,9 +29,9 @@
 
                                            turning to atlas
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -52,11 +52,11 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           36 seconds ago      framelink       26 minutes ago
+   atlas           38 seconds ago      framelink       26 minutes ago
    cli             1 minute ago        home            27 minutes ago
    atlas           2 minutes ago       framelink       27 minutes ago
    atlas           3 minutes ago       home            28 minutes ago
-   atlas           10 minutes ago      atlas           29 minutes ago
+   atlas           11 minutes ago      atlas           29 minutes ago
    cli             12 minutes ago      home            32 minutes ago
    home            23 minutes ago      cli             34 minutes ago
    home            24 minutes ago      framelink       36 minutes ago
@@ -78,4 +78,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=atlas pct=6 -->
+<!-- nav:loading=atlas pct=31 -->
