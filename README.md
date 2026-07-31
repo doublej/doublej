@@ -11,9 +11,9 @@
 
   turning to atlas
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  reticulating splines…
+  waking the runner…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,13 +25,13 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   projects        41 seconds ago      projects        13 minutes ago
+   projects        46 seconds ago      projects        13 minutes ago
    framelink       1 minute ago        systems         14 minutes ago
    cli             4 minutes ago       framelink       15 minutes ago
    framelink       5 minutes ago       simsync         16 minutes ago
    atlas           6 minutes ago       systems         19 minutes ago
    projects        8 minutes ago       simsync         20 minutes ago
-   home            9 minutes ago       systems         22 minutes ago
+   home            10 minutes ago      systems         22 minutes ago
    cli             10 minutes ago      atlas           23 minutes ago
    simsync         11 minutes ago      cli             23 minutes ago
    framelink       12 minutes ago      cli             27 minutes ago
