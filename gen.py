@@ -32,28 +32,19 @@ CLI = [
         ("bpr", "bpr", "Beeper CLI for agents: stable ids, JSON when piped, prime"),
         ("strand", "strandkanban", "One command opens a Kanban board over your beads issues"),
         ("rbridge", "reminders-beads-bridge", "Two-way bridge between beads issues and Apple Reminders"),
-        ("mcpick-plus", "mcpick-plus", "Toggle MCP servers per project to cut context bloat"),
         ("claude-verbs", "claude-verbs-cli", "Install themed spinner verb sets into Claude Code"),
-        ("cookiecutter-picker", "cookiecutter-picker", "Pick a template and scaffold a project from the terminal"),
         ("caveman-compress", None, "Squeeze text via Claude / Codex / Opencode / Ollama backends"),
         ("cav", None, "Supervisor TUI coordinating several Claude Code agents"),
         ("gh-inbox", None, "Relevance-filtered GitHub issue and PR triage"),
-        ("claude-activity-watcher", None, "Watch what running Claude Code sessions are doing"),
-        ("pyterm-cli", None, "Drive iTerm2 tabs, panes and agent sessions from the shell"),
-        ("better-input", None, "Find the active Claude Code session and its iTerm2 tab"),
         ("atlas-picker", "atlas-picker", "Rust TUI: fuzzy-pick any project in the monorepo and go"),
     ]),
     ("machines & environment", [
         ("onenv", "onenv", "1Password-backed env vars with an agent-friendly CLI"),
         ("nordvpn", "nordvpn-cli-macos", "NordVPN over WireGuard on macOS, CLI plus TUI"),
-        ("envchain-tools", "envchain-tools-manager", "TUI and CLI wrapper around envchain secret namespaces"),
         ("cdy", None, "Reverse proxies, static sites and certs on the NAS, over SSH"),
         ("qnap-cli", None, "QNAP NAS services, storage, files, power and users"),
         ("hn", None, "Work on other machines on the LAN as if they were local"),
         ("rig", None, "YAML control plane for a VR sim-racing PC (CLI, API, VR UI)"),
-        ("process-watcher", None, "Watch resource usage of non-essential macOS processes"),
-        ("macos-data-keeper", None, "Snapshot and rotate macOS data with short retention"),
-        ("reclaim", None, "Token-friendly disk usage scanner, built for agents"),
         ("swcache", None, "List and delete stale Chrome service-worker caches"),
     ]),
     ("media & files", [
@@ -61,9 +52,6 @@ CLI = [
         ("poolsuite", "poolsuite-cli", "Poolsuite FM in the terminal"),
         ("c4d2pixi", "ss-image-processor", "Batch image-sequence processing for VFX and 3D pipelines"),
         ("kfcut", None, "Keyframe-aware video cutting with no re-encode, plus ASR"),
-        ("image-compressor", None, "Batch-compress images to AVIF and WebP"),
-        ("npo-dl", None, "Download shows from NPO Start via yt-dlp and ffmpeg"),
-        ("cc-screenshots", None, "Capture screenshots sized and named for Claude Code"),
         ("micstream", None, "Turn phones into wireless mics for the Mac over the LAN"),
         ("rotary", None, "The DJ's operating system: library, crates and set prep"),
     ]),
@@ -75,9 +63,7 @@ CLI = [
         ("sheet-cms", "sheet-cms", "Bidirectional sync between Google Sheets and local JSON"),
         ("umami", None, "Agent-first CLI for Umami analytics"),
         ("fin", None, "Aggregate bank, broker and crypto balances locally"),
-        ("funda", None, "Dutch housing listings, straight from the Nuxt payload"),
         ("fb-scrape", None, "Facebook group scraper with CLI, API and web UI"),
-        ("qbt", None, "qBittorrent Web API from the terminal"),
         ("iracing-bbg", None, "Which single iRacing purchase unlocks the most races"),
     ]),
     ("debug & devices", [
@@ -85,7 +71,6 @@ CLI = [
         ("sagemcom-cli", "sagemcom-mcp", "Open and close router ports from the shell or an LLM"),
         ("soundlink", None, "BLE test kit for SoundLink Max: scan, GATT, firmware"),
         ("simstew", None, "Voice assistant for VR sim racing"),
-        ("ezviz-flasher", None, "Flash and pull history off EZVIZ cameras"),
     ]),
 ]
 
@@ -99,7 +84,6 @@ PROJECTS = [
     ("claude-history-browser", "claude-history-browser", "Web UI for browsing and analysing Claude Code history"),
     ("claude-verbs", "claude-verbs", "Community-contributed spinner verb sets for Claude Code"),
     ("cookiecutter-templates", "cookiecutter-templates", "Project templates by language and framework, agent-ready"),
-    ("personal-boilerplate", "personal-boilerplate", "Cookiecutter template for agent-friendly Python projects"),
     ("browser-router", "browser-router", "Menu bar app routing URLs to browsers by rule"),
     ("Scoot", "Scoot", "Web disk usage analyser with live scanning and 3D view"),
     ("apple-notes-sync", "apple-notes-sync", "Two-way task sync between Markdown, Reminders and Notes"),
@@ -114,7 +98,6 @@ PROJECTS = [
     ("laptop-light", "laptop-light", "Turn a laptop screen into warm ambient light, phone remote"),
     ("siargao-market", "siargao-market", "Marketplace site for listings scraped from Siargao FB groups"),
     ("pimpelmees-wallgen-psd-tool", "pimpelmees-wallgen-psd-tool", "Photoshop script: validate PSD specs, convert to TIFF"),
-    ("swift-recording-indicator", "swift-recording-indicator", "Recording state indicator with configurable shape and motion"),
 ]
 
 RAYCAST = [
@@ -150,13 +133,10 @@ FORKS = [
     ("Gmail-MCP-Server", "Gmail-MCP-Server", "Gmail MCP server with auto authentication"),
     ("portainer-mcp", "portainer-mcp", "Portainer MCP server"),
     ("libgen-downloader", "libgen-downloader", "Search and download ebooks from libgen in a TUI"),
-    ("osxphotos", "osxphotos", "Work with Apple Photos libraries and metadata from Python"),
-    ("videogrep", "videogrep", "Automatic video supercuts driven by transcripts"),
     ("npo-dl-webui", "npo-dl-webui", "NPO Start download tool with a web UI"),
     ("globe", "globe", "Interactive ASCII globe generator"),
     ("cookiecutter-uv", "cookiecutter-uv", "Modern cookiecutter template for Python projects using uv"),
     ("comfy-ui", "comfy-ui", "ComfyUI node system for running plain Python functions"),
-    ("MAHORAGA", "MAHORAGA", "Trading agent driven by social sentiment analysis"),
 ]
 
 out = []

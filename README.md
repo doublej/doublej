@@ -16,29 +16,20 @@
    <a href="https://github.com/doublej/bpr">bpr</a>                              Beeper CLI for agents: stable ids, JSON when piped, prime
    <a href="https://github.com/doublej/strandkanban">strand</a>                           One command opens a Kanban board over your beads issues
    <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                          Two-way bridge between beads issues and Apple Reminders
-   <a href="https://github.com/doublej/mcpick-plus">mcpick-plus</a>                      Toggle MCP servers per project to cut context bloat
    <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                     Install themed spinner verb sets into Claude Code
-   <a href="https://github.com/doublej/cookiecutter-picker">cookiecutter-picker</a>              Pick a template and scaffold a project from the terminal
    caveman-compress                 Squeeze text via Claude / Codex / Opencode / Ollama backends
    cav                              Supervisor TUI coordinating several Claude Code agents
    gh-inbox                         Relevance-filtered GitHub issue and PR triage
-   claude-activity-watcher          Watch what running Claude Code sessions are doing
-   pyterm-cli                       Drive iTerm2 tabs, panes and agent sessions from the shell
-   better-input                     Find the active Claude Code session and its iTerm2 tab
    <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI: fuzzy-pick any project in the monorepo and go
 
    machines & environment
 
    <a href="https://github.com/doublej/onenv">onenv</a>                            1Password-backed env vars with an agent-friendly CLI
    <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn</a>                          NordVPN over WireGuard on macOS, CLI plus TUI
-   <a href="https://github.com/doublej/envchain-tools-manager">envchain-tools</a>                   TUI and CLI wrapper around envchain secret namespaces
    cdy                              Reverse proxies, static sites and certs on the NAS, over SSH
    qnap-cli                         QNAP NAS services, storage, files, power and users
    hn                               Work on other machines on the LAN as if they were local
    rig                              YAML control plane for a VR sim-racing PC (CLI, API, VR UI)
-   process-watcher                  Watch resource usage of non-essential macOS processes
-   macos-data-keeper                Snapshot and rotate macOS data with short retention
-   reclaim                          Token-friendly disk usage scanner, built for agents
    swcache                          List and delete stale Chrome service-worker caches
 
    media & files
@@ -47,9 +38,6 @@
    <a href="https://github.com/doublej/poolsuite-cli">poolsuite</a>                        Poolsuite FM in the terminal
    <a href="https://github.com/doublej/ss-image-processor">c4d2pixi</a>                         Batch image-sequence processing for VFX and 3D pipelines
    kfcut                            Keyframe-aware video cutting with no re-encode, plus ASR
-   image-compressor                 Batch-compress images to AVIF and WebP
-   npo-dl                           Download shows from NPO Start via yt-dlp and ffmpeg
-   cc-screenshots                   Capture screenshots sized and named for Claude Code
    micstream                        Turn phones into wireless mics for the Mac over the LAN
    rotary                           The DJ's operating system: library, crates and set prep
 
@@ -62,9 +50,7 @@
    <a href="https://github.com/doublej/sheet-cms">sheet-cms</a>                        Bidirectional sync between Google Sheets and local JSON
    umami                            Agent-first CLI for Umami analytics
    fin                              Aggregate bank, broker and crypto balances locally
-   funda                            Dutch housing listings, straight from the Nuxt payload
    fb-scrape                        Facebook group scraper with CLI, API and web UI
-   qbt                              qBittorrent Web API from the terminal
    iracing-bbg                      Which single iRacing purchase unlocks the most races
 
    debug & devices
@@ -73,7 +59,6 @@
    <a href="https://github.com/doublej/sagemcom-mcp">sagemcom-cli</a>                     Open and close router ports from the shell or an LLM
    soundlink                        BLE test kit for SoundLink Max: scan, GATT, firmware
    simstew                          Voice assistant for VR sim racing
-   ezviz-flasher                    Flash and pull history off EZVIZ cameras
 
 
   HIGHLIGHTS  ────────────────────────────────────────────────────────────────────────────────────────
@@ -170,7 +155,6 @@
    <a href="https://github.com/doublej/claude-history-browser">claude-history-browser</a>           Web UI for browsing and analysing Claude Code history
    <a href="https://github.com/doublej/claude-verbs">claude-verbs</a>                     Community-contributed spinner verb sets for Claude Code
    <a href="https://github.com/doublej/cookiecutter-templates">cookiecutter-templates</a>           Project templates by language and framework, agent-ready
-   <a href="https://github.com/doublej/personal-boilerplate">personal-boilerplate</a>             Cookiecutter template for agent-friendly Python projects
    <a href="https://github.com/doublej/browser-router">browser-router</a>                   Menu bar app routing URLs to browsers by rule
    <a href="https://github.com/doublej/Scoot">Scoot</a>                            Web disk usage analyser with live scanning and 3D view
    <a href="https://github.com/doublej/apple-notes-sync">apple-notes-sync</a>                 Two-way task sync between Markdown, Reminders and Notes
@@ -185,7 +169,6 @@
    <a href="https://github.com/doublej/laptop-light">laptop-light</a>                     Turn a laptop screen into warm ambient light, phone remote
    <a href="https://github.com/doublej/siargao-market">siargao-market</a>                   Marketplace site for listings scraped from Siargao FB groups
    <a href="https://github.com/doublej/pimpelmees-wallgen-psd-tool">pimpelmees-wallgen-psd-tool</a>      Photoshop script: validate PSD specs, convert to TIFF
-   <a href="https://github.com/doublej/swift-recording-indicator">swift-recording-indicator</a>        Recording state indicator with configurable shape and motion
 
 
   RAYCAST PLUGINS  ───────────────────────────────────────────────────────────────────────────────────
@@ -224,13 +207,10 @@
    <a href="https://github.com/doublej/Gmail-MCP-Server">Gmail-MCP-Server</a>                 Gmail MCP server with auto authentication
    <a href="https://github.com/doublej/portainer-mcp">portainer-mcp</a>                    Portainer MCP server
    <a href="https://github.com/doublej/libgen-downloader">libgen-downloader</a>                Search and download ebooks from libgen in a TUI
-   <a href="https://github.com/doublej/osxphotos">osxphotos</a>                        Work with Apple Photos libraries and metadata from Python
-   <a href="https://github.com/doublej/videogrep">videogrep</a>                        Automatic video supercuts driven by transcripts
    <a href="https://github.com/doublej/npo-dl-webui">npo-dl-webui</a>                     NPO Start download tool with a web UI
    <a href="https://github.com/doublej/globe">globe</a>                            Interactive ASCII globe generator
    <a href="https://github.com/doublej/cookiecutter-uv">cookiecutter-uv</a>                  Modern cookiecutter template for Python projects using uv
    <a href="https://github.com/doublej/comfy-ui">comfy-ui</a>                         ComfyUI node system for running plain Python functions
-   <a href="https://github.com/doublej/MAHORAGA">MAHORAGA</a>                         Trading agent driven by social sentiment analysis
 
 </pre>
 
