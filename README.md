@@ -98,23 +98,18 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            1 minute ago        home            32 minutes ago
-   home            6 minutes ago       home            33 minutes ago
-   atlas           8 minutes ago       atlas           33 minutes ago
-   atlas           9 minutes ago       framelink       34 minutes ago
-   cli             9 minutes ago       home            35 minutes ago
-   atlas           10 minutes ago      framelink       36 minutes ago
-   atlas           11 minutes ago      home            36 minutes ago
-   atlas           19 minutes ago      atlas           37 minutes ago
-   cli             20 minutes ago      home            40 minutes ago
-   home            31 minutes ago      cli             42 minutes ago
+   home            4 minutes ago       home            36 minutes ago
+   home            10 minutes ago      home            37 minutes ago
+   atlas           12 minutes ago      atlas           37 minutes ago
+   atlas           12 minutes ago      framelink       38 minutes ago
+   cli             13 minutes ago      home            39 minutes ago
+   atlas           14 minutes ago      framelink       40 minutes ago
+   atlas           15 minutes ago      home            40 minutes ago
+   atlas           23 minutes ago      atlas           41 minutes ago
+   cli             24 minutes ago      home            44 minutes ago
+   home            35 minutes ago      cli             46 minutes ago
 
 
-  ────────────────────────────────────────────────────────────────────────────────────────────────────
-  A README cannot open a new tab, and github.com refuses to be framed. So for the half minute
-  a rebuild takes, a worker hands the profile back to you and lets this document load inside it
-  — not a fake progress bar, but the actual frames the Action commits, polled as they land.
-  Then it returns you to the real page. Five commits a turn. Refresh here and you catch one.
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)

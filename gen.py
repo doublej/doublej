@@ -424,13 +424,6 @@ def site(url, label):
     return f'  \u2192  <a href="{url}">{label}</a>'
 
 
-FOOTER = [
-    "  " + "\u2500" * (W - 2),
-    "  A README cannot open a new tab, and github.com refuses to be framed. So for the half minute",
-    "  a rebuild takes, a worker hands the profile back to you and lets this document load inside it",
-    "  \u2014 not a fake progress bar, but the actual frames the Action commits, polled as they land.",
-    "  Then it returns you to the real page. Five commits a turn. Refresh here and you catch one.",
-]
 
 
 
@@ -585,7 +578,7 @@ def build(page, pct=None):
     out += ["", ""] + nav(page, live=pct is None) + ["", ""]
     out += loading(page, pct) if pct is not None else BUILDERS[page]()
     out += activity()
-    out += ["", ""] + FOOTER
+    out += ["", ""]
     out += ["</pre>", "", "![](https://umami-inky-two.vercel.app/p/QL68zROQG)"]
     # A marker for the nav proxy, which polls the raw file to know when a turn has
     # landed. Explicit, so that restyling the tab strip cannot quietly break it.
