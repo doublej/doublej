@@ -26,10 +26,9 @@
  * 72px dark marketing header and the tab row inside the main column; logged in you get
  * the 52px GlobalNav with a full-bleed tab row, an Edit profile button, an email row
  * and Organizations. Login state cannot be detected cross-origin — every way to probe
- * it is an XS-Leak — so the shell defaults to logged out (the README link is public,
- * so that is the common case) and offers a quiet "not your view?" control that writes
- * a cookie on this origin. The cookie is read in fetch(), so the corrected shell is in
- * the first byte on the next visit: no flash, no client-side reflow.
+ * it is an XS-Leak — so the shell defaults to logged out, which is the common case for
+ * a public README link. A cookie on this origin can override it, read in fetch() so the
+ * chosen shell is in the first byte: no flash, no client-side reflow.
  *
  *   ?dry=1   render the shell without dispatching a workflow run or polling for it.
  *            Use this for visual checking — every uncached real hit rewrites the
@@ -400,15 +399,6 @@ return `<!doctype html>
         font-size:11.9px; line-height:17.255px; }
   pre a { color:var(--accent); text-decoration:underline; }
 
-  /* The guess about who is looking is unverifiable from here, so say so quietly and
-     let the visitor correct it. Muted, below the fold of the document, small. */
-  .viewfix { display:flex; justify-content:flex-end; align-items:center; gap:6px;
-             margin-top:8px; font-size:12px; color:var(--muted); }
-  .viewfix button { font:inherit; color:var(--dim); background:none; border:0; padding:0;
-                    cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
-  .viewfix button:hover { color:var(--accent); }
-  .viewfix button.on { color:var(--fg); text-decoration:none; cursor:default; }
-
   .sect { margin-top:32px; }
   .secthead { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; }
   .secthead h2 { font-size:16px; font-weight:400; color:var(--fg); margin:0; }
@@ -525,12 +515,6 @@ return `<!doctype html>
         <div class="doc" id="doc">${pre}</div>
       </div>
 
-      <div class="viewfix">not your view?
-        <button data-set="${THEME_COOKIE}:light"${look.theme === "light" ? ` class="on"` : ""}>light</button><span>·</span>
-        <button data-set="${THEME_COOKIE}:dark"${look.theme === "dark" ? ` class="on"` : ""}>dark</button><span>·</span>
-        <button data-set="${VIEW_COOKIE}:${owner ? "out" : "owner"}">${owner ? "signed out" : "signed in"}</button>
-      </div>
-
       <div class="sect">
         <div class="secthead"><h2>Pinned</h2>${
           owner ? `<a href="${PROFILE}">Customize your pins</a>` : ""}</div>
@@ -547,18 +531,6 @@ return `<!doctype html>
 <script>
   const PAGE = ${JSON.stringify(page)}, MAX = ${MAX_WAIT_SECONDS}, DRY = ${look.dry};
 
-  // Which shell to serve is a guess, so the correction has to survive the visit. The
-  // worker is first-party on a top-level navigation, so a plain cookie does it, read
-  // back in fetch() — the theme flips in place, the view needs the server.
-  document.querySelectorAll(".viewfix button").forEach((b) => b.addEventListener("click", () => {
-    const parts = b.dataset.set.split(":");
-    document.cookie = parts[0] + "=" + parts[1] + ";path=/;max-age=31536000;samesite=lax" +
-      (location.protocol === "https:" ? ";secure" : "");
-    if (parts[0] === ${JSON.stringify(VIEW_COOKIE)}) return location.reload();
-    document.documentElement.dataset.theme = parts[1];
-    b.parentNode.querySelectorAll("[data-set^=" + ${JSON.stringify(THEME_COOKIE)} + "]")
-      .forEach((x) => x.classList.toggle("on", x === b));
-  }));
 
   // The tracker is deferred, so it may not exist yet on the first beat. Retry rather
   // than drop it — nav:request fires immediately and is the one event we cannot lose.
