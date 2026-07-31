@@ -23,7 +23,18 @@ def row(name, repo, desc):
 
 
 def group(title):
-    return "\n" + " " * NAMECOL + title
+    """Group rule: dotted, so a solid rule always means a section and a dotted one a group."""
+    left = " " * NAMECOL + title + "  "
+    return "\n" + left + "\u00b7" * (W - len(left))
+
+
+def cli_row(name, repo, desc):
+    """Like row(), but prompted \u2014 the CLI section reads as things you type."""
+    label = f'<a href="{GH}{repo}">{name}</a>' if repo else name
+    pad = " " * (DESCCOL - NAMECOL - 2 - len(name))
+    assert len(name) <= DESCCOL - NAMECOL - 3, name
+    assert len(desc) <= W - DESCCOL, (len(desc), desc)
+    return " " * NAMECOL + "$ " + label + pad + desc
 
 
 CLI = [
@@ -184,7 +195,7 @@ for title, rows in CLI:
     A(group(title))
     A("")
     for r in rows:
-        A(row(*r))
+        A(cli_row(*r))
 
 A("")
 A("")
