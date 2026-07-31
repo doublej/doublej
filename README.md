@@ -11,9 +11,9 @@
 
   turning to raycast
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  reticulating splines…
+  waking the runner…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,11 +25,11 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   projects        just now            framelink       13 minutes ago
-   atlas           50 seconds ago      atlas           14 minutes ago
+   projects        14 seconds ago      framelink       13 minutes ago
+   atlas           55 seconds ago      atlas           14 minutes ago
    raycast         2 minutes ago       projects        16 minutes ago
    projects        3 minutes ago       home            18 minutes ago
-   projects        6 minutes ago       cli             18 minutes ago
+   projects        6 minutes ago       cli             19 minutes ago
    systems         7 minutes ago       simsync         19 minutes ago
    atlas           7 minutes ago       framelink       20 minutes ago
    projects        8 minutes ago       projects        21 minutes ago
