@@ -574,11 +574,7 @@ def loading(target, pct):
              "",
              f"[{bar(pct)}]  {pct:>3}%",
              "",
-             f"{beat}\u2026",
-             "",
-             "",
-             "This is not a gif. A GitHub Action is rewriting this file while you",
-             "read it, one commit per frame, and it will land on the page you asked for."]
+             f"{beat}\u2026"]
     mid = [" " * ((W - len(l)) // 2) + l if l else "" for l in block]
 
     height = len(BUILDERS[target]())
