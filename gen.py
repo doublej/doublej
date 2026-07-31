@@ -33,10 +33,9 @@ CLI = [
         ("strand", "strandkanban", "One command opens a Kanban board over your beads issues"),
         ("rbridge", "reminders-beads-bridge", "Two-way bridge between beads issues and Apple Reminders"),
         ("claude-verbs", "claude-verbs-cli", "Install themed spinner verb sets into Claude Code"),
-        ("caveman-compress", None, "Squeeze text via Claude / Codex / Opencode / Ollama backends"),
         ("cav", None, "Supervisor TUI coordinating several Claude Code agents"),
         ("gh-inbox", None, "Relevance-filtered GitHub issue and PR triage"),
-        ("atlas-picker", "atlas-picker", "Rust TUI: fuzzy-pick any project in the monorepo and go"),
+        ("atlas-picker", "atlas-picker", "Rust TUI: fuzzy-pick any project on disk and jump into it"),
     ]),
     ("machines & environment", [
         ("onenv", "onenv", "1Password-backed env vars with an agent-friendly CLI"),
@@ -277,7 +276,7 @@ CARDS = [
       [("source", GH + "laptop-light")]),
      ("more  →", GH + "?tab=repositories",
       ["94 public repos and counting,",
-       "267 in total across the monorepo.",
+       "267 repos in total, public and private.",
        "Browse the full set:"],
       [("github.com/doublej?tab=repositories", GH + "?tab=repositories")])),
 ]

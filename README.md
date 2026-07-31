@@ -17,10 +17,9 @@
    <a href="https://github.com/doublej/strandkanban">strand</a>                           One command opens a Kanban board over your beads issues
    <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                          Two-way bridge between beads issues and Apple Reminders
    <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                     Install themed spinner verb sets into Claude Code
-   caveman-compress                 Squeeze text via Claude / Codex / Opencode / Ollama backends
    cav                              Supervisor TUI coordinating several Claude Code agents
    gh-inbox                         Relevance-filtered GitHub issue and PR triage
-   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI: fuzzy-pick any project in the monorepo and go
+   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI: fuzzy-pick any project on disk and jump into it
 
    machines & environment
 
@@ -120,7 +119,7 @@
   ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐
   │  <a href="https://github.com/doublej/laptop-light">laptop-light</a>                                │    │  <a href="https://github.com/doublej/?tab=repositories">more  →</a>                                     │
   │  Turns a laptop screen into ambient light.   │    │  94 public repos and counting,               │
-  │  Warm tones, candle flicker, HDR/P3 colour,  │    │  267 in total across the monorepo.           │
+  │  Warm tones, candle flicker, HDR/P3 colour,  │    │  267 repos in total, public and private.     │
   │  wake lock, phone remote over WebRTC.        │    │  Browse the full set:                        │
   │                                              │    │                                              │
   │  → <a href="https://github.com/doublej/laptop-light">source</a>                                    │    │  → <a href="https://github.com/doublej/?tab=repositories">github.com/doublej?tab=repositories</a>       │
