@@ -11,9 +11,9 @@
 
   turning to raycast
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-  resolving the monorepo that is not a monorepo…
+  committing…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,7 +25,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   framelink       25 seconds ago      projects        2 minutes ago
+   framelink       30 seconds ago      projects        2 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
