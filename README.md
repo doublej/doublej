@@ -4,29 +4,32 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">◂</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  [simsync]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">▸</a>           page 5 / 9
+  ◂  home  cli  atlas  [framelink]  simsync  systems  projects  raycast  forks  ▸           page 4 / 9
 
 
-  SIMSYNC  ───────────────────────────────────────────────────────────────────────────────────────────
+  LOADING  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  →  <a href="https://www.simsync.app/">www.simsync.app</a>
+  turning to framelink
 
-  Set your wheel up once and use it in every sim. Each racing function gets a universal
-  control id, so switching titles stops meaning an afternoon of remapping.
+  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
 
-  Assetto Corsa  ·  Competizione  ·  Evo  ·  iRacing  ·  F1 24  ·  ETS2  ·  BeamNG  ·  WRC
+  reticulating splines…
 
-  Commercial product — the source stays closed.
+
+  This is not a gif. A GitHub Action is rewriting this file while you read it,
+  one commit per frame, and it will land on the page you asked for.
+
+
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
-   simsync         just now            cli             7 minutes ago
-   systems         2 minutes ago       cli             10 minutes ago
-   simsync         3 minutes ago       raycast         11 minutes ago
-   systems         5 minutes ago       framelink       12 minutes ago
-   atlas           6 minutes ago       projects        14 minutes ago
+   simsync         28 seconds ago      cli             7 minutes ago
+   systems         3 minutes ago       cli             11 minutes ago
+   simsync         3 minutes ago       raycast         12 minutes ago
+   systems         6 minutes ago       framelink       12 minutes ago
+   atlas           7 minutes ago       projects        14 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
