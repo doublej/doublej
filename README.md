@@ -13,9 +13,9 @@
 
   turning to home
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-  runner booting…
+  checking out doublej/doublej…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -27,7 +27,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           29 seconds ago      cli             15 minutes ago
+   atlas           32 seconds ago      cli             15 minutes ago
    framelink       1 minute ago        raycast         16 minutes ago
    home            2 minutes ago       simsync         17 minutes ago
    framelink       3 minutes ago       raycast         19 minutes ago
