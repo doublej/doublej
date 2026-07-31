@@ -4,34 +4,37 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">◂</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  [framelink]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">▸</a>           page 4 / 9
+  ◂  [home]  cli  atlas  framelink  simsync  systems  projects  raycast  forks  ▸           page 1 / 9
 
 
-  FRAMELINK  ─────────────────────────────────────────────────────────────────────────────────────────
+  LOADING  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  →  <a href="https://www.framelink.quest/">www.framelink.quest</a>
+  turning to home
 
-  Wireless PC-VR streaming to a Quest 3. Low-latency capture, encode and transport, with a
-  control plane that keeps the session honest when the network is not.
+  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
 
-  Quest 3  ·  SteamVR  ·  OpenXR
+  queued…
 
-  Commercial product — the source stays closed.
+
+  This is not a gif. A GitHub Action is rewriting this file while you read it,
+  one commit per frame, and it will land on the page you asked for.
+
+
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
-   framelink       just now            raycast         15 minutes ago
-   home            23 seconds ago      projects        16 minutes ago
-   atlas           1 minute ago        atlas           17 minutes ago
-   home            4 minutes ago       raycast         18 minutes ago
-   cli             6 minutes ago       projects        20 minutes ago
-   framelink       8 minutes ago       projects        22 minutes ago
-   forks           10 minutes ago      systems         23 minutes ago
+   framelink       30 seconds ago      raycast         16 minutes ago
+   home            53 seconds ago      projects        16 minutes ago
+   atlas           2 minutes ago       atlas           17 minutes ago
+   home            4 minutes ago       raycast         19 minutes ago
+   cli             7 minutes ago       projects        20 minutes ago
+   framelink       8 minutes ago       projects        23 minutes ago
+   forks           11 minutes ago      systems         23 minutes ago
    cli             12 minutes ago      atlas           24 minutes ago
    raycast         13 minutes ago      projects        25 minutes ago
-   simsync         13 minutes ago      framelink       25 minutes ago
+   simsync         14 minutes ago      framelink       26 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
