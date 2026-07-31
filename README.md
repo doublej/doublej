@@ -11,9 +11,9 @@
 
   turning to framelink
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-  resolving the monorepo that is not a monorepo…
+  committing…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,12 +25,12 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           37 seconds ago      systems         13 minutes ago
+   atlas           43 seconds ago      systems         13 minutes ago
    projects        2 minutes ago       simsync         14 minutes ago
    home            4 minutes ago       systems         16 minutes ago
    cli             5 minutes ago       atlas           17 minutes ago
    simsync         6 minutes ago       cli             18 minutes ago
-   framelink       6 minutes ago       cli             21 minutes ago
+   framelink       7 minutes ago       cli             22 minutes ago
    projects        8 minutes ago       raycast         22 minutes ago
    systems         8 minutes ago       framelink       23 minutes ago
    framelink       10 minutes ago      projects        25 minutes ago
