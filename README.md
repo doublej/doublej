@@ -4,31 +4,33 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  ◂  home  cli  atlas  framelink  simsync  [systems]  projects  raycast  forks  ▸           page 6 / 9
+  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">◂</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a>  [systems]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">▸</a>           page 6 / 9
 
 
-  LOADING  ───────────────────────────────────────────────────────────────────────────────────────────
+  SYSTEMS  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  turning to systems
+  The bigger multi-repo work — VR streaming, sim racing, print pipelines, admin platforms.
+  All private, so described rather than linked.
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
-
-  committing…
-
-
-  This is not a gif. A GitHub Action is rewriting this file while you read it,
-  one commit per frame, and it will land on the page you asked for.
-
-
+   frameclarity                     Per-game Quest optimizer over ADB: Rust core, Tauri, APK
+   quest-link-bridge                Meta Quest Link (XRSP) protocol RE, bridged into SteamVR
+   acc-native-server                The ACC dedicated server, reverse-engineered and rebuilt in Rust
+   beamng-mcp                       Drive, tune and sense BeamNG.drive from any MCP client
+   wallgen                          Wallpaper print pipeline: wall segmentation to press-ready art
+   schakelwerk                      Field admin: a deterministic hour engine on an append-only log
+   capture-resistance               Screen-capture detection, deterrence and attribution in-browser
+   geluid                           Multi-device mic ingest with a live waveform viewer
+   dia-tts-api                      Nari Labs Dia 1.6B wrapped as a LAN text-to-speech service
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
-   simsync         32 seconds ago      cli             8 minutes ago
-   systems         2 minutes ago       raycast         8 minutes ago
-   atlas           3 minutes ago       framelink       9 minutes ago
-   cli             4 minutes ago       projects        11 minutes ago
+   systems         just now            cli             8 minutes ago
+   simsync         37 seconds ago      raycast         8 minutes ago
+   systems         2 minutes ago       framelink       9 minutes ago
+   atlas           3 minutes ago       projects        11 minutes ago
+   cli             4 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
