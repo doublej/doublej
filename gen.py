@@ -123,6 +123,48 @@ FORKS = [
     ("comfy-ui", "comfy-ui", "ComfyUI node system for running plain Python functions"),
 ]
 
+def atlas_diagram():
+    """Scanner at the top, four consumers fanning out below it."""
+    CONSUMERS = [("atlas-picker", "Rust TUI"), ("atlas-browser", "Raycast"),
+                 ("atlas-cli", "`atlas`"), ("atlas-watchdog", "launchd")]
+    centres = [11, 30, 47, 65]
+    trunk = (centres[0] + centres[-1]) // 2
+
+    def place(pairs):
+        """pairs = [(centre, text)] -> one line with each text centred on its column."""
+        line = ""
+        for c, t in pairs:
+            start = c - len(t) // 2
+            line += " " * (start - len(line)) + t
+        return line
+
+    box = "┌───────────┐"
+    lines = [
+        place([(trunk, "~/Documents/development")]),
+        place([(trunk, "│")]),
+        place([(trunk, "▼")]),
+        " " * (trunk - 6) + box,
+        " " * (trunk - 6) + "│ atlas-api │" + "    :47891  ·  scans, types, caches the graph",
+        " " * (trunk - 6) + "└─────┬─────┘" + "    .atlas-cache.json  ·  60s TTL, revalidating",
+        place([(trunk, "│")]),
+    ]
+
+    # the fan-out rail: corners at the outer consumers, tees at the inner ones, trunk in the middle
+    rail = [" "] * (centres[-1] + 1)
+    for i in range(centres[0], centres[-1] + 1):
+        rail[i] = "─"
+    rail[centres[0]], rail[centres[-1]] = "┌", "┐"
+    for c in centres[1:-1]:
+        rail[c] = "┬"
+    rail[trunk] = "┴"
+    lines.append("".join(rail))
+
+    lines.append(place([(c, "▼") for c in centres]))
+    lines.append(place(list(zip(centres, [n for n, _ in CONSUMERS]))))
+    lines.append(place(list(zip(centres, [t for _, t in CONSUMERS]))))
+    return [("  " + l).rstrip() for l in lines]
+
+
 out = []
 A = out.append
 
@@ -282,9 +324,21 @@ A("                               /_/                              ")
 A("")
 A("    find.  pick.  go.")
 A("")
-A(row("atlas-api", None, "SvelteKit backend serving the project graph, port 47891"))
-A(row("atlas-picker", "atlas-picker", "Rust TUI: splash logo, fuzzy fast project picking"))
-A(row("atlas-browser", "atlas-browser", "Raycast extension to browse and search indexed projects"))
+A("")
+A("  One scanner, four front ends. atlas-api walks the development folder and types every project")
+A("  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches")
+A("  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same")
+A("  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-")
+A("  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.")
+A("")
+out.extend(atlas_diagram())
+A("")
+A("")
+A(row("atlas-api", None, "Scanner, cache and project graph — SvelteKit on :47891"))
+A(row("atlas-cli", None, "The global `atlas`: tree, scan, pick, open, ports, new"))
+A(row("atlas-picker", "atlas-picker", "Rust TUI — iocraft and Nucleo, reads the cache directly"))
+A(row("atlas-browser", "atlas-browser", "Raycast: browse, filter and act on any project"))
+A(row("atlas-watchdog", None, "Polls the API and restarts it through launchctl"))
 A("")
 A("")
 A(header("PROJECTS"))

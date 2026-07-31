@@ -133,9 +133,31 @@
 
     find.  pick.  go.
 
-   atlas-api                        SvelteKit backend serving the project graph, port 47891
-   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI: splash logo, fuzzy fast project picking
-   <a href="https://github.com/doublej/atlas-browser">atlas-browser</a>                    Raycast extension to browse and search indexed projects
+
+  One scanner, four front ends. atlas-api walks the development folder and types every project
+  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches
+  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same
+  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-
+  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.
+
+                             ~/Documents/development
+                                        │
+                                        ▼
+                                  ┌───────────┐
+                                  │ atlas-api │    :47891  ·  scans, types, caches the graph
+                                  └─────┬─────┘    .atlas-cache.json  ·  60s TTL, revalidating
+                                        │
+             ┌──────────────────┬───────┴────────┬─────────────────┐
+             ▼                  ▼                ▼                 ▼
+       atlas-picker       atlas-browser      atlas-cli      atlas-watchdog
+         Rust TUI            Raycast          `atlas`           launchd
+
+
+   atlas-api                        Scanner, cache and project graph — SvelteKit on :47891
+   atlas-cli                        The global `atlas`: tree, scan, pick, open, ports, new
+   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI — iocraft and Nucleo, reads the cache directly
+   <a href="https://github.com/doublej/atlas-browser">atlas-browser</a>                    Raycast: browse, filter and act on any project
+   atlas-watchdog                   Polls the API and restarts it through launchctl
 
 
   PROJECTS  ──────────────────────────────────────────────────────────────────────────────────────────
