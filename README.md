@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-                                    checking out doublej/doublej…
+                                       committing and pushing…
 
 
 
@@ -68,7 +68,7 @@
    framelink       15 minutes ago      raycast         31 minutes ago
    home            15 minutes ago      projects        32 minutes ago
    atlas           17 minutes ago      atlas           32 minutes ago
-   home            19 minutes ago      raycast         34 minutes ago
+   home            20 minutes ago      raycast         34 minutes ago
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
