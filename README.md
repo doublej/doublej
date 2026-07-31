@@ -98,16 +98,16 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            just now            atlas           27 minutes ago
-   cli             30 seconds ago      cli             28 minutes ago
-   framelink       1 minute ago        home            39 minutes ago
-   home            9 minutes ago       home            40 minutes ago
-   home            14 minutes ago      home            41 minutes ago
-   atlas           16 minutes ago      atlas           41 minutes ago
-   atlas           17 minutes ago      framelink       42 minutes ago
-   cli             18 minutes ago      home            43 minutes ago
-   atlas           18 minutes ago      framelink       44 minutes ago
-   atlas           19 minutes ago      home            44 minutes ago
+   home            35 seconds ago      atlas           28 minutes ago
+   cli             1 minute ago        cli             29 minutes ago
+   framelink       1 minute ago        home            40 minutes ago
+   home            9 minutes ago       home            41 minutes ago
+   home            15 minutes ago      home            41 minutes ago
+   atlas           16 minutes ago      atlas           42 minutes ago
+   atlas           17 minutes ago      framelink       43 minutes ago
+   cli             18 minutes ago      home            44 minutes ago
+   atlas           19 minutes ago      framelink       44 minutes ago
+   atlas           20 minutes ago      home            45 minutes ago
 
 
 </pre>
