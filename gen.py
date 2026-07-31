@@ -535,42 +535,126 @@ def bar(pct, width=60):
     return "\u2593" * filled + "\u2591" * (width - filled)
 
 
-def loading(target, pct):
+# --- the sign -----------------------------------------------------------------
+# A monochrome cousin of design/pharmacy-sign: an 11-row LED matrix, a pharmacy
+# cross that pulses on its own loop, and an info panel that fills in as the run
+# proceeds. Off dots are middots, lit ones run the block shades, so it glows
+# without using a single colour.
+
+LED_H = 11               # rows in the panel
+CROSS_W = 13             # the cross gets its own 13-wide panel, as on the real sign
+GAP = 2
+INFO_W = W - NAMECOL - CROSS_W - GAP
+OFF, SHADE = "·", "░▒▓█"
+
+# How the info panel fills in. Picked per run, so two visits rarely reveal the
+# same portion in the same order -- the sign is never caught mid-cycle twice.
+REVEALS = ("wipe", "scatter", "snake", "diagonal", "blinds")
+
+BEATS = ["queued", "runner booting", "checking out doublej/doublej",
+         "rendering with gen.py", "committing and pushing"]
+
+
+def cross(pct):
+    """The cross, lit from the middle out, its rings travelling as the run proceeds."""
+    out = []
+    for r in range(LED_H):
+        line = ""
+        for c in range(CROSS_W):
+            arm = 5 <= c <= 7 or (4 <= r <= 6 and 1 <= c <= 11)
+            ring = max(abs(r - 5), abs(c - 6))
+            line += SHADE[int(ring - pct * 0.15) % 4] if arm else OFF
+        out.append(line)
+    return out
+
+
+def is_lit(reveal, r, c, pct):
+    """Has the fill reached this cell yet? One branch per reveal style."""
+    p = pct / 100
+    if reveal == "wipe":
+        return c < INFO_W * p
+    if reveal == "scatter":                    # hash the cell, light it once p passes it
+        h = (r * 73856093) ^ (c * 19349663)
+        return (h ^ (h >> 13)) % 1000 < p * 1000
+    if reveal == "snake":                      # serpentine, row by row
+        i = r * INFO_W + (c if r % 2 == 0 else INFO_W - 1 - c)
+        return i < LED_H * INFO_W * p
+    if reveal == "diagonal":
+        return c + r * 3 < (INFO_W + LED_H * 3) * p
+    band = r % 3                               # blinds: three interleaved bands
+    return c < INFO_W * max(0.0, min(1.0, p * 3 - band))
+
+
+def info(target, pct, reveal):
+    """The message panel: a dark field that lights up behind its own text as the run goes."""
+    grid = [[None] * INFO_W for _ in range(LED_H)]
+    beat = BEATS[min(pct * len(BEATS) // 100, len(BEATS) - 1)]
+    for r, text in ((3, "TURNING TO " + target.upper()), (6, beat.upper())):
+        start = (INFO_W - len(text)) // 2
+        for i, ch in enumerate(text[:INFO_W]):
+            grid[r][start + i] = ch
+    return ["".join((ch or SHADE[0]) if is_lit(reveal, r, c, pct) else OFF
+                    for c, ch in enumerate(row)) for r, row in enumerate(grid)]
+
+
+def sign(target, pct, reveal):
+    left, right = cross(pct), info(target, pct, reveal)
+    return [" " * NAMECOL + left[r] + " " * GAP + right[r] for r in range(LED_H)]
+
+
+def loading(target, pct, reveal=REVEALS[0]):
     """A real README, committed mid-flight, purely so the wait is visible."""
-    beat = ["reticulating splines", "waking the runner", "resolving the monorepo that is not a monorepo",
-            "asking the scanner nicely", "committing"][min(pct * 5 // 100, 4)]
-    return ["", header("LOADING"), "",
-            f"  turning to {target}",
-            "",
-            f"  [{bar(pct)}]  {pct:>3}%",
-            "",
-            f"  {beat}…",
-            "",
-            "",
-            "  This is not a gif. A GitHub Action is rewriting this file while you read it,",
-            "  one commit per frame, and it will land on the page you asked for.",
-            "", ""]
+    return ["", header("LOADING"), ""] + sign(target, pct, reveal) + [
+        "",
+        f"  [{bar(pct)}]  {pct:>3}%",
+        "",
+        "",
+        "  This is not a gif. A GitHub Action is rewriting this file while you read it,",
+        "  one commit per frame, and it will land on the page you asked for.",
+        "", ""]
 
 
-def build(page, pct=None):
+def build(page, pct=None, reveal=REVEALS[0]):
     out = ["<pre>", ""]
     out += masthead()
     out += ["", nav(page, live=pct is None), ""]
-    out += loading(page, pct) if pct is not None else BUILDERS[page]()
+    out += loading(page, pct, reveal) if pct is not None else BUILDERS[page]()
     out += activity()
     out += ["", ""] + FOOTER
     out += ["</pre>", "", "![](https://umami-inky-two.vercel.app/p/QL68zROQG)"]
     return out
 
 
+def emit_frames(dest):
+    """Freeze every page's 0% frame for the nav proxy.
+
+    The proxy has to put a loading document on screen the instant you click, well
+    before the runner has booted, and it must be the *same* document the workflow
+    will commit a moment later or the swap would show. So it ships these, rendered
+    here, by the same code. At 0% no reveal has started yet, which is why one frame
+    per page is enough — the styles only diverge once the fill begins.
+    """
+    frames = {page: "\n".join(build(page, 0)) for page in PAGES}
+    body = ",\n".join(f"  {json.dumps(k)}: {json.dumps(v)}" for k, v in frames.items())
+    pathlib.Path(dest).write_text(
+        "// Generated by gen.py --frames. Do not edit; run `just frames` instead.\n"
+        f"export const FRAME_0: Record<string, string> = {{\n{body}\n}};\n")
+    print(f"wrote {dest}  ({len(frames)} frames)")
+
+
 if __name__ == "__main__":
     if "--bar" in sys.argv:                      # the workflow reuses this for its commentary
         print(bar(int(sys.argv[sys.argv.index("--bar") + 1]), 28))
         raise SystemExit
+    if "--frames" in sys.argv:
+        emit_frames(sys.argv[sys.argv.index("--frames") + 1])
+        raise SystemExit
     dest = sys.argv[1]
     if "--loading" in sys.argv:
         i = sys.argv.index("--loading")
-        lines = build(sys.argv[i + 1], int(sys.argv[i + 2]))
+        # The reveal is per run, not per frame, so all four frames fill in one style.
+        seed = int(sys.argv[sys.argv.index("--seed") + 1]) if "--seed" in sys.argv else 0
+        lines = build(sys.argv[i + 1], int(sys.argv[i + 2]), REVEALS[seed % len(REVEALS)])
     else:
         i = sys.argv.index("--page") if "--page" in sys.argv else None
         lines = build(sys.argv[i + 1] if i else "home")

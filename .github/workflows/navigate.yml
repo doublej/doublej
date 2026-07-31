@@ -84,17 +84,19 @@ jobs:
             gh issue comment "$NUMBER" --body "$1" >/dev/null
           }
 
+          # The run id picks which way the sign fills in, so every visit reveals a
+          # different portion of the panel, and all four frames share one style.
           while IFS='|' read -r pct beat; do
             [ -n "$pct" ] || continue
-            python3 gen.py README.md --loading "$PAGE" "$pct"
+            python3 gen.py README.md --loading "$PAGE" "$pct" --seed "$GITHUB_RUN_ID"
             publish "nav: loading $PAGE — $pct%"
             say "\`$(python3 gen.py --bar "$pct")\` \`${pct}%\` · $beat"
-            sleep 4
+            sleep 1
           done <<'FRAMES'
-          6|waking the runner
-          31|resolving the monorepo that is not a monorepo
-          58|rendering the page
-          84|committing it, one frame at a time
+          6|runner booted
+          31|repository checked out
+          58|page rendered by gen.py
+          84|frame committed and pushed
           FRAMES
 
           record
