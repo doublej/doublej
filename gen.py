@@ -514,23 +514,35 @@ def page_forks():
 
 
 def page_framelink():
-    return ["", header("FRAMELINK"), "", site("https://www.framelink.quest/", "www.framelink.quest"), "",
-            "  Wireless PC-VR streaming to a Quest 3. Low-latency capture, encode and transport, with a",
-            "  control plane that keeps the session honest when the network is not.",
-            "",
-            "  Quest 3  \u00b7  SteamVR  \u00b7  OpenXR",
-            "",
-            "  Commercial product \u2014 the source stays closed."]
+    """Copy borrowed from the homepage, which says it better than a repo blurb would."""
+    return ["", header("FRAMELINK"), "",
+            site("https://www.framelink.quest/", "www.framelink.quest"), "",
+            "  Wire or air. PC VR on your Quest 3.", "",
+            "  Play your PC's VR games on a Quest 3. Go wireless, or plug in over USB-C for a steadier",
+            "  link. One app streams your SteamVR games and your Windows desktop to the headset.",
+            group("two transports, one app"), "",
+            "  Plug in for the boss fight, unplug to stretch your legs. Your profile, codec and tuning",
+            "  follow you across transports, and the handover takes under two seconds \u2014 no re-pairing.",
+            "  A sleeping headset does not end the session either: wake it, no SteamVR restart.", "",
+            "  Every SteamVR title you already own, nothing to re-buy and nothing to port. Your desktop",
+            "  streams in too, so you can change a setting without taking the headset off. AV1 keeps the",
+            "  picture sharp while using less of the link than older codecs.", "",
+            "  Quest 3  \u00b7  SteamVR  \u00b7  OpenXR  \u00b7  closed beta, free while it lasts"]
 
 
 def page_simsync():
-    return ["", header("SIMSYNC"), "", site("https://www.simsync.app/", "www.simsync.app"), "",
-            "  Set your wheel up once and use it in every sim. Each racing function gets a universal",
-            "  control id, so switching titles stops meaning an afternoon of remapping.",
-            "",
-            "  Assetto Corsa  \u00b7  Competizione  \u00b7  Evo  \u00b7  iRacing  \u00b7  F1 24  \u00b7  ETS2  \u00b7  BeamNG  \u00b7  WRC",
-            "",
-            "  Commercial product \u2014 the source stays closed."]
+    """Same: the site's own words, which are sharper than the ones that were here."""
+    return ["", header("SIMSYNC"), "",
+            site("https://www.simsync.app/", "www.simsync.app"), "",
+            "  Set up your wheel once. Race anywhere.", "",
+            "  Every sim speaks a different language. Your muscle memory doesn't.",
+            group("import once, export everywhere"), "",
+            "  Point SimSync at your best config and it learns your bindings, your layers, your logic.",
+            "  It translates them into one universal profile, then writes that profile back out to every",
+            "  sim you own. Button 7 is pit limiter. In iRacing. In ACC. In everything.", "",
+            "  The alternative: 847 bindable actions in one sim's control menu, five names for \u201cpit",
+            "  limiter\u201d across the sims on your drive, and two hours gone before you turn a single lap.", "",
+            "  Assetto Corsa  \u00b7  Competizione  \u00b7  Evo  \u00b7  iRacing  \u00b7  F1 24  \u00b7  ETS2  \u00b7  BeamNG  \u00b7  WRC"]
 
 
 BUILDERS = {"home": page_home, "cli": page_cli, "atlas": page_atlas,
