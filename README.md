@@ -15,7 +15,7 @@
    <a href="https://github.com/doublej/ccom">ccom</a>                             Plain English to a shell command, shown before it runs
    <a href="https://github.com/doublej/bpr">bpr</a>                              Beeper CLI for agents: stable ids, JSON when piped, prime
    <a href="https://github.com/doublej/strandkanban">strand</a>                           One command opens a Kanban board over your beads issues
-   <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                          Two-way bridge between beads issues and Apple Reminders
+   <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                          Drive beads, agent sessions and Claude tabs from Apple Reminders
    <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                     Install themed spinner verb sets into Claude Code
    cav                              Supervisor TUI coordinating several Claude Code agents
    gh-inbox                         Relevance-filtered GitHub issue and PR triage
@@ -34,11 +34,10 @@
    media & files
 
    <a href="https://github.com/doublej/shazam-export">shazam-export</a>                    Export Shazam history to CSV, JSON, GeoJSON, GPX, KML, HTML
-   <a href="https://github.com/doublej/poolsuite-cli">poolsuite</a>                        Poolsuite FM in the terminal
    <a href="https://github.com/doublej/ss-image-processor">c4d2pixi</a>                         Batch image-sequence processing for VFX and 3D pipelines
    kfcut                            Keyframe-aware video cutting with no re-encode, plus ASR
    micstream                        Turn phones into wireless mics for the Mac over the LAN
-   rotary                           The DJ's operating system: library, crates and set prep
+   rotary                           The DJ's operating system: crawl, enrich, query and mix crates
 
    data & scraping
 
@@ -48,9 +47,8 @@
    <a href="https://github.com/doublej/apple-notes-sync">apple-notes-sync</a>                 Two-way task sync: Markdown, Apple Reminders, Apple Notes
    <a href="https://github.com/doublej/sheet-cms">sheet-cms</a>                        Bidirectional sync between Google Sheets and local JSON
    umami                            Agent-first CLI for Umami analytics
-   fin                              Aggregate bank, broker and crypto balances locally
+   fin                              Aggregate bank and broker balances and transactions locally
    fb-scrape                        Facebook group scraper with CLI, API and web UI
-   iracing-bbg                      Which single iRacing purchase unlocks the most races
 
    debug & devices
 
@@ -145,7 +143,7 @@
 
   PROJECTS  ──────────────────────────────────────────────────────────────────────────────────────────
 
-   <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                 Native macOS dialogs, forms and slider panes for MCP agents
+   <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                 Native dialogs, forms and slider panes for MCP agents
    <a href="https://github.com/doublej/ConsultUserSketch">ConsultUserSketch</a>                Grid layout sketcher behind consult-user-mcp propose_layout
    <a href="https://github.com/doublej/strandkanban">strandkanban</a>                     Drag-and-drop Kanban board for beads issues
    <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                    Keyboard-first Gantt editor with Mermaid import and export
@@ -155,40 +153,40 @@
    <a href="https://github.com/doublej/claude-verbs">claude-verbs</a>                     Community-contributed spinner verb sets for Claude Code
    <a href="https://github.com/doublej/cookiecutter-templates">cookiecutter-templates</a>           Project templates by language and framework, agent-ready
    <a href="https://github.com/doublej/browser-router">browser-router</a>                   Menu bar app routing URLs to browsers by rule
-   <a href="https://github.com/doublej/Scoot">Scoot</a>                            Web disk usage analyser with live scanning and 3D view
+   <a href="https://github.com/doublej/Scoot">Scoot</a>                            Disk usage analyser with live scanning and a 3D depth view
    <a href="https://github.com/doublej/apple-notes-sync">apple-notes-sync</a>                 Two-way task sync between Markdown, Reminders and Notes
    <a href="https://github.com/doublej/sheet-cms">sheet-cms</a>                        Bidirectional sync between Google Sheets and local JSON
    <a href="https://github.com/doublej/pii-filter-proxy">pii-filter-proxy</a>                 Proxy between app and LLM that swaps out PII
    <a href="https://github.com/doublej/web-haptics-polyfill">web-haptics-polyfill</a>             Cross-platform haptic feedback for the mobile web
    <a href="https://github.com/doublej/orphan-obliterator">orphan-obliterator</a>               Prevent orphaned words on the last line of HTML elements
-   <a href="https://github.com/doublej/doublej-project-linking">doublej-project-linking</a>          Embeddable corner widget with path-based profile matching
+   <a href="https://github.com/doublej/doublej-project-linking">doublej-project-linking</a>          Corner widget with path-based profiles and Short.io shortening
    <a href="https://github.com/doublej/pixi-adaptive-glass">pixi-adaptive-glass</a>              Refraction and chromatic aberration glass plugin for PixiJS
    <a href="https://github.com/doublej/pixi-paper">pixi-paper</a>                       Real-time comparison of HTML-to-canvas screenshot libraries
    <a href="https://github.com/doublej/batch-qr-generator">batch-qr-generator</a>               Data-driven QR code generator built with Svelte 5
    <a href="https://github.com/doublej/laptop-light">laptop-light</a>                     Turn a laptop screen into warm ambient light, phone remote
    <a href="https://github.com/doublej/siargao-market">siargao-market</a>                   Marketplace site for listings scraped from Siargao FB groups
-   <a href="https://github.com/doublej/pimpelmees-wallgen-psd-tool">pimpelmees-wallgen-psd-tool</a>      Photoshop script: validate PSD specs, convert to TIFF
+   <a href="https://github.com/doublej/pimpelmees-wallgen-psd-tool">pimpelmees-wallgen-psd-tool</a>      macOS app: validate PSD specs, convert to print-ready TIFF
 
 
   RAYCAST PLUGINS  ───────────────────────────────────────────────────────────────────────────────────
 
-   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View and manage active TCP ports
-   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Caddyfile utilities and tools
-   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress text via Claude, Codex or Ollama backends
-   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about software
-   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open your favourite projects in Claude Code
-   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history
-   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean and format text
-   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks from images
-   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with progress
+   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View active TCP ports, kill processes, restart dev servers
+   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Manage the NAS Caddyfile: open, generate passwords, apply
+   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress selected text via LLM or heuristic backends
+   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
+   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
+   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
+   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
+   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
+   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
    <a href="https://github.com/doublej/raycast-ext-hide-my-email">Hide My Email</a>                    Generate Apple Hide My Email addresses
-   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome with security disabled for testing
-   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   OpenRouter API key management
+   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
+   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
    <a href="https://github.com/doublej/atlas-browser">Project Browser</a>                  Browse and search indexed projects with framework detection
    <a href="https://github.com/doublej/raycast-ext-save-api-key">Save API Key</a>                     Securely save API keys
-   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Wake PC via Wake-on-LAN
-   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Analyse clipboard text for invisible AI watermarks
-   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap text at a specified width
+   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
+   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
+   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
    <a href="https://github.com/doublej/raycast-ext-ziggo-router">Ziggo Router</a>                     Ziggo router control
 
 
@@ -201,6 +199,7 @@
   FORKS  ─────────────────────────────────────────────────────────────────────────────────────────────
 
    <a href="https://github.com/doublej/cui">cui</a>                              Web UI for Claude Code agents, ported to the Agent SDK
+   <a href="https://github.com/doublej/poolsuite-cli">poolsuite-cli</a>                    Poolsuite FM in the terminal
    <a href="https://github.com/doublej/mcpick">mcpick</a>                           CLI for dynamically managing MCP server configurations
    <a href="https://github.com/doublej/whatsapp-mcp-ts">whatsapp-mcp-ts</a>                  WhatsApp MCP server (TypeScript / Baileys)
    <a href="https://github.com/doublej/Gmail-MCP-Server">Gmail-MCP-Server</a>                 Gmail MCP server with auto authentication
