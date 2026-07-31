@@ -11,9 +11,9 @@
 
   turning to cli
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-  runner booting…
+  checking out doublej/doublej…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -29,7 +29,7 @@
    forks           4 minutes ago       systems         16 minutes ago
    cli             5 minutes ago       atlas           17 minutes ago
    raycast         6 minutes ago       projects        18 minutes ago
-   simsync         7 minutes ago       framelink       18 minutes ago
+   simsync         7 minutes ago       framelink       19 minutes ago
    raycast         9 minutes ago       cli             22 minutes ago
    projects        9 minutes ago       framelink       23 minutes ago
    atlas           10 minutes ago      atlas           23 minutes ago
