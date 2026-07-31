@@ -11,9 +11,9 @@
 
   turning to systems
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  reticulating splines…
+  waking the runner…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,7 +25,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   simsync         17 seconds ago      cli             7 minutes ago
+   simsync         22 seconds ago      cli             7 minutes ago
    systems         2 minutes ago       raycast         8 minutes ago
    atlas           3 minutes ago       framelink       9 minutes ago
    cli             4 minutes ago       projects        11 minutes ago
