@@ -592,6 +592,10 @@ def build(page, pct=None):
     out += activity()
     out += ["", ""] + FOOTER
     out += ["</pre>", "", "![](https://umami-inky-two.vercel.app/p/QL68zROQG)"]
+    # A marker for the nav proxy, which polls the raw file to know when a turn has
+    # landed. Explicit, so that restyling the tab strip cannot quietly break it.
+    out += ["", f"<!-- nav:loading={page} pct={pct} -->" if pct is not None
+                else f"<!-- nav:page={page} -->"]
     return out
 
 
