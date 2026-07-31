@@ -4,22 +4,26 @@
   ────────────────────────────────────────────────────────────────────────────────────────────────────
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
-  ◂  home  cli  atlas  framelink  [simsync]  systems  projects  raycast  forks  ▸           page 5 / 9
+  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">◂</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a>  [simsync]  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a>  <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">▸</a>           page 5 / 9
 
 
-  LOADING  ───────────────────────────────────────────────────────────────────────────────────────────
+  SIMSYNC  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  turning to simsync
+  →  <a href="https://www.simsync.app/">www.simsync.app</a>
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
+  Set your wheel up once and use it in every sim. Every racing function gets a universal
+  control id; SimSync binds your hardware to those ids and maps them onto whatever a game
+  expects, so supporting a new sim is a new adapter rather than an afternoon of remapping.
 
-  committing…
+        PERIPHERAL                 CONTROL                    SIM
+        Fanatec DD    ◄─ bind ─►   Throttle 0301001   ◄─ map ─►   iRacing
 
-
-  This is not a gif. A GitHub Action is rewriting this file while you read it,
-  one commit per frame, and it will land on the page you asked for.
-
-
+   simsync-application              The core: read, translate and write input maps
+   simsync-ui                       Desktop UI for binding hardware to controls
+   simsync-helper                   Rust helper for direct device access
+   simsync-emulator                 Stands in for hardware that is not on the desk
+   adapters                         ac · acc · acevo · iracing · f124 · ets2 · beamng · wrc
+   simsync-marketing                The site at simsync.app
 
 
   ────────────────────────────────────────────────────────────────────────────────────────────────────
