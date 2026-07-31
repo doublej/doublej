@@ -11,9 +11,9 @@
 
   turning to projects
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  reticulating splines…
+  waking the runner…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,12 +25,12 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   framelink       17 seconds ago      systems         13 minutes ago
+   framelink       22 seconds ago      systems         13 minutes ago
    cli             3 minutes ago       framelink       14 minutes ago
    framelink       4 minutes ago       simsync         15 minutes ago
    atlas           5 minutes ago       systems         18 minutes ago
    projects        7 minutes ago       simsync         19 minutes ago
-   home            8 minutes ago       systems         21 minutes ago
+   home            9 minutes ago       systems         21 minutes ago
    cli             9 minutes ago       atlas           22 minutes ago
    simsync         10 minutes ago      cli             22 minutes ago
    framelink       11 minutes ago      cli             26 minutes ago
