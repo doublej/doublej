@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -65,7 +65,7 @@
    framelink       32 minutes ago      atlas           1 hour ago
    cli             36 minutes ago      atlas           1 hour ago
    home            44 minutes ago      atlas           1 hour ago
-   cli             44 minutes ago      cli             1 hour ago
+   cli             45 minutes ago      cli             1 hour ago
    framelink       45 minutes ago      home            1 hour ago
    home            53 minutes ago      home            1 hour ago
    home            59 minutes ago      home            1 hour ago
@@ -75,4 +75,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=cli pct=31 -->
+<!-- nav:loading=cli pct=58 -->
