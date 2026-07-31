@@ -11,9 +11,9 @@
 
   turning to home
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-  runner booting…
+  checking out doublej/doublej…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -32,7 +32,7 @@
    raycast         8 minutes ago       projects        20 minutes ago
    simsync         9 minutes ago       framelink       21 minutes ago
    raycast         11 minutes ago      cli             24 minutes ago
-   projects        11 minutes ago      framelink       25 minutes ago
+   projects        12 minutes ago      framelink       25 minutes ago
    atlas           12 minutes ago      atlas           26 minutes ago
    raycast         14 minutes ago      projects        28 minutes ago
 
