@@ -11,9 +11,9 @@
 
   turning to home
 
-  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-  resolving the monorepo that is not a monorepo…
+  committing…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -25,7 +25,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             48 seconds ago      simsync         9 minutes ago
+   cli             53 seconds ago      simsync         10 minutes ago
    simsync         1 minute ago        systems         12 minutes ago
    framelink       2 minutes ago       atlas           13 minutes ago
    projects        3 minutes ago       cli             13 minutes ago
