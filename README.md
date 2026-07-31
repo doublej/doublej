@@ -11,9 +11,9 @@
 
   turning to framelink
 
-  [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+  [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-  reticulating splines…
+  waking the runner…
 
 
   This is not a gif. A GitHub Action is rewriting this file while you read it,
@@ -26,7 +26,7 @@
   The last 20 turns, as of the build that produced this page.
 
    cli             3 minutes ago       framelink       14 minutes ago
-   framelink       3 minutes ago       simsync         14 minutes ago
+   framelink       3 minutes ago       simsync         15 minutes ago
    atlas           4 minutes ago       systems         17 minutes ago
    projects        6 minutes ago       simsync         18 minutes ago
    home            8 minutes ago       systems         20 minutes ago
