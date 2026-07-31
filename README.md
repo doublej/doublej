@@ -22,9 +22,9 @@
 
                                          turning to projects
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -38,7 +38,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            42 seconds ago      atlas           1 hour ago
+   home            44 seconds ago      atlas           1 hour ago
    home            6 minutes ago       cli             1 hour ago
    framelink       31 minutes ago      atlas           1 hour ago
    cli             34 minutes ago      atlas           1 hour ago
@@ -54,4 +54,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=projects pct=6 -->
+<!-- nav:loading=projects pct=31 -->
