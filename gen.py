@@ -195,9 +195,9 @@ HL = """  ╔══════════════════════�
   ║                                                                                                  ║
   ║  <a href="{gh}consult-user-mcp">consult-user-mcp</a>                                                                          ★ 40  ║
   ║                                                                                                  ║
-  ║  Native macOS dialogs for MCP agents.                                                            ║
+  ║  Native dialogs for MCP agents, on macOS and Windows.                                            ║
   ║                                                                                                  ║
-  ║  Sidecar Swift app + Python bridge giving Claude Code real interactive UI:                       ║
+  ║  A sidecar app and an MCP bridge giving Claude Code real interactive UI:                         ║
   ║  confirms, picks, multi-question forms, slider tweak panes that write live to disk.              ║
   ║                                                                                                  ║
   ║  →  <a href="{gh}consult-user-mcp">source</a>                                                                                       ║
@@ -214,96 +214,108 @@ def card(name, repo, lines, links):
 
 
 def render_cards(left, right):
-    """left/right = (name, repo, [3 desc lines], [(label, url), ...])"""
-    IW = 42  # inner width between "│ " and " │"
+    """Each card is (name, repo_or_None, [body lines], [(label, url)]). No repo -> private."""
+    IW, BODY = 42, 4
 
-    def cell(c, i):
-        name, repo, lines, links = c
-        if i == 0 or i == 8:
-            return " " * IW, None
-        if i == 1:
-            return name.ljust(IW), f'<a href="{repo}">{name}</a>' + " " * (IW - len(name))
-        if i in (2, 3, 4):
-            t = lines[i - 2] if i - 2 < len(lines) else ""
-            return t.ljust(IW), None
-        if i == 5:
-            return " " * IW, None
-        if i == 6:
-            plain = ""
-            rich = ""
+    def rows(c):
+        name, repo, body, links = c
+        out = [(name.ljust(IW),
+                f'<a href="{repo}">{name}</a>' + " " * (IW - len(name)) if repo else None),
+               (" " * IW, None)]
+        for k in range(BODY):
+            out.append(((body[k] if k < len(body) else "").ljust(IW), None))
+        out.append((" " * IW, None))
+        if links:
+            plain = rich = ""
             for j, (label, url) in enumerate(links):
-                seg = ("→ " if j == 0 else "     → ")
+                seg = "\u2192 " if j == 0 else "     \u2192 "
                 plain += seg + label
                 rich += seg + f'<a href="{url}">{label}</a>'
-            return plain.ljust(IW), rich + " " * (IW - len(plain))
-        return " " * IW, None
+            out.append((plain.ljust(IW), rich + " " * (IW - len(plain))))
+        else:
+            out.append((" " * IW, None))
+        return out
 
-    res = []
-    for i in range(9):
-        if i == 0:
-            res.append("  ┌" + "─" * 46 + "┐    ┌" + "─" * 46 + "┐")
-            continue
-        if i == 8:
-            res.append("  └" + "─" * 46 + "┘    └" + "─" * 46 + "┘")
-            continue
-        parts = []
-        for c in (left, right):
-            plain, rich = cell(c, i)
+    L, R = rows(left), rows(right)
+    res = ["  \u250c" + "\u2500" * 46 + "\u2510    \u250c" + "\u2500" * 46 + "\u2510"]
+    for (lp, lr), (rp, rr) in zip(L, R):
+        for plain in (lp, rp):
             assert len(plain) == IW, (len(plain), plain)
-            parts.append(rich if rich else plain)
-        res.append("  │  " + parts[0] + "  │    │  " + parts[1] + "  │")
+        res.append("  \u2502  " + (lr or lp) + "  \u2502    \u2502  " + (rr or rp) + "  \u2502")
+    res.append("  \u2514" + "\u2500" * 46 + "\u2518    \u2514" + "\u2500" * 46 + "\u2518")
     return res
 
 
 CARDS = [
+    (("reminders-beads-bridge", GH + "reminders-beads-bridge",
+      ["Apple Reminders as an agent remote.",
+       "A macOS daemon: file and close beads",
+       "issues, drive Claude and Codex sessions,",
+       "read and type into live tabs from a phone."],
+      [("source", GH + "reminders-beads-bridge"),
+       ("docs", "https://doublej.github.io/reminders-beads-bridge/")]),
+     ("strandkanban", GH + "strandkanban",
+      ["Drag-and-drop Kanban over beads issues.",
+       "One command starts it, the issues never",
+       "leave your repo, and the board draws the",
+       "dependency arrows the bd CLI cannot."],
+      [("source", GH + "strandkanban")])),
+    (("flt", GH + "flt",
+      ["Flight search in four shapes: a CLI, a",
+       "green-on-black GDS-style TUI, a SvelteKit",
+       "web UI and an MCP server \u2014 all over an",
+       "engine with zero npm dependencies."],
+      [("source", GH + "flt"), ("docs", "https://doublej.github.io/flt/")]),
+     ("onenv", GH + "onenv",
+      ["Stop committing .env. Values live in a",
+       "1Password vault; onenv run injects them",
+       "into a child process and they vanish when",
+       "it exits. KEY=value ergonomics, unchanged."],
+      [("source", GH + "onenv")])),
+    (("bpr", GH + "bpr",
+      ["A Beeper CLI shaped for agents. Short",
+       "stable ids, a dense table on a TTY and",
+       "JSON the moment you pipe it, watch",
+       "subscriptions, takeout, a prime contract."],
+      [("source", GH + "bpr")]),
+     ("fin", None,
+      ["Every account in one local ledger.",
+       "ING and Revolut over PSD2, Wise on its",
+       "own API, DEGIRO through degiro-connector,",
+       "broker CSVs for the rest. Private."],
+      [])),
     (("ccom", GH + "ccom",
-      ["Plain English → shell command via Claude.",
+      ["Plain English \u2192 shell command via Claude.",
        "Shows the proposed command before running",
        "so you can confirm, edit, or pipe further."],
       [("source", GH + "ccom"), ("docs", "https://doublej.github.io/ccom/")]),
-     ("strandkanban", GH + "strandkanban",
-      ["SvelteKit board wrapping the beads CLI.",
-       "Drag-and-drop Kanban over your bd issues",
-       "with live sync and dependency arrows."],
-      [("source", GH + "strandkanban")])),
-    (("flt", GH + "flt",
-      ["Flight search across CLI, TUI, and web.",
-       "Scrapes Google Flights, compares prices",
-       "by date range, builds and exports trips."],
-      [("source", GH + "flt"), ("docs", "https://doublej.github.io/flt/")]),
-     ("onenv", GH + "onenv",
-      ["1Password-backed env var manager.",
-       "CLI + TUI for humans, HTTP API for agents",
-       "with permission brokering. No more .env."],
-      [("source", GH + "onenv")])),
-    (("claude-verbs", GH + "claude-verbs",
-      ["Themed spinner verb sets for Claude Code.",
-       "Community-contributed, browsable online,",
-       "installed with a single CLI command."],
-      [("source", GH + "claude-verbs"), ("site", "https://claudeverbs.com")]),
      ("mermaid-gantt", GH + "mermaid-gantt",
       ["Keyboard-first Gantt chart editor.",
-       "Type Mermaid syntax, see live diagram.",
-       "Round-trip import/export for planning."],
+       "Type Mermaid syntax, see the diagram",
+       "update live, round-trip it back out for",
+       "planning somewhere else."],
       [("source", GH + "mermaid-gantt")])),
     (("nordvpn-cli-macos", GH + "nordvpn-cli-macos",
-      ["Unofficial NordVPN CLI + TUI for macOS.",
-       "Uses WireGuard directly — no Electron, no",
-       "menu bar app, just configs and a fast CLI."],
+      ["Unofficial NordVPN CLI and TUI for macOS.",
+       "Talks WireGuard directly \u2014 no Electron, no",
+       "menu bar app, just configs and a fast",
+       "command you can script."],
       [("source", GH + "nordvpn-cli-macos")]),
      ("browser-router", GH + "browser-router",
       ["Menu bar app routing URLs to browsers.",
-       "Rule-based: dev → Chrome, work → Firefox,",
-       "social → default. Reclaim your default."],
+       "Rule-based, down to the profile: dev to",
+       "Chrome, work to Firefox, everything else",
+       "to the default. Reclaim your default."],
       [("source", GH + "browser-router")])),
     (("laptop-light", GH + "laptop-light",
       ["Turns a laptop screen into ambient light.",
        "Warm tones, candle flicker, HDR/P3 colour,",
-       "wake lock, phone remote over WebRTC."],
+       "a wake lock so it never sleeps, and a",
+       "phone remote over WebRTC."],
       [("source", GH + "laptop-light")]),
-     ("more  →", GH + "?tab=repositories",
+     ("more  \u2192", GH + "?tab=repositories",
       ["94 public repos and counting,",
-       "267 repos in total, public and private.",
+       "267 in total, public and private.",
        "Browse the full set:"],
       [("github.com/doublej?tab=repositories", GH + "?tab=repositories")])),
 ]
