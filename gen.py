@@ -443,9 +443,9 @@ FOOTER = [
 # ── pages ───────────────────────────────────────────────────────────────────
 
 def masthead():
-    return ["  doublej",
-            "  " + "─" * (W - 2),
-            "  Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners"]
+    """Just the byline. The name is already the page title, and the tab strip below
+    supplies the rule this used to draw for itself."""
+    return ["", "", "  Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners"]
 
 
 def page_home():
@@ -587,7 +587,7 @@ def loading(target, pct):
 def build(page, pct=None):
     out = ["<pre>", ""]
     out += masthead()
-    out += [""] + nav(page, live=pct is None) + [""]
+    out += ["", ""] + nav(page, live=pct is None) + ["", ""]
     out += loading(page, pct) if pct is not None else BUILDERS[page]()
     out += activity()
     out += ["", ""] + FOOTER
