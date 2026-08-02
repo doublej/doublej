@@ -19,9 +19,9 @@
 
                                           turning to simsync
 
-                 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]    6%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
 
-                                               queued…
+                                           runner booting…
 
 
 
@@ -33,7 +33,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   systems         43 seconds ago      raycast         1 day ago
+   systems         45 seconds ago      raycast         1 day ago
    raycast         2 minutes ago       cli             1 day ago
    atlas           1 day ago           projects        1 day ago
    cli             1 day ago           home            1 day ago
@@ -49,4 +49,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=simsync pct=6 -->
+<!-- nav:loading=simsync pct=31 -->
