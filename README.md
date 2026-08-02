@@ -98,16 +98,16 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   home            1 hour ago          atlas           1 day ago
-   framelink       1 hour ago          cli             1 day ago
-   simsync         1 hour ago          home            1 day ago
-   systems         1 hour ago          raycast         1 day ago
-   raycast         1 hour ago          cli             1 day ago
-   atlas           1 day ago           projects        1 day ago
-   cli             1 day ago           home            1 day ago
-   cli             1 day ago           home            1 day ago
-   projects        1 day ago           framelink       1 day ago
-   atlas           1 day ago           cli             1 day ago
+   home            7 hours ago         atlas           2 days ago
+   framelink       7 hours ago         cli             2 days ago
+   simsync         7 hours ago         home            2 days ago
+   systems         7 hours ago         raycast         2 days ago
+   raycast         7 hours ago         cli             2 days ago
+   atlas           1 day ago           projects        2 days ago
+   cli             1 day ago           home            2 days ago
+   cli             2 days ago          home            2 days ago
+   projects        2 days ago          framelink       2 days ago
+   atlas           2 days ago          cli             2 days ago
 
 
 </pre>
