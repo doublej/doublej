@@ -20,9 +20,9 @@
 
                                          turning to framelink
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -51,4 +51,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=framelink pct=31 -->
+<!-- nav:loading=framelink pct=58 -->
