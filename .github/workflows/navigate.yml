@@ -1,8 +1,8 @@
 name: navigate
 
 # The profile README is a seven-page portfolio. Every tab on the page is a link that
-# opens an issue titled "go:<page>". This reads that title, re-renders the README one
-# frame at a time, commits each frame, and closes the issue behind itself.
+# opens an issue titled "go:<page>". This reads that title, paces the wait out in issue
+# comments, commits the finished page once, and closes the issue behind itself.
 #
 # It is a deeply silly way to paginate a text file. It also genuinely works.
 
@@ -86,27 +86,18 @@ jobs:
 
           while IFS='|' read -r pct beat; do
             [ -n "$pct" ] || continue
-            python3 gen.py README.md --loading "$PAGE" "$pct"
-            publish "nav: loading $PAGE — $pct%"
             say "\`$(python3 gen.py --bar "$pct")\` \`${pct}%\` · $beat"
             sleep 1
           done <<'FRAMES'
           6|runner booted
           31|repository checked out
           58|page rendered by gen.py
-          84|frame committed and pushed
+          84|pushing to main
           FRAMES
 
           record
           python3 gen.py README.md --page "$PAGE"
           publish "nav: $PAGE"
-
-      - name: If anything broke, do not leave a loading bar up forever
-        if: failure()
-        run: |
-          python3 gen.py README.md --page home
-          git add README.md
-          git diff --cached --quiet || { git commit -q -m "nav: recover to home"; git push -q; }
 
       - name: Close the issue behind us
         if: github.event_name == 'issues'
@@ -120,5 +111,5 @@ jobs:
 
           **$PAGE** is live → **[github.com/doublej]($GITHUB_SERVER_URL/doublej)**
 
-          <sub>That took five commits. Closing this behind me.</sub>"
+          <sub>That took one commit. Closing this behind me.</sub>"
           gh issue close "$NUMBER"
