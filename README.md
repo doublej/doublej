@@ -98,8 +98,8 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             3 hours ago         projects        4 days ago
-   cli             22 hours ago        atlas           4 days ago
+   cli             9 hours ago         projects        4 days ago
+   cli             1 day ago           atlas           4 days ago
    home            2 days ago          atlas           4 days ago
    framelink       2 days ago          cli             4 days ago
    simsync         2 days ago          home            4 days ago
