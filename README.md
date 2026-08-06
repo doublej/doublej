@@ -64,9 +64,9 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             just now            cli             4 days ago
-   home            2 minutes ago       cli             5 days ago
-   cli             3 minutes ago       cli             6 days ago
+   cli             54 seconds ago      cli             4 days ago
+   home            3 minutes ago       cli             5 days ago
+   cli             4 minutes ago       cli             6 days ago
    simsync         6 hours ago         home            1 week ago
    cli             6 hours ago         framelink       1 week ago
    cli             1 day ago           simsync         1 week ago

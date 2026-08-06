@@ -477,11 +477,11 @@ def page_atlas():
            ""]
     out.extend(atlas_diagram())
     out += ["", "",
-            row("atlas-api", None, "Scanner, cache and project graph — SvelteKit on :47891"),
-            row("atlas-cli", None, "The global `atlas`: tree, scan, pick, open, ports, new"),
+            row("atlas-api", "atlas-api", "Scanner, cache and project graph — SvelteKit on :47891"),
+            row("atlas-cli", "atlas-cli", "The global `atlas`: tree, scan, pick, open, ports, new"),
             row("atlas-picker", "atlas-picker", "Rust TUI — iocraft and Nucleo, reads the cache directly"),
             row("atlas-browser", "atlas-browser", "Raycast: browse, filter and act on any project"),
-            row("atlas-watchdog", None, "Polls the API and restarts it through launchctl")]
+            row("atlas-watchdog", "atlas-watchdog", "Polls the API and restarts it through launchctl")]
     return out
 
 
