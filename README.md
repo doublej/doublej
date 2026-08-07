@@ -98,9 +98,9 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   atlas           8 hours ago         atlas           6 days ago
-   cli             9 hours ago         cli             6 days ago
-   cli             15 hours ago        cli             6 days ago
+   atlas           11 hours ago        atlas           6 days ago
+   cli             12 hours ago        cli             6 days ago
+   cli             18 hours ago        cli             6 days ago
    cli             2 days ago          projects        6 days ago
    cli             2 days ago          atlas           6 days ago
    home            4 days ago          atlas           6 days ago
