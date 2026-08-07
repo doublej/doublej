@@ -32,9 +32,9 @@
 
                                             turning to cli
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   31%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
 
-                                           runner booting…
+                                    checking out doublej/doublej…
 
 
 
@@ -75,4 +75,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=cli pct=31 -->
+<!-- nav:loading=cli pct=58 -->
