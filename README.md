@@ -98,10 +98,10 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             21 hours ago        systems         6 days ago
+   cli             1 day ago           systems         6 days ago
    cli             1 day ago           raycast         6 days ago
-   atlas           1 day ago           atlas           1 week ago
-   cli             1 day ago           cli             1 week ago
+   atlas           2 days ago          atlas           1 week ago
+   cli             2 days ago          cli             1 week ago
    cli             2 days ago          cli             1 week ago
    cli             3 days ago          projects        1 week ago
    cli             4 days ago          atlas           1 week ago
