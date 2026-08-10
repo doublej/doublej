@@ -339,25 +339,15 @@ def atlas_diagram():
 LOG = pathlib.Path(__file__).parent / "nav-log.json"
 
 
-def ago(seconds):
-    for unit, size in (("second", 60), ("minute", 60), ("hour", 24), ("day", 7)):
-        if seconds < size:
-            n = int(seconds)
-            return "just now" if unit == "second" and n < 10 else f"{n} {unit}{'s' * (n != 1)} ago"
-        seconds /= size
-    return f"{int(seconds)} week{'s' * (int(seconds) != 1)} ago"
-
-
 def activity():
-    """The last 20 page turns. Relative times are frozen at build time, which is the
-    joke: this clock only ticks when somebody clicks something."""
+    """The last 20 page turns, timestamped absolutely so the log still means
+    something no matter how long it sits before the next build reads it."""
     if not LOG.exists():
         return []
     entries = json.loads(LOG.read_text())[:20]
     if not entries:
         return []
-    now = time.time()
-    cells = [(e["page"], ago(max(0, now - e["at"]))) for e in entries]
+    cells = [(e["page"], time.strftime("%Y-%m-%d %H:%M", time.localtime(e["at"]))) for e in entries]
     half = (len(cells) + 1) // 2
     left, right = cells[:half], cells[half:]
 

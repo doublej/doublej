@@ -64,16 +64,16 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             54 seconds ago      cli             4 days ago
-   home            3 minutes ago       cli             5 days ago
-   cli             4 minutes ago       cli             6 days ago
-   simsync         6 hours ago         home            1 week ago
-   cli             6 hours ago         framelink       1 week ago
-   cli             1 day ago           simsync         1 week ago
-   cli             2 days ago          systems         1 week ago
-   cli             3 days ago          raycast         1 week ago
-   atlas           3 days ago          atlas           1 week ago
-   cli             3 days ago          cli             1 week ago
+   cli             2026-08-10 15:17    cli             2026-08-06 10:43
+   home            2026-08-10 15:15    cli             2026-08-05 01:54
+   cli             2026-08-10 15:14    cli             2026-08-04 07:19
+   simsync         2026-08-10 08:50    home            2026-08-02 14:18
+   cli             2026-08-10 08:41    framelink       2026-08-02 14:14
+   cli             2026-08-09 10:53    simsync         2026-08-02 14:11
+   cli             2026-08-07 17:51    systems         2026-08-02 14:10
+   cli             2026-08-07 14:13    raycast         2026-08-02 14:08
+   atlas           2026-08-06 17:23    atlas           2026-08-01 01:16
+   cli             2026-08-06 16:52    cli             2026-08-01 01:09
 
 
 </pre>
