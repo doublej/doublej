@@ -46,9 +46,9 @@
 
                                            turning to home
 
-                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░]   58%
+                 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░]   84%
 
-                                    checking out doublej/doublej…
+                                       committing and pushing…
 
 
 
@@ -86,7 +86,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
-   cli             52 seconds ago      cli             6 days ago
+   cli             54 seconds ago      cli             6 days ago
    simsync         6 hours ago         home            1 week ago
    cli             6 hours ago         framelink       1 week ago
    cli             1 day ago           simsync         1 week ago
@@ -102,4 +102,4 @@
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:loading=home pct=58 -->
+<!-- nav:loading=home pct=84 -->
