@@ -310,7 +310,7 @@ def atlas_diagram():
         return line
 
     lines = [
-        place([(trunk, "~/Documents/development")]),
+        place([(trunk, "~/dev")]),
         place([(trunk, "│")]),
         place([(trunk, "▼")]),
         " " * (trunk - 6) + "┌───────────┐",
