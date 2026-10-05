@@ -5,65 +5,54 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 2 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ cli │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">▸</a>
-───┴──────┘     └───────┴───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 3 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ atlas │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">▸</a>
+───┴──────┴─────┘       └───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  CLI TOOLS  ─────────────────────────────────────────────────────────────────────────────────────────
+  ATLAS  ─────────────────────────────────────────────────────────────────────────────────────────────
 
-  Everything I drive from a terminal. Linked names are public repos;
-  plain names live in private repos and are described here instead.
+             __  __                       _      __            
+      ____ _/ /_/ /___ ______      ____  (_)____/ /_____  _____
+     / __ `/ __/ / __ `/ ___/_____/ __ \/ / ___/ //_/ _ \/ ___/
+    / /_/ / /_/ / /_/ (__  )_____/ /_/ / / /__/ ,< /  __/ /    
+    \__,_/\__/_/\__,_/____/     / .___/_/\___/_/|_|\___/_/     
+                               /_/                              
 
-   agents, terminal & workflow  ······································································
+    find.  pick.  go.
 
-   $ <a href="https://github.com/doublej/ccom">ccom</a>                           Plain English to a shell command, shown before it runs
-   $ <a href="https://github.com/doublej/bpr">bpr</a>                            Beeper CLI for agents: stable ids, JSON when piped, prime
-   $ <a href="https://github.com/doublej/strandkanban">strand</a>                         One command opens a Kanban board over your beads issues
-   $ <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                        Drive beads, agent sessions and Claude tabs from Apple Reminders
-   $ <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                   Install themed spinner verb sets into Claude Code
-   $ cav                            Supervisor TUI coordinating several Claude Code agents
-   $ gh-inbox                       Relevance-filtered GitHub issue and PR triage
 
-   machines & environment  ···········································································
+  One scanner, four front ends. atlas-api walks the development folder and types every project
+  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches
+  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same
+  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-
+  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.
 
-   $ <a href="https://github.com/doublej/onenv">onenv</a>                          1Password-backed env vars with an agent-friendly CLI
-   $ <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn</a>                        NordVPN over WireGuard on macOS, CLI plus TUI
-   $ cdy                            Reverse proxies, static sites and certs on the NAS, over SSH
-   $ qnap-cli                       QNAP NAS services, storage, files, power and users
-   $ hn                             Work on other machines on the LAN as if they were local
-   $ rig                            YAML control plane for a VR sim-racing PC (CLI, API, VR UI)
-   $ swcache                        List and delete stale Chrome service-worker caches
+                             ~/Documents/development
+                                        │
+                                        ▼
+                                  ┌───────────┐
+                                  │ atlas-api │    :47891  ·  scans, types, caches the graph
+                                  └─────┬─────┘    .atlas-cache.json  ·  60s TTL, revalidating
+                                        │
+             ┌──────────────────┬───────┴────────┬─────────────────┐
+             ▼                  ▼                ▼                 ▼
+       atlas-picker       atlas-browser      atlas-cli      atlas-watchdog
+         Rust TUI            Raycast          `atlas`           launchd
 
-   media & files  ····················································································
 
-   $ <a href="https://github.com/doublej/shazam-export">shazam-export</a>                  Export Shazam history to CSV, JSON, GeoJSON, GPX, KML, HTML
-   $ <a href="https://github.com/doublej/ss-image-processor">c4d2pixi</a>                       Batch image-sequence processing for VFX and 3D pipelines
-   $ kfcut                          Keyframe-aware video cutting with no re-encode, plus ASR
-   $ micstream                      Turn phones into wireless mics for the Mac over the LAN
-   $ rotary                         The DJ's operating system: crawl, enrich, query and mix crates
-
-   data & scraping  ··················································································
-
-   $ <a href="https://github.com/doublej/flt">flt</a>                            Flight search, price-by-date comparison and trip export
-   $ <a href="https://github.com/doublej/marktplaats">marktplaats</a>                    Marktplaats scraper library with CLI, MCP server and UI
-   $ <a href="https://github.com/doublej/snail-mail-parser">snail-mail</a>                     Parse physical mail with an LLM and manage it like email
-   $ umami                          Agent-first CLI for Umami analytics
-   $ fin                            Aggregate bank and broker balances and transactions locally
-   $ fb-scrape                      Facebook group scraper with CLI, API and web UI
-
-   debug & devices  ··················································································
-
-   $ <a href="https://github.com/doublej/pixi-devtools-cli">pixi-debug</a>                     Debug PixiJS apps over the Chrome DevTools Protocol
-   $ <a href="https://github.com/doublej/sagemcom-mcp">sagemcom-cli</a>                   Open and close router ports from the shell or an LLM
-   $ soundlink                      BLE test kit for SoundLink Max: scan, GATT, firmware
-   $ simstew                        Voice assistant for VR sim racing
+   <a href="https://github.com/doublej/atlas-api">atlas-api</a>                        Scanner, cache and project graph — SvelteKit on :47891
+   <a href="https://github.com/doublej/atlas-cli">atlas-cli</a>                        The global `atlas`: tree, scan, pick, open, ports, new
+   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI — iocraft and Nucleo, reads the cache directly
+   <a href="https://github.com/doublej/atlas-browser">atlas-browser</a>                    Raycast: browse, filter and act on any project
+   <a href="https://github.com/doublej/atlas-watchdog">atlas-watchdog</a>                   Polls the API and restarts it through launchctl
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   atlas           2026-10-05 12:51    raycast         2026-08-16 17:54
    cli             2026-10-05 12:50    systems         2026-08-16 12:15
    cli             2026-09-14 12:24    cli             2026-08-14 14:07
    cli             2026-08-29 16:04    cli             2026-08-14 14:05
@@ -73,11 +62,10 @@
    projects        2026-08-16 22:49    cli             2026-08-10 13:14
    atlas           2026-08-16 22:43    simsync         2026-08-10 06:50
    framelink       2026-08-16 21:47    cli             2026-08-10 06:41
-   raycast         2026-08-16 17:54    cli             2026-08-09 08:53
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=cli -->
+<!-- nav:page=atlas -->
