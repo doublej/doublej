@@ -5,32 +5,38 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 9 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ forks │  
-───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┴─────────┘       └────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 4 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ framelink │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">▸</a>
+───┴──────┴─────┴───────┘           └─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  FORKS  ─────────────────────────────────────────────────────────────────────────────────────────────
+  FRAMELINK  ─────────────────────────────────────────────────────────────────────────────────────────
 
-  Other people's work that I run, patched to taste. Credit upstream.
+  →  <a href="https://www.framelink.quest/">www.framelink.quest</a>
 
-   <a href="https://github.com/doublej/cui">cui</a>                              Web UI for Claude Code agents, ported to the Agent SDK
-   <a href="https://github.com/doublej/poolsuite-cli">poolsuite-cli</a>                    Poolsuite FM in the terminal
-   <a href="https://github.com/doublej/mcpick">mcpick</a>                           CLI for dynamically managing MCP server configurations
-   <a href="https://github.com/doublej/whatsapp-mcp-ts">whatsapp-mcp-ts</a>                  WhatsApp MCP server (TypeScript / Baileys)
-   <a href="https://github.com/doublej/Gmail-MCP-Server">Gmail-MCP-Server</a>                 Gmail MCP server with auto authentication
-   <a href="https://github.com/doublej/portainer-mcp">portainer-mcp</a>                    Portainer MCP server
-   <a href="https://github.com/doublej/libgen-downloader">libgen-downloader</a>                Search and download ebooks from libgen in a TUI
-   <a href="https://github.com/doublej/npo-dl-webui">npo-dl-webui</a>                     NPO Start download tool with a web UI
-   <a href="https://github.com/doublej/globe">globe</a>                            Interactive ASCII globe generator
-   <a href="https://github.com/doublej/cookiecutter-uv">cookiecutter-uv</a>                  Modern cookiecutter template for Python projects using uv
-   <a href="https://github.com/doublej/comfy-ui">comfy-ui</a>                         ComfyUI node system for running plain Python functions
+  Wire or air. PC VR on your Quest 3.
+
+  Play your PC's VR games on a Quest 3. Go wireless, or plug in over USB-C for a steadier
+  link. One app streams your SteamVR games and your Windows desktop to the headset.
+
+   two transports, one app  ··········································································
+
+  Plug in for the boss fight, unplug to stretch your legs. Your profile, codec and tuning
+  follow you across transports, and the handover takes under two seconds — no re-pairing.
+  A sleeping headset does not end the session either: wake it, no SteamVR restart.
+
+  Every SteamVR title you already own, nothing to re-buy and nothing to port. Your desktop
+  streams in too, so you can change a setting without taking the headset off. AV1 keeps the
+  picture sharp while using less of the link than older codecs.
+
+  Quest 3  ·  SteamVR  ·  OpenXR  ·  closed beta, free while it lasts
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   framelink       2026-10-13 03:07    cli             2026-08-29 16:04
    forks           2026-10-13 02:56    forks           2026-08-17 09:21
    systems         2026-10-13 02:30    cli             2026-08-17 04:57
    projects        2026-10-13 02:23    simsync         2026-08-16 23:45
@@ -40,11 +46,10 @@
    atlas           2026-10-05 12:51    raycast         2026-08-16 17:54
    cli             2026-10-05 12:50    systems         2026-08-16 12:15
    cli             2026-09-14 12:24    cli             2026-08-14 14:07
-   cli             2026-08-29 16:04    cli             2026-08-14 14:05
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=forks -->
+<!-- nav:page=framelink -->
