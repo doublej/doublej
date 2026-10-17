@@ -5,37 +5,38 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 8 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ raycast │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">▸</a>
-───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┘         └───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 4 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ framelink │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">▸</a>
+───┴──────┴─────┴───────┘           └─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  RAYCAST  ───────────────────────────────────────────────────────────────────────────────────────────
+  FRAMELINK  ─────────────────────────────────────────────────────────────────────────────────────────
 
-  Extensions I use every day. The launcher is half my interface.
+  →  <a href="https://www.framelink.quest/">www.framelink.quest</a>
 
-   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View active TCP ports, kill processes, restart dev servers
-   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Manage the NAS Caddyfile: open, generate passwords, apply
-   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress selected text via LLM or heuristic backends
-   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
-   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
-   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
-   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
-   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
-   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
-   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
-   Keyboard Backlight               Control MacBook keyboard backlight brightness
-   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
-   <a href="https://github.com/doublej/raycast-ext-text-tools">Text Tools</a>                       Clean, unwrap and wrap clipboard text
-   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
-   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
-   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
+  Wire or air. PC VR on your Quest 3.
+
+  Play your PC's VR games on a Quest 3. Go wireless, or plug in over USB-C for a steadier
+  link. One app streams your SteamVR games and your Windows desktop to the headset.
+
+   two transports, one app  ··········································································
+
+  Plug in for the boss fight, unplug to stretch your legs. Your profile, codec and tuning
+  follow you across transports, and the handover takes under two seconds — no re-pairing.
+  A sleeping headset does not end the session either: wake it, no SteamVR restart.
+
+  Every SteamVR title you already own, nothing to re-buy and nothing to port. Your desktop
+  streams in too, so you can change a setting without taking the headset off. AV1 keeps the
+  picture sharp while using less of the link than older codecs.
+
+  Quest 3  ·  SteamVR  ·  OpenXR  ·  closed beta, free while it lasts
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   framelink       2026-10-17 06:51    cli             2026-10-13 01:25
    raycast         2026-10-17 06:27    atlas           2026-10-05 12:51
    atlas           2026-10-14 17:19    cli             2026-10-05 12:50
    raycast         2026-10-13 03:15    cli             2026-09-14 12:24
@@ -45,11 +46,10 @@
    projects        2026-10-13 02:23    simsync         2026-08-16 23:45
    simsync         2026-10-13 02:12    projects        2026-08-16 22:49
    atlas           2026-10-13 01:58    atlas           2026-08-16 22:43
-   cli             2026-10-13 01:25    framelink       2026-08-16 21:47
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=raycast -->
+<!-- nav:page=framelink -->
