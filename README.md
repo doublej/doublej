@@ -5,37 +5,66 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 8 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ raycast │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">▸</a>
-───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┘         └───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 2 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ cli │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">▸</a>
+───┴──────┘     └───────┴───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  RAYCAST  ───────────────────────────────────────────────────────────────────────────────────────────
+  CLI TOOLS  ─────────────────────────────────────────────────────────────────────────────────────────
 
-  Extensions I use every day. The launcher is half my interface.
+  Everything I drive from a terminal. Linked names are public repos;
+  plain names live in private repos and are described here instead.
 
-   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View active TCP ports, kill processes, restart dev servers
-   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Manage the NAS Caddyfile: open, generate passwords, apply
-   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress selected text via LLM or heuristic backends
-   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
-   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
-   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
-   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
-   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
-   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
-   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
-   Keyboard Backlight               Control MacBook keyboard backlight brightness
-   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
-   <a href="https://github.com/doublej/raycast-ext-text-tools">Text Tools</a>                       Clean, unwrap and wrap clipboard text
-   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
-   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
-   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
+   agents, terminal & workflow  ······································································
+
+   $ <a href="https://github.com/doublej/ccom">ccom</a>                           Plain English to a shell command, shown before it runs
+   $ <a href="https://github.com/doublej/bpr">bpr</a>                            Beeper CLI for agents: stable ids, JSON when piped, prime
+   $ <a href="https://github.com/doublej/strandkanban">strand</a>                         One command opens a Kanban board over your beads issues
+   $ <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                        Drive beads, agent sessions and Claude tabs from Apple Reminders
+   $ <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                   Install themed spinner verb sets into Claude Code
+   $ cav                            Supervisor TUI coordinating several Claude Code agents
+   $ gh-inbox                       Relevance-filtered GitHub issue and PR triage
+
+   machines & environment  ···········································································
+
+   $ <a href="https://github.com/doublej/onenv">onenv</a>                          1Password-backed env vars with an agent-friendly CLI
+   $ <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn</a>                        NordVPN over WireGuard on macOS, CLI plus TUI
+   $ cdy                            Reverse proxies, static sites and certs on the NAS, over SSH
+   $ qnap-cli                       QNAP NAS services, storage, files, power and users
+   $ hn                             Work on other machines on the LAN as if they were local
+   $ rig                            YAML control plane for a VR sim-racing PC (CLI, API, VR UI)
+   $ swcache                        List and delete stale Chrome service-worker caches
+
+   media & files  ····················································································
+
+   $ <a href="https://github.com/doublej/shazam-export">shazam-export</a>                  Export Shazam history to CSV, JSON, GeoJSON, GPX, KML, HTML
+   $ <a href="https://github.com/doublej/ss-image-processor">c4d2pixi</a>                       Batch image-sequence processing for VFX and 3D pipelines
+   $ kfcut                          Keyframe-aware video cutting with no re-encode, plus ASR
+   $ micstream                      Turn phones into wireless mics for the Mac over the LAN
+   $ rotary                         The DJ's operating system: crawl, enrich, query and mix crates
+
+   data & scraping  ··················································································
+
+   $ <a href="https://github.com/doublej/flt">flt</a>                            Flight search, price-by-date comparison and trip export
+   $ <a href="https://github.com/doublej/marktplaats">marktplaats</a>                    Marktplaats scraper library with CLI, MCP server and UI
+   $ <a href="https://github.com/doublej/snail-mail-parser">snail-mail</a>                     Parse physical mail with an LLM and manage it like email
+   $ umami                          Agent-first CLI for Umami analytics
+   $ fin                            Aggregate bank and broker balances and transactions locally
+   $ fb-scrape                      Facebook group scraper with CLI, API and web UI
+
+   debug & devices  ··················································································
+
+   $ <a href="https://github.com/doublej/pixi-devtools-cli">pixi-debug</a>                     Debug PixiJS apps over the Chrome DevTools Protocol
+   $ <a href="https://github.com/doublej/sagemcom-mcp">sagemcom-cli</a>                   Open and close router ports from the shell or an LLM
+   $ soundlink                      BLE test kit for SoundLink Max: scan, GATT, firmware
+   $ simstew                        Voice assistant for VR sim racing
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   cli             2026-10-19 11:06    framelink       2026-10-13 03:07
    raycast         2026-10-19 07:33    forks           2026-10-13 02:56
    cli             2026-10-17 07:21    systems         2026-10-13 02:30
    atlas           2026-10-17 07:20    projects        2026-10-13 02:23
@@ -45,11 +74,10 @@
    raycast         2026-10-17 06:27    atlas           2026-10-05 12:51
    atlas           2026-10-14 17:19    cli             2026-10-05 12:50
    raycast         2026-10-13 03:15    cli             2026-09-14 12:24
-   framelink       2026-10-13 03:07    cli             2026-08-29 16:04
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=raycast -->
+<!-- nav:page=cli -->
