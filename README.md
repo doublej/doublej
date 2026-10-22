@@ -5,35 +5,38 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 5 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ simsync │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">▸</a>
-───┴──────┴─────┴───────┴───────────┘         └─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 8 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ raycast │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">▸</a>
+───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┘         └───────┴────────────────
 
 
 
-  SIMSYNC  ───────────────────────────────────────────────────────────────────────────────────────────
+  RAYCAST  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  →  <a href="https://www.simsync.app/">www.simsync.app</a>
+  Extensions I use every day. The launcher is half my interface.
 
-  Set up your wheel once. Race anywhere.
-
-  Every sim speaks a different language. Your muscle memory doesn't.
-
-   import once, export everywhere  ···································································
-
-  Point SimSync at your best config and it learns your bindings, your layers, your logic.
-  It translates them into one universal profile, then writes that profile back out to every
-  sim you own. Button 7 is pit limiter. In iRacing. In ACC. In everything.
-
-  The alternative: 847 bindable actions in one sim's control menu, five names for “pit
-  limiter” across the sims on your drive, and two hours gone before you turn a single lap.
-
-  Assetto Corsa  ·  Competizione  ·  Evo  ·  iRacing  ·  F1 24  ·  ETS2  ·  BeamNG  ·  WRC
+   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View active TCP ports, kill processes, restart dev servers
+   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Manage the NAS Caddyfile: open, generate passwords, apply
+   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress selected text via LLM or heuristic backends
+   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
+   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
+   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
+   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
+   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
+   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
+   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
+   Keyboard Backlight               Control MacBook keyboard backlight brightness
+   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
+   <a href="https://github.com/doublej/raycast-ext-text-tools">Text Tools</a>                       Clean, unwrap and wrap clipboard text
+   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
+   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
+   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   raycast         2026-10-22 20:04    atlas           2026-10-17 07:20
    simsync         2026-10-22 19:38    systems         2026-10-17 07:17
    forks           2026-10-22 18:22    projects        2026-10-17 06:55
    framelink       2026-10-22 16:21    framelink       2026-10-17 06:51
@@ -43,11 +46,10 @@
    cli             2026-10-19 11:06    framelink       2026-10-13 03:07
    raycast         2026-10-19 07:33    forks           2026-10-13 02:56
    cli             2026-10-17 07:21    systems         2026-10-13 02:30
-   atlas           2026-10-17 07:20    projects        2026-10-13 02:23
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=simsync -->
+<!-- nav:page=raycast -->
