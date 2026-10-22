@@ -5,32 +5,36 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 9 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ forks │  
-───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┴─────────┘       └────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 5 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ simsync │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">▸</a>
+───┴──────┴─────┴───────┴───────────┘         └─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  FORKS  ─────────────────────────────────────────────────────────────────────────────────────────────
+  SIMSYNC  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  Other people's work that I run, patched to taste. Credit upstream.
+  →  <a href="https://www.simsync.app/">www.simsync.app</a>
 
-   <a href="https://github.com/doublej/cui">cui</a>                              Web UI for Claude Code agents, ported to the Agent SDK
-   <a href="https://github.com/doublej/poolsuite-cli">poolsuite-cli</a>                    Poolsuite FM in the terminal
-   <a href="https://github.com/doublej/mcpick">mcpick</a>                           CLI for dynamically managing MCP server configurations
-   <a href="https://github.com/doublej/whatsapp-mcp-ts">whatsapp-mcp-ts</a>                  WhatsApp MCP server (TypeScript / Baileys)
-   <a href="https://github.com/doublej/Gmail-MCP-Server">Gmail-MCP-Server</a>                 Gmail MCP server with auto authentication
-   <a href="https://github.com/doublej/portainer-mcp">portainer-mcp</a>                    Portainer MCP server
-   <a href="https://github.com/doublej/libgen-downloader">libgen-downloader</a>                Search and download ebooks from libgen in a TUI
-   <a href="https://github.com/doublej/npo-dl-webui">npo-dl-webui</a>                     NPO Start download tool with a web UI
-   <a href="https://github.com/doublej/globe">globe</a>                            Interactive ASCII globe generator
-   <a href="https://github.com/doublej/cookiecutter-uv">cookiecutter-uv</a>                  Modern cookiecutter template for Python projects using uv
-   <a href="https://github.com/doublej/comfy-ui">comfy-ui</a>                         ComfyUI node system for running plain Python functions
+  Set up your wheel once. Race anywhere.
+
+  Every sim speaks a different language. Your muscle memory doesn't.
+
+   import once, export everywhere  ···································································
+
+  Point SimSync at your best config and it learns your bindings, your layers, your logic.
+  It translates them into one universal profile, then writes that profile back out to every
+  sim you own. Button 7 is pit limiter. In iRacing. In ACC. In everything.
+
+  The alternative: 847 bindable actions in one sim's control menu, five names for “pit
+  limiter” across the sims on your drive, and two hours gone before you turn a single lap.
+
+  Assetto Corsa  ·  Competizione  ·  Evo  ·  iRacing  ·  F1 24  ·  ETS2  ·  BeamNG  ·  WRC
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   simsync         2026-10-22 19:38    systems         2026-10-17 07:17
    forks           2026-10-22 18:22    projects        2026-10-17 06:55
    framelink       2026-10-22 16:21    framelink       2026-10-17 06:51
    projects        2026-10-20 23:14    raycast         2026-10-17 06:27
@@ -40,11 +44,10 @@
    raycast         2026-10-19 07:33    forks           2026-10-13 02:56
    cli             2026-10-17 07:21    systems         2026-10-13 02:30
    atlas           2026-10-17 07:20    projects        2026-10-13 02:23
-   systems         2026-10-17 07:17    simsync         2026-10-13 02:12
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=forks -->
+<!-- nav:page=simsync -->
