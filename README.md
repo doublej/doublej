@@ -5,37 +5,40 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 4 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ framelink │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">▸</a>
-───┴──────┴─────┴───────┘           └─────────┴─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 7 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ projects │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">▸</a>
+───┴──────┴─────┴───────┴───────────┴─────────┴─────────┘          └─────────┴───────┴────────────────
 
 
 
-  FRAMELINK  ─────────────────────────────────────────────────────────────────────────────────────────
+  PROJECTS  ──────────────────────────────────────────────────────────────────────────────────────────
 
-  →  <a href="https://www.framelink.quest/">www.framelink.quest</a>
-
-  Wire or air. PC VR on your Quest 3.
-
-  Play your PC's VR games on a Quest 3. Go wireless, or plug in over USB-C for a steadier
-  link. One app streams your SteamVR games and your Windows desktop to the headset.
-
-   two transports, one app  ··········································································
-
-  Plug in for the boss fight, unplug to stretch your legs. Your profile, codec and tuning
-  follow you across transports, and the handover takes under two seconds — no re-pairing.
-  A sleeping headset does not end the session either: wake it, no SteamVR restart.
-
-  Every SteamVR title you already own, nothing to re-buy and nothing to port. Your desktop
-  streams in too, so you can change a setting without taking the headset off. AV1 keeps the
-  picture sharp while using less of the link than older codecs.
-
-  Quest 3  ·  SteamVR  ·  OpenXR  ·  closed beta, free while it lasts
+   doublej-productivity-skills      Claude Code skills for dev, design, DevOps and creative work
+   <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                 Native dialogs, forms and slider panes for MCP agents
+   <a href="https://github.com/doublej/ConsultUserSketch">ConsultUserSketch</a>                Grid layout sketcher behind consult-user-mcp propose_layout
+   <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                    Keyboard-first Gantt editor with Mermaid import and export
+   <a href="https://github.com/doublej/kanban-claude">kanban-claude</a>                    WebSocket server wrapping the Claude Agent SDK
+   <a href="https://github.com/doublej/prompt-analysis">prompt-analysis</a>                  Distil project briefings out of Claude Code session history
+   <a href="https://github.com/doublej/claude-history-browser">claude-history-browser</a>           Web UI for browsing and analysing Claude Code history
+   <a href="https://github.com/doublej/cookiecutter-templates">cookiecutter-templates</a>           Project templates by language and framework, agent-ready
+   <a href="https://github.com/doublej/browser-router">browser-router</a>                   Menu bar app routing URLs to browsers by rule
+   <a href="https://github.com/doublej/Scoot">Scoot</a>                            Disk usage analyser with live scanning and a 3D depth view
+   <a href="https://github.com/doublej/pii-filter-proxy">pii-filter-proxy</a>                 Proxy between app and LLM that swaps out PII
+   <a href="https://github.com/doublej/web-haptics-polyfill">web-haptics-polyfill</a>             Cross-platform haptic feedback for the mobile web
+   <a href="https://github.com/doublej/orphan-obliterator">orphan-obliterator</a>               Prevent orphaned words on the last line of HTML elements
+   <a href="https://github.com/doublej/doublej-project-linking">doublej-project-linking</a>          Corner widget with path-based profiles and Short.io shortening
+   <a href="https://github.com/doublej/pixi-adaptive-glass">pixi-adaptive-glass</a>              Refraction and chromatic aberration glass plugin for PixiJS
+   <a href="https://github.com/doublej/pixi-paper">pixi-paper</a>                       Real-time comparison of HTML-to-canvas screenshot libraries
+   <a href="https://github.com/doublej/batch-qr-generator">batch-qr-generator</a>               Data-driven QR code generator built with Svelte 5
+   <a href="https://github.com/doublej/laptop-light">laptop-light</a>                     Turn a laptop screen into warm ambient light, phone remote
+   <a href="https://github.com/doublej/siargao-market">siargao-market</a>                   Marketplace site for listings scraped from Siargao FB groups
+   <a href="https://github.com/doublej/pimpelmees-wallgen-psd-tool">pimpelmees-wallgen-psd-tool</a>      macOS app: validate PSD specs, convert to print-ready TIFF
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   projects        2026-10-24 12:58    forks           2026-10-23 18:24
    framelink       2026-10-24 12:53    systems         2026-10-23 13:30
    raycast         2026-10-24 12:41    systems         2026-10-23 09:30
    raycast         2026-10-24 11:19    cli             2026-10-23 09:12
@@ -45,11 +48,10 @@
    projects        2026-10-23 19:17    cli             2026-10-22 21:23
    raycast         2026-10-23 19:14    projects        2026-10-22 20:06
    simsync         2026-10-23 19:11    raycast         2026-10-22 20:04
-   forks           2026-10-23 18:24    simsync         2026-10-22 19:38
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=framelink -->
+<!-- nav:page=projects -->
