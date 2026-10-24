@@ -5,32 +5,32 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 9 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ forks │  
-───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┴─────────┘       └────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 6 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ systems │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">▸</a>
+───┴──────┴─────┴───────┴───────────┴─────────┘         └──────────┴─────────┴───────┴────────────────
 
 
 
-  FORKS  ─────────────────────────────────────────────────────────────────────────────────────────────
+  SYSTEMS  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  Other people's work that I run, patched to taste. Credit upstream.
+  The bigger multi-repo work — VR streaming, sim racing, print pipelines, admin platforms.
+  All private, so described rather than linked.
 
-   <a href="https://github.com/doublej/cui">cui</a>                              Web UI for Claude Code agents, ported to the Agent SDK
-   <a href="https://github.com/doublej/poolsuite-cli">poolsuite-cli</a>                    Poolsuite FM in the terminal
-   <a href="https://github.com/doublej/mcpick">mcpick</a>                           CLI for dynamically managing MCP server configurations
-   <a href="https://github.com/doublej/whatsapp-mcp-ts">whatsapp-mcp-ts</a>                  WhatsApp MCP server (TypeScript / Baileys)
-   <a href="https://github.com/doublej/Gmail-MCP-Server">Gmail-MCP-Server</a>                 Gmail MCP server with auto authentication
-   <a href="https://github.com/doublej/portainer-mcp">portainer-mcp</a>                    Portainer MCP server
-   <a href="https://github.com/doublej/libgen-downloader">libgen-downloader</a>                Search and download ebooks from libgen in a TUI
-   <a href="https://github.com/doublej/npo-dl-webui">npo-dl-webui</a>                     NPO Start download tool with a web UI
-   <a href="https://github.com/doublej/globe">globe</a>                            Interactive ASCII globe generator
-   <a href="https://github.com/doublej/cookiecutter-uv">cookiecutter-uv</a>                  Modern cookiecutter template for Python projects using uv
-   <a href="https://github.com/doublej/comfy-ui">comfy-ui</a>                         ComfyUI node system for running plain Python functions
+   frameclarity                     Per-game Quest optimizer over ADB: Rust core, Tauri, APK
+   quest-link-bridge                Meta Quest Link (XRSP) protocol RE, bridged into SteamVR
+   acc-native-server                The ACC dedicated server, reverse-engineered and rebuilt in Rust
+   beamng-mcp                       Drive, tune and sense BeamNG.drive from any MCP client
+   wallgen                          Wallpaper print pipeline: wall segmentation to press-ready art
+   schakelwerk                      Field admin: a deterministic hour engine on an append-only log
+   capture-resistance               Screen-capture detection, deterrence and attribution in-browser
+   geluid                           Multi-device mic ingest with a live waveform viewer
+   dia-tts-api                      Nari Labs Dia 1.6B wrapped as a LAN text-to-speech service
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   systems         2026-10-24 09:35    atlas           2026-10-23 06:32
    forks           2026-10-24 09:18    cli             2026-10-23 02:24
    cli             2026-10-23 20:29    forks           2026-10-23 01:50
    projects        2026-10-23 19:17    cli             2026-10-22 21:23
@@ -40,11 +40,10 @@
    systems         2026-10-23 13:30    forks           2026-10-22 18:22
    systems         2026-10-23 09:30    framelink       2026-10-22 16:21
    cli             2026-10-23 09:12    projects        2026-10-20 23:14
-   atlas           2026-10-23 06:32    forks           2026-10-20 17:27
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=forks -->
+<!-- nav:page=systems -->
