@@ -5,37 +5,40 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 8 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ raycast │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">▸</a>
-───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┘         └───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 7 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ projects │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">▸</a>
+───┴──────┴─────┴───────┴───────────┴─────────┴─────────┘          └─────────┴───────┴────────────────
 
 
 
-  RAYCAST  ───────────────────────────────────────────────────────────────────────────────────────────
+  PROJECTS  ──────────────────────────────────────────────────────────────────────────────────────────
 
-  Extensions I use every day. The launcher is half my interface.
-
-   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View active TCP ports, kill processes, restart dev servers
-   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Manage the NAS Caddyfile: open, generate passwords, apply
-   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress selected text via LLM or heuristic backends
-   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
-   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
-   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
-   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
-   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
-   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
-   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
-   Keyboard Backlight               Control MacBook keyboard backlight brightness
-   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
-   <a href="https://github.com/doublej/raycast-ext-text-tools">Text Tools</a>                       Clean, unwrap and wrap clipboard text
-   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
-   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
-   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
+   doublej-productivity-skills      Claude Code skills for dev, design, DevOps and creative work
+   <a href="https://github.com/doublej/consult-user-mcp">consult-user-mcp</a>                 Native dialogs, forms and slider panes for MCP agents
+   <a href="https://github.com/doublej/ConsultUserSketch">ConsultUserSketch</a>                Grid layout sketcher behind consult-user-mcp propose_layout
+   <a href="https://github.com/doublej/mermaid-gantt">mermaid-gantt</a>                    Keyboard-first Gantt editor with Mermaid import and export
+   <a href="https://github.com/doublej/kanban-claude">kanban-claude</a>                    WebSocket server wrapping the Claude Agent SDK
+   <a href="https://github.com/doublej/prompt-analysis">prompt-analysis</a>                  Distil project briefings out of Claude Code session history
+   <a href="https://github.com/doublej/claude-history-browser">claude-history-browser</a>           Web UI for browsing and analysing Claude Code history
+   <a href="https://github.com/doublej/cookiecutter-templates">cookiecutter-templates</a>           Project templates by language and framework, agent-ready
+   <a href="https://github.com/doublej/browser-router">browser-router</a>                   Menu bar app routing URLs to browsers by rule
+   <a href="https://github.com/doublej/Scoot">Scoot</a>                            Disk usage analyser with live scanning and a 3D depth view
+   <a href="https://github.com/doublej/pii-filter-proxy">pii-filter-proxy</a>                 Proxy between app and LLM that swaps out PII
+   <a href="https://github.com/doublej/web-haptics-polyfill">web-haptics-polyfill</a>             Cross-platform haptic feedback for the mobile web
+   <a href="https://github.com/doublej/orphan-obliterator">orphan-obliterator</a>               Prevent orphaned words on the last line of HTML elements
+   <a href="https://github.com/doublej/doublej-project-linking">doublej-project-linking</a>          Corner widget with path-based profiles and Short.io shortening
+   <a href="https://github.com/doublej/pixi-adaptive-glass">pixi-adaptive-glass</a>              Refraction and chromatic aberration glass plugin for PixiJS
+   <a href="https://github.com/doublej/pixi-paper">pixi-paper</a>                       Real-time comparison of HTML-to-canvas screenshot libraries
+   <a href="https://github.com/doublej/batch-qr-generator">batch-qr-generator</a>               Data-driven QR code generator built with Svelte 5
+   <a href="https://github.com/doublej/laptop-light">laptop-light</a>                     Turn a laptop screen into warm ambient light, phone remote
+   <a href="https://github.com/doublej/siargao-market">siargao-market</a>                   Marketplace site for listings scraped from Siargao FB groups
+   <a href="https://github.com/doublej/pimpelmees-wallgen-psd-tool">pimpelmees-wallgen-psd-tool</a>      macOS app: validate PSD specs, convert to print-ready TIFF
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   projects        2026-10-25 19:17    simsync         2026-10-24 19:17
    raycast         2026-10-25 19:13    forks           2026-10-24 18:24
    simsync         2026-10-25 19:10    systems         2026-10-24 13:08
    forks           2026-10-25 18:24    atlas           2026-10-24 13:06
@@ -45,11 +48,10 @@
    cli             2026-10-24 20:28    raycast         2026-10-24 12:41
    projects        2026-10-24 19:27    raycast         2026-10-24 11:19
    raycast         2026-10-24 19:22    systems         2026-10-24 09:35
-   simsync         2026-10-24 19:17    forks           2026-10-24 09:18
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=raycast -->
+<!-- nav:page=projects -->
