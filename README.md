@@ -5,31 +5,36 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 6 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ systems │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">▸</a>
-───┴──────┴─────┴───────┴───────────┴─────────┘         └──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 5 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ simsync │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">▸</a>
+───┴──────┴─────┴───────┴───────────┘         └─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  SYSTEMS  ───────────────────────────────────────────────────────────────────────────────────────────
+  SIMSYNC  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  The bigger multi-repo work — VR streaming, sim racing, print pipelines, admin platforms.
-  All private, so described rather than linked.
+  →  <a href="https://www.simsync.app/">www.simsync.app</a>
 
-   frameclarity                     Per-game Quest optimizer over ADB: Rust core, Tauri, APK
-   quest-link-bridge                Meta Quest Link (XRSP) protocol RE, bridged into SteamVR
-   acc-native-server                The ACC dedicated server, reverse-engineered and rebuilt in Rust
-   beamng-mcp                       Drive, tune and sense BeamNG.drive from any MCP client
-   wallgen                          Wallpaper print pipeline: wall segmentation to press-ready art
-   schakelwerk                      Field admin: a deterministic hour engine on an append-only log
-   capture-resistance               Screen-capture detection, deterrence and attribution in-browser
-   geluid                           Multi-device mic ingest with a live waveform viewer
-   dia-tts-api                      Nari Labs Dia 1.6B wrapped as a LAN text-to-speech service
+  Set up your wheel once. Race anywhere.
+
+  Every sim speaks a different language. Your muscle memory doesn't.
+
+   import once, export everywhere  ···································································
+
+  Point SimSync at your best config and it learns your bindings, your layers, your logic.
+  It translates them into one universal profile, then writes that profile back out to every
+  sim you own. Button 7 is pit limiter. In iRacing. In ACC. In everything.
+
+  The alternative: 847 bindable actions in one sim's control menu, five names for “pit
+  limiter” across the sims on your drive, and two hours gone before you turn a single lap.
+
+  Assetto Corsa  ·  Competizione  ·  Evo  ·  iRacing  ·  F1 24  ·  ETS2  ·  BeamNG  ·  WRC
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   simsync         2026-10-26 10:06    projects        2026-10-25 00:44
    systems         2026-10-26 09:01    cli             2026-10-24 20:28
    atlas           2026-10-26 05:12    projects        2026-10-24 19:27
    cli             2026-10-25 20:25    raycast         2026-10-24 19:22
@@ -39,11 +44,10 @@
    forks           2026-10-25 18:24    atlas           2026-10-24 13:06
    systems         2026-10-25 08:37    cli             2026-10-24 13:05
    atlas           2026-10-25 05:07    projects        2026-10-24 12:58
-   projects        2026-10-25 00:44    framelink       2026-10-24 12:53
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=systems -->
+<!-- nav:page=simsync -->
