@@ -98,6 +98,7 @@
 
   The last 20 turns, as of the build that produced this page.
 
+   home            2026-11-01 04:55    projects        2026-10-25 19:17
    systems         2026-10-31 15:23    raycast         2026-10-25 19:13
    raycast         2026-10-30 12:59    simsync         2026-10-25 19:10
    cli             2026-10-27 22:17    forks           2026-10-25 18:24
@@ -107,7 +108,6 @@
    systems         2026-10-26 09:01    cli             2026-10-24 20:28
    atlas           2026-10-26 05:12    projects        2026-10-24 19:27
    cli             2026-10-25 20:25    raycast         2026-10-24 19:22
-   projects        2026-10-25 19:17    simsync         2026-10-24 19:17
 
 
 </pre>
