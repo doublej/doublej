@@ -5,65 +5,38 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 2 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ cli │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">▸</a>
-───┴──────┘     └───────┴───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 4 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ framelink │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">▸</a>
+───┴──────┴─────┴───────┘           └─────────┴─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  CLI TOOLS  ─────────────────────────────────────────────────────────────────────────────────────────
+  FRAMELINK  ─────────────────────────────────────────────────────────────────────────────────────────
 
-  Everything I drive from a terminal. Linked names are public repos;
-  plain names live in private repos and are described here instead.
+  →  <a href="https://www.framelink.quest/">www.framelink.quest</a>
 
-   agents, terminal & workflow  ······································································
+  Wire or air. PC VR on your Quest 3.
 
-   $ <a href="https://github.com/doublej/ccom">ccom</a>                           Plain English to a shell command, shown before it runs
-   $ <a href="https://github.com/doublej/bpr">bpr</a>                            Beeper CLI for agents: stable ids, JSON when piped, prime
-   $ <a href="https://github.com/doublej/strandkanban">strand</a>                         One command opens a Kanban board over your beads issues
-   $ <a href="https://github.com/doublej/reminders-beads-bridge">rbridge</a>                        Drive beads, agent sessions and Claude tabs from Apple Reminders
-   $ <a href="https://github.com/doublej/claude-verbs-cli">claude-verbs</a>                   Install themed spinner verb sets into Claude Code
-   $ cav                            Supervisor TUI coordinating several Claude Code agents
-   $ gh-inbox                       Relevance-filtered GitHub issue and PR triage
+  Play your PC's VR games on a Quest 3. Go wireless, or plug in over USB-C for a steadier
+  link. One app streams your SteamVR games and your Windows desktop to the headset.
 
-   machines & environment  ···········································································
+   two transports, one app  ··········································································
 
-   $ <a href="https://github.com/doublej/onenv">onenv</a>                          1Password-backed env vars with an agent-friendly CLI
-   $ <a href="https://github.com/doublej/nordvpn-cli-macos">nordvpn</a>                        NordVPN over WireGuard on macOS, CLI plus TUI
-   $ cdy                            Reverse proxies, static sites and certs on the NAS, over SSH
-   $ qnap-cli                       QNAP NAS services, storage, files, power and users
-   $ hn                             Work on other machines on the LAN as if they were local
-   $ rig                            YAML control plane for a VR sim-racing PC (CLI, API, VR UI)
-   $ swcache                        List and delete stale Chrome service-worker caches
+  Plug in for the boss fight, unplug to stretch your legs. Your profile, codec and tuning
+  follow you across transports, and the handover takes under two seconds — no re-pairing.
+  A sleeping headset does not end the session either: wake it, no SteamVR restart.
 
-   media & files  ····················································································
+  Every SteamVR title you already own, nothing to re-buy and nothing to port. Your desktop
+  streams in too, so you can change a setting without taking the headset off. AV1 keeps the
+  picture sharp while using less of the link than older codecs.
 
-   $ <a href="https://github.com/doublej/shazam-export">shazam-export</a>                  Export Shazam history to CSV, JSON, GeoJSON, GPX, KML, HTML
-   $ <a href="https://github.com/doublej/ss-image-processor">c4d2pixi</a>                       Batch image-sequence processing for VFX and 3D pipelines
-   $ kfcut                          Keyframe-aware video cutting with no re-encode, plus ASR
-   $ micstream                      Turn phones into wireless mics for the Mac over the LAN
-   $ rotary                         The DJ's operating system: crawl, enrich, query and mix crates
-
-   data & scraping  ··················································································
-
-   $ <a href="https://github.com/doublej/flt">flt</a>                            Flight search, price-by-date comparison and trip export
-   $ <a href="https://github.com/doublej/marktplaats">marktplaats</a>                    Marktplaats scraper library with CLI, MCP server and UI
-   $ <a href="https://github.com/doublej/snail-mail-parser">snail-mail</a>                     Parse physical mail with an LLM and manage it like email
-   $ umami                          Agent-first CLI for Umami analytics
-   $ fin                            Aggregate bank and broker balances and transactions locally
-   $ fb-scrape                      Facebook group scraper with CLI, API and web UI
-
-   debug & devices  ··················································································
-
-   $ <a href="https://github.com/doublej/pixi-devtools-cli">pixi-debug</a>                     Debug PixiJS apps over the Chrome DevTools Protocol
-   $ <a href="https://github.com/doublej/sagemcom-mcp">sagemcom-cli</a>                   Open and close router ports from the shell or an LLM
-   $ soundlink                      BLE test kit for SoundLink Max: scan, GATT, firmware
-   $ simstew                        Voice assistant for VR sim racing
+  Quest 3  ·  SteamVR  ·  OpenXR  ·  closed beta, free while it lasts
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   framelink       2026-11-05 01:59    forks           2026-11-03 15:59
    cli             2026-11-05 01:59    home            2026-11-01 04:55
    projects        2026-11-03 23:51    systems         2026-10-31 15:23
    projects        2026-11-03 18:58    raycast         2026-10-30 12:59
@@ -73,11 +46,10 @@
    cli             2026-11-03 17:35    simsync         2026-10-26 10:06
    simsync         2026-11-03 16:53    systems         2026-10-26 09:01
    raycast         2026-11-03 16:39    atlas           2026-10-26 05:12
-   forks           2026-11-03 15:59    cli             2026-10-25 20:25
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=cli -->
+<!-- nav:page=framelink -->
