@@ -5,37 +5,36 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 4 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ framelink │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">▸</a>
-───┴──────┴─────┴───────┘           └─────────┴─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 5 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ simsync │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">▸</a>
+───┴──────┴─────┴───────┴───────────┘         └─────────┴──────────┴─────────┴───────┴────────────────
 
 
 
-  FRAMELINK  ─────────────────────────────────────────────────────────────────────────────────────────
+  SIMSYNC  ───────────────────────────────────────────────────────────────────────────────────────────
 
-  →  <a href="https://www.framelink.quest/">www.framelink.quest</a>
+  →  <a href="https://www.simsync.app/">www.simsync.app</a>
 
-  Wire or air. PC VR on your Quest 3.
+  Set up your wheel once. Race anywhere.
 
-  Play your PC's VR games on a Quest 3. Go wireless, or plug in over USB-C for a steadier
-  link. One app streams your SteamVR games and your Windows desktop to the headset.
+  Every sim speaks a different language. Your muscle memory doesn't.
 
-   two transports, one app  ··········································································
+   import once, export everywhere  ···································································
 
-  Plug in for the boss fight, unplug to stretch your legs. Your profile, codec and tuning
-  follow you across transports, and the handover takes under two seconds — no re-pairing.
-  A sleeping headset does not end the session either: wake it, no SteamVR restart.
+  Point SimSync at your best config and it learns your bindings, your layers, your logic.
+  It translates them into one universal profile, then writes that profile back out to every
+  sim you own. Button 7 is pit limiter. In iRacing. In ACC. In everything.
 
-  Every SteamVR title you already own, nothing to re-buy and nothing to port. Your desktop
-  streams in too, so you can change a setting without taking the headset off. AV1 keeps the
-  picture sharp while using less of the link than older codecs.
+  The alternative: 847 bindable actions in one sim's control menu, five names for “pit
+  limiter” across the sims on your drive, and two hours gone before you turn a single lap.
 
-  Quest 3  ·  SteamVR  ·  OpenXR  ·  closed beta, free while it lasts
+  Assetto Corsa  ·  Competizione  ·  Evo  ·  iRacing  ·  F1 24  ·  ETS2  ·  BeamNG  ·  WRC
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   simsync         2026-11-22 07:48    projects        2026-11-17 11:28
    framelink       2026-11-22 06:47    framelink       2026-11-17 10:47
    projects        2026-11-22 06:38    atlas           2026-11-17 10:01
    cli             2026-11-22 05:54    framelink       2026-11-17 08:50
@@ -45,11 +44,10 @@
    forks           2026-11-17 16:08    systems         2026-11-06 02:19
    systems         2026-11-17 14:46    framelink       2026-11-05 01:59
    simsync         2026-11-17 13:05    cli             2026-11-05 01:59
-   projects        2026-11-17 11:28    projects        2026-11-03 23:51
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=framelink -->
+<!-- nav:page=simsync -->
