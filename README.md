@@ -5,53 +5,38 @@
   Jurre-Jan Smit  ·  Netherlands  ·  poolsuite.partners
 
 
-   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 3 / 9
- <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ atlas │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=raycast">raycast</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">▸</a>
-───┴──────┴─────┘       └───────────┴─────────┴─────────┴──────────┴─────────┴───────┴────────────────
+   ┌──────┬─────┬───────┬───────────┬─────────┬─────────┬──────────┬─────────┬───────┐      page 8 / 9
+ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">◂</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=home">home</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=cli">cli</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=atlas">atlas</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=framelink">framelink</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=simsync">simsync</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=systems">systems</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=projects">projects</a> │ raycast │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">forks</a> │ <a href="https://doublej-nav.jurrejan-e26.workers.dev/?p=forks">▸</a>
+───┴──────┴─────┴───────┴───────────┴─────────┴─────────┴──────────┘         └───────┴────────────────
 
 
 
-  ATLAS  ─────────────────────────────────────────────────────────────────────────────────────────────
+  RAYCAST  ───────────────────────────────────────────────────────────────────────────────────────────
 
-             __  __                       _      __            
-      ____ _/ /_/ /___ ______      ____  (_)____/ /_____  _____
-     / __ `/ __/ / __ `/ ___/_____/ __ \/ / ___/ //_/ _ \/ ___/
-    / /_/ / /_/ / /_/ (__  )_____/ /_/ / / /__/ ,< /  __/ /    
-    \__,_/\__/_/\__,_/____/     / .___/_/\___/_/|_|\___/_/     
-                               /_/                              
+  Extensions I use every day. The launcher is half my interface.
 
-    find.  pick.  go.
-
-
-  One scanner, four front ends. atlas-api walks the development folder and types every project
-  it finds — framework, runner, git state, scripts, deploy target, beads issues — then caches
-  the graph. A Rust TUI, a Raycast extension, a global CLI and a watchdog all read those same
-  shapes, so an action is declared once in a shared registry and turns up everywhere. Twenty-
-  five actions, fifteen daemons, one vocabulary, types kept byte-identical across consumers.
-
-                             ~/Documents/development
-                                        │
-                                        ▼
-                                  ┌───────────┐
-                                  │ atlas-api │    :47891  ·  scans, types, caches the graph
-                                  └─────┬─────┘    .atlas-cache.json  ·  60s TTL, revalidating
-                                        │
-             ┌──────────────────┬───────┴────────┬─────────────────┐
-             ▼                  ▼                ▼                 ▼
-       atlas-picker       atlas-browser      atlas-cli      atlas-watchdog
-         Rust TUI            Raycast          `atlas`           launchd
-
-
-   <a href="https://github.com/doublej/atlas-api">atlas-api</a>                        Scanner, cache and project graph — SvelteKit on :47891
-   <a href="https://github.com/doublej/atlas-cli">atlas-cli</a>                        The global `atlas`: tree, scan, pick, open, ports, new
-   <a href="https://github.com/doublej/atlas-picker">atlas-picker</a>                     Rust TUI — iocraft and Nucleo, reads the cache directly
-   <a href="https://github.com/doublej/atlas-browser">atlas-browser</a>                    Raycast: browse, filter and act on any project
-   <a href="https://github.com/doublej/atlas-watchdog">atlas-watchdog</a>                   Polls the API and restarts it through launchctl
+   <a href="https://github.com/doublej/raycast-ext-active-ports">Active Ports</a>                     View active TCP ports, kill processes, restart dev servers
+   <a href="https://github.com/doublej/raycast-ext-caddyfile-tools">Caddyfile Tools</a>                  Manage the NAS Caddyfile: open, generate passwords, apply
+   <a href="https://github.com/doublej/raycast-ext-caveman-compress">Caveman Compress</a>                 Compress selected text via LLM or heuristic backends
+   <a href="https://github.com/doublej/raycast-ext-chatgpt-software">ChatGPT Software Question</a>        Ask ChatGPT about the frontmost application
+   <a href="https://github.com/doublej/claude-code-launcher">Claude Code Launcher</a>             Open Claude Code in any directory, in your terminal of choice
+   <a href="https://github.com/doublej/claude-history">Claude History</a>                   Search and browse Claude Code session history across projects
+   <a href="https://github.com/doublej/raycast-ext-clean-text">Clean Text</a>                       Clean clipboard text with the fabric clean_text pattern
+   <a href="https://github.com/doublej/raycast-ext-clean-watermark">Clean Watermark</a>                  Remove watermarks, formatting and junk from clipboard text
+   <a href="https://github.com/doublej/raycast-ext-file-scripts">File Scripts</a>                     Run ffmpeg presets on the Finder selection, with live progress
+   <a href="https://github.com/doublej/raycast-ext-insecure-chrome">Insecure Chrome</a>                  Launch Chrome Canary with insecure HTTP flags for local dev
+   Keyboard Backlight               Control MacBook keyboard backlight brightness
+   <a href="https://github.com/doublej/raycast-ext-openrouter-key">OpenRouter Key</a>                   Create API keys on OpenRouter
+   <a href="https://github.com/doublej/raycast-ext-text-tools">Text Tools</a>                       Clean, unwrap and wrap clipboard text
+   <a href="https://github.com/doublej/raycast-ext-wake-pc">Wake PC</a>                          Send a Wake-on-LAN magic packet to wake your PC
+   <a href="https://github.com/doublej/watermark-washer">Watermark Washer</a>                 Clean the clipboard of invisible AI watermarks
+   <a href="https://github.com/doublej/raycast-ext-wrap-text">Wrap Text</a>                        Wrap clipboard or selected text in XML-like tags
 
   RECENT  ────────────────────────────────────────────────────────────────────────────────────────────
 
   The last 20 turns, as of the build that produced this page.
 
+   raycast         2026-11-25 01:40    raycast         2026-11-22 05:44
    atlas           2026-11-25 01:27    cli             2026-11-19 02:12
    framelink       2026-11-25 01:13    raycast         2026-11-18 09:50
    forks           2026-11-22 09:18    forks           2026-11-17 16:08
@@ -61,11 +46,10 @@
    framelink       2026-11-22 06:47    framelink       2026-11-17 10:47
    projects        2026-11-22 06:38    atlas           2026-11-17 10:01
    cli             2026-11-22 05:54    framelink       2026-11-17 08:50
-   raycast         2026-11-22 05:44    raycast         2026-11-17 08:43
 
 
 </pre>
 
 ![](https://umami-inky-two.vercel.app/p/QL68zROQG)
 
-<!-- nav:page=atlas -->
+<!-- nav:page=raycast -->
